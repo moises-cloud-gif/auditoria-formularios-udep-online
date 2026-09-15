@@ -1,0 +1,479 @@
+{
+  "id": "1631981721",
+  "isEnabled": true,
+  "flowType": "WORKFLOW",
+  "revisionId": "19",
+  "name": "0301. Activador Cluster Liderazgo y Gestión de Personas(UDN UDEP)",
+  "description": "Los formularios y programas incluidos en este cluster son los siguientes:\n\nFelicidad Organizacional y Gestión de Equipos de alto rendimiento Piura (UDN UDEP)\nLiderazgo y Felicidad Organizacional Piura (UDN UDEP)\nLiderazgo y Gestión del Talento Piura (UDN UDEP)\nGestión de Talento y Negociación de Conflictos Piura  (UDN UDEP)\nLiderazgo y Comunicación Efectiva Piura (UDN UDEP)\nInteligencia Emocional y Coaching Piura (UDN UDEP)\nFelicidad Organizacional e Inteligencia Emocional Piura (UDN UDEP)\nLiderazgo y Negociación de Conflictos Piura (UDN UDEP)",
+  "uuid": "0301. Activador Cluster Liderazgo y Gestión de Personas(UDN UDEP)-1631981721",
+  "createdAt": "2025-02-17T18:16:43.599Z",
+  "updatedAt": "2025-12-24T13:20:16.551Z",
+  "startActionId": "1",
+  "nextAvailableActionId": "2",
+  "actions": [
+    {
+      "actionId": "1",
+      "actionTypeVersion": 0,
+      "actionTypeId": "0-15",
+      "fields": {
+        "flow_id": "1631981736"
+      },
+      "type": "SINGLE_CONNECTION"
+    }
+  ],
+  "enrollmentCriteria": {
+    "shouldReEnroll": true,
+    "listFilterBranch": {
+      "filterBranches": [
+        {
+          "filterBranches": [],
+          "filters": [
+            {
+              "formId": "9983e250-a86a-4c16-9bc2-0c45cb4c0b8c",
+              "operator": "FILLED_OUT",
+              "filterType": "FORM_SUBMISSION"
+            }
+          ],
+          "filterBranchType": "AND",
+          "filterBranchOperator": "AND"
+        },
+        {
+          "filterBranches": [],
+          "filters": [
+            {
+              "formId": "a45261f2-1853-4db6-b42a-9371a245c534",
+              "operator": "FILLED_OUT",
+              "filterType": "FORM_SUBMISSION"
+            }
+          ],
+          "filterBranchType": "AND",
+          "filterBranchOperator": "AND"
+        },
+        {
+          "filterBranches": [],
+          "filters": [
+            {
+              "formId": "12f124c6-1095-4f18-9016-cef5fee6d236",
+              "operator": "FILLED_OUT",
+              "filterType": "FORM_SUBMISSION"
+            }
+          ],
+          "filterBranchType": "AND",
+          "filterBranchOperator": "AND"
+        },
+        {
+          "filterBranches": [],
+          "filters": [
+            {
+              "formId": "239f9f86-9a17-43d1-9f22-0ea91afa9668",
+              "operator": "FILLED_OUT",
+              "filterType": "FORM_SUBMISSION"
+            }
+          ],
+          "filterBranchType": "AND",
+          "filterBranchOperator": "AND"
+        },
+        {
+          "filterBranches": [],
+          "filters": [
+            {
+              "formId": "20337cd1-9ab9-49ac-82ba-15ac8f775be8",
+              "operator": "FILLED_OUT",
+              "filterType": "FORM_SUBMISSION"
+            }
+          ],
+          "filterBranchType": "AND",
+          "filterBranchOperator": "AND"
+        },
+        {
+          "filterBranches": [],
+          "filters": [
+            {
+              "formId": "0852ab0d-4d3f-4f89-92e5-6b9f0430fe92",
+              "operator": "FILLED_OUT",
+              "filterType": "FORM_SUBMISSION"
+            }
+          ],
+          "filterBranchType": "AND",
+          "filterBranchOperator": "AND"
+        },
+        {
+          "filterBranches": [],
+          "filters": [
+            {
+              "formId": "bb72c54a-39ba-43ac-b871-ef12e44b33fb",
+              "operator": "FILLED_OUT",
+              "filterType": "FORM_SUBMISSION"
+            }
+          ],
+          "filterBranchType": "AND",
+          "filterBranchOperator": "AND"
+        },
+        {
+          "filterBranches": [],
+          "filters": [
+            {
+              "formId": "4f9a2ab1-d7c2-4a98-940b-e13171bbc23f",
+              "operator": "FILLED_OUT",
+              "filterType": "FORM_SUBMISSION"
+            }
+          ],
+          "filterBranchType": "AND",
+          "filterBranchOperator": "AND"
+        },
+        {
+          "filterBranches": [],
+          "filters": [
+            {
+              "formId": "c7a943c1-962f-4b03-9f48-5521bf485196",
+              "operator": "FILLED_OUT",
+              "filterType": "FORM_SUBMISSION"
+            }
+          ],
+          "filterBranchType": "AND",
+          "filterBranchOperator": "AND"
+        },
+        {
+          "filterBranches": [],
+          "filters": [
+            {
+              "formId": "2aae55af-180f-4ed5-a33d-b7e6d9f737ca",
+              "operator": "FILLED_OUT",
+              "filterType": "FORM_SUBMISSION"
+            }
+          ],
+          "filterBranchType": "AND",
+          "filterBranchOperator": "AND"
+        },
+        {
+          "filterBranches": [],
+          "filters": [
+            {
+              "formId": "806b2a8f-a0e2-469f-93d8-2173a41e1b82",
+              "operator": "FILLED_OUT",
+              "filterType": "FORM_SUBMISSION"
+            }
+          ],
+          "filterBranchType": "AND",
+          "filterBranchOperator": "AND"
+        },
+        {
+          "filterBranches": [],
+          "filters": [
+            {
+              "formId": "84f82226-d1c2-43aa-b4e9-da20f43c0548",
+              "operator": "FILLED_OUT",
+              "filterType": "FORM_SUBMISSION"
+            }
+          ],
+          "filterBranchType": "AND",
+          "filterBranchOperator": "AND"
+        },
+        {
+          "filterBranches": [],
+          "filters": [
+            {
+              "formId": "20d1a6ad-9788-4a2a-a6cc-4917bed546e8",
+              "operator": "FILLED_OUT",
+              "filterType": "FORM_SUBMISSION"
+            }
+          ],
+          "filterBranchType": "AND",
+          "filterBranchOperator": "AND"
+        },
+        {
+          "filterBranches": [],
+          "filters": [
+            {
+              "formId": "1117d061-5d64-4497-9ce3-e3aff834e996",
+              "operator": "FILLED_OUT",
+              "filterType": "FORM_SUBMISSION"
+            }
+          ],
+          "filterBranchType": "AND",
+          "filterBranchOperator": "AND"
+        },
+        {
+          "filterBranches": [],
+          "filters": [
+            {
+              "formId": "81e1fd4a-6992-4150-9153-ca6bcb9ad986",
+              "operator": "FILLED_OUT",
+              "filterType": "FORM_SUBMISSION"
+            }
+          ],
+          "filterBranchType": "AND",
+          "filterBranchOperator": "AND"
+        },
+        {
+          "filterBranches": [],
+          "filters": [
+            {
+              "formId": "c207918c-7869-42f2-96f7-76a963123ef5",
+              "operator": "FILLED_OUT",
+              "filterType": "FORM_SUBMISSION"
+            }
+          ],
+          "filterBranchType": "AND",
+          "filterBranchOperator": "AND"
+        },
+        {
+          "filterBranches": [],
+          "filters": [
+            {
+              "formId": "43632e61-2706-46fe-bc8a-1638b6bfc01e",
+              "operator": "FILLED_OUT",
+              "filterType": "FORM_SUBMISSION"
+            }
+          ],
+          "filterBranchType": "AND",
+          "filterBranchOperator": "AND"
+        },
+        {
+          "filterBranches": [],
+          "filters": [
+            {
+              "formId": "4310fd51-e61a-4364-9778-e12e11be8e41",
+              "operator": "FILLED_OUT",
+              "filterType": "FORM_SUBMISSION"
+            }
+          ],
+          "filterBranchType": "AND",
+          "filterBranchOperator": "AND"
+        }
+      ],
+      "filters": [],
+      "filterBranchType": "OR",
+      "filterBranchOperator": "OR"
+    },
+    "unEnrollObjectsNotMeetingCriteria": false,
+    "reEnrollmentTriggersFilterBranches": [
+      {
+        "filterBranches": [],
+        "filters": [
+          {
+            "formId": "4f9a2ab1-d7c2-4a98-940b-e13171bbc23f",
+            "operator": "FILLED_OUT",
+            "filterType": "FORM_SUBMISSION"
+          }
+        ],
+        "filterBranchType": "AND",
+        "filterBranchOperator": "AND"
+      },
+      {
+        "filterBranches": [],
+        "filters": [
+          {
+            "formId": "bb72c54a-39ba-43ac-b871-ef12e44b33fb",
+            "operator": "FILLED_OUT",
+            "filterType": "FORM_SUBMISSION"
+          }
+        ],
+        "filterBranchType": "AND",
+        "filterBranchOperator": "AND"
+      },
+      {
+        "filterBranches": [],
+        "filters": [
+          {
+            "formId": "9983e250-a86a-4c16-9bc2-0c45cb4c0b8c",
+            "operator": "FILLED_OUT",
+            "filterType": "FORM_SUBMISSION"
+          }
+        ],
+        "filterBranchType": "AND",
+        "filterBranchOperator": "AND"
+      },
+      {
+        "filterBranches": [],
+        "filters": [
+          {
+            "formId": "239f9f86-9a17-43d1-9f22-0ea91afa9668",
+            "operator": "FILLED_OUT",
+            "filterType": "FORM_SUBMISSION"
+          }
+        ],
+        "filterBranchType": "AND",
+        "filterBranchOperator": "AND"
+      },
+      {
+        "filterBranches": [],
+        "filters": [
+          {
+            "formId": "806b2a8f-a0e2-469f-93d8-2173a41e1b82",
+            "operator": "FILLED_OUT",
+            "filterType": "FORM_SUBMISSION"
+          }
+        ],
+        "filterBranchType": "AND",
+        "filterBranchOperator": "AND"
+      },
+      {
+        "filterBranches": [],
+        "filters": [
+          {
+            "formId": "84f82226-d1c2-43aa-b4e9-da20f43c0548",
+            "operator": "FILLED_OUT",
+            "filterType": "FORM_SUBMISSION"
+          }
+        ],
+        "filterBranchType": "AND",
+        "filterBranchOperator": "AND"
+      },
+      {
+        "filterBranches": [],
+        "filters": [
+          {
+            "formId": "2aae55af-180f-4ed5-a33d-b7e6d9f737ca",
+            "operator": "FILLED_OUT",
+            "filterType": "FORM_SUBMISSION"
+          }
+        ],
+        "filterBranchType": "AND",
+        "filterBranchOperator": "AND"
+      },
+      {
+        "filterBranches": [],
+        "filters": [
+          {
+            "formId": "c207918c-7869-42f2-96f7-76a963123ef5",
+            "operator": "FILLED_OUT",
+            "filterType": "FORM_SUBMISSION"
+          }
+        ],
+        "filterBranchType": "AND",
+        "filterBranchOperator": "AND"
+      },
+      {
+        "filterBranches": [],
+        "filters": [
+          {
+            "formId": "12f124c6-1095-4f18-9016-cef5fee6d236",
+            "operator": "FILLED_OUT",
+            "filterType": "FORM_SUBMISSION"
+          }
+        ],
+        "filterBranchType": "AND",
+        "filterBranchOperator": "AND"
+      },
+      {
+        "filterBranches": [],
+        "filters": [
+          {
+            "formId": "c7a943c1-962f-4b03-9f48-5521bf485196",
+            "operator": "FILLED_OUT",
+            "filterType": "FORM_SUBMISSION"
+          }
+        ],
+        "filterBranchType": "AND",
+        "filterBranchOperator": "AND"
+      },
+      {
+        "filterBranches": [],
+        "filters": [
+          {
+            "formId": "0852ab0d-4d3f-4f89-92e5-6b9f0430fe92",
+            "operator": "FILLED_OUT",
+            "filterType": "FORM_SUBMISSION"
+          }
+        ],
+        "filterBranchType": "AND",
+        "filterBranchOperator": "AND"
+      },
+      {
+        "filterBranches": [],
+        "filters": [
+          {
+            "formId": "4310fd51-e61a-4364-9778-e12e11be8e41",
+            "operator": "FILLED_OUT",
+            "filterType": "FORM_SUBMISSION"
+          }
+        ],
+        "filterBranchType": "AND",
+        "filterBranchOperator": "AND"
+      },
+      {
+        "filterBranches": [],
+        "filters": [
+          {
+            "formId": "a45261f2-1853-4db6-b42a-9371a245c534",
+            "operator": "FILLED_OUT",
+            "filterType": "FORM_SUBMISSION"
+          }
+        ],
+        "filterBranchType": "AND",
+        "filterBranchOperator": "AND"
+      },
+      {
+        "filterBranches": [],
+        "filters": [
+          {
+            "formId": "81e1fd4a-6992-4150-9153-ca6bcb9ad986",
+            "operator": "FILLED_OUT",
+            "filterType": "FORM_SUBMISSION"
+          }
+        ],
+        "filterBranchType": "AND",
+        "filterBranchOperator": "AND"
+      },
+      {
+        "filterBranches": [],
+        "filters": [
+          {
+            "formId": "1117d061-5d64-4497-9ce3-e3aff834e996",
+            "operator": "FILLED_OUT",
+            "filterType": "FORM_SUBMISSION"
+          }
+        ],
+        "filterBranchType": "AND",
+        "filterBranchOperator": "AND"
+      },
+      {
+        "filterBranches": [],
+        "filters": [
+          {
+            "formId": "20337cd1-9ab9-49ac-82ba-15ac8f775be8",
+            "operator": "FILLED_OUT",
+            "filterType": "FORM_SUBMISSION"
+          }
+        ],
+        "filterBranchType": "AND",
+        "filterBranchOperator": "AND"
+      },
+      {
+        "filterBranches": [],
+        "filters": [
+          {
+            "formId": "43632e61-2706-46fe-bc8a-1638b6bfc01e",
+            "operator": "FILLED_OUT",
+            "filterType": "FORM_SUBMISSION"
+          }
+        ],
+        "filterBranchType": "AND",
+        "filterBranchOperator": "AND"
+      },
+      {
+        "filterBranches": [],
+        "filters": [
+          {
+            "formId": "20d1a6ad-9788-4a2a-a6cc-4917bed546e8",
+            "operator": "FILLED_OUT",
+            "filterType": "FORM_SUBMISSION"
+          }
+        ],
+        "filterBranchType": "AND",
+        "filterBranchOperator": "AND"
+      }
+    ],
+    "type": "LIST_BASED"
+  },
+  "timeWindows": [],
+  "blockedDates": [],
+  "customProperties": {},
+  "dataSources": [],
+  "crmObjectCreationStatus": "COMPLETE",
+  "suppressionListIds": [],
+  "canEnrollFromSalesforce": false,
+  "type": "CONTACT_FLOW",
+  "objectTypeId": "0-1"
+}

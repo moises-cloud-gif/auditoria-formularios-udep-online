@@ -1,0 +1,1456 @@
+{
+  "generado": "2026-09-15T22:15:08",
+  "paginas": [
+    {
+      "slug": "curso-de-analitica-digital-growth-marketing",
+      "url": "https://udeponline.pe/curso-de-analitica-digital-growth-marketing/",
+      "http": 200,
+      "llamadas_create": 2,
+      "form_ids": [
+        "7a38b319-f279-497a-84c6-e85dad3de2a4"
+      ],
+      "portal_ids": [
+        "6925781"
+      ],
+      "banner": "7a38b319-f279-497a-84c6-e85dad3de2a4",
+      "modal": "7a38b319-f279-497a-84c6-e85dad3de2a4",
+      "instancias": [
+        {
+          "formId": "7a38b319-f279-497a-84c6-e85dad3de2a4",
+          "destino": "inline",
+          "portalId": "6925781",
+          "tiene_callbacks": false,
+          "cuerpo": "region:\"na1\",portalId:\"6925781\",formId:\"7a38b319-f279-497a-84c6-e85dad3de2a4\""
+        },
+        {
+          "formId": "7a38b319-f279-497a-84c6-e85dad3de2a4",
+          "destino": "#hubspot-formulario",
+          "portalId": "6925781",
+          "tiene_callbacks": false,
+          "cuerpo": "portalId:\"6925781\",formId:\"7a38b319-f279-497a-84c6-e85dad3de2a4\",region:\"na1\",target:\"#hubspot-formulario\""
+        }
+      ],
+      "html_manipula_campo_programa": false,
+      "html_menciona_recaptcha": false,
+      "recaptcha_prueba_en_html": false,
+      "titulo_wordpress": true,
+      "anomalia": null
+    },
+    {
+      "slug": "curso-de-business-intelligence-data-science",
+      "url": "https://udeponline.pe/curso-de-business-intelligence-data-science/",
+      "http": 200,
+      "llamadas_create": 2,
+      "form_ids": [
+        "0a25bf0d-06d8-4722-8735-18cd0078c725"
+      ],
+      "portal_ids": [
+        "6925781"
+      ],
+      "banner": "0a25bf0d-06d8-4722-8735-18cd0078c725",
+      "modal": "0a25bf0d-06d8-4722-8735-18cd0078c725",
+      "instancias": [
+        {
+          "formId": "0a25bf0d-06d8-4722-8735-18cd0078c725",
+          "destino": "inline",
+          "portalId": "6925781",
+          "tiene_callbacks": false,
+          "cuerpo": "region:\"na1\",portalId:\"6925781\",formId:\"0a25bf0d-06d8-4722-8735-18cd0078c725\""
+        },
+        {
+          "formId": "0a25bf0d-06d8-4722-8735-18cd0078c725",
+          "destino": "#hubspot-formulario",
+          "portalId": "6925781",
+          "tiene_callbacks": false,
+          "cuerpo": "portalId:\"6925781\",formId:\"0a25bf0d-06d8-4722-8735-18cd0078c725\",region:\"na1\",target:\"#hubspot-formulario\""
+        }
+      ],
+      "html_manipula_campo_programa": false,
+      "html_menciona_recaptcha": false,
+      "recaptcha_prueba_en_html": false,
+      "titulo_wordpress": true,
+      "anomalia": null
+    },
+    {
+      "slug": "curso-de-coaching",
+      "url": "https://udeponline.pe/curso-de-coaching/",
+      "http": 200,
+      "llamadas_create": 2,
+      "form_ids": [
+        "294bab20-eebc-43aa-bdc6-b9aff0882c40"
+      ],
+      "portal_ids": [
+        "6925781"
+      ],
+      "banner": "294bab20-eebc-43aa-bdc6-b9aff0882c40",
+      "modal": "294bab20-eebc-43aa-bdc6-b9aff0882c40",
+      "instancias": [
+        {
+          "formId": "294bab20-eebc-43aa-bdc6-b9aff0882c40",
+          "destino": "inline",
+          "portalId": "6925781",
+          "tiene_callbacks": false,
+          "cuerpo": "region:\"na1\",portalId:\"6925781\",formId:\"294bab20-eebc-43aa-bdc6-b9aff0882c40\""
+        },
+        {
+          "formId": "294bab20-eebc-43aa-bdc6-b9aff0882c40",
+          "destino": "#hubspot-formulario",
+          "portalId": "6925781",
+          "tiene_callbacks": false,
+          "cuerpo": "portalId:\"6925781\",formId:\"294bab20-eebc-43aa-bdc6-b9aff0882c40\",region:\"na1\",target:\"#hubspot-formulario\""
+        }
+      ],
+      "html_manipula_campo_programa": false,
+      "html_menciona_recaptcha": false,
+      "recaptcha_prueba_en_html": false,
+      "titulo_wordpress": true,
+      "anomalia": null
+    },
+    {
+      "slug": "curso-de-comunicacion-efectiva",
+      "url": "https://udeponline.pe/curso-de-comunicacion-efectiva/",
+      "http": 200,
+      "llamadas_create": 2,
+      "form_ids": [
+        "f828a14e-d122-4982-91c5-0f956c00617c"
+      ],
+      "portal_ids": [
+        "6925781"
+      ],
+      "banner": "f828a14e-d122-4982-91c5-0f956c00617c",
+      "modal": "f828a14e-d122-4982-91c5-0f956c00617c",
+      "instancias": [
+        {
+          "formId": "f828a14e-d122-4982-91c5-0f956c00617c",
+          "destino": "inline",
+          "portalId": "6925781",
+          "tiene_callbacks": false,
+          "cuerpo": "region:\"na1\",portalId:\"6925781\",formId:\"f828a14e-d122-4982-91c5-0f956c00617c\""
+        },
+        {
+          "formId": "f828a14e-d122-4982-91c5-0f956c00617c",
+          "destino": "#hubspot-formulario",
+          "portalId": "6925781",
+          "tiene_callbacks": false,
+          "cuerpo": "portalId:\"6925781\",formId:\"f828a14e-d122-4982-91c5-0f956c00617c\",region:\"na1\",target:\"#hubspot-formulario\""
+        }
+      ],
+      "html_manipula_campo_programa": false,
+      "html_menciona_recaptcha": false,
+      "recaptcha_prueba_en_html": false,
+      "titulo_wordpress": true,
+      "anomalia": null
+    },
+    {
+      "slug": "curso-de-digital-business-model",
+      "url": "https://udeponline.pe/curso-de-digital-business-model/",
+      "http": 200,
+      "llamadas_create": 2,
+      "form_ids": [
+        "00b12055-381c-43f6-9dc1-45372becccd8"
+      ],
+      "portal_ids": [
+        "6925781"
+      ],
+      "banner": "00b12055-381c-43f6-9dc1-45372becccd8",
+      "modal": "00b12055-381c-43f6-9dc1-45372becccd8",
+      "instancias": [
+        {
+          "formId": "00b12055-381c-43f6-9dc1-45372becccd8",
+          "destino": "inline",
+          "portalId": "6925781",
+          "tiene_callbacks": false,
+          "cuerpo": "region:\"na1\",portalId:\"6925781\",formId:\"00b12055-381c-43f6-9dc1-45372becccd8\""
+        },
+        {
+          "formId": "00b12055-381c-43f6-9dc1-45372becccd8",
+          "destino": "#hubspot-formulario",
+          "portalId": "6925781",
+          "tiene_callbacks": false,
+          "cuerpo": "portalId:\"6925781\",formId:\"00b12055-381c-43f6-9dc1-45372becccd8\",region:\"na1\",target:\"#hubspot-formulario\""
+        }
+      ],
+      "html_manipula_campo_programa": false,
+      "html_menciona_recaptcha": false,
+      "recaptcha_prueba_en_html": false,
+      "titulo_wordpress": true,
+      "anomalia": null
+    },
+    {
+      "slug": "curso-de-felicidad-y-bienestar-organizacional",
+      "url": "https://udeponline.pe/curso-de-felicidad-y-bienestar-organizacional/",
+      "http": 200,
+      "llamadas_create": 2,
+      "form_ids": [
+        "3727950a-ecce-48ee-b75e-b3c46cc54c7a"
+      ],
+      "portal_ids": [
+        "6925781"
+      ],
+      "banner": "3727950a-ecce-48ee-b75e-b3c46cc54c7a",
+      "modal": "3727950a-ecce-48ee-b75e-b3c46cc54c7a",
+      "instancias": [
+        {
+          "formId": "3727950a-ecce-48ee-b75e-b3c46cc54c7a",
+          "destino": "inline",
+          "portalId": "6925781",
+          "tiene_callbacks": false,
+          "cuerpo": "region:\"na1\",portalId:\"6925781\",formId:\"3727950a-ecce-48ee-b75e-b3c46cc54c7a\""
+        },
+        {
+          "formId": "3727950a-ecce-48ee-b75e-b3c46cc54c7a",
+          "destino": "#hubspot-formulario",
+          "portalId": "6925781",
+          "tiene_callbacks": false,
+          "cuerpo": "portalId:\"6925781\",formId:\"3727950a-ecce-48ee-b75e-b3c46cc54c7a\",region:\"na1\",target:\"#hubspot-formulario\""
+        }
+      ],
+      "html_manipula_campo_programa": false,
+      "html_menciona_recaptcha": false,
+      "recaptcha_prueba_en_html": false,
+      "titulo_wordpress": true,
+      "anomalia": null
+    },
+    {
+      "slug": "curso-de-gestion-de-equipos-de-alto-rendimiento",
+      "url": "https://udeponline.pe/curso-de-gestion-de-equipos-de-alto-rendimiento/",
+      "http": 200,
+      "llamadas_create": 2,
+      "form_ids": [
+        "84e5b722-e953-4dc9-a199-61f96667f10e"
+      ],
+      "portal_ids": [
+        "6925781"
+      ],
+      "banner": "84e5b722-e953-4dc9-a199-61f96667f10e",
+      "modal": "84e5b722-e953-4dc9-a199-61f96667f10e",
+      "instancias": [
+        {
+          "formId": "84e5b722-e953-4dc9-a199-61f96667f10e",
+          "destino": "inline",
+          "portalId": "6925781",
+          "tiene_callbacks": false,
+          "cuerpo": "region:\"na1\",portalId:\"6925781\",formId:\"84e5b722-e953-4dc9-a199-61f96667f10e\""
+        },
+        {
+          "formId": "84e5b722-e953-4dc9-a199-61f96667f10e",
+          "destino": "#hubspot-formulario",
+          "portalId": "6925781",
+          "tiene_callbacks": false,
+          "cuerpo": "portalId:\"6925781\",formId:\"84e5b722-e953-4dc9-a199-61f96667f10e\",region:\"na1\",target:\"#hubspot-formulario\""
+        }
+      ],
+      "html_manipula_campo_programa": false,
+      "html_menciona_recaptcha": false,
+      "recaptcha_prueba_en_html": false,
+      "titulo_wordpress": true,
+      "anomalia": null
+    },
+    {
+      "slug": "curso-de-gestion-del-talento",
+      "url": "https://udeponline.pe/curso-de-gestion-del-talento/",
+      "http": 200,
+      "llamadas_create": 2,
+      "form_ids": [
+        "d6c333ed-17db-4e16-8afa-d87ef1b4eb49"
+      ],
+      "portal_ids": [
+        "6925781"
+      ],
+      "banner": "d6c333ed-17db-4e16-8afa-d87ef1b4eb49",
+      "modal": "d6c333ed-17db-4e16-8afa-d87ef1b4eb49",
+      "instancias": [
+        {
+          "formId": "d6c333ed-17db-4e16-8afa-d87ef1b4eb49",
+          "destino": "inline",
+          "portalId": "6925781",
+          "tiene_callbacks": false,
+          "cuerpo": "region:\"na1\",portalId:\"6925781\",formId:\"d6c333ed-17db-4e16-8afa-d87ef1b4eb49\""
+        },
+        {
+          "formId": "d6c333ed-17db-4e16-8afa-d87ef1b4eb49",
+          "destino": "#hubspot-formulario",
+          "portalId": "6925781",
+          "tiene_callbacks": false,
+          "cuerpo": "portalId:\"6925781\",formId:\"d6c333ed-17db-4e16-8afa-d87ef1b4eb49\",region:\"na1\",target:\"#hubspot-formulario\""
+        }
+      ],
+      "html_manipula_campo_programa": false,
+      "html_menciona_recaptcha": false,
+      "recaptcha_prueba_en_html": false,
+      "titulo_wordpress": true,
+      "anomalia": null
+    },
+    {
+      "slug": "curso-de-inteligencia-emocional",
+      "url": "https://udeponline.pe/curso-de-inteligencia-emocional/",
+      "http": 200,
+      "llamadas_create": 2,
+      "form_ids": [
+        "c1438a54-76d7-4155-8ec0-28d6c65e24fb"
+      ],
+      "portal_ids": [
+        "6925781"
+      ],
+      "banner": "c1438a54-76d7-4155-8ec0-28d6c65e24fb",
+      "modal": "c1438a54-76d7-4155-8ec0-28d6c65e24fb",
+      "instancias": [
+        {
+          "formId": "c1438a54-76d7-4155-8ec0-28d6c65e24fb",
+          "destino": "inline",
+          "portalId": "6925781",
+          "tiene_callbacks": false,
+          "cuerpo": "region:\"na1\",portalId:\"6925781\",formId:\"c1438a54-76d7-4155-8ec0-28d6c65e24fb\""
+        },
+        {
+          "formId": "c1438a54-76d7-4155-8ec0-28d6c65e24fb",
+          "destino": "#hubspot-formulario",
+          "portalId": "6925781",
+          "tiene_callbacks": false,
+          "cuerpo": "portalId:\"6925781\",formId:\"c1438a54-76d7-4155-8ec0-28d6c65e24fb\",region:\"na1\",target:\"#hubspot-formulario\""
+        }
+      ],
+      "html_manipula_campo_programa": false,
+      "html_menciona_recaptcha": false,
+      "recaptcha_prueba_en_html": false,
+      "titulo_wordpress": true,
+      "anomalia": null
+    },
+    {
+      "slug": "curso-de-liderazgo-en-la-era-digital",
+      "url": "https://udeponline.pe/curso-de-liderazgo-en-la-era-digital/",
+      "http": 200,
+      "llamadas_create": 2,
+      "form_ids": [
+        "89781058-251b-4213-9673-08605ddc1b93"
+      ],
+      "portal_ids": [
+        "6925781"
+      ],
+      "banner": "89781058-251b-4213-9673-08605ddc1b93",
+      "modal": "89781058-251b-4213-9673-08605ddc1b93",
+      "instancias": [
+        {
+          "formId": "89781058-251b-4213-9673-08605ddc1b93",
+          "destino": "inline",
+          "portalId": "6925781",
+          "tiene_callbacks": false,
+          "cuerpo": "region:\"na1\",portalId:\"6925781\",formId:\"89781058-251b-4213-9673-08605ddc1b93\""
+        },
+        {
+          "formId": "89781058-251b-4213-9673-08605ddc1b93",
+          "destino": "#hubspot-formulario",
+          "portalId": "6925781",
+          "tiene_callbacks": false,
+          "cuerpo": "portalId:\"6925781\",formId:\"89781058-251b-4213-9673-08605ddc1b93\",region:\"na1\",target:\"#hubspot-formulario\""
+        }
+      ],
+      "html_manipula_campo_programa": false,
+      "html_menciona_recaptcha": false,
+      "recaptcha_prueba_en_html": false,
+      "titulo_wordpress": true,
+      "anomalia": null
+    },
+    {
+      "slug": "curso-de-marketing-digital",
+      "url": "https://udeponline.pe/curso-de-marketing-digital/",
+      "http": 200,
+      "llamadas_create": 2,
+      "form_ids": [
+        "b6e43bcf-a7cc-4b9e-ae6c-1087963599b3"
+      ],
+      "portal_ids": [
+        "6925781"
+      ],
+      "banner": "b6e43bcf-a7cc-4b9e-ae6c-1087963599b3",
+      "modal": "b6e43bcf-a7cc-4b9e-ae6c-1087963599b3",
+      "instancias": [
+        {
+          "formId": "b6e43bcf-a7cc-4b9e-ae6c-1087963599b3",
+          "destino": "inline",
+          "portalId": "6925781",
+          "tiene_callbacks": false,
+          "cuerpo": "region:\"na1\",portalId:\"6925781\",formId:\"b6e43bcf-a7cc-4b9e-ae6c-1087963599b3\""
+        },
+        {
+          "formId": "b6e43bcf-a7cc-4b9e-ae6c-1087963599b3",
+          "destino": "#hubspot-formulario",
+          "portalId": "6925781",
+          "tiene_callbacks": false,
+          "cuerpo": "portalId:\"6925781\",formId:\"b6e43bcf-a7cc-4b9e-ae6c-1087963599b3\",region:\"na1\",target:\"#hubspot-formulario\""
+        }
+      ],
+      "html_manipula_campo_programa": false,
+      "html_menciona_recaptcha": false,
+      "recaptcha_prueba_en_html": false,
+      "titulo_wordpress": true,
+      "anomalia": null
+    },
+    {
+      "slug": "curso-de-negociacion-y-resolucion-de-conflictos",
+      "url": "https://udeponline.pe/curso-de-negociacion-y-resolucion-de-conflictos/",
+      "http": 200,
+      "llamadas_create": 2,
+      "form_ids": [
+        "51477554-b683-4fb1-99c3-9b063b68c3a3"
+      ],
+      "portal_ids": [
+        "6925781"
+      ],
+      "banner": "51477554-b683-4fb1-99c3-9b063b68c3a3",
+      "modal": "51477554-b683-4fb1-99c3-9b063b68c3a3",
+      "instancias": [
+        {
+          "formId": "51477554-b683-4fb1-99c3-9b063b68c3a3",
+          "destino": "inline",
+          "portalId": "6925781",
+          "tiene_callbacks": false,
+          "cuerpo": "region:\"na1\",portalId:\"6925781\",formId:\"51477554-b683-4fb1-99c3-9b063b68c3a3\""
+        },
+        {
+          "formId": "51477554-b683-4fb1-99c3-9b063b68c3a3",
+          "destino": "#hubspot-formulario",
+          "portalId": "6925781",
+          "tiene_callbacks": false,
+          "cuerpo": "portalId:\"6925781\",formId:\"51477554-b683-4fb1-99c3-9b063b68c3a3\",region:\"na1\",target:\"#hubspot-formulario\""
+        }
+      ],
+      "html_manipula_campo_programa": false,
+      "html_menciona_recaptcha": false,
+      "recaptcha_prueba_en_html": false,
+      "titulo_wordpress": true,
+      "anomalia": null
+    },
+    {
+      "slug": "curso-de-negocios-e-commerce",
+      "url": "https://udeponline.pe/curso-de-negocios-e-commerce/",
+      "http": 200,
+      "llamadas_create": 2,
+      "form_ids": [
+        "66f1f7d0-79f6-4ef5-8796-4d0e41e3db89"
+      ],
+      "portal_ids": [
+        "6925781"
+      ],
+      "banner": "66f1f7d0-79f6-4ef5-8796-4d0e41e3db89",
+      "modal": "66f1f7d0-79f6-4ef5-8796-4d0e41e3db89",
+      "instancias": [
+        {
+          "formId": "66f1f7d0-79f6-4ef5-8796-4d0e41e3db89",
+          "destino": "inline",
+          "portalId": "6925781",
+          "tiene_callbacks": false,
+          "cuerpo": "region:\"na1\",portalId:\"6925781\",formId:\"66f1f7d0-79f6-4ef5-8796-4d0e41e3db89\""
+        },
+        {
+          "formId": "66f1f7d0-79f6-4ef5-8796-4d0e41e3db89",
+          "destino": "#hubspot-formulario",
+          "portalId": "6925781",
+          "tiene_callbacks": false,
+          "cuerpo": "portalId:\"6925781\",formId:\"66f1f7d0-79f6-4ef5-8796-4d0e41e3db89\",region:\"na1\",target:\"#hubspot-formulario\""
+        }
+      ],
+      "html_manipula_campo_programa": false,
+      "html_menciona_recaptcha": false,
+      "recaptcha_prueba_en_html": false,
+      "titulo_wordpress": true,
+      "anomalia": null
+    },
+    {
+      "slug": "curso-de-negocios-innovadores",
+      "url": "https://udeponline.pe/curso-de-negocios-innovadores/",
+      "http": 200,
+      "llamadas_create": 2,
+      "form_ids": [
+        "a44b1d7f-6c25-4797-a134-6e4581722480"
+      ],
+      "portal_ids": [
+        "6925781"
+      ],
+      "banner": "a44b1d7f-6c25-4797-a134-6e4581722480",
+      "modal": "a44b1d7f-6c25-4797-a134-6e4581722480",
+      "instancias": [
+        {
+          "formId": "a44b1d7f-6c25-4797-a134-6e4581722480",
+          "destino": "inline",
+          "portalId": "6925781",
+          "tiene_callbacks": false,
+          "cuerpo": "region:\"na1\",portalId:\"6925781\",formId:\"a44b1d7f-6c25-4797-a134-6e4581722480\""
+        },
+        {
+          "formId": "a44b1d7f-6c25-4797-a134-6e4581722480",
+          "destino": "#hubspot-formulario",
+          "portalId": "6925781",
+          "tiene_callbacks": false,
+          "cuerpo": "portalId:\"6925781\",formId:\"a44b1d7f-6c25-4797-a134-6e4581722480\",region:\"na1\",target:\"#hubspot-formulario\""
+        }
+      ],
+      "html_manipula_campo_programa": false,
+      "html_menciona_recaptcha": false,
+      "recaptcha_prueba_en_html": false,
+      "titulo_wordpress": true,
+      "anomalia": null
+    },
+    {
+      "slug": "curso-de-transformacion-digital",
+      "url": "https://udeponline.pe/curso-de-transformacion-digital/",
+      "http": 200,
+      "llamadas_create": 2,
+      "form_ids": [
+        "179df4f7-4389-45b3-9550-8cf9d6ac1c09"
+      ],
+      "portal_ids": [
+        "6925781"
+      ],
+      "banner": "179df4f7-4389-45b3-9550-8cf9d6ac1c09",
+      "modal": "179df4f7-4389-45b3-9550-8cf9d6ac1c09",
+      "instancias": [
+        {
+          "formId": "179df4f7-4389-45b3-9550-8cf9d6ac1c09",
+          "destino": "inline",
+          "portalId": "6925781",
+          "tiene_callbacks": false,
+          "cuerpo": "region:\"na1\",portalId:\"6925781\",formId:\"179df4f7-4389-45b3-9550-8cf9d6ac1c09\""
+        },
+        {
+          "formId": "179df4f7-4389-45b3-9550-8cf9d6ac1c09",
+          "destino": "#hubspot-formulario",
+          "portalId": "6925781",
+          "tiene_callbacks": false,
+          "cuerpo": "portalId:\"6925781\",formId:\"179df4f7-4389-45b3-9550-8cf9d6ac1c09\",region:\"na1\",target:\"#hubspot-formulario\""
+        }
+      ],
+      "html_manipula_campo_programa": false,
+      "html_menciona_recaptcha": false,
+      "recaptcha_prueba_en_html": false,
+      "titulo_wordpress": true,
+      "anomalia": null
+    },
+    {
+      "slug": "curso-desarrollo-organizacional-y-gestion-del-cambio",
+      "url": "https://udeponline.pe/curso-desarrollo-organizacional-y-gestion-del-cambio/",
+      "http": 200,
+      "llamadas_create": 2,
+      "form_ids": [
+        "47578cfa-f426-4fc3-a358-e880a8ad121e"
+      ],
+      "portal_ids": [
+        "6925781"
+      ],
+      "banner": "47578cfa-f426-4fc3-a358-e880a8ad121e",
+      "modal": "47578cfa-f426-4fc3-a358-e880a8ad121e",
+      "instancias": [
+        {
+          "formId": "47578cfa-f426-4fc3-a358-e880a8ad121e",
+          "destino": "inline",
+          "portalId": "6925781",
+          "tiene_callbacks": false,
+          "cuerpo": "region:\"na1\",portalId:\"6925781\",formId:\"47578cfa-f426-4fc3-a358-e880a8ad121e\""
+        },
+        {
+          "formId": "47578cfa-f426-4fc3-a358-e880a8ad121e",
+          "destino": "#hubspot-formulario",
+          "portalId": "6925781",
+          "tiene_callbacks": false,
+          "cuerpo": "portalId:\"6925781\",formId:\"47578cfa-f426-4fc3-a358-e880a8ad121e\",region:\"na1\",target:\"#hubspot-formulario\""
+        }
+      ],
+      "html_manipula_campo_programa": false,
+      "html_menciona_recaptcha": false,
+      "recaptcha_prueba_en_html": false,
+      "titulo_wordpress": true,
+      "anomalia": null
+    },
+    {
+      "slug": "diplomado-en-gestion-de-la-felicidad-y-bienestar-organizacional",
+      "url": "https://udeponline.pe/diplomado-en-gestion-de-la-felicidad-y-bienestar-organizacional/",
+      "http": 200,
+      "llamadas_create": 2,
+      "form_ids": [
+        "0ce67a0b-b785-4f54-b09f-0016e2f3a4d2"
+      ],
+      "portal_ids": [
+        "6925781"
+      ],
+      "banner": "0ce67a0b-b785-4f54-b09f-0016e2f3a4d2",
+      "modal": "0ce67a0b-b785-4f54-b09f-0016e2f3a4d2",
+      "instancias": [
+        {
+          "formId": "0ce67a0b-b785-4f54-b09f-0016e2f3a4d2",
+          "destino": "inline",
+          "portalId": "6925781",
+          "tiene_callbacks": false,
+          "cuerpo": "portalId: \"6925781\", formId: \"0ce67a0b-b785-4f54-b09f-0016e2f3a4d2\", region: \"na1\""
+        },
+        {
+          "formId": "0ce67a0b-b785-4f54-b09f-0016e2f3a4d2",
+          "destino": "#hubspot-formulario",
+          "portalId": "6925781",
+          "tiene_callbacks": false,
+          "cuerpo": "portalId: \"6925781\", formId: \"0ce67a0b-b785-4f54-b09f-0016e2f3a4d2\", region: \"na1\", target: \"#hubspot-formulario\""
+        }
+      ],
+      "html_manipula_campo_programa": false,
+      "html_menciona_recaptcha": false,
+      "recaptcha_prueba_en_html": false,
+      "titulo_wordpress": true,
+      "anomalia": null
+    },
+    {
+      "slug": "diplomado-en-habilidades-para-la-gestion-de-equipos",
+      "url": "https://udeponline.pe/diplomado-en-habilidades-para-la-gestion-de-equipos/",
+      "http": 200,
+      "llamadas_create": 2,
+      "form_ids": [
+        "c86ebf10-b97f-49a4-98ca-c16c183462ad"
+      ],
+      "portal_ids": [
+        "6925781"
+      ],
+      "banner": "c86ebf10-b97f-49a4-98ca-c16c183462ad",
+      "modal": "c86ebf10-b97f-49a4-98ca-c16c183462ad",
+      "instancias": [
+        {
+          "formId": "c86ebf10-b97f-49a4-98ca-c16c183462ad",
+          "destino": "inline",
+          "portalId": "6925781",
+          "tiene_callbacks": false,
+          "cuerpo": "portalId: \"6925781\", formId: \"c86ebf10-b97f-49a4-98ca-c16c183462ad\", region: \"na1\""
+        },
+        {
+          "formId": "c86ebf10-b97f-49a4-98ca-c16c183462ad",
+          "destino": "#hubspot-formulario",
+          "portalId": "6925781",
+          "tiene_callbacks": false,
+          "cuerpo": "portalId: \"6925781\", formId: \"c86ebf10-b97f-49a4-98ca-c16c183462ad\", region: \"na1\", target: \"#hubspot-formulario\""
+        }
+      ],
+      "html_manipula_campo_programa": false,
+      "html_menciona_recaptcha": false,
+      "recaptcha_prueba_en_html": false,
+      "titulo_wordpress": true,
+      "anomalia": null
+    },
+    {
+      "slug": "diplomado-en-inteligencia-emocional-y-coaching-para-el-liderazgo-en-las-organizaciones",
+      "url": "https://udeponline.pe/diplomado-en-inteligencia-emocional-y-coaching-para-el-liderazgo-en-las-organizaciones/",
+      "http": 200,
+      "llamadas_create": 2,
+      "form_ids": [
+        "bef4306e-9106-4ad8-920f-c01e63c7726e"
+      ],
+      "portal_ids": [
+        "6925781"
+      ],
+      "banner": "bef4306e-9106-4ad8-920f-c01e63c7726e",
+      "modal": "bef4306e-9106-4ad8-920f-c01e63c7726e",
+      "instancias": [
+        {
+          "formId": "bef4306e-9106-4ad8-920f-c01e63c7726e",
+          "destino": "inline",
+          "portalId": "6925781",
+          "tiene_callbacks": false,
+          "cuerpo": "portalId: \"6925781\", formId: \"bef4306e-9106-4ad8-920f-c01e63c7726e\", region: \"na1\""
+        },
+        {
+          "formId": "bef4306e-9106-4ad8-920f-c01e63c7726e",
+          "destino": "#hubspot-formulario",
+          "portalId": "6925781",
+          "tiene_callbacks": false,
+          "cuerpo": "portalId: \"6925781\", formId: \"bef4306e-9106-4ad8-920f-c01e63c7726e\", region: \"na1\", target: \"#hubspot-formulario\""
+        }
+      ],
+      "html_manipula_campo_programa": false,
+      "html_menciona_recaptcha": false,
+      "recaptcha_prueba_en_html": false,
+      "titulo_wordpress": true,
+      "anomalia": null
+    },
+    {
+      "slug": "diplomado-en-liderazgo-y-gestion-del-talento",
+      "url": "https://udeponline.pe/diplomado-en-liderazgo-y-gestion-del-talento/",
+      "http": 200,
+      "llamadas_create": 2,
+      "form_ids": [
+        "74f59f7e-d2cd-40ad-911b-face84652266"
+      ],
+      "portal_ids": [
+        "6925781"
+      ],
+      "banner": "74f59f7e-d2cd-40ad-911b-face84652266",
+      "modal": "74f59f7e-d2cd-40ad-911b-face84652266",
+      "instancias": [
+        {
+          "formId": "74f59f7e-d2cd-40ad-911b-face84652266",
+          "destino": "inline",
+          "portalId": "6925781",
+          "tiene_callbacks": false,
+          "cuerpo": "portalId: \"6925781\", formId: \"74f59f7e-d2cd-40ad-911b-face84652266\", region: \"na1\""
+        },
+        {
+          "formId": "74f59f7e-d2cd-40ad-911b-face84652266",
+          "destino": "#hubspot-formulario",
+          "portalId": "6925781",
+          "tiene_callbacks": false,
+          "cuerpo": "portalId: \"6925781\", formId: \"74f59f7e-d2cd-40ad-911b-face84652266\", region: \"na1\", target: \"#hubspot-formulario\""
+        }
+      ],
+      "html_manipula_campo_programa": false,
+      "html_menciona_recaptcha": false,
+      "recaptcha_prueba_en_html": false,
+      "titulo_wordpress": true,
+      "anomalia": null
+    },
+    {
+      "slug": "diplomado-en-marketing-digital-y-analitica",
+      "url": "https://udeponline.pe/diplomado-en-marketing-digital-y-analitica/",
+      "http": 200,
+      "llamadas_create": 2,
+      "form_ids": [
+        "36b4d47d-ccc6-4c5f-add9-b6477706ad65"
+      ],
+      "portal_ids": [
+        "6925781"
+      ],
+      "banner": "36b4d47d-ccc6-4c5f-add9-b6477706ad65",
+      "modal": "36b4d47d-ccc6-4c5f-add9-b6477706ad65",
+      "instancias": [
+        {
+          "formId": "36b4d47d-ccc6-4c5f-add9-b6477706ad65",
+          "destino": "inline",
+          "portalId": "6925781",
+          "tiene_callbacks": false,
+          "cuerpo": "portalId: \"6925781\", formId: \"36b4d47d-ccc6-4c5f-add9-b6477706ad65\", region: \"na1\""
+        },
+        {
+          "formId": "36b4d47d-ccc6-4c5f-add9-b6477706ad65",
+          "destino": "#hubspot-formulario",
+          "portalId": "6925781",
+          "tiene_callbacks": false,
+          "cuerpo": "portalId: \"6925781\", formId: \"36b4d47d-ccc6-4c5f-add9-b6477706ad65\", region: \"na1\", target: \"#hubspot-formulario\""
+        }
+      ],
+      "html_manipula_campo_programa": false,
+      "html_menciona_recaptcha": false,
+      "recaptcha_prueba_en_html": false,
+      "titulo_wordpress": true,
+      "anomalia": null
+    },
+    {
+      "slug": "diplomado-en-marketing-digital-y-ecommerce",
+      "url": "https://udeponline.pe/diplomado-en-marketing-digital-y-ecommerce/",
+      "http": 200,
+      "llamadas_create": 2,
+      "form_ids": [
+        "243be113-191b-4e14-92a7-1636105d46f4"
+      ],
+      "portal_ids": [
+        "6925781"
+      ],
+      "banner": "243be113-191b-4e14-92a7-1636105d46f4",
+      "modal": "243be113-191b-4e14-92a7-1636105d46f4",
+      "instancias": [
+        {
+          "formId": "243be113-191b-4e14-92a7-1636105d46f4",
+          "destino": "inline",
+          "portalId": "6925781",
+          "tiene_callbacks": false,
+          "cuerpo": "portalId: \"6925781\", formId: \"243be113-191b-4e14-92a7-1636105d46f4\", region: \"na1\""
+        },
+        {
+          "formId": "243be113-191b-4e14-92a7-1636105d46f4",
+          "destino": "#hubspot-formulario",
+          "portalId": "6925781",
+          "tiene_callbacks": false,
+          "cuerpo": "portalId: \"6925781\", formId: \"243be113-191b-4e14-92a7-1636105d46f4\", region: \"na1\", target: \"#hubspot-formulario\""
+        }
+      ],
+      "html_manipula_campo_programa": false,
+      "html_menciona_recaptcha": false,
+      "recaptcha_prueba_en_html": false,
+      "titulo_wordpress": true,
+      "anomalia": null
+    },
+    {
+      "slug": "programa-de-especializacion-en-comunicacion-efectiva-y-gestion-de-equipos-de-alto-rendimiento",
+      "url": "https://udeponline.pe/programa-de-especializacion-en-comunicacion-efectiva-y-gestion-de-equipos-de-alto-rendimiento/",
+      "http": 200,
+      "llamadas_create": 2,
+      "form_ids": [
+        "523d3530-c6c2-415d-a587-096a58a3f71f"
+      ],
+      "portal_ids": [
+        "6925781"
+      ],
+      "banner": "523d3530-c6c2-415d-a587-096a58a3f71f",
+      "modal": "523d3530-c6c2-415d-a587-096a58a3f71f",
+      "instancias": [
+        {
+          "formId": "523d3530-c6c2-415d-a587-096a58a3f71f",
+          "destino": "inline",
+          "portalId": "6925781",
+          "tiene_callbacks": false,
+          "cuerpo": "portalId: \"6925781\", formId: \"523d3530-c6c2-415d-a587-096a58a3f71f\", region: \"na1\""
+        },
+        {
+          "formId": "523d3530-c6c2-415d-a587-096a58a3f71f",
+          "destino": "#hubspot-formulario",
+          "portalId": "6925781",
+          "tiene_callbacks": false,
+          "cuerpo": "portalId: \"6925781\", formId: \"523d3530-c6c2-415d-a587-096a58a3f71f\", /* ← actualizado */ region: \"na1\", target: \"#hubspot-formulario\""
+        }
+      ],
+      "html_manipula_campo_programa": false,
+      "html_menciona_recaptcha": false,
+      "recaptcha_prueba_en_html": false,
+      "titulo_wordpress": true,
+      "anomalia": null
+    },
+    {
+      "slug": "programa-de-especializacion-en-comunicacion-efectiva-y-gestion-del-talento",
+      "url": "https://udeponline.pe/programa-de-especializacion-en-comunicacion-efectiva-y-gestion-del-talento/",
+      "http": 200,
+      "llamadas_create": 2,
+      "form_ids": [
+        "d60e69e9-97ee-4b86-beee-2447c8305fff"
+      ],
+      "portal_ids": [
+        "6925781"
+      ],
+      "banner": "d60e69e9-97ee-4b86-beee-2447c8305fff",
+      "modal": "d60e69e9-97ee-4b86-beee-2447c8305fff",
+      "instancias": [
+        {
+          "formId": "d60e69e9-97ee-4b86-beee-2447c8305fff",
+          "destino": "inline",
+          "portalId": "6925781",
+          "tiene_callbacks": false,
+          "cuerpo": "portalId: \"6925781\", formId: \"d60e69e9-97ee-4b86-beee-2447c8305fff\", region: \"na1\""
+        },
+        {
+          "formId": "d60e69e9-97ee-4b86-beee-2447c8305fff",
+          "destino": "#hubspot-formulario",
+          "portalId": "6925781",
+          "tiene_callbacks": false,
+          "cuerpo": "portalId:\"6925781\", formId:\"d60e69e9-97ee-4b86-beee-2447c8305fff\", /* ← formId actualizado */ region:\"na1\", target:\"#hubspot-formulario\""
+        }
+      ],
+      "html_manipula_campo_programa": false,
+      "html_menciona_recaptcha": false,
+      "recaptcha_prueba_en_html": false,
+      "titulo_wordpress": true,
+      "anomalia": null
+    },
+    {
+      "slug": "programa-de-especializacion-en-felicidad-organizacional-y-gestion-de-equipos-de-alto-rendimiento",
+      "url": "https://udeponline.pe/programa-de-especializacion-en-felicidad-organizacional-y-gestion-de-equipos-de-alto-rendimiento/",
+      "http": 200,
+      "llamadas_create": 2,
+      "form_ids": [
+        "fb1d6938-aed4-44b8-bc70-03d1379f0712"
+      ],
+      "portal_ids": [
+        "6925781"
+      ],
+      "banner": "fb1d6938-aed4-44b8-bc70-03d1379f0712",
+      "modal": "fb1d6938-aed4-44b8-bc70-03d1379f0712",
+      "instancias": [
+        {
+          "formId": "fb1d6938-aed4-44b8-bc70-03d1379f0712",
+          "destino": "inline",
+          "portalId": "6925781",
+          "tiene_callbacks": false,
+          "cuerpo": "portalId: \"6925781\", formId: \"fb1d6938-aed4-44b8-bc70-03d1379f0712\", region: \"na1\""
+        },
+        {
+          "formId": "fb1d6938-aed4-44b8-bc70-03d1379f0712",
+          "destino": "#hubspot-formulario",
+          "portalId": "6925781",
+          "tiene_callbacks": false,
+          "cuerpo": "portalId: \"6925781\", formId: \"fb1d6938-aed4-44b8-bc70-03d1379f0712\", /* ← actualizado */ region: \"na1\", target: \"#hubspot-formulario\""
+        }
+      ],
+      "html_manipula_campo_programa": false,
+      "html_menciona_recaptcha": false,
+      "recaptcha_prueba_en_html": false,
+      "titulo_wordpress": true,
+      "anomalia": null
+    },
+    {
+      "slug": "programa-de-especializacion-en-felicidad-organizacional-y-inteligencia-emocional",
+      "url": "https://udeponline.pe/programa-de-especializacion-en-felicidad-organizacional-y-inteligencia-emocional/",
+      "http": 200,
+      "llamadas_create": 2,
+      "form_ids": [
+        "72e670fc-a6d3-4ef1-a735-987515c286d6"
+      ],
+      "portal_ids": [
+        "6925781"
+      ],
+      "banner": "72e670fc-a6d3-4ef1-a735-987515c286d6",
+      "modal": "72e670fc-a6d3-4ef1-a735-987515c286d6",
+      "instancias": [
+        {
+          "formId": "72e670fc-a6d3-4ef1-a735-987515c286d6",
+          "destino": "inline",
+          "portalId": "6925781",
+          "tiene_callbacks": false,
+          "cuerpo": "portalId: \"6925781\", formId: \"72e670fc-a6d3-4ef1-a735-987515c286d6\", region: \"na1\""
+        },
+        {
+          "formId": "72e670fc-a6d3-4ef1-a735-987515c286d6",
+          "destino": "#hubspot-formulario",
+          "portalId": "6925781",
+          "tiene_callbacks": false,
+          "cuerpo": "portalId:\"6925781\", formId:\"72e670fc-a6d3-4ef1-a735-987515c286d6\", /* ← formId actualizado */ region:\"na1\", target:\"#hubspot-formulario\""
+        }
+      ],
+      "html_manipula_campo_programa": false,
+      "html_menciona_recaptcha": false,
+      "recaptcha_prueba_en_html": false,
+      "titulo_wordpress": true,
+      "anomalia": null
+    },
+    {
+      "slug": "programa-de-especializacion-en-felicidad-y-desarrollo-organizacional",
+      "url": "https://udeponline.pe/programa-de-especializacion-en-felicidad-y-desarrollo-organizacional/",
+      "http": 200,
+      "llamadas_create": 2,
+      "form_ids": [
+        "be719c32-c6ca-4e4c-ae56-e748f2edeb3a"
+      ],
+      "portal_ids": [
+        "6925781"
+      ],
+      "banner": "be719c32-c6ca-4e4c-ae56-e748f2edeb3a",
+      "modal": "be719c32-c6ca-4e4c-ae56-e748f2edeb3a",
+      "instancias": [
+        {
+          "formId": "be719c32-c6ca-4e4c-ae56-e748f2edeb3a",
+          "destino": "inline",
+          "portalId": "6925781",
+          "tiene_callbacks": false,
+          "cuerpo": "portalId: \"6925781\", formId: \"be719c32-c6ca-4e4c-ae56-e748f2edeb3a\", region: \"na1\""
+        },
+        {
+          "formId": "be719c32-c6ca-4e4c-ae56-e748f2edeb3a",
+          "destino": "#hubspot-formulario",
+          "portalId": "6925781",
+          "tiene_callbacks": false,
+          "cuerpo": "portalId: \"6925781\", formId: \"be719c32-c6ca-4e4c-ae56-e748f2edeb3a\", /* ← formId actual */ region: \"na1\", target: \"#hubspot-formulario\""
+        }
+      ],
+      "html_manipula_campo_programa": false,
+      "html_menciona_recaptcha": false,
+      "recaptcha_prueba_en_html": false,
+      "titulo_wordpress": true,
+      "anomalia": null
+    },
+    {
+      "slug": "programa-de-especializacion-en-gestion-del-cambio-y-negociacion-de-conflictos",
+      "url": "https://udeponline.pe/programa-de-especializacion-en-gestion-del-cambio-y-negociacion-de-conflictos/",
+      "http": 200,
+      "llamadas_create": 2,
+      "form_ids": [
+        "9359c5fb-9bf0-49ff-8048-d44d56eddeb1"
+      ],
+      "portal_ids": [
+        "6925781"
+      ],
+      "banner": "9359c5fb-9bf0-49ff-8048-d44d56eddeb1",
+      "modal": "9359c5fb-9bf0-49ff-8048-d44d56eddeb1",
+      "instancias": [
+        {
+          "formId": "9359c5fb-9bf0-49ff-8048-d44d56eddeb1",
+          "destino": "inline",
+          "portalId": "6925781",
+          "tiene_callbacks": false,
+          "cuerpo": "portalId: \"6925781\", formId: \"9359c5fb-9bf0-49ff-8048-d44d56eddeb1\", region: \"na1\""
+        },
+        {
+          "formId": "9359c5fb-9bf0-49ff-8048-d44d56eddeb1",
+          "destino": "#hubspot-formulario",
+          "portalId": "6925781",
+          "tiene_callbacks": false,
+          "cuerpo": "portalId: \"6925781\", formId: \"9359c5fb-9bf0-49ff-8048-d44d56eddeb1\", /* ← actualizado */ region: \"na1\", target: \"#hubspot-formulario\""
+        }
+      ],
+      "html_manipula_campo_programa": false,
+      "html_menciona_recaptcha": false,
+      "recaptcha_prueba_en_html": false,
+      "titulo_wordpress": true,
+      "anomalia": null
+    },
+    {
+      "slug": "programa-de-especializacion-en-gestion-del-talento-y-negociacion-de-conflictos",
+      "url": "https://udeponline.pe/programa-de-especializacion-en-gestion-del-talento-y-negociacion-de-conflictos/",
+      "http": 200,
+      "llamadas_create": 2,
+      "form_ids": [
+        "0c7b3436-4cc6-4ada-91ea-76b82d1e64ed"
+      ],
+      "portal_ids": [
+        "6925781"
+      ],
+      "banner": "0c7b3436-4cc6-4ada-91ea-76b82d1e64ed",
+      "modal": "0c7b3436-4cc6-4ada-91ea-76b82d1e64ed",
+      "instancias": [
+        {
+          "formId": "0c7b3436-4cc6-4ada-91ea-76b82d1e64ed",
+          "destino": "inline",
+          "portalId": "6925781",
+          "tiene_callbacks": false,
+          "cuerpo": "portalId: \"6925781\", formId: \"0c7b3436-4cc6-4ada-91ea-76b82d1e64ed\", region: \"na1\""
+        },
+        {
+          "formId": "0c7b3436-4cc6-4ada-91ea-76b82d1e64ed",
+          "destino": "#hubspot-formulario",
+          "portalId": "6925781",
+          "tiene_callbacks": false,
+          "cuerpo": "portalId: \"6925781\", formId: \"0c7b3436-4cc6-4ada-91ea-76b82d1e64ed\", /* ← actualizado */ region: \"na1\", target: \"#hubspot-formulario\""
+        }
+      ],
+      "html_manipula_campo_programa": false,
+      "html_menciona_recaptcha": false,
+      "recaptcha_prueba_en_html": false,
+      "titulo_wordpress": true,
+      "anomalia": null
+    },
+    {
+      "slug": "programa-de-especializacion-en-habilidades-para-la-gestion-de-equipos",
+      "url": "https://udeponline.pe/programa-de-especializacion-en-habilidades-para-la-gestion-de-equipos/",
+      "http": 200,
+      "llamadas_create": 2,
+      "form_ids": [
+        "78d79e2c-ef41-47b8-a76f-16c67851c99e"
+      ],
+      "portal_ids": [
+        "6925781"
+      ],
+      "banner": "78d79e2c-ef41-47b8-a76f-16c67851c99e",
+      "modal": "78d79e2c-ef41-47b8-a76f-16c67851c99e",
+      "instancias": [
+        {
+          "formId": "78d79e2c-ef41-47b8-a76f-16c67851c99e",
+          "destino": "inline",
+          "portalId": "6925781",
+          "tiene_callbacks": false,
+          "cuerpo": "portalId: \"6925781\", formId: \"78d79e2c-ef41-47b8-a76f-16c67851c99e\", region: \"na1\""
+        },
+        {
+          "formId": "78d79e2c-ef41-47b8-a76f-16c67851c99e",
+          "destino": "#hubspot-formulario",
+          "portalId": "6925781",
+          "tiene_callbacks": false,
+          "cuerpo": "portalId:\"6925781\", formId:\"78d79e2c-ef41-47b8-a76f-16c67851c99e\", /* ← formId actualizado */ region:\"na1\", target:\"#hubspot-formulario\""
+        }
+      ],
+      "html_manipula_campo_programa": false,
+      "html_menciona_recaptcha": false,
+      "recaptcha_prueba_en_html": false,
+      "titulo_wordpress": true,
+      "anomalia": null
+    },
+    {
+      "slug": "programa-de-especializacion-en-inteligencia-emocional-y-coaching",
+      "url": "https://udeponline.pe/programa-de-especializacion-en-inteligencia-emocional-y-coaching/",
+      "http": 200,
+      "llamadas_create": 2,
+      "form_ids": [
+        "518f587e-3cfe-4c56-85d7-1939a4624925"
+      ],
+      "portal_ids": [
+        "6925781"
+      ],
+      "banner": "518f587e-3cfe-4c56-85d7-1939a4624925",
+      "modal": "518f587e-3cfe-4c56-85d7-1939a4624925",
+      "instancias": [
+        {
+          "formId": "518f587e-3cfe-4c56-85d7-1939a4624925",
+          "destino": "inline",
+          "portalId": "6925781",
+          "tiene_callbacks": false,
+          "cuerpo": "portalId: \"6925781\", formId: \"518f587e-3cfe-4c56-85d7-1939a4624925\", region: \"na1\""
+        },
+        {
+          "formId": "518f587e-3cfe-4c56-85d7-1939a4624925",
+          "destino": "#hubspot-formulario",
+          "portalId": "6925781",
+          "tiene_callbacks": false,
+          "cuerpo": "portalId: \"6925781\", formId: \"518f587e-3cfe-4c56-85d7-1939a4624925\", /* ← actualizado */ region: \"na1\", target: \"#hubspot-formulario\""
+        }
+      ],
+      "html_manipula_campo_programa": false,
+      "html_menciona_recaptcha": false,
+      "recaptcha_prueba_en_html": false,
+      "titulo_wordpress": true,
+      "anomalia": null
+    },
+    {
+      "slug": "programa-de-especializacion-en-liderazgo-y-comunicacion-efectiva",
+      "url": "https://udeponline.pe/programa-de-especializacion-en-liderazgo-y-comunicacion-efectiva/",
+      "http": 200,
+      "llamadas_create": 2,
+      "form_ids": [
+        "20d1a6ad-9788-4a2a-a6cc-4917bed546e8"
+      ],
+      "portal_ids": [
+        "6925781"
+      ],
+      "banner": "20d1a6ad-9788-4a2a-a6cc-4917bed546e8",
+      "modal": "20d1a6ad-9788-4a2a-a6cc-4917bed546e8",
+      "instancias": [
+        {
+          "formId": "20d1a6ad-9788-4a2a-a6cc-4917bed546e8",
+          "destino": "inline",
+          "portalId": "6925781",
+          "tiene_callbacks": false,
+          "cuerpo": "portalId: \"6925781\", formId: \"20d1a6ad-9788-4a2a-a6cc-4917bed546e8\", region: \"na1\""
+        },
+        {
+          "formId": "20d1a6ad-9788-4a2a-a6cc-4917bed546e8",
+          "destino": "#hubspot-formulario",
+          "portalId": "6925781",
+          "tiene_callbacks": false,
+          "cuerpo": "portalId: \"6925781\", formId: \"20d1a6ad-9788-4a2a-a6cc-4917bed546e8\", /* ← actualizado */ region: \"na1\", target: \"#hubspot-formulario\""
+        }
+      ],
+      "html_manipula_campo_programa": false,
+      "html_menciona_recaptcha": false,
+      "recaptcha_prueba_en_html": false,
+      "titulo_wordpress": true,
+      "anomalia": null
+    },
+    {
+      "slug": "programa-de-especializacion-en-liderazgo-y-felicidad-organizacional",
+      "url": "https://udeponline.pe/programa-de-especializacion-en-liderazgo-y-felicidad-organizacional/",
+      "http": 200,
+      "llamadas_create": 2,
+      "form_ids": [
+        "81e1fd4a-6992-4150-9153-ca6bcb9ad986"
+      ],
+      "portal_ids": [
+        "6925781"
+      ],
+      "banner": "81e1fd4a-6992-4150-9153-ca6bcb9ad986",
+      "modal": "81e1fd4a-6992-4150-9153-ca6bcb9ad986",
+      "instancias": [
+        {
+          "formId": "81e1fd4a-6992-4150-9153-ca6bcb9ad986",
+          "destino": "inline",
+          "portalId": "6925781",
+          "tiene_callbacks": false,
+          "cuerpo": "portalId: \"6925781\", formId: \"81e1fd4a-6992-4150-9153-ca6bcb9ad986\", region: \"na1\""
+        },
+        {
+          "formId": "81e1fd4a-6992-4150-9153-ca6bcb9ad986",
+          "destino": "#hubspot-formulario",
+          "portalId": "6925781",
+          "tiene_callbacks": false,
+          "cuerpo": "portalId: \"6925781\", formId: \"81e1fd4a-6992-4150-9153-ca6bcb9ad986\", /* ← actualizado */ region: \"na1\", target: \"#hubspot-formulario\""
+        }
+      ],
+      "html_manipula_campo_programa": false,
+      "html_menciona_recaptcha": false,
+      "recaptcha_prueba_en_html": false,
+      "titulo_wordpress": true,
+      "anomalia": null
+    },
+    {
+      "slug": "programa-de-especializacion-en-liderazgo-y-gestion-del-talento",
+      "url": "https://udeponline.pe/programa-de-especializacion-en-liderazgo-y-gestion-del-talento/",
+      "http": 200,
+      "llamadas_create": 2,
+      "form_ids": [
+        "c207918c-7869-42f2-96f7-76a963123ef5"
+      ],
+      "portal_ids": [
+        "6925781"
+      ],
+      "banner": "c207918c-7869-42f2-96f7-76a963123ef5",
+      "modal": "c207918c-7869-42f2-96f7-76a963123ef5",
+      "instancias": [
+        {
+          "formId": "c207918c-7869-42f2-96f7-76a963123ef5",
+          "destino": "inline",
+          "portalId": "6925781",
+          "tiene_callbacks": false,
+          "cuerpo": "portalId: \"6925781\", formId: \"c207918c-7869-42f2-96f7-76a963123ef5\", region: \"na1\""
+        },
+        {
+          "formId": "c207918c-7869-42f2-96f7-76a963123ef5",
+          "destino": "#hubspot-formulario",
+          "portalId": "6925781",
+          "tiene_callbacks": false,
+          "cuerpo": "portalId: \"6925781\", formId: \"c207918c-7869-42f2-96f7-76a963123ef5\", /* ← actualizado */ region: \"na1\", target: \"#hubspot-formulario\""
+        }
+      ],
+      "html_manipula_campo_programa": false,
+      "html_menciona_recaptcha": false,
+      "recaptcha_prueba_en_html": false,
+      "titulo_wordpress": true,
+      "anomalia": null
+    },
+    {
+      "slug": "programa-de-especializacion-en-liderazgo-y-negociacion-de-conflictos",
+      "url": "https://udeponline.pe/programa-de-especializacion-en-liderazgo-y-negociacion-de-conflictos/",
+      "http": 200,
+      "llamadas_create": 8,
+      "form_ids": [
+        "84f82226-d1c2-43aa-b4e9-da20f43c0548"
+      ],
+      "portal_ids": [
+        "6925781"
+      ],
+      "banner": "84f82226-d1c2-43aa-b4e9-da20f43c0548",
+      "modal": null,
+      "instancias": [
+        {
+          "formId": "84f82226-d1c2-43aa-b4e9-da20f43c0548",
+          "destino": "inline",
+          "portalId": "6925781",
+          "tiene_callbacks": false,
+          "cuerpo": "portalId: \"6925781\", formId: \"84f82226-d1c2-43aa-b4e9-da20f43c0548\", region: \"na1\""
+        },
+        {
+          "formId": null,
+          "destino": "#hubspot-formulario",
+          "portalId": null,
+          "tiene_callbacks": true,
+          "cuerpo": "portalId: HS_PORTAL_ID, formId: HS_FORM_ID, region: HS_REGION, target: '#hubspot-formulario', css: hsCSS, // <-- evita título duplicado onFormReady: function($form){ // Ajustes finos si se requiere (no forzamos alturas) }"
+        },
+        {
+          "formId": null,
+          "destino": "#hubspot-formulario",
+          "portalId": null,
+          "tiene_callbacks": true,
+          "cuerpo": "portalId: HS_PORTAL_ID, formId: HS_FORM_ID, region: HS_REGION, target: '#hubspot-formulario', css: hsCSS, // <-- evita título duplicado onFormReady: function($form){ // Ajustes finos si se requiere (no forzamos alturas) }"
+        },
+        {
+          "formId": null,
+          "destino": "#hubspot-formulario",
+          "portalId": null,
+          "tiene_callbacks": true,
+          "cuerpo": "portalId: HS_PORTAL_ID, formId: HS_FORM_ID, region: HS_REGION, target: '#hubspot-formulario', css: hsCSS, // <-- evita título duplicado onFormReady: function($form){ // Ajustes finos si se requiere (no forzamos alturas) }"
+        },
+        {
+          "formId": null,
+          "destino": "#hubspot-formulario",
+          "portalId": null,
+          "tiene_callbacks": true,
+          "cuerpo": "portalId: HS_PORTAL_ID, formId: HS_FORM_ID, region: HS_REGION, target: '#hubspot-formulario', css: hsCSS, // <-- evita título duplicado onFormReady: function($form){ // Ajustes finos si se requiere (no forzamos alturas) }"
+        },
+        {
+          "formId": null,
+          "destino": "#hubspot-formulario",
+          "portalId": null,
+          "tiene_callbacks": true,
+          "cuerpo": "portalId: HS_PORTAL_ID, formId: HS_FORM_ID, region: HS_REGION, target: '#hubspot-formulario', css: hsCSS, // <-- evita título duplicado onFormReady: function($form){ // Ajustes finos si se requiere (no forzamos alturas) }"
+        },
+        {
+          "formId": null,
+          "destino": "#hubspot-formulario",
+          "portalId": null,
+          "tiene_callbacks": true,
+          "cuerpo": "portalId: HS_PORTAL_ID, formId: HS_FORM_ID, region: HS_REGION, target: '#hubspot-formulario', css: hsCSS, // <-- evita título duplicado onFormReady: function($form){ // Ajustes finos si se requiere (no forzamos alturas) }"
+        },
+        {
+          "formId": "84f82226-d1c2-43aa-b4e9-da20f43c0548",
+          "destino": "#hubspot-formulario",
+          "portalId": "6925781",
+          "tiene_callbacks": false,
+          "cuerpo": "portalId:\"6925781\", formId:\"84f82226-d1c2-43aa-b4e9-da20f43c0548\", /* ← formId actualizado */ region:\"na1\", target:\"#hubspot-formulario\""
+        }
+      ],
+      "html_manipula_campo_programa": false,
+      "html_menciona_recaptcha": false,
+      "recaptcha_prueba_en_html": false,
+      "titulo_wordpress": true,
+      "anomalia": "8 incrustaciones / 1 formularios"
+    },
+    {
+      "slug": "programa-de-especializacion-en-liderazgo-y-transformacion-digital",
+      "url": "https://udeponline.pe/programa-de-especializacion-en-liderazgo-y-transformacion-digital/",
+      "http": 200,
+      "llamadas_create": 2,
+      "form_ids": [
+        "1117d061-5d64-4497-9ce3-e3aff834e996"
+      ],
+      "portal_ids": [
+        "6925781"
+      ],
+      "banner": "1117d061-5d64-4497-9ce3-e3aff834e996",
+      "modal": "1117d061-5d64-4497-9ce3-e3aff834e996",
+      "instancias": [
+        {
+          "formId": "1117d061-5d64-4497-9ce3-e3aff834e996",
+          "destino": "inline",
+          "portalId": "6925781",
+          "tiene_callbacks": false,
+          "cuerpo": "portalId: \"6925781\", formId: \"1117d061-5d64-4497-9ce3-e3aff834e996\", region: \"na1\""
+        },
+        {
+          "formId": "1117d061-5d64-4497-9ce3-e3aff834e996",
+          "destino": "#hubspot-formulario",
+          "portalId": "6925781",
+          "tiene_callbacks": false,
+          "cuerpo": "portalId: \"6925781\", formId: \"1117d061-5d64-4497-9ce3-e3aff834e996\", /* ← actualizado */ region: \"na1\", target: \"#hubspot-formulario\""
+        }
+      ],
+      "html_manipula_campo_programa": false,
+      "html_menciona_recaptcha": false,
+      "recaptcha_prueba_en_html": false,
+      "titulo_wordpress": true,
+      "anomalia": null
+    },
+    {
+      "slug": "programa-de-especializacion-en-marketing-digital-y-business-model",
+      "url": "https://udeponline.pe/programa-de-especializacion-en-marketing-digital-y-business-model/",
+      "http": 200,
+      "llamadas_create": 2,
+      "form_ids": [
+        "f49da541-6cda-489e-98cf-985b7b3dc1b8"
+      ],
+      "portal_ids": [
+        "6925781"
+      ],
+      "banner": "f49da541-6cda-489e-98cf-985b7b3dc1b8",
+      "modal": "f49da541-6cda-489e-98cf-985b7b3dc1b8",
+      "instancias": [
+        {
+          "formId": "f49da541-6cda-489e-98cf-985b7b3dc1b8",
+          "destino": "inline",
+          "portalId": "6925781",
+          "tiene_callbacks": false,
+          "cuerpo": "portalId: \"6925781\", formId: \"f49da541-6cda-489e-98cf-985b7b3dc1b8\", region: \"na1\""
+        },
+        {
+          "formId": "f49da541-6cda-489e-98cf-985b7b3dc1b8",
+          "destino": "#hubspot-formulario",
+          "portalId": "6925781",
+          "tiene_callbacks": false,
+          "cuerpo": "portalId: \"6925781\", formId: \"f49da541-6cda-489e-98cf-985b7b3dc1b8\", /* ← formId actual */ region: \"na1\", target: \"#hubspot-formulario\""
+        }
+      ],
+      "html_manipula_campo_programa": false,
+      "html_menciona_recaptcha": false,
+      "recaptcha_prueba_en_html": false,
+      "titulo_wordpress": true,
+      "anomalia": null
+    },
+    {
+      "slug": "programa-de-especializacion-en-marketing-digital-y-e-commerce",
+      "url": "https://udeponline.pe/programa-de-especializacion-en-marketing-digital-y-e-commerce/",
+      "http": 200,
+      "llamadas_create": 2,
+      "form_ids": [
+        "cd64140f-f93d-4265-8222-426ad8dfc3d8"
+      ],
+      "portal_ids": [
+        "6925781"
+      ],
+      "banner": "cd64140f-f93d-4265-8222-426ad8dfc3d8",
+      "modal": "cd64140f-f93d-4265-8222-426ad8dfc3d8",
+      "instancias": [
+        {
+          "formId": "cd64140f-f93d-4265-8222-426ad8dfc3d8",
+          "destino": "inline",
+          "portalId": "6925781",
+          "tiene_callbacks": false,
+          "cuerpo": "portalId: \"6925781\", formId: \"cd64140f-f93d-4265-8222-426ad8dfc3d8\", region: \"na1\""
+        },
+        {
+          "formId": "cd64140f-f93d-4265-8222-426ad8dfc3d8",
+          "destino": "#hubspot-formulario",
+          "portalId": "6925781",
+          "tiene_callbacks": false,
+          "cuerpo": "portalId: \"6925781\", formId: \"cd64140f-f93d-4265-8222-426ad8dfc3d8\", region: \"na1\", target: \"#hubspot-formulario\""
+        }
+      ],
+      "html_manipula_campo_programa": false,
+      "html_menciona_recaptcha": false,
+      "recaptcha_prueba_en_html": false,
+      "titulo_wordpress": true,
+      "anomalia": null
+    },
+    {
+      "slug": "programa-de-especializacion-en-modelo-de-negocios-digitales-y-business-intelligence",
+      "url": "https://udeponline.pe/programa-de-especializacion-en-modelo-de-negocios-digitales-y-business-intelligence/",
+      "http": 200,
+      "llamadas_create": 2,
+      "form_ids": [
+        "b8164bf0-4166-46aa-8760-5cb87ebd8888"
+      ],
+      "portal_ids": [
+        "6925781"
+      ],
+      "banner": "b8164bf0-4166-46aa-8760-5cb87ebd8888",
+      "modal": "b8164bf0-4166-46aa-8760-5cb87ebd8888",
+      "instancias": [
+        {
+          "formId": "b8164bf0-4166-46aa-8760-5cb87ebd8888",
+          "destino": "inline",
+          "portalId": "6925781",
+          "tiene_callbacks": false,
+          "cuerpo": "portalId: \"6925781\", formId: \"b8164bf0-4166-46aa-8760-5cb87ebd8888\", region: \"na1\""
+        },
+        {
+          "formId": "b8164bf0-4166-46aa-8760-5cb87ebd8888",
+          "destino": "#hubspot-formulario",
+          "portalId": "6925781",
+          "tiene_callbacks": false,
+          "cuerpo": "portalId: \"6925781\", formId: \"b8164bf0-4166-46aa-8760-5cb87ebd8888\", /* ← formId actual */ region: \"na1\", target: \"#hubspot-formulario\""
+        }
+      ],
+      "html_manipula_campo_programa": false,
+      "html_menciona_recaptcha": false,
+      "recaptcha_prueba_en_html": false,
+      "titulo_wordpress": true,
+      "anomalia": null
+    },
+    {
+      "slug": "programa-de-especializacion-en-modelo-de-negocios-y-transformacion-digital",
+      "url": "https://udeponline.pe/programa-de-especializacion-en-modelo-de-negocios-y-transformacion-digital/",
+      "http": 200,
+      "llamadas_create": 2,
+      "form_ids": [
+        "5878cd5d-839e-4146-bc79-725360097a74"
+      ],
+      "portal_ids": [
+        "6925781"
+      ],
+      "banner": "5878cd5d-839e-4146-bc79-725360097a74",
+      "modal": "5878cd5d-839e-4146-bc79-725360097a74",
+      "instancias": [
+        {
+          "formId": "5878cd5d-839e-4146-bc79-725360097a74",
+          "destino": "inline",
+          "portalId": "6925781",
+          "tiene_callbacks": false,
+          "cuerpo": "portalId: \"6925781\", formId: \"5878cd5d-839e-4146-bc79-725360097a74\", region: \"na1\""
+        },
+        {
+          "formId": "5878cd5d-839e-4146-bc79-725360097a74",
+          "destino": "#hubspot-formulario",
+          "portalId": "6925781",
+          "tiene_callbacks": false,
+          "cuerpo": "portalId: \"6925781\", formId: \"5878cd5d-839e-4146-bc79-725360097a74\", /* <- tu formId aquí */ region: \"na1\", target: \"#hubspot-formulario\""
+        }
+      ],
+      "html_manipula_campo_programa": false,
+      "html_menciona_recaptcha": false,
+      "recaptcha_prueba_en_html": false,
+      "titulo_wordpress": true,
+      "anomalia": null
+    }
+  ],
+  "divergencias": [],
+  "paginas_extra": [
+    {
+      "url": "https://udeponline.pe/programas-de-especializacion-dev/",
+      "http": 200,
+      "form_ids": [],
+      "publicada": true
+    }
+  ]
+}

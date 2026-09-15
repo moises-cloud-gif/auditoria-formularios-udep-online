@@ -1,5 +1,5 @@
 {
-  "generado": "2026-09-15T21:46:55",
+  "generado": "2026-09-15T21:50:55",
   "dry_run": true,
   "checks": {
     "P1_token_y_portal": {
@@ -20,7 +20,7 @@
     },
     "P5_playwright_render": {
       "pasa": false,
-      "detalle": "Error: BrowserType.launch: Executable doesn't exist at /opt/pw-browsers/chromium_headless_shell-1243/chrome-headless-shell-linux64/chrome-headless-shell\n╔════════════════════════════════════════════════════════════╗\n║ Looks like Playwright was just installed or updated.       ║\n║ Please run the following command to download new browsers: ║\n║                                                            ║\n║     playwright install                                     ║\n║                                                            ║\n║ <3 Playwright Team                                         ║\n╚════════════════════════════════════════════════════════════╝"
+      "detalle": "Error: Page.goto: net::ERR_CERT_AUTHORITY_INVALID at https://udeponline.pe/curso-de-analitica-digital-growth-marketing/\nCall log:\n  - navigating to \"https://udeponline.pe/curso-de-analitica-digital-growth-marketing/\", waiting until \"networkidle\"\n"
     },
     "P6_paginas_vivas": {
       "pasa": true,

@@ -1,0 +1,375 @@
+{
+  "id": "c207918c-7869-42f2-96f7-76a963123ef5",
+  "name": "PIURA: PDE en Liderazgo y Gestión del Talento (UDN UDEP)",
+  "createdAt": "2025-09-26T01:30:35.834Z",
+  "updatedAt": "2026-09-15T13:26:08.329Z",
+  "archived": false,
+  "fieldGroups": [
+    {
+      "groupType": "default_group",
+      "richTextType": "text",
+      "richText": "<h1 id=\"inscripcion\" style=\"font-weight: bold; margin: 0px; font-size: 28px;\"><span style=\"color: #ffffff;\"><strong style=\"font-weight: 600;\">¿QUIERES MÁS INFORMACIÓN?</strong></span></h1>"
+    },
+    {
+      "groupType": "default_group",
+      "richTextType": "text",
+      "fields": [
+        {
+          "objectTypeId": "0-1",
+          "name": "firstname",
+          "label": "Nombre",
+          "required": true,
+          "hidden": false,
+          "fieldType": "single_line_text"
+        },
+        {
+          "objectTypeId": "0-1",
+          "name": "lastname",
+          "label": "Apellido",
+          "required": true,
+          "hidden": false,
+          "fieldType": "single_line_text"
+        }
+      ]
+    },
+    {
+      "groupType": "default_group",
+      "richTextType": "text",
+      "fields": [
+        {
+          "objectTypeId": "0-1",
+          "name": "phone",
+          "label": "Número de teléfono",
+          "required": true,
+          "hidden": false,
+          "useCountryCodeSelect": true,
+          "validation": {
+            "minAllowedDigits": 10,
+            "maxAllowedDigits": 14
+          },
+          "fieldType": "phone"
+        },
+        {
+          "objectTypeId": "0-1",
+          "name": "email",
+          "label": "Email",
+          "required": true,
+          "hidden": false,
+          "validation": {
+            "blockedEmailDomains": [],
+            "useDefaultBlockList": false
+          },
+          "fieldType": "email"
+        }
+      ]
+    },
+    {
+      "groupType": "default_group",
+      "richTextType": "text",
+      "fields": [
+        {
+          "objectTypeId": "0-1",
+          "name": "nivel_de_estudios__udn_udep_",
+          "label": "Nivel de Estudios",
+          "required": true,
+          "hidden": false,
+          "options": [
+            {
+              "label": "Bachiller",
+              "value": "Grado Bachiller",
+              "description": "",
+              "displayOrder": 0
+            },
+            {
+              "label": "Técnico",
+              "value": "Técnico",
+              "description": "",
+              "displayOrder": 1
+            },
+            {
+              "label": "Títulado",
+              "value": "Títulado",
+              "description": "",
+              "displayOrder": 2
+            },
+            {
+              "label": "Magister",
+              "value": "Magister",
+              "description": "",
+              "displayOrder": 3
+            },
+            {
+              "label": "Doctorado",
+              "value": "Doctorado",
+              "description": "",
+              "displayOrder": 4
+            },
+            {
+              "label": "Secundaria Completa",
+              "value": "Secundaria Completa",
+              "description": "",
+              "displayOrder": 5
+            }
+          ],
+          "fieldType": "dropdown"
+        }
+      ]
+    },
+    {
+      "groupType": "default_group",
+      "richTextType": "text",
+      "fields": [
+        {
+          "objectTypeId": "0-1",
+          "name": "programas_piura__udn_udep_",
+          "label": "Programas Piura (UDN UDEP)",
+          "required": false,
+          "hidden": true,
+          "defaultValues": [
+            "Marketing Digital y Ecommerce"
+          ],
+          "options": [
+            {
+              "label": "PDE Marketing Digital y Ecommerce",
+              "value": "Marketing Digital y Ecommerce",
+              "description": "",
+              "displayOrder": 0
+            },
+            {
+              "label": "PDE Liderazgo y Gestión del Talento",
+              "value": "Liderazgo y Gestión del Talento",
+              "description": "",
+              "displayOrder": 1
+            },
+            {
+              "label": "PDE Gestión de Talento y Negociación de Conflictos",
+              "value": "Gestión de Talento y Negociación de Conflictos",
+              "description": "",
+              "displayOrder": 2
+            },
+            {
+              "label": "PDE Felicidad Organizacional y Gestion de Equipos de Alto Rendimiento",
+              "value": "Felicidad Organizacional y Gestion de Equipos de Alto Rendimiento",
+              "description": "",
+              "displayOrder": 4
+            },
+            {
+              "label": "PDE Liderazgo y Felicidad Organizacional",
+              "value": "liderazgo_y_felicidad_organizacional",
+              "description": "",
+              "displayOrder": 5
+            },
+            {
+              "label": "PDE Felicidad y Desarrollo Organizacional",
+              "value": "Felicidad y Desarrollo Organizacional",
+              "description": "",
+              "displayOrder": 6
+            },
+            {
+              "label": "PDE Modelo de Negocios y Transformación Digital",
+              "value": "Modelo de Negocios y Transformación Digital",
+              "description": "",
+              "displayOrder": 7
+            },
+            {
+              "label": "PDE Liderazgo y Transformación Digital",
+              "value": "liderazgo_y_transformacion_digital",
+              "description": "",
+              "displayOrder": 8
+            },
+            {
+              "label": "PDE Marketing Digital y Business Model",
+              "value": "Marketing Digital y Business Model",
+              "description": "",
+              "displayOrder": 9
+            },
+            {
+              "label": "PDE Comunicación Efectiva y Gestión de Equipos de Alto Rendimiento",
+              "value": "Comunicación Efectiva y Gestión de Equipos de Alto Rendimiento",
+              "description": "",
+              "displayOrder": 11
+            },
+            {
+              "label": "PDE Liderazgo y Comunicación Efectiva",
+              "value": "Liderazgo y Comunicación Efectiva",
+              "description": "",
+              "displayOrder": 12
+            },
+            {
+              "label": "PDE Gestión del Cambio y Negociación de Conflictos",
+              "value": "Gestión del Cambio y Negociación de Conflictos",
+              "description": "",
+              "displayOrder": 13
+            },
+            {
+              "label": "PDE Modelo de Negocios Digitales y Business Intelligence",
+              "value": "Modelo de Negocios Digitales y Business Intelligence",
+              "description": "",
+              "displayOrder": 14
+            },
+            {
+              "label": "PDE Comunicación Efectiva y Gestión del Talento",
+              "value": "Comunicación Efectiva y Gestión del Talento",
+              "description": "",
+              "displayOrder": 15
+            },
+            {
+              "label": "PDE Inteligencia Emocional y Coaching",
+              "value": "Inteligencia Emocional y Coaching",
+              "description": "",
+              "displayOrder": 16
+            },
+            {
+              "label": "PDE Felicidad Organizacional e Inteligencia Emocional",
+              "value": "Felicidad Organizacional e Inteligencia Emocional",
+              "description": "",
+              "displayOrder": 17
+            },
+            {
+              "label": "PDE Liderazgo y Negociación de Conflictos",
+              "value": "Liderazgo y Negociación de Conflictos",
+              "description": "",
+              "displayOrder": 18
+            },
+            {
+              "label": "PDE Habilidades para la Gestión de Equipos",
+              "value": "Habilidades para la Gestión de Equipos",
+              "description": "",
+              "displayOrder": 19
+            },
+            {
+              "label": "Diplomado en Marketing Digital y Ecommerce",
+              "value": "Diplomado en Marketing Digital y Ecommerce",
+              "description": "",
+              "displayOrder": 20
+            },
+            {
+              "label": "Diplomado Inteligencia Emocional &amp; Coaching",
+              "value": "Diplomado Inteligencia Emocional & Coaching",
+              "description": "",
+              "displayOrder": 21
+            },
+            {
+              "label": "Diplomado Liderazgo y Gestión del Talento",
+              "value": "Diplomado Liderazgo y Gestión del Talento",
+              "description": "",
+              "displayOrder": 22
+            },
+            {
+              "label": "Diplomado Habilidades para la Gestión de Equipos",
+              "value": "Diplomado Habilidades para la Gestión de Equipos",
+              "description": "",
+              "displayOrder": 23
+            },
+            {
+              "label": "Diplomado Gestión Felicidad y Bienestar Organizacional",
+              "value": "Diplomado Gestión Felicidad y Bienestar Organizacional",
+              "description": "",
+              "displayOrder": 24
+            },
+            {
+              "label": "Diplomado Marketing Digital y Analítica",
+              "value": "Diplomado Marketing Digital y Analítica",
+              "description": "",
+              "displayOrder": 25
+            }
+          ],
+          "fieldType": "dropdown"
+        }
+      ]
+    },
+    {
+      "groupType": "default_group",
+      "richTextType": "text",
+      "fields": [
+        {
+          "objectTypeId": "0-1",
+          "name": "medio_de_contacto__udn_udep_",
+          "label": "¿Cómo quiere ser contactado?",
+          "required": true,
+          "hidden": false,
+          "options": [
+            {
+              "label": "Teléfono",
+              "value": "Teléfono",
+              "description": "",
+              "displayOrder": -1
+            },
+            {
+              "label": "Correo",
+              "value": "Correo",
+              "description": "",
+              "displayOrder": -1
+            },
+            {
+              "label": "WhatsApp",
+              "value": "WhatsApp",
+              "description": "",
+              "displayOrder": -1
+            }
+          ],
+          "fieldType": "dropdown"
+        }
+      ]
+    },
+    {
+      "groupType": "default_group",
+      "richTextType": "text",
+      "fields": [
+        {
+          "objectTypeId": "0-1",
+          "name": "mensaje",
+          "label": "Mensaje",
+          "required": false,
+          "hidden": false,
+          "fieldType": "multi_line_text"
+        }
+      ]
+    }
+  ],
+  "configuration": {
+    "language": "es",
+    "cloneable": true,
+    "postSubmitAction": {
+      "type": "thank_you",
+      "value": "<p>Gracias, te contactaremos a la brevedad.</p>"
+    },
+    "editable": true,
+    "archivable": true,
+    "recaptchaEnabled": true,
+    "notifyContactOwner": false,
+    "createNewContactForNewEmail": false,
+    "prePopulateKnownValues": true,
+    "allowLinkToResetKnownValues": false,
+    "embedType": "V3"
+  },
+  "displayOptions": {
+    "renderRawHtml": false,
+    "theme": "default_style",
+    "submitButtonText": "ENVIAR",
+    "style": {
+      "fontFamily": "Oswald",
+      "backgroundWidth": "100%",
+      "labelTextColor": "#ffffff",
+      "labelTextSize": "14px",
+      "helpTextColor": "#7C98B6",
+      "helpTextSize": "11px",
+      "legalConsentTextColor": "#ffffff",
+      "legalConsentTextSize": "14px",
+      "submitColor": "#005cb9",
+      "submitAlignment": "left",
+      "submitFontColor": "#ffffff",
+      "submitSize": "14px"
+    },
+    "cssClass": "hs-form stacked"
+  },
+  "legalConsentOptions": {
+    "subscriptionTypeIds": [
+      608587966
+    ],
+    "lawfulBasis": "lead",
+    "privacyText": "<p>Al completar este formulario autorizo expresamente a la Universidad de los Andes, Universidad de Piura, UA blended SpA y filiales para que me contacten y/o envíen información respecto de sus Programas de Postgrados y Educación Continua y otra información de interés.</p>",
+    "type": "legitimate_interest"
+  },
+  "formType": "hubspot"
+}

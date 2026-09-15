@@ -1,0 +1,166 @@
+{
+  "id": "1645743473",
+  "isEnabled": true,
+  "flowType": "WORKFLOW",
+  "revisionId": "10",
+  "name": "0307. Activador Cluster Emprendimiento Innovación y Tecnología (UDN UDEP)",
+  "uuid": "0307. Activador Cluster Emprendimiento Innovación y Tecnología (UDN UDEP)-1645743473",
+  "createdAt": "2025-04-11T21:19:48.554Z",
+  "updatedAt": "2026-01-09T01:23:29.352Z",
+  "startActionId": "1",
+  "nextAvailableActionId": "2",
+  "actions": [
+    {
+      "actionId": "1",
+      "actionTypeVersion": 0,
+      "actionTypeId": "0-15",
+      "fields": {
+        "flow_id": "1631981736"
+      },
+      "type": "SINGLE_CONNECTION"
+    }
+  ],
+  "enrollmentCriteria": {
+    "shouldReEnroll": true,
+    "listFilterBranch": {
+      "filterBranches": [
+        {
+          "filterBranches": [],
+          "filters": [
+            {
+              "formId": "6000e13b-623c-4ef2-8046-4897f43803f6",
+              "operator": "FILLED_OUT",
+              "filterType": "FORM_SUBMISSION"
+            }
+          ],
+          "filterBranchType": "AND",
+          "filterBranchOperator": "AND"
+        },
+        {
+          "filterBranches": [],
+          "filters": [
+            {
+              "formId": "0ec1253b-1715-4d5e-9e9c-0840a7e1c703",
+              "operator": "FILLED_OUT",
+              "filterType": "FORM_SUBMISSION"
+            }
+          ],
+          "filterBranchType": "AND",
+          "filterBranchOperator": "AND"
+        },
+        {
+          "filterBranches": [],
+          "filters": [
+            {
+              "formId": "9359c5fb-9bf0-49ff-8048-d44d56eddeb1",
+              "operator": "FILLED_OUT",
+              "filterType": "FORM_SUBMISSION"
+            }
+          ],
+          "filterBranchType": "AND",
+          "filterBranchOperator": "AND"
+        },
+        {
+          "filterBranches": [],
+          "filters": [
+            {
+              "formId": "5878cd5d-839e-4146-bc79-725360097a74",
+              "operator": "FILLED_OUT",
+              "filterType": "FORM_SUBMISSION"
+            }
+          ],
+          "filterBranchType": "AND",
+          "filterBranchOperator": "AND"
+        },
+        {
+          "filterBranches": [],
+          "filters": [
+            {
+              "formId": "b8164bf0-4166-46aa-8760-5cb87ebd8888",
+              "operator": "FILLED_OUT",
+              "filterType": "FORM_SUBMISSION"
+            }
+          ],
+          "filterBranchType": "AND",
+          "filterBranchOperator": "AND"
+        }
+      ],
+      "filters": [],
+      "filterBranchType": "OR",
+      "filterBranchOperator": "OR"
+    },
+    "unEnrollObjectsNotMeetingCriteria": false,
+    "reEnrollmentTriggersFilterBranches": [
+      {
+        "filterBranches": [],
+        "filters": [
+          {
+            "formId": "9359c5fb-9bf0-49ff-8048-d44d56eddeb1",
+            "operator": "FILLED_OUT",
+            "filterType": "FORM_SUBMISSION"
+          }
+        ],
+        "filterBranchType": "AND",
+        "filterBranchOperator": "AND"
+      },
+      {
+        "filterBranches": [],
+        "filters": [
+          {
+            "formId": "b8164bf0-4166-46aa-8760-5cb87ebd8888",
+            "operator": "FILLED_OUT",
+            "filterType": "FORM_SUBMISSION"
+          }
+        ],
+        "filterBranchType": "AND",
+        "filterBranchOperator": "AND"
+      },
+      {
+        "filterBranches": [],
+        "filters": [
+          {
+            "formId": "6000e13b-623c-4ef2-8046-4897f43803f6",
+            "operator": "FILLED_OUT",
+            "filterType": "FORM_SUBMISSION"
+          }
+        ],
+        "filterBranchType": "AND",
+        "filterBranchOperator": "AND"
+      },
+      {
+        "filterBranches": [],
+        "filters": [
+          {
+            "formId": "5878cd5d-839e-4146-bc79-725360097a74",
+            "operator": "FILLED_OUT",
+            "filterType": "FORM_SUBMISSION"
+          }
+        ],
+        "filterBranchType": "AND",
+        "filterBranchOperator": "AND"
+      },
+      {
+        "filterBranches": [],
+        "filters": [
+          {
+            "formId": "0ec1253b-1715-4d5e-9e9c-0840a7e1c703",
+            "operator": "FILLED_OUT",
+            "filterType": "FORM_SUBMISSION"
+          }
+        ],
+        "filterBranchType": "AND",
+        "filterBranchOperator": "AND"
+      }
+    ],
+    "type": "LIST_BASED"
+  },
+  "timeWindows": [],
+  "blockedDates": [],
+  "customProperties": {},
+  "dataSources": [],
+  "crmObjectCreationStatus": "COMPLETE",
+  "suppressionListIds": [],
+  "canEnrollFromSalesforce": false,
+  "type": "CONTACT_FLOW",
+  "objectTypeId": "0-1"
+}

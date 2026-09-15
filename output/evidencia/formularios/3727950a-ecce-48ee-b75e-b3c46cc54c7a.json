@@ -1,0 +1,366 @@
+{
+  "id": "3727950a-ecce-48ee-b75e-b3c46cc54c7a",
+  "name": "Curso Felicidad y Bienestar Organizacional Piura (UDN UDEP)",
+  "createdAt": "2025-03-21T13:51:19.801Z",
+  "updatedAt": "2026-09-15T13:26:47.285Z",
+  "archived": false,
+  "fieldGroups": [
+    {
+      "groupType": "default_group",
+      "richTextType": "text",
+      "richText": "<h1 id=\"inscripcion\" style=\"font-weight: bold; margin: 0px; font-size: 28px;\"><span style=\"color: #ffffff;\"><strong style=\"font-weight: 600;\">¿QUIERES MÁS INFORMACIÓN?</strong></span></h1>"
+    },
+    {
+      "groupType": "default_group",
+      "richTextType": "text",
+      "fields": [
+        {
+          "objectTypeId": "0-1",
+          "name": "firstname",
+          "label": "Nombre",
+          "required": true,
+          "hidden": false,
+          "fieldType": "single_line_text"
+        },
+        {
+          "objectTypeId": "0-1",
+          "name": "lastname",
+          "label": "Apellido",
+          "required": true,
+          "hidden": false,
+          "fieldType": "single_line_text"
+        }
+      ]
+    },
+    {
+      "groupType": "default_group",
+      "richTextType": "text",
+      "fields": [
+        {
+          "objectTypeId": "0-1",
+          "name": "phone",
+          "label": "Número de teléfono",
+          "required": true,
+          "hidden": false,
+          "useCountryCodeSelect": true,
+          "validation": {
+            "minAllowedDigits": 10,
+            "maxAllowedDigits": 14
+          },
+          "fieldType": "phone"
+        },
+        {
+          "objectTypeId": "0-1",
+          "name": "email",
+          "label": "Email",
+          "required": true,
+          "hidden": false,
+          "validation": {
+            "blockedEmailDomains": [],
+            "useDefaultBlockList": false
+          },
+          "fieldType": "email"
+        }
+      ]
+    },
+    {
+      "groupType": "default_group",
+      "richTextType": "text",
+      "fields": [
+        {
+          "objectTypeId": "0-1",
+          "name": "nivel_de_estudios__udn_udep_",
+          "label": "Nivel de Estudios",
+          "required": true,
+          "hidden": false,
+          "options": [
+            {
+              "label": "Bachiller",
+              "value": "Grado Bachiller",
+              "description": "",
+              "displayOrder": 0
+            },
+            {
+              "label": "Técnico",
+              "value": "Técnico",
+              "description": "",
+              "displayOrder": 1
+            },
+            {
+              "label": "Títulado",
+              "value": "Títulado",
+              "description": "",
+              "displayOrder": 2
+            },
+            {
+              "label": "Magister",
+              "value": "Magister",
+              "description": "",
+              "displayOrder": 3
+            },
+            {
+              "label": "Doctorado",
+              "value": "Doctorado",
+              "description": "",
+              "displayOrder": 4
+            },
+            {
+              "label": "Secundaria Completa",
+              "value": "Secundaria Completa",
+              "description": "",
+              "displayOrder": 5
+            }
+          ],
+          "fieldType": "dropdown"
+        }
+      ]
+    },
+    {
+      "groupType": "default_group",
+      "richTextType": "text",
+      "fields": [
+        {
+          "objectTypeId": "0-1",
+          "name": "cursos_piura__udn_udep_",
+          "label": "Cursos Piura",
+          "required": false,
+          "hidden": true,
+          "defaultValues": [
+            "Gestión del Talento"
+          ],
+          "options": [
+            {
+              "label": "Negocios e-commerce",
+              "value": "Negocios e-commerce",
+              "description": "",
+              "displayOrder": 0
+            },
+            {
+              "label": "Business Intelligence &amp; Data Science",
+              "value": "Business Intelligence & Data Science",
+              "description": "",
+              "displayOrder": 1
+            },
+            {
+              "label": "Gestión del Talento",
+              "value": "Gestión del Talento",
+              "description": "",
+              "displayOrder": 2
+            },
+            {
+              "label": "Supply Chain Management",
+              "value": "Supply Chain Management",
+              "description": "",
+              "displayOrder": 3
+            },
+            {
+              "label": "Gestión Comercial y de Ventas",
+              "value": "Gestión Comercial y de Ventas",
+              "description": "",
+              "displayOrder": 4
+            },
+            {
+              "label": "Gestión de Equipos de Alto Rendimiento",
+              "value": "Gestión de Equipos de Alto Rendimiento",
+              "description": "",
+              "displayOrder": 5
+            },
+            {
+              "label": "Liderazgo en la era digital",
+              "value": "Liderazgo en la era digital",
+              "description": "",
+              "displayOrder": 6
+            },
+            {
+              "label": "Marketing Digital",
+              "value": "Marketing Digital",
+              "description": "",
+              "displayOrder": 7
+            },
+            {
+              "label": "Digital Business Model",
+              "value": "Digital Business Model",
+              "description": "",
+              "displayOrder": 8
+            },
+            {
+              "label": "Negociación y Resolución de Conflictos",
+              "value": "Negociación y Resolución de Conflictos",
+              "description": "",
+              "displayOrder": 9
+            },
+            {
+              "label": "Logística Integral",
+              "value": "Logística Integral",
+              "description": "",
+              "displayOrder": 10
+            },
+            {
+              "label": "Comunicación Efectiva",
+              "value": "Comunicación Efectiva",
+              "description": "",
+              "displayOrder": 11
+            },
+            {
+              "label": "Gestión de Personas",
+              "value": "Gestión de Personas",
+              "description": "",
+              "displayOrder": 12
+            },
+            {
+              "label": "Desarrollo Organizacional y Gestión del Cambio",
+              "value": "Desarrollo Organizacional y Gestión del Cambio",
+              "description": "",
+              "displayOrder": 13
+            },
+            {
+              "label": "Transformación Digital",
+              "value": "Transformación Digital",
+              "description": "",
+              "displayOrder": 14
+            },
+            {
+              "label": "Felicidad y Bienestar Organizacional",
+              "value": "Felicidad y Bienestar Organizacional",
+              "description": "",
+              "displayOrder": 15
+            },
+            {
+              "label": "Inteligencia Emocional",
+              "value": "Inteligencia Emocional",
+              "description": "",
+              "displayOrder": 16
+            },
+            {
+              "label": "Negocios Ecommerce",
+              "value": "Negocios Ecommerce",
+              "description": "",
+              "displayOrder": 17
+            },
+            {
+              "label": "Comunicacio Efectiva",
+              "value": "Comunicacio Efectiva",
+              "description": "",
+              "displayOrder": 18
+            },
+            {
+              "label": "Negocios E Commerce",
+              "value": "Negocios E Commerce",
+              "description": "",
+              "displayOrder": 19
+            },
+            {
+              "label": "Negocios Innovadores",
+              "value": "Negocios Innovadores",
+              "description": "",
+              "displayOrder": 20
+            },
+            {
+              "label": "Coaching",
+              "value": "Coaching",
+              "description": "",
+              "displayOrder": 21
+            }
+          ],
+          "fieldType": "dropdown"
+        }
+      ]
+    },
+    {
+      "groupType": "default_group",
+      "richTextType": "text",
+      "fields": [
+        {
+          "objectTypeId": "0-1",
+          "name": "medio_de_contacto__udn_udep_",
+          "label": "¿Cómo quiere ser contactado?",
+          "required": true,
+          "hidden": false,
+          "options": [
+            {
+              "label": "Teléfono",
+              "value": "Teléfono",
+              "description": "",
+              "displayOrder": -1
+            },
+            {
+              "label": "Correo",
+              "value": "Correo",
+              "description": "",
+              "displayOrder": -1
+            },
+            {
+              "label": "WhatsApp",
+              "value": "WhatsApp",
+              "description": "",
+              "displayOrder": -1
+            }
+          ],
+          "fieldType": "dropdown"
+        }
+      ]
+    },
+    {
+      "groupType": "default_group",
+      "richTextType": "text",
+      "fields": [
+        {
+          "objectTypeId": "0-1",
+          "name": "mensaje",
+          "label": "Mensaje",
+          "required": false,
+          "hidden": false,
+          "fieldType": "multi_line_text"
+        }
+      ]
+    }
+  ],
+  "configuration": {
+    "language": "es",
+    "cloneable": true,
+    "postSubmitAction": {
+      "type": "thank_you",
+      "value": "<p>Gracias, te contactaremos a la brevedad.</p>"
+    },
+    "editable": true,
+    "archivable": true,
+    "recaptchaEnabled": true,
+    "notifyContactOwner": false,
+    "notifyRecipients": [
+      "8918095"
+    ],
+    "createNewContactForNewEmail": false,
+    "prePopulateKnownValues": true,
+    "allowLinkToResetKnownValues": false,
+    "embedType": "V3"
+  },
+  "displayOptions": {
+    "renderRawHtml": false,
+    "theme": "default_style",
+    "submitButtonText": "ENVIAR",
+    "style": {
+      "fontFamily": "Oswald",
+      "backgroundWidth": "100%",
+      "labelTextColor": "#ffffff",
+      "labelTextSize": "14px",
+      "helpTextColor": "#7C98B6",
+      "helpTextSize": "11px",
+      "legalConsentTextColor": "#ffffff",
+      "legalConsentTextSize": "14px",
+      "submitColor": "#005cb9",
+      "submitAlignment": "left",
+      "submitFontColor": "#ffffff",
+      "submitSize": "14px"
+    },
+    "cssClass": "hs-form stacked"
+  },
+  "legalConsentOptions": {
+    "subscriptionTypeIds": [
+      608587966
+    ],
+    "lawfulBasis": "lead",
+    "privacyText": "<p>Al completar este formulario autorizo expresamente a la Universidad de los Andes, Universidad de Piura, UA blended SpA y filiales para que me contacten y/o envíen información respecto de sus Programas de Postgrados y Educación Continua y otra información de interés.</p>",
+    "type": "legitimate_interest"
+  },
+  "formType": "hubspot"
+}

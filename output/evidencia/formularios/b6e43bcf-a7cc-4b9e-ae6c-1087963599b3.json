@@ -1,0 +1,341 @@
+{
+  "id": "b6e43bcf-a7cc-4b9e-ae6c-1087963599b3",
+  "name": "Curso Marketing Digital (UDN-UDEP)",
+  "createdAt": "2026-04-07T03:29:03.186Z",
+  "updatedAt": "2026-06-11T06:04:55.826Z",
+  "archived": false,
+  "fieldGroups": [
+    {
+      "groupType": "default_group",
+      "richTextType": "text",
+      "fields": [
+        {
+          "objectTypeId": "0-1",
+          "name": "firstname",
+          "label": "Nombre",
+          "required": true,
+          "hidden": false,
+          "fieldType": "single_line_text"
+        },
+        {
+          "objectTypeId": "0-1",
+          "name": "lastname",
+          "label": "Apellidos",
+          "required": true,
+          "hidden": false,
+          "fieldType": "single_line_text"
+        },
+        {
+          "objectTypeId": "0-1",
+          "name": "phone",
+          "label": "Número de teléfono",
+          "required": false,
+          "hidden": false,
+          "useCountryCodeSelect": false,
+          "validation": {
+            "minAllowedDigits": 7,
+            "maxAllowedDigits": 20
+          },
+          "fieldType": "phone"
+        },
+        {
+          "objectTypeId": "0-1",
+          "name": "email",
+          "label": "Correo",
+          "required": true,
+          "hidden": false,
+          "validation": {
+            "blockedEmailDomains": [],
+            "useDefaultBlockList": false
+          },
+          "fieldType": "email"
+        },
+        {
+          "objectTypeId": "0-1",
+          "name": "nivel_de_estudios__udn_udep_",
+          "label": "Nivel de Estudios",
+          "required": true,
+          "hidden": false,
+          "options": [
+            {
+              "label": "Bachiller",
+              "value": "Grado Bachiller",
+              "description": "",
+              "displayOrder": -1
+            },
+            {
+              "label": "Técnico",
+              "value": "Técnico",
+              "description": "",
+              "displayOrder": -1
+            },
+            {
+              "label": "Títulado",
+              "value": "Títulado",
+              "description": "",
+              "displayOrder": -1
+            },
+            {
+              "label": "Magister",
+              "value": "Magister",
+              "description": "",
+              "displayOrder": -1
+            },
+            {
+              "label": "Doctorado",
+              "value": "Doctorado",
+              "description": "",
+              "displayOrder": -1
+            },
+            {
+              "label": "Secundaria Completa",
+              "value": "Secundaria Completa",
+              "description": "",
+              "displayOrder": -1
+            },
+            {
+              "label": "Título Profesional",
+              "value": "Titulo Profesional",
+              "description": "",
+              "displayOrder": -1
+            },
+            {
+              "label": "Maestría",
+              "value": "Maestría",
+              "description": "",
+              "displayOrder": -1
+            },
+            {
+              "label": "Técnico Profesional",
+              "value": "Técnico Profesional",
+              "description": "",
+              "displayOrder": -1
+            },
+            {
+              "label": "Universitaria Incompleta",
+              "value": "Universitaria Incompleta",
+              "description": "",
+              "displayOrder": -1
+            },
+            {
+              "label": "Universitaria Completa",
+              "value": "Universitaria Completa",
+              "description": "",
+              "displayOrder": -1
+            },
+            {
+              "label": "Posgrado",
+              "value": "Postgrado",
+              "description": "",
+              "displayOrder": -1
+            },
+            {
+              "label": "Técnico de Nivel Superior (TNS)",
+              "value": "Técnico de Nivel Superior (TNS)",
+              "description": "",
+              "displayOrder": -1
+            },
+            {
+              "label": "Técnico Profesional (Instituto profesional)",
+              "value": "Técnico Profesional (Instituto profesional)",
+              "description": "",
+              "displayOrder": -1
+            },
+            {
+              "label": "Carrera Universitaria",
+              "value": "Carrera Universitaria",
+              "description": "",
+              "displayOrder": -1
+            }
+          ],
+          "fieldType": "dropdown"
+        },
+        {
+          "objectTypeId": "0-1",
+          "name": "cursos_piura",
+          "label": "Cursos Piura",
+          "required": false,
+          "hidden": true,
+          "options": [
+            {
+              "label": "Negocios e-commerce",
+              "value": "Negocios e-commerce",
+              "description": "",
+              "displayOrder": -1
+            },
+            {
+              "label": "Business Intelligence &amp; Data Science",
+              "value": "Business Intelligence & Data Science",
+              "description": "",
+              "displayOrder": -1
+            },
+            {
+              "label": "Gestión del Talento",
+              "value": "Gestión del Talento",
+              "description": "",
+              "displayOrder": -1
+            },
+            {
+              "label": "Supply Chain Management",
+              "value": "Supply Chain Management",
+              "description": "",
+              "displayOrder": -1
+            },
+            {
+              "label": "Gestión Comercial y de Ventas",
+              "value": "Gestión Comercial y de Ventas",
+              "description": "",
+              "displayOrder": -1
+            },
+            {
+              "label": "Gestión de Equipos de Alto Rendimiento",
+              "value": "Gestión de Equipos de Alto Rendimiento",
+              "description": "",
+              "displayOrder": -1
+            },
+            {
+              "label": "Liderazgo en la era digital",
+              "value": "Liderazgo en la era digital",
+              "description": "",
+              "displayOrder": -1
+            },
+            {
+              "label": "Marketing Digital",
+              "value": "Marketing Digital",
+              "description": "",
+              "displayOrder": -1
+            },
+            {
+              "label": "Digital Business Model",
+              "value": "Digital Business Model",
+              "description": "",
+              "displayOrder": -1
+            },
+            {
+              "label": "Negociación y Resolución de Conflictos",
+              "value": "Negociación y Resolución de Conflictos",
+              "description": "",
+              "displayOrder": -1
+            },
+            {
+              "label": "Logística Integral",
+              "value": "Logística Integral",
+              "description": "",
+              "displayOrder": -1
+            },
+            {
+              "label": "Comunicación Efectiva",
+              "value": "Comunicación Efectiva",
+              "description": "",
+              "displayOrder": -1
+            },
+            {
+              "label": "Gestión de Personas",
+              "value": "Gestión de Personas",
+              "description": "",
+              "displayOrder": -1
+            },
+            {
+              "label": "Desarrollo Organizacional y Gestión del Cambio",
+              "value": "Desarrollo Organizacional y Gestión del Cambio",
+              "description": "",
+              "displayOrder": -1
+            },
+            {
+              "label": "Transformación Digital",
+              "value": "Transformación Digital",
+              "description": "",
+              "displayOrder": -1
+            },
+            {
+              "label": "Felicidad y Bienestar Organizacional",
+              "value": "Felicidad y Bienestar Organizacional",
+              "description": "",
+              "displayOrder": -1
+            }
+          ],
+          "fieldType": "dropdown"
+        },
+        {
+          "objectTypeId": "0-1",
+          "name": "medio_de_contacto__udn_udep_",
+          "label": "¿Cómo quiere ser contactado?",
+          "required": true,
+          "hidden": false,
+          "options": [
+            {
+              "label": "Teléfono",
+              "value": "Teléfono",
+              "description": "",
+              "displayOrder": -1
+            },
+            {
+              "label": "Correo",
+              "value": "Correo",
+              "description": "",
+              "displayOrder": -1
+            },
+            {
+              "label": "WhatsApp",
+              "value": "WhatsApp",
+              "description": "",
+              "displayOrder": -1
+            }
+          ],
+          "fieldType": "dropdown"
+        },
+        {
+          "objectTypeId": "0-1",
+          "name": "message",
+          "label": "Mensaje",
+          "required": false,
+          "hidden": false,
+          "fieldType": "multi_line_text"
+        }
+      ]
+    }
+  ],
+  "configuration": {
+    "language": "es",
+    "cloneable": true,
+    "postSubmitAction": {
+      "type": "thank_you",
+      "value": ""
+    },
+    "editable": true,
+    "archivable": true,
+    "recaptchaEnabled": true,
+    "notifyContactOwner": false,
+    "notifyRecipients": [
+      "83348853"
+    ],
+    "createNewContactForNewEmail": false,
+    "prePopulateKnownValues": true,
+    "allowLinkToResetKnownValues": false,
+    "embedType": "V4"
+  },
+  "displayOptions": {
+    "renderRawHtml": false,
+    "theme": "default_style",
+    "submitButtonText": "",
+    "style": {
+      "fontFamily": "arial, helvetica, sans-serif",
+      "backgroundWidth": "100%",
+      "labelTextColor": "#33475b",
+      "labelTextSize": "11px",
+      "helpTextColor": "#7C98B6",
+      "helpTextSize": "11px",
+      "legalConsentTextColor": "#33475b",
+      "legalConsentTextSize": "14px",
+      "submitColor": "#ff7a59",
+      "submitAlignment": "left",
+      "submitFontColor": "#ffffff",
+      "submitSize": "12px"
+    },
+    "cssClass": null
+  },
+  "legalConsentOptions": {
+    "type": "none"
+  },
+  "formType": "hubspot"
+}

@@ -34,8 +34,7 @@
       "Bash(curl *)",
       "Bash(wget *)",
       "Bash(rm *)",
-      "Bash(sudo *)",
-      "Bash(git push *)"
+      "Bash(sudo *)"
     ]
   },
   "hooks": {

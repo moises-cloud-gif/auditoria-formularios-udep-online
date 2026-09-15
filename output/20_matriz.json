@@ -1,5 +1,5 @@
 {
-  "generado": "2026-09-15T22:18:37",
+  "generado": "2026-09-15T22:23:47",
   "filas": [
     {
       "slug": "curso-de-analitica-digital-growth-marketing",
@@ -91,7 +91,8 @@
         {
           "flowId": "1631969831",
           "nombre": "0305. Activador Cursos Piura (UDN UDEP)",
-          "activo": true
+          "activo": true,
+          "en_criterios_de_inscripcion": true
         }
       ],
       "estado_activador": "UNO",
@@ -146,7 +147,8 @@
         {
           "flowId": "1631969831",
           "nombre": "0305. Activador Cursos Piura (UDN UDEP)",
-          "activo": true
+          "activo": true,
+          "en_criterios_de_inscripcion": true
         }
       ],
       "estado_activador": "UNO",
@@ -246,7 +248,8 @@
         {
           "flowId": "1631969831",
           "nombre": "0305. Activador Cursos Piura (UDN UDEP)",
-          "activo": true
+          "activo": true,
+          "en_criterios_de_inscripcion": true
         }
       ],
       "estado_activador": "UNO",
@@ -301,7 +304,8 @@
         {
           "flowId": "1631969831",
           "nombre": "0305. Activador Cursos Piura (UDN UDEP)",
-          "activo": true
+          "activo": true,
+          "en_criterios_de_inscripcion": true
         }
       ],
       "estado_activador": "UNO",
@@ -356,7 +360,8 @@
         {
           "flowId": "1631969831",
           "nombre": "0305. Activador Cursos Piura (UDN UDEP)",
-          "activo": true
+          "activo": true,
+          "en_criterios_de_inscripcion": true
         }
       ],
       "estado_activador": "UNO",
@@ -411,7 +416,8 @@
         {
           "flowId": "1631969831",
           "nombre": "0305. Activador Cursos Piura (UDN UDEP)",
-          "activo": true
+          "activo": true,
+          "en_criterios_de_inscripcion": true
         }
       ],
       "estado_activador": "UNO",
@@ -466,7 +472,8 @@
         {
           "flowId": "1631969831",
           "nombre": "0305. Activador Cursos Piura (UDN UDEP)",
-          "activo": true
+          "activo": true,
+          "en_criterios_de_inscripcion": true
         }
       ],
       "estado_activador": "UNO",
@@ -515,7 +522,8 @@
         {
           "flowId": "1631969831",
           "nombre": "0305. Activador Cursos Piura (UDN UDEP)",
-          "activo": true
+          "activo": true,
+          "en_criterios_de_inscripcion": true
         }
       ],
       "estado_activador": "UNO",
@@ -610,7 +618,8 @@
         {
           "flowId": "1631969831",
           "nombre": "0305. Activador Cursos Piura (UDN UDEP)",
-          "activo": true
+          "activo": true,
+          "en_criterios_de_inscripcion": true
         }
       ],
       "estado_activador": "UNO",
@@ -667,7 +676,8 @@
         {
           "flowId": "1631969831",
           "nombre": "0305. Activador Cursos Piura (UDN UDEP)",
-          "activo": true
+          "activo": true,
+          "en_criterios_de_inscripcion": true
         }
       ],
       "estado_activador": "UNO",
@@ -767,7 +777,8 @@
         {
           "flowId": "1631969831",
           "nombre": "0305. Activador Cursos Piura (UDN UDEP)",
-          "activo": true
+          "activo": true,
+          "en_criterios_de_inscripcion": true
         }
       ],
       "estado_activador": "UNO",
@@ -822,7 +833,8 @@
         {
           "flowId": "1631969831",
           "nombre": "0305. Activador Cursos Piura (UDN UDEP)",
-          "activo": true
+          "activo": true,
+          "en_criterios_de_inscripcion": true
         }
       ],
       "estado_activador": "UNO",
@@ -912,7 +924,8 @@
         {
           "flowId": "1631969831",
           "nombre": "0305. Activador Cursos Piura (UDN UDEP)",
-          "activo": true
+          "activo": true,
+          "en_criterios_de_inscripcion": true
         }
       ],
       "estado_activador": "UNO",
@@ -967,7 +980,8 @@
         {
           "flowId": "1631969831",
           "nombre": "0305. Activador Cursos Piura (UDN UDEP)",
-          "activo": true
+          "activo": true,
+          "en_criterios_de_inscripcion": true
         }
       ],
       "estado_activador": "UNO",
@@ -1022,7 +1036,8 @@
         {
           "flowId": "1631969831",
           "nombre": "0305. Activador Cursos Piura (UDN UDEP)",
-          "activo": true
+          "activo": true,
+          "en_criterios_de_inscripcion": true
         }
       ],
       "estado_activador": "UNO",
@@ -1077,7 +1092,8 @@
         {
           "flowId": "1854523916",
           "nombre": "0305. Activador Diplomados Piura (UDN UDEP)",
-          "activo": true
+          "activo": true,
+          "en_criterios_de_inscripcion": true
         }
       ],
       "estado_activador": "UNO",
@@ -1132,7 +1148,8 @@
         {
           "flowId": "1854523916",
           "nombre": "0305. Activador Diplomados Piura (UDN UDEP)",
-          "activo": true
+          "activo": true,
+          "en_criterios_de_inscripcion": true
         }
       ],
       "estado_activador": "UNO",
@@ -1187,7 +1204,8 @@
         {
           "flowId": "1854523916",
           "nombre": "0305. Activador Diplomados Piura (UDN UDEP)",
-          "activo": true
+          "activo": true,
+          "en_criterios_de_inscripcion": true
         }
       ],
       "estado_activador": "UNO",
@@ -1242,7 +1260,8 @@
         {
           "flowId": "1854523916",
           "nombre": "0305. Activador Diplomados Piura (UDN UDEP)",
-          "activo": true
+          "activo": true,
+          "en_criterios_de_inscripcion": true
         }
       ],
       "estado_activador": "UNO",
@@ -1297,7 +1316,8 @@
         {
           "flowId": "1854523916",
           "nombre": "0305. Activador Diplomados Piura (UDN UDEP)",
-          "activo": true
+          "activo": true,
+          "en_criterios_de_inscripcion": true
         }
       ],
       "estado_activador": "UNO",
@@ -1352,7 +1372,8 @@
         {
           "flowId": "1631988744",
           "nombre": "0302. Activador Cluster Marketing Digital Piura (UDN UDEP)",
-          "activo": true
+          "activo": true,
+          "en_criterios_de_inscripcion": true
         }
       ],
       "estado_activador": "UNO",
@@ -1412,7 +1433,8 @@
         {
           "flowId": "1631988748",
           "nombre": "0303. Activador Cluster Habilidades de Gestión Piura (UDN UDEP)",
-          "activo": true
+          "activo": true,
+          "en_criterios_de_inscripcion": true
         }
       ],
       "estado_activador": "UNO",
@@ -1467,7 +1489,8 @@
         {
           "flowId": "1631988748",
           "nombre": "0303. Activador Cluster Habilidades de Gestión Piura (UDN UDEP)",
-          "activo": true
+          "activo": true,
+          "en_criterios_de_inscripcion": true
         }
       ],
       "estado_activador": "UNO",
@@ -1522,7 +1545,8 @@
         {
           "flowId": "1631988748",
           "nombre": "0303. Activador Cluster Habilidades de Gestión Piura (UDN UDEP)",
-          "activo": true
+          "activo": true,
+          "en_criterios_de_inscripcion": true
         }
       ],
       "estado_activador": "UNO",
@@ -1577,7 +1601,8 @@
         {
           "flowId": "1631988748",
           "nombre": "0303. Activador Cluster Habilidades de Gestión Piura (UDN UDEP)",
-          "activo": true
+          "activo": true,
+          "en_criterios_de_inscripcion": true
         }
       ],
       "estado_activador": "UNO",
@@ -1632,7 +1657,8 @@
         {
           "flowId": "1631988748",
           "nombre": "0303. Activador Cluster Habilidades de Gestión Piura (UDN UDEP)",
-          "activo": true
+          "activo": true,
+          "en_criterios_de_inscripcion": true
         }
       ],
       "estado_activador": "UNO",
@@ -1687,7 +1713,8 @@
         {
           "flowId": "1645743473",
           "nombre": "0307. Activador Cluster Emprendimiento Innovación y Tecnología (UDN UDEP)",
-          "activo": true
+          "activo": true,
+          "en_criterios_de_inscripcion": true
         }
       ],
       "estado_activador": "UNO",
@@ -1747,7 +1774,8 @@
         {
           "flowId": "1631988748",
           "nombre": "0303. Activador Cluster Habilidades de Gestión Piura (UDN UDEP)",
-          "activo": true
+          "activo": true,
+          "en_criterios_de_inscripcion": true
         }
       ],
       "estado_activador": "UNO",
@@ -1802,7 +1830,8 @@
         {
           "flowId": "1631988748",
           "nombre": "0303. Activador Cluster Habilidades de Gestión Piura (UDN UDEP)",
-          "activo": true
+          "activo": true,
+          "en_criterios_de_inscripcion": true
         }
       ],
       "estado_activador": "UNO",
@@ -1857,7 +1886,8 @@
         {
           "flowId": "1631988748",
           "nombre": "0303. Activador Cluster Habilidades de Gestión Piura (UDN UDEP)",
-          "activo": true
+          "activo": true,
+          "en_criterios_de_inscripcion": true
         }
       ],
       "estado_activador": "UNO",
@@ -1912,7 +1942,8 @@
         {
           "flowId": "1631981721",
           "nombre": "0301. Activador Cluster Liderazgo y Gestión de Personas(UDN UDEP)",
-          "activo": true
+          "activo": true,
+          "en_criterios_de_inscripcion": true
         }
       ],
       "estado_activador": "UNO",
@@ -1967,7 +1998,8 @@
         {
           "flowId": "1631981721",
           "nombre": "0301. Activador Cluster Liderazgo y Gestión de Personas(UDN UDEP)",
-          "activo": true
+          "activo": true,
+          "en_criterios_de_inscripcion": true
         }
       ],
       "estado_activador": "UNO",
@@ -2022,7 +2054,8 @@
         {
           "flowId": "1631981721",
           "nombre": "0301. Activador Cluster Liderazgo y Gestión de Personas(UDN UDEP)",
-          "activo": true
+          "activo": true,
+          "en_criterios_de_inscripcion": true
         }
       ],
       "estado_activador": "UNO",
@@ -2077,7 +2110,8 @@
         {
           "flowId": "1631981721",
           "nombre": "0301. Activador Cluster Liderazgo y Gestión de Personas(UDN UDEP)",
-          "activo": true
+          "activo": true,
+          "en_criterios_de_inscripcion": true
         }
       ],
       "estado_activador": "UNO",
@@ -2137,7 +2171,8 @@
         {
           "flowId": "1631981721",
           "nombre": "0301. Activador Cluster Liderazgo y Gestión de Personas(UDN UDEP)",
-          "activo": true
+          "activo": true,
+          "en_criterios_de_inscripcion": true
         }
       ],
       "estado_activador": "UNO",
@@ -2192,7 +2227,8 @@
         {
           "flowId": "1631988744",
           "nombre": "0302. Activador Cluster Marketing Digital Piura (UDN UDEP)",
-          "activo": true
+          "activo": true,
+          "en_criterios_de_inscripcion": true
         }
       ],
       "estado_activador": "UNO",
@@ -2247,7 +2283,8 @@
         {
           "flowId": "1631988744",
           "nombre": "0302. Activador Cluster Marketing Digital Piura (UDN UDEP)",
-          "activo": true
+          "activo": true,
+          "en_criterios_de_inscripcion": true
         }
       ],
       "estado_activador": "UNO",
@@ -2296,7 +2333,8 @@
         {
           "flowId": "1645743473",
           "nombre": "0307. Activador Cluster Emprendimiento Innovación y Tecnología (UDN UDEP)",
-          "activo": true
+          "activo": true,
+          "en_criterios_de_inscripcion": true
         }
       ],
       "estado_activador": "UNO",
@@ -2351,7 +2389,8 @@
         {
           "flowId": "1645743473",
           "nombre": "0307. Activador Cluster Emprendimiento Innovación y Tecnología (UDN UDEP)",
-          "activo": true
+          "activo": true,
+          "en_criterios_de_inscripcion": true
         }
       ],
       "estado_activador": "UNO",

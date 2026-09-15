@@ -1,0 +1,203 @@
+{
+  "id": "1854523916",
+  "isEnabled": true,
+  "flowType": "WORKFLOW",
+  "revisionId": "4",
+  "name": "0305. Activador Diplomados Piura (UDN UDEP)",
+  "description": "Los formularios y cursos incluidos en este activador son los siguientes:\nCurso Marketing Digital Piura (UDN UDEP)\nCurso Comunicación Efectiva Piura (UDN UDEP)\nCurso Gestión de Personas Piura (UDN UDEP)\nCurso Negociación y Resolución de Conflictos Piura (UDN UDEP)\nCurso Digital Business Model Piura (UDN UDEP)\nCurso Negocios e-commerce Piura (UDN UDEP)\nCurso Gestión del Talento Piura (UDN UDEP)\nCurso Gestión de Equipos de Alto Rendimiento Piura (UDN UDEP)\nCurso Liderazgo en la era digital Piura (UDN UDEP)\nCurso Desarrollo Organizacional y Gestión del Cambio Piura (UDN UDEP)\nCurso Transformación Digital Piura (UDN UDEP)\nCurso Felicidad y Bienestar Organizacional Piura (UDN UDEP)",
+  "createdAt": "2026-07-21T04:06:00.518Z",
+  "updatedAt": "2026-07-21T04:13:10.149Z",
+  "startActionId": "1",
+  "nextAvailableActionId": "2",
+  "actions": [
+    {
+      "actionId": "1",
+      "actionTypeVersion": 0,
+      "actionTypeId": "0-15",
+      "fields": {
+        "flow_id": "1631981736"
+      },
+      "type": "SINGLE_CONNECTION"
+    }
+  ],
+  "enrollmentCriteria": {
+    "shouldReEnroll": true,
+    "listFilterBranch": {
+      "filterBranches": [
+        {
+          "filterBranches": [],
+          "filters": [
+            {
+              "formId": "bef4306e-9106-4ad8-920f-c01e63c7726e",
+              "operator": "FILLED_OUT",
+              "filterType": "FORM_SUBMISSION"
+            }
+          ],
+          "filterBranchType": "AND",
+          "filterBranchOperator": "AND"
+        },
+        {
+          "filterBranches": [],
+          "filters": [
+            {
+              "formId": "74f59f7e-d2cd-40ad-911b-face84652266",
+              "operator": "FILLED_OUT",
+              "filterType": "FORM_SUBMISSION"
+            }
+          ],
+          "filterBranchType": "AND",
+          "filterBranchOperator": "AND"
+        },
+        {
+          "filterBranches": [],
+          "filters": [
+            {
+              "formId": "c86ebf10-b97f-49a4-98ca-c16c183462ad",
+              "operator": "FILLED_OUT",
+              "filterType": "FORM_SUBMISSION"
+            }
+          ],
+          "filterBranchType": "AND",
+          "filterBranchOperator": "AND"
+        },
+        {
+          "filterBranches": [],
+          "filters": [
+            {
+              "formId": "0ce67a0b-b785-4f54-b09f-0016e2f3a4d2",
+              "operator": "FILLED_OUT",
+              "filterType": "FORM_SUBMISSION"
+            }
+          ],
+          "filterBranchType": "AND",
+          "filterBranchOperator": "AND"
+        },
+        {
+          "filterBranches": [],
+          "filters": [
+            {
+              "formId": "36b4d47d-ccc6-4c5f-add9-b6477706ad65",
+              "operator": "FILLED_OUT",
+              "filterType": "FORM_SUBMISSION"
+            }
+          ],
+          "filterBranchType": "AND",
+          "filterBranchOperator": "AND"
+        }
+      ],
+      "filters": [],
+      "filterBranchType": "OR",
+      "filterBranchOperator": "OR"
+    },
+    "unEnrollObjectsNotMeetingCriteria": false,
+    "reEnrollmentTriggersFilterBranches": [
+      {
+        "filterBranches": [],
+        "filters": [
+          {
+            "formId": "0ce67a0b-b785-4f54-b09f-0016e2f3a4d2",
+            "operator": "FILLED_OUT",
+            "filterType": "FORM_SUBMISSION"
+          }
+        ],
+        "filterBranchType": "AND",
+        "filterBranchOperator": "AND"
+      },
+      {
+        "filterBranches": [],
+        "filters": [
+          {
+            "formId": "74f59f7e-d2cd-40ad-911b-face84652266",
+            "operator": "FILLED_OUT",
+            "filterType": "FORM_SUBMISSION"
+          }
+        ],
+        "filterBranchType": "AND",
+        "filterBranchOperator": "AND"
+      },
+      {
+        "filterBranches": [],
+        "filters": [
+          {
+            "formId": "bef4306e-9106-4ad8-920f-c01e63c7726e",
+            "operator": "FILLED_OUT",
+            "filterType": "FORM_SUBMISSION"
+          }
+        ],
+        "filterBranchType": "AND",
+        "filterBranchOperator": "AND"
+      },
+      {
+        "filterBranches": [],
+        "filters": [
+          {
+            "formId": "36b4d47d-ccc6-4c5f-add9-b6477706ad65",
+            "operator": "FILLED_OUT",
+            "filterType": "FORM_SUBMISSION"
+          }
+        ],
+        "filterBranchType": "AND",
+        "filterBranchOperator": "AND"
+      },
+      {
+        "filterBranches": [],
+        "filters": [
+          {
+            "formId": "c86ebf10-b97f-49a4-98ca-c16c183462ad",
+            "operator": "FILLED_OUT",
+            "filterType": "FORM_SUBMISSION"
+          }
+        ],
+        "filterBranchType": "AND",
+        "filterBranchOperator": "AND"
+      }
+    ],
+    "type": "LIST_BASED"
+  },
+  "timeWindows": [],
+  "blockedDates": [],
+  "customProperties": {},
+  "dataSources": [
+    {
+      "name": "fetched_object_323538446",
+      "objectTypeId": "0-47",
+      "associationTypeId": 199,
+      "associationCategory": "HUBSPOT_DEFINED",
+      "sortBy": {
+        "property": "hs_lastmodifieddate",
+        "missing": null,
+        "order": "DESC"
+      },
+      "type": "ASSOCIATION"
+    },
+    {
+      "name": "fetched_object_323538444",
+      "objectTypeId": "0-2",
+      "associationTypeId": 279,
+      "associationCategory": "HUBSPOT_DEFINED",
+      "sortBy": {
+        "property": "hs_lastmodifieddate",
+        "missing": null,
+        "order": "DESC"
+      },
+      "type": "ASSOCIATION"
+    },
+    {
+      "name": "fetched_object_323538445",
+      "objectTypeId": "0-3",
+      "associationTypeId": 4,
+      "associationCategory": "HUBSPOT_DEFINED",
+      "sortBy": {
+        "property": "hs_lastmodifieddate",
+        "missing": null,
+        "order": "DESC"
+      },
+      "type": "ASSOCIATION"
+    }
+  ],
+  "crmObjectCreationStatus": "COMPLETE",
+  "suppressionListIds": [],
+  "canEnrollFromSalesforce": false,
+  "type": "CONTACT_FLOW",
+  "objectTypeId": "0-1"
+}

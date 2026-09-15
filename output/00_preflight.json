@@ -1,0 +1,31 @@
+{
+  "generado": "2026-09-15T21:46:55",
+  "dry_run": true,
+  "checks": {
+    "P1_token_y_portal": {
+      "pasa": true,
+      "detalle": "token valido sobre el portal 6925781"
+    },
+    "P2_scope_forms": {
+      "pasa": true,
+      "detalle": "formulario de referencia 'Curso Gestión del Talento Piura (UDN UDEP)' con 8 campos"
+    },
+    "P3_scope_contacts": {
+      "pasa": true,
+      "detalle": "scope de lectura de contactos activo"
+    },
+    "P4_scope_automation": {
+      "pasa": true,
+      "detalle": "scope de automation activo"
+    },
+    "P5_playwright_render": {
+      "pasa": false,
+      "detalle": "Error: BrowserType.launch: Executable doesn't exist at /opt/pw-browsers/chromium_headless_shell-1243/chrome-headless-shell-linux64/chrome-headless-shell\n╔════════════════════════════════════════════════════════════╗\n║ Looks like Playwright was just installed or updated.       ║\n║ Please run the following command to download new browsers: ║\n║                                                            ║\n║     playwright install                                     ║\n║                                                            ║\n║ <3 Playwright Team                                         ║\n╚════════════════════════════════════════════════════════════╝"
+    },
+    "P6_paginas_vivas": {
+      "pasa": true,
+      "detalle": "las 40 paginas responden 200"
+    }
+  },
+  "veredicto": "FALLA"
+}

@@ -1,0 +1,26 @@
+{
+  "fuente": "requirements.md CA-3 y correo de Vicente Ham del 15-sep-2026",
+  "formulario_modelo": {
+    "nombre": "Curso Gestion del Talento Piura (UDN UDEP)",
+    "formId": "d6c333ed-17db-4e16-8afa-d87ef1b4eb49"
+  },
+  "encabezado": {
+    "texto": "¿QUIERES MÁS INFORMACIÓN?",
+    "estilo": "h1, 28px, negrita, blanco"
+  },
+  "campos": [
+    {"fila": 1, "nombre": "firstname", "etiqueta": "Nombre", "obligatorio": true},
+    {"fila": 1, "nombre": "lastname", "etiqueta": "Apellido", "obligatorio": true},
+    {"fila": 2, "nombre": "phone", "etiqueta": "Número de teléfono", "obligatorio": true},
+    {"fila": 2, "nombre": "email", "etiqueta": "Email", "obligatorio": true},
+    {"fila": 3, "nombre": "nivel_de_estudios__udn_udep_", "etiqueta": "Nivel de Estudios", "obligatorio": true},
+    {"fila": 4, "nombre": "cursos_piura__udn_udep_", "etiqueta": "Cursos Piura", "obligatorio": false, "oculto": true},
+    {"fila": 5, "nombre": "medio_de_contacto__udn_udep_", "etiqueta": "¿Cómo quiere ser contactado?", "obligatorio": true},
+    {"fila": 6, "nombre": "mensaje", "etiqueta": "Mensaje", "obligatorio": false}
+  ],
+  "boton": {"texto": "ENVIAR", "tipografia": "Oswald", "color": "#005cb9", "alineacion": "izquierda"},
+  "etiquetas": {"color": "blanco", "tamano": "14px"},
+  "clausula_autorizacion_datos": "obligatoria, con el texto que usan los demas formularios",
+  "mensaje_al_enviar": "Gracias, te contactaremos a la brevedad.",
+  "nota_sufijo": "Los cuatro formularios del apartado 3 usan hoy medio_de_contacto o mensaje SIN el sufijo __udn_udep_. Son propiedades distintas y por eso ese dato no llega junto con el resto."
+}

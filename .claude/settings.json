@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "permissions": {
+    "defaultMode": "acceptEdits",
+    "allow": [
+      "Read(./**)",
+      "Write(./output/**)",
+      "Write(./loop-workspace/**)",
+      "Edit(./output/**)",
+      "Edit(./loop-workspace/**)",
+      "Bash(python tools/*.py*)",
+      "Bash(python3 tools/*.py*)",
+      "Bash(python -m playwright*)",
+      "Bash(python3 -m playwright*)",
+      "Bash(pip install -r requirements.txt*)",
+      "Bash(ls *)",
+      "Bash(cat output/*)",
+      "Bash(cat input/*)",
+      "Bash(jq *)",
+      "WebFetch(domain:udeponline.pe)",
+      "WebFetch(domain:www.udeponline.pe)"
+    ],
+    "ask": [
+      "Bash(python tools/limpiar_pruebas.py --ejecutar*)",
+      "Bash(python3 tools/limpiar_pruebas.py --ejecutar*)"
+    ],
+    "deny": [
+      "mcp__*",
+      "Read(./.env)",
+      "Read(./.env.*)",
+      "Edit(./.env)",
+      "Read(**/.env)",
+      "Bash(cat .env*)",
+      "Bash(curl *)",
+      "Bash(wget *)",
+      "Bash(rm *)",
+      "Bash(sudo *)",
+      "Bash(git push *)"
+    ]
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash|Read|Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 .claude/hooks/block_secrets.py"
+          }
+        ]
+      },
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 .claude/hooks/guard_escrituras.py"
+          }
+        ]
+      }
+    ]
+  },
+  "env": {
+    "PYTHONUNBUFFERED": "1"
+  }
+}

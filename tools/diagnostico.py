@@ -54,7 +54,9 @@ except ImportError:
     print("Playwright no esta instalado. Corre: pip install -r requirements.txt")
     sys.exit(0)
 
-url = "https://udeponline.pe/curso-de-gestion-del-talento/"
+# Se puede pasar otra URL como argumento, por ejemplo una pagina de UANDES Online,
+# para comparar si la clave del reCAPTCHA es la misma (o sea, si es de portal).
+url = sys.argv[1] if len(sys.argv) > 1 else "https://udeponline.pe/curso-de-gestion-del-talento/"
 visible = os.getenv("PW_VISIBLE", "0") == "1"
 evid = RAIZ / "output" / "evidencia"
 evid.mkdir(parents=True, exist_ok=True)
@@ -114,3 +116,8 @@ with sync_playwright() as pw:
 print()
 print("Si 'CAMPOS REALES DENTRO DE LOS MARCOS' es mayor que 0, el sitio esta bien y el")
 print("problema era solo que los scripts buscaban los campos en el lugar equivocado.")
+print()
+print("Para comparar el reCAPTCHA con UANDES Online (y saber si la clave es de portal):")
+print("  python tools/diagnostico.py https://uandesonline.cl/producto/diplomado-en-marketing-digital-e-commerce/")
+print("Si la sitekey es la misma que la de UDEP, la clave es del portal 6925781 y el")
+print("problema alcanza tambien a los formularios de UANDES: avisarle a Rocio.")

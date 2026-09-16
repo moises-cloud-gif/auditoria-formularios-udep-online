@@ -1,6 +1,6 @@
 # Auditoría de formularios · UDEP Online — informe preliminar (rondas 0 a 2)
 
-**Fecha:** 15 de septiembre de 2026 · actualizado 16-sep con el cruce contra el canon Piura, seguridad, título y reconciliación con agosto · **Portal HubSpot:** 6925781 · **Sitio:** udeponline.pe
+**Fecha:** 15 de septiembre de 2026 · actualizado 16-sep con el cruce contra el canon Piura, seguridad, título, reconciliación con agosto y el reCAPTCHA confirmado en pantalla · **Portal HubSpot:** 6925781 · **Sitio:** udeponline.pe
 **Estado:** PRELIMINAR. Cubre lo verificable sin enviar formularios: definición de los 40
 formularios por API, marcado de las 40 páginas y los workflows Activador del portal. La prueba de
 envío real (80 instancias) no se ejecutó todavía; ver "Lo que no se pudo verificar".
@@ -204,20 +204,30 @@ Se revisaron primero y su resultado va antes que el resto:
   propiedad. Hoy un lead de este curso entra al CRM, no se asigna a nadie y dice "Gestión del
   Talento".
 
-## reCAPTCHA (CA-5)
+## reCAPTCHA (CA-5) — CONFIRMADO EN PANTALLA EL 16-SEP
 
 - El interruptor de reCAPTCHA está **activado en los 40 formularios** (`11_formularios.json`,
-  `recaptcha_habilitado: true`). Es una configuración por formulario.
+  `recaptcha_habilitado: true`).
 - El HTML de las 40 páginas de WordPress **no contiene ninguna referencia a reCAPTCHA** ni a un
   complemento que lo cargue (`10_paginas.json`, `html_menciona_recaptcha: false`). Lo que se ve en
   pantalla viene de HubSpot.
-- **Si es de portal o por formulario:** el interruptor es por formulario; la clave, en HubSpot, no
-  es configurable por formulario, así que un aviso de "clave de prueba" no sería de un formulario
-  en particular. **Esto es una inferencia sobre cómo funciona HubSpot, no evidencia de esta
-  corrida.** La evidencia (el aviso "This reCAPTCHA is for testing purposes only" en pantalla) solo
-  se obtiene abriendo el formulario con el navegador, que quedó para la ronda 3.
-- **Alcance a UANDES:** si el aviso se confirma, alcanza a todos los formularios del portal
-  6925781, incluidos los de UANDES Online. Hay que avisar a Rocío antes de tocar nada.
+- **Lo que Vicente reportó queda confirmado con evidencia propia.** Al abrir
+  `curso-de-gestion-del-talento` con un navegador (ejecución local de `tools/diagnostico.py`,
+  16-sep), el formulario carga reCAPTCHA Enterprise y **muestra el aviso "This reCAPTCHA is for
+  testing purposes only"**. Eso significa que hoy **no hay protección real contra spam** en los
+  formularios de UDEP.
+- La clave pública (sitekey) que sirve el formulario es `6LdGZJsoAAAAAIwMJHRwqiAHA6A_6ZP6bTYpbgSX`.
+  **No es** la clave de prueba clásica de Google (`6LeIxAcTAAAA…`), sino otra clave que Google
+  igualmente marca como de prueba. Que la clave sea de HubSpot y no del sitio es coherente con que
+  WordPress no cargue nada de reCAPTCHA.
+- **Si es de portal o por formulario: pendiente de una sola comprobación.** La clave no se
+  configura formulario por formulario en HubSpot, así que lo esperable es que sea del portal. Se
+  confirma abriendo una página de UANDES Online del mismo portal y comparando la sitekey:
+  `python tools/diagnostico.py https://uandesonline.cl/producto/diplomado-en-marketing-digital-e-commerce/`.
+  Si devuelve la misma clave, es del portal.
+- **Alcance a UANDES:** si la clave resulta ser la misma, el problema y su corrección alcanzan a
+  todos los formularios del portal 6925781, incluidos los de UANDES Online. **Avisarle a Rocío
+  antes de tocar nada.**
 
 ---
 
@@ -330,7 +340,7 @@ que quien mantenga la planilla la revise y la aplique.
 | R1 a R5 (render, campos en pantalla, envío aceptado, confirmación visible, cláusula legible) en las 80 instancias | La ronda 3 no corrió: variable `DRY_RUN` en 1 por decisión pendiente, y el navegador automatizado no pudo abrir el sitio desde este entorno (certificado del proxy de salida, error `ERR_CERT_AUTHORITY_INVALID`, `00_preflight.json` P5) | Correr la ronda 3 desde una máquina local con `DRY_RUN=0`, después de avisar al equipo comercial |
 | H1, H2, H5 (contacto creado, atribución al formulario, Activador ejecutado) | Dependen del envío real | Ronda 3 |
 | H6 (unidad de negocio y tipo de suscripción) | La API de formularios no lo expone | Revisión en la interfaz de HubSpot |
-| Si el reCAPTCHA muestra la clave de prueba | Solo se ve en el formulario renderizado | Ronda 3 (captura del banner) |
+| Si la clave del reCAPTCHA es de portal (alcanza a UANDES) o solo de UDEP | Falta comparar la sitekey contra una página de UANDES Online | Un comando: `tools/diagnostico.py <url de uandesonline.cl>` |
 | Si los seis bloques rotos de *Liderazgo y Negociación* duplican el formulario en pantalla (CA-7) | Solo se ve en el navegador | Ronda 3 |
 | El valor oculto de programa **antes** del 15 de septiembre | La API no tiene historial de formularios | Preguntar a Vicente qué envió su script |
 

@@ -220,14 +220,24 @@ Se revisaron primero y su resultado va antes que el resto:
   **No es** la clave de prueba clásica de Google (`6LeIxAcTAAAA…`), sino otra clave que Google
   igualmente marca como de prueba. Que la clave sea de HubSpot y no del sitio es coherente con que
   WordPress no cargue nada de reCAPTCHA.
-- **Si es de portal o por formulario: pendiente de una sola comprobación.** La clave no se
-  configura formulario por formulario en HubSpot, así que lo esperable es que sea del portal. Se
-  confirma abriendo una página de UANDES Online del mismo portal y comparando la sitekey:
-  `python tools/diagnostico.py https://uandesonline.cl/producto/diplomado-en-marketing-digital-e-commerce/`.
-  Si devuelve la misma clave, es del portal.
-- **Alcance a UANDES:** si la clave resulta ser la misma, el problema y su corrección alcanzan a
-  todos los formularios del portal 6925781, incluidos los de UANDES Online. **Avisarle a Rocío
-  antes de tocar nada.**
+- **Alcance a UANDES: sí, alcanza.** Tres hechos verificados el 16-sep:
+  1. Los formularios de UDEP Online y los de UANDES Online **viven en el mismo portal 6925781**.
+     Comprobado consultando la definición pública de un formulario de cada marca contra ese portal:
+     los dos responden 200 (`d6c333ed` de UDEP y `cdc34c31` de UANDES, *Diplomado en Marketing
+     Digital & e-Commerce*).
+  2. Los dos traen **exactamente la misma configuración de captcha**: `captchaEnabled: true` y
+     `captchaVersion: V2`. Lo único que se configura por formulario es encender o apagar el
+     captcha y su versión, no la clave.
+  3. La clave la pone HubSpot, no el sitio: el WordPress de UDEP no carga nada de reCAPTCHA.
+  Como la clave no es un ajuste por formulario y ambas marcas comparten portal, **corregirla en el
+  portal cambia el comportamiento de los formularios de UANDES Online también.**
+- **Queda una comprobación visual, opcional:** abrir una página de UANDES Online y leer la sitekey
+  renderizada, con `python tools/diagnostico.py <url de uandesonline.cl>`. Si devuelve
+  `6LdGZJsoAAAAAIwMJHRwqiAHA6A_6ZP6bTYpbgSX`, queda cerrado también por observación directa. El
+  primer intento del 16-sep no pudo hacerse: la red desde la que se corrió rechazó la conexión a
+  `uandesonline.cl`, aunque el sitio responde 200 desde otras redes.
+- **Acción:** avisarle a Rocío **antes** de tocar el reCAPTCHA, porque el cambio alcanza a su
+  portal. No es pedirle permiso sobre UDEP, es avisarle de un cambio que le afecta.
 
 ---
 
@@ -340,7 +350,7 @@ que quien mantenga la planilla la revise y la aplique.
 | R1 a R5 (render, campos en pantalla, envío aceptado, confirmación visible, cláusula legible) en las 80 instancias | La ronda 3 no corrió: variable `DRY_RUN` en 1 por decisión pendiente, y el navegador automatizado no pudo abrir el sitio desde este entorno (certificado del proxy de salida, error `ERR_CERT_AUTHORITY_INVALID`, `00_preflight.json` P5) | Correr la ronda 3 desde una máquina local con `DRY_RUN=0`, después de avisar al equipo comercial |
 | H1, H2, H5 (contacto creado, atribución al formulario, Activador ejecutado) | Dependen del envío real | Ronda 3 |
 | H6 (unidad de negocio y tipo de suscripción) | La API de formularios no lo expone | Revisión en la interfaz de HubSpot |
-| Si la clave del reCAPTCHA es de portal (alcanza a UANDES) o solo de UDEP | Falta comparar la sitekey contra una página de UANDES Online | Un comando: `tools/diagnostico.py <url de uandesonline.cl>` |
+| La sitekey renderizada en una página de UANDES Online | La red desde la que se corrió rechazó la conexión a `uandesonline.cl`. El alcance ya quedó establecido por otra vía (mismo portal, misma configuración de captcha), así que esto solo agregaría confirmación visual | Reintentar `tools/diagnostico.py <url de uandesonline.cl>` desde otra red |
 | Si los seis bloques rotos de *Liderazgo y Negociación* duplican el formulario en pantalla (CA-7) | Solo se ve en el navegador | Ronda 3 |
 | El valor oculto de programa **antes** del 15 de septiembre | La API no tiene historial de formularios | Preguntar a Vicente qué envió su script |
 

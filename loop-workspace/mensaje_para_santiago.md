@@ -67,6 +67,23 @@ con la planilla son errores de la planilla (los nombres cruzados de Liderazgo/Ge
 Negociación, y Digital Business Model, que tiene dos formularios activos para el mismo curso).
 Dos páginas no tienen fila en la planilla. Tabla para Vicente: `output/cruce_canon_vicente.csv`.
 
+## Lo que se hizo con tu checklist (16-sep), sin navegador
+
+- **Seguridad P0 (ClickFix):** 0 indicadores en el HTML de las 40 páginas y en los 38 scripts propios del sitio; todos los dominios de scripts son reconocidos. Límite: es lo que el servidor entrega; la confirmación final es con navegador en la ronda 3.
+- **Título 7 vs 36:** no se contradicen. Agosto contó 7 en pantalla, antes de la normalización, y 4 de esos 7 son los formularios de junio (sin encabezado en HubSpot: era marcado de WordPress). Hoy 36 formularios traen encabezado propio desde el 15-sep y las 36 páginas también lo traen en WordPress, sin CSS que oculte ninguno: riesgo estructural en 36. El conteo en pantalla queda para la ronda 3, y ese es el número para Vicente.
+- **Embed nuevo:** 39 páginas usan la incrustación plana; solo Liderazgo y Negociación usa el bloque nuevo (en sus 6 copias rotas). No aparece un grupo de "3 cursos con embed nuevo" en el HTML actual.
+- **Agosto:** `negocios-innovadores/` ya redirige (301) a la página real; los 6 diplomados están publicados con formulario (instructivo F cerrado); la página de test da 404; la URL "enfelicidad" era un error de la planilla. Si el "diplomado caído" es otra URL, decime cuál.
+- **Planilla canon:** propuesta corregida con 17 cambios marcados en amarillo y hoja de cambios, sin pisar la original (`output/canon_piura_propuesta_corregida.xlsx`). Quién la mantiene: decisión pendiente.
+- **Hipótesis del 15-sep:** el informe ya la trata como hipótesis a confirmar con Vicente, no como hecho.
+- **Borrador a Rocío/comercial:** retenido hasta la ronda 3, como pediste. La versión matizada está abajo.
+
+## Borrador matizado para UANDES / UDEP (NO ENVIAR hasta cerrar la ronda 3)
+
+> Avance de la auditoría de formularios de UDEP Online. Revisamos los 40 formularios, las 40 páginas y los flujos de asignación.
+> Por identificador, los 40 formularios incrustados son los correctos: ninguna página apunta al formulario de otro programa. Pero 38 de los 40 formularios tienen algo que corregir por dentro, y lo más importante es que 37 guardan el lead con un programa de interés equivocado (o ninguno). El lead se asigna, pero llega mal etiquetado. Eso lo corregimos nosotros en HubSpot.
+> Del lado web sí hay trabajo para Vicente: limpiar los 8 bloques de formulario de Liderazgo y Negociación, resolver el título que aparece dentro del formulario y en la página, y revisar la página de prueba que sigue publicada.
+> Para cerrar necesitamos: (equipo comercial) ventana para la prueba real de 80 envíos con contactos "qa+" que no hay que gestionar; (Vicente) qué valor envió su script del 15-sep al campo de programa; (Rocío) solo si el reCAPTCHA resulta ser clave de prueba, avisarte antes de tocarlo porque alcanza a UANDES.
+
 ## Evidencia
 
 Informe preliminar y registro de 80 filas en el repositorio

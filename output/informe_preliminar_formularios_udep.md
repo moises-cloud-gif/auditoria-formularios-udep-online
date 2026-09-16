@@ -1,6 +1,6 @@
 # Auditoría de formularios · UDEP Online — informe preliminar (rondas 0 a 2)
 
-**Fecha:** 15 de septiembre de 2026 · actualizado 16-sep con el cruce contra el canon Piura · **Portal HubSpot:** 6925781 · **Sitio:** udeponline.pe
+**Fecha:** 15 de septiembre de 2026 · actualizado 16-sep con el cruce contra el canon Piura, seguridad, título y reconciliación con agosto · **Portal HubSpot:** 6925781 · **Sitio:** udeponline.pe
 **Estado:** PRELIMINAR. Cubre lo verificable sin enviar formularios: definición de los 40
 formularios por API, marcado de las 40 páginas y los workflows Activador del portal. La prueba de
 envío real (80 instancias) no se ejecutó todavía; ver "Lo que no se pudo verificar".
@@ -12,7 +12,7 @@ envío real (80 instancias) no se ejecutó todavía; ver "Lo que no se pudo veri
 **De los 40 formularios, solo 2 capturan, atribuyen y enrutan bien según lo que se puede ver sin
 enviar. Los otros 38 tienen al menos un defecto crítico.** El más extendido no lo reportó nadie:
 **37 formularios atribuyen el lead a un programa distinto del de su página o a ninguno**, porque el
-campo oculto que lleva el nombre del programa trae el mismo valor copiado en todos (registro
+campo oculto que lleva el nombre del programa trae el mismo valor en todos (registro
 `20_matriz.json`, columna `H3`). Además, el formulario nuevo de *Analítica Digital & Growth
 Marketing* **no está conectado a ningún Activador**: sus leads entran al CRM y no se asignan a
 nadie (`12_activadores.json`, `7a38b319`).
@@ -168,11 +168,12 @@ programa de interés. Lo que se observa (`11_formularios.json`, `valor_programa`
 - *Analítica Digital & Growth Marketing* no puede enviar el valor correcto aunque se edite: la
   propiedad de cursos **no tiene una opción para ese curso** (`11_formularios.json`, `opciones`).
 
-Que el valor sea exactamente el de la plantilla en los 14 cursos, y la primera opción de la lista
-en los 24 programas, y que los 36 se hayan actualizado en la misma ventana de siete minutos, apunta
-a que **la normalización del 15 de septiembre copió el valor oculto de la plantilla sobre todos**.
-No se puede probar el valor anterior por API (no hay historial de versiones de formulario), así que
-queda como hipótesis fuerte, no como hecho. Lo que sí es hecho es el valor actual.
+**Hipótesis, no hecho.** Que el valor sea exactamente el de la plantilla en los 14 cursos, la
+primera opción de la lista en los 24 programas, y que los 36 se hayan actualizado en la misma
+ventana de siete minutos, es compatible con que la normalización del 15 de septiembre haya
+escrito el valor oculto de la plantilla sobre todos. No se puede probar el valor anterior por API
+(no hay historial de versiones de formulario). Se confirma o descarta preguntándole a Vicente qué
+valor envió su script. Lo que sí es hecho, y lo que hay que corregir, es el valor actual.
 
 Consecuencia: los Activadores enrutan bien porque se disparan por formulario, no por este campo.
 Pero el ejecutivo recibe un lead cuyo programa de interés dice "Gestión del Talento" cuando la
@@ -237,11 +238,11 @@ cambian. Lo que le toca a él es marcado de WordPress, no formularios:
    `HS_FORM_ID` sin resolver, apuntando al mismo contenedor del modal (`10_paginas.json`,
    `instancias`). El banner y la octava llamada sí tienen el identificador correcto. Si esos seis
    bloques producen renderizado duplicado o errores en consola se ve en la ronda 3.
-2. **Título duplicado:** el HTML de las 40 páginas trae el título "¿QUIERES MÁS INFORMACIÓN?" de
-   WordPress, y 36 formularios lo traen también dentro del propio formulario desde la
-   normalización del 15 de septiembre (`11_formularios.json`, `tiene_encabezado`). Es probable que
-   hoy se vea dos veces en 36 páginas. Se confirma en pantalla en la ronda 3. Cuando se corrijan
-   los 4 restantes con la plantilla, pasará también en esas (CA-6).
+2. **Título duplicado:** ver la sección "Título duplicado: 7 de agosto vs 36 de hoy" más abajo.
+   En resumen: 36 páginas tienen hoy el título en WordPress y también dentro del formulario de
+   HubSpot, sin CSS que oculte uno de los dos (`41_titulo_embeds.json`). Cuántas lo muestran dos
+   veces en pantalla se confirma en la ronda 3. Cuando se corrijan los 4 restantes con la
+   plantilla, quedarán en la misma situación (CA-6).
 3. **Página `programas-de-especializacion-dev/`:** sigue publicada y responde 200, sin formularios
    (`10_paginas.json`, `paginas_extra`).
 
@@ -256,6 +257,69 @@ cambian. Lo que le toca a él es marcado de WordPress, no formularios:
   crear la opción del curso en la propiedad de cursos. **Ambas cosas modifican HubSpot y requieren
   su propia aprobación: esta corrida no las hizo.**
 - Confirmar con quien administra los Activadores los dos clústeres a revisar.
+
+---
+
+## Verificaciones adicionales del 16 de septiembre
+
+### Seguridad (P0): script de verificación falsa tipo ClickFix
+
+Se buscó en el HTML servido de las 40 páginas y en los 38 archivos JavaScript propios del sitio
+(tema y complementos de WordPress) el dominio `id-verif-code.info`, textos de "verificación
+humana" fuera del reCAPTCHA legítimo, escritura al portapapeles, comandos de Windows
+(PowerShell, mshta, cmd) y patrones de código ofuscado. **Resultado: cero indicadores en las 40
+páginas y en los 38 scripts.** Todos los dominios desde los que se cargan scripts e iframes son
+reconocidos (HubSpot, Google, Meta, Cloudflare, el propio sitio) (`40_seguridad.json`,
+`evidencia/scripts/`).
+
+**Límite de esta verificación:** se analizó lo que el servidor entrega a una petición normal. Una
+inyección que se active solo en el navegador, o solo para ciertos visitantes (por país, por
+dispositivo o desde Cloudflare), no se ve así. La confirmación final es abrir las páginas con el
+navegador en la ronda 3 y revisar la consola y las peticiones de red.
+
+### Título duplicado: 7 de agosto vs 36 de hoy
+
+Son dos medidas distintas y no se contradicen:
+
+- **Agosto (QA visual del 6 de agosto, planilla canon):** 7 páginas mostraban el título tres veces
+  dentro del modal abierto, en pantalla. Cuatro de esas siete son los formularios de junio, que
+  **no tienen encabezado en HubSpot**, así que la triplicación venía del marcado de WordPress al
+  abrir el modal, no del formulario.
+- **Hoy (HTML servido + API):** el título de WordPress está en el HTML de las 40 páginas (una vez
+  en 20, dos veces en 14, tres veces en 5 y siete veces en *Liderazgo y Negociación*). Desde el
+  15 de septiembre, 36 formularios traen además su propio encabezado dentro de HubSpot. Solo una
+  página (*Liderazgo y Negociación*, en sus bloques rotos) tiene CSS que oculte el encabezado del
+  formulario. Por eso **36 páginas tienen riesgo estructural de mostrar el título dos veces**, y
+  el riesgo es nuevo: lo introdujo la normalización, no existía en agosto.
+- **Lo que falta:** contar en pantalla, hero y modal por separado, en la ronda 3. Ese es el número
+  que se le lleva a Vicente. Hasta entonces, el "36" es riesgo, no conteo (`41_titulo_embeds.json`).
+
+Sobre "el embed nuevo": de las 40 páginas, 39 usan la incrustación plana (portal, formulario,
+región y destino) y solo *Liderazgo y Negociación* usa el bloque nuevo con CSS y `onFormReady`,
+en sus seis copias rotas. No se detectó un grupo de "3 cursos con embed nuevo" en el HTML actual;
+si en agosto lo hubo, hoy no está o se homogeneizó (`41_titulo_embeds.json`, `firma_incrustaciones`).
+
+### Reconciliación con los ítems de agosto
+
+| Ítem de agosto | Estado hoy | Evidencia |
+|---|---|---|
+| `negocios-innovadores/` daba 404 | **Cerrado:** redirige (301) a `curso-de-negocios-innovadores/`, que responde 200 con formulario | `42_reconciliacion_agosto.json` |
+| `programa-de-especializacion-enfelicidad-…` daba 404 | Sigue 404, pero es un error de la planilla (falta un guion); la página real responde 200. Corregido en la planilla propuesta | ídem |
+| `curso-de-marketing-digital-test/` | 404: la página de prueba ya no existe. Quitar la fila 34 de la planilla | ídem |
+| Diplomados en borrador (instructivo F) | **Cerrado:** las 6 páginas de diplomados responden 200 e incrustan su formulario | ídem, `10_paginas.json` |
+| Fuga del modal (el modal no envía) | **Abierto:** solo se verifica enviando. Ronda 3 | — |
+| Título en el modal | **Abierto:** ver sección anterior. Ronda 3 | — |
+| `programas-de-especializacion-dev/` | Sigue publicada (200), sin formularios | ídem |
+
+### Planilla canon Piura: propuesta corregida
+
+`canon_piura_propuesta_corregida.xlsx` es una copia de la planilla con 17 cambios marcados en
+amarillo y una hoja "Cambios 16-sep" que explica cada uno con su evidencia: los nombres y los ID
+de las filas 3 y 7, el ID de Digital Business Model (fila 30), dos ID con barra al final, la URL
+mal escrita de la fila 19, la URL de Negocios Innovadores, la fila 37 duplicada con un ID de Meta,
+las URL que faltaban en las cuatro filas de diplomados, y dos filas nuevas (Analítica Digital y
+el Diplomado en Inteligencia Emocional y Coaching). **No pisa la original**: es una propuesta para
+que quien mantenga la planilla la revise y la aplique.
 
 ---
 
@@ -289,8 +353,9 @@ cambian. Lo que le toca a él es marcado de WordPress, no formularios:
   no se mueve solo (§6 del requerimiento).
 - **Los leads de *Analítica Digital* atribuidos a *Marketing Digital*** hasta el 14 de septiembre
   siguen así. Fuera de alcance, pendiente de decisión (§6).
-- **Los 36 formularios normalizados llevan encabezado propio** y las páginas también: título
-  probablemente duplicado en 36 páginas, no solo en las 4 que faltan.
+- **Los 36 formularios normalizados llevan encabezado propio** y las páginas también: riesgo de
+  título duplicado en 36 páginas, no solo en las 7 que reportó el QA de agosto. Pendiente de
+  confirmar en pantalla.
 
 ---
 
@@ -325,6 +390,10 @@ cambian. Lo que le toca a él es marcado de WordPress, no formularios:
 - `21_cruce_canon.json` + `13_formularios_canon.json` + `input/canon_piura.xlsx` · cruce de las 80 instancias
   contra la planilla Piura, con los dos formIds del canon resueltos por API.
 - `cruce_canon_vicente.csv` (80 filas) y `cruce_canon_discrepancias.csv` (vacío: 0 discrepancias reales).
+- `40_seguridad.json` + `evidencia/scripts/` · escaneo de ClickFix en 40 páginas y 38 scripts propios.
+- `41_titulo_embeds.json` · título de WordPress, encabezado de HubSpot, CSS y firma de incrustación por página.
+- `42_reconciliacion_agosto.json` · estado HTTP actual de las URL marcadas en agosto.
+- `canon_piura_propuesta_corregida.xlsx` · planilla canon con 17 correcciones propuestas.
 - `registro_pruebas.csv` · 80 filas (banner y modal por página) con R1-R5, H1-H7, caso y
   severidad; R1-R5, H1, H2 y H5 en PENDIENTE hasta la ronda 3.
 

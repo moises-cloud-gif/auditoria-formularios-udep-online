@@ -1,0 +1,687 @@
+{
+  "generado": "2026-09-16T14:32:07",
+  "paginas": [
+    {
+      "slug": "curso-de-analitica-digital-growth-marketing",
+      "bytes": 242037,
+      "indicadores": {},
+      "sospechosa": false,
+      "dominios_no_reconocidos": {},
+      "menciona_recaptcha_en_html": false,
+      "scripts_inline": 25
+    },
+    {
+      "slug": "curso-de-business-intelligence-data-science",
+      "bytes": 245924,
+      "indicadores": {},
+      "sospechosa": false,
+      "dominios_no_reconocidos": {},
+      "menciona_recaptcha_en_html": false,
+      "scripts_inline": 26
+    },
+    {
+      "slug": "curso-de-coaching",
+      "bytes": 244755,
+      "indicadores": {},
+      "sospechosa": false,
+      "dominios_no_reconocidos": {},
+      "menciona_recaptcha_en_html": false,
+      "scripts_inline": 26
+    },
+    {
+      "slug": "curso-de-comunicacion-efectiva",
+      "bytes": 248528,
+      "indicadores": {},
+      "sospechosa": false,
+      "dominios_no_reconocidos": {},
+      "menciona_recaptcha_en_html": false,
+      "scripts_inline": 26
+    },
+    {
+      "slug": "curso-de-digital-business-model",
+      "bytes": 248947,
+      "indicadores": {},
+      "sospechosa": false,
+      "dominios_no_reconocidos": {},
+      "menciona_recaptcha_en_html": false,
+      "scripts_inline": 26
+    },
+    {
+      "slug": "curso-de-felicidad-y-bienestar-organizacional",
+      "bytes": 248716,
+      "indicadores": {},
+      "sospechosa": false,
+      "dominios_no_reconocidos": {},
+      "menciona_recaptcha_en_html": false,
+      "scripts_inline": 26
+    },
+    {
+      "slug": "curso-de-gestion-de-equipos-de-alto-rendimiento",
+      "bytes": 247519,
+      "indicadores": {},
+      "sospechosa": false,
+      "dominios_no_reconocidos": {},
+      "menciona_recaptcha_en_html": false,
+      "scripts_inline": 26
+    },
+    {
+      "slug": "curso-de-gestion-del-talento",
+      "bytes": 248886,
+      "indicadores": {},
+      "sospechosa": false,
+      "dominios_no_reconocidos": {},
+      "menciona_recaptcha_en_html": false,
+      "scripts_inline": 26
+    },
+    {
+      "slug": "curso-de-inteligencia-emocional",
+      "bytes": 246275,
+      "indicadores": {},
+      "sospechosa": false,
+      "dominios_no_reconocidos": {},
+      "menciona_recaptcha_en_html": false,
+      "scripts_inline": 26
+    },
+    {
+      "slug": "curso-de-liderazgo-en-la-era-digital",
+      "bytes": 249902,
+      "indicadores": {},
+      "sospechosa": false,
+      "dominios_no_reconocidos": {},
+      "menciona_recaptcha_en_html": false,
+      "scripts_inline": 26
+    },
+    {
+      "slug": "curso-de-marketing-digital",
+      "bytes": 247656,
+      "indicadores": {},
+      "sospechosa": false,
+      "dominios_no_reconocidos": {},
+      "menciona_recaptcha_en_html": false,
+      "scripts_inline": 26
+    },
+    {
+      "slug": "curso-de-negociacion-y-resolucion-de-conflictos",
+      "bytes": 248388,
+      "indicadores": {},
+      "sospechosa": false,
+      "dominios_no_reconocidos": {},
+      "menciona_recaptcha_en_html": false,
+      "scripts_inline": 26
+    },
+    {
+      "slug": "curso-de-negocios-e-commerce",
+      "bytes": 246353,
+      "indicadores": {},
+      "sospechosa": false,
+      "dominios_no_reconocidos": {},
+      "menciona_recaptcha_en_html": false,
+      "scripts_inline": 26
+    },
+    {
+      "slug": "curso-de-negocios-innovadores",
+      "bytes": 245168,
+      "indicadores": {},
+      "sospechosa": false,
+      "dominios_no_reconocidos": {},
+      "menciona_recaptcha_en_html": false,
+      "scripts_inline": 26
+    },
+    {
+      "slug": "curso-de-transformacion-digital",
+      "bytes": 247807,
+      "indicadores": {},
+      "sospechosa": false,
+      "dominios_no_reconocidos": {},
+      "menciona_recaptcha_en_html": false,
+      "scripts_inline": 26
+    },
+    {
+      "slug": "curso-desarrollo-organizacional-y-gestion-del-cambio",
+      "bytes": 247908,
+      "indicadores": {},
+      "sospechosa": false,
+      "dominios_no_reconocidos": {},
+      "menciona_recaptcha_en_html": false,
+      "scripts_inline": 26
+    },
+    {
+      "slug": "diplomado-en-gestion-de-la-felicidad-y-bienestar-organizacional",
+      "bytes": 335309,
+      "indicadores": {},
+      "sospechosa": false,
+      "dominios_no_reconocidos": {},
+      "menciona_recaptcha_en_html": false,
+      "scripts_inline": 39
+    },
+    {
+      "slug": "diplomado-en-habilidades-para-la-gestion-de-equipos",
+      "bytes": 334977,
+      "indicadores": {},
+      "sospechosa": false,
+      "dominios_no_reconocidos": {},
+      "menciona_recaptcha_en_html": false,
+      "scripts_inline": 39
+    },
+    {
+      "slug": "diplomado-en-inteligencia-emocional-y-coaching-para-el-liderazgo-en-las-organizaciones",
+      "bytes": 335655,
+      "indicadores": {},
+      "sospechosa": false,
+      "dominios_no_reconocidos": {},
+      "menciona_recaptcha_en_html": false,
+      "scripts_inline": 39
+    },
+    {
+      "slug": "diplomado-en-liderazgo-y-gestion-del-talento",
+      "bytes": 334859,
+      "indicadores": {},
+      "sospechosa": false,
+      "dominios_no_reconocidos": {},
+      "menciona_recaptcha_en_html": false,
+      "scripts_inline": 39
+    },
+    {
+      "slug": "diplomado-en-marketing-digital-y-analitica",
+      "bytes": 334641,
+      "indicadores": {},
+      "sospechosa": false,
+      "dominios_no_reconocidos": {},
+      "menciona_recaptcha_en_html": false,
+      "scripts_inline": 39
+    },
+    {
+      "slug": "diplomado-en-marketing-digital-y-ecommerce",
+      "bytes": 337723,
+      "indicadores": {},
+      "sospechosa": false,
+      "dominios_no_reconocidos": {},
+      "menciona_recaptcha_en_html": false,
+      "scripts_inline": 39
+    },
+    {
+      "slug": "programa-de-especializacion-en-comunicacion-efectiva-y-gestion-de-equipos-de-alto-rendimiento",
+      "bytes": 258614,
+      "indicadores": {},
+      "sospechosa": false,
+      "dominios_no_reconocidos": {},
+      "menciona_recaptcha_en_html": false,
+      "scripts_inline": 26
+    },
+    {
+      "slug": "programa-de-especializacion-en-comunicacion-efectiva-y-gestion-del-talento",
+      "bytes": 257396,
+      "indicadores": {},
+      "sospechosa": false,
+      "dominios_no_reconocidos": {},
+      "menciona_recaptcha_en_html": false,
+      "scripts_inline": 26
+    },
+    {
+      "slug": "programa-de-especializacion-en-felicidad-organizacional-y-gestion-de-equipos-de-alto-rendimiento",
+      "bytes": 258329,
+      "indicadores": {},
+      "sospechosa": false,
+      "dominios_no_reconocidos": {},
+      "menciona_recaptcha_en_html": false,
+      "scripts_inline": 26
+    },
+    {
+      "slug": "programa-de-especializacion-en-felicidad-organizacional-y-inteligencia-emocional",
+      "bytes": 256907,
+      "indicadores": {},
+      "sospechosa": false,
+      "dominios_no_reconocidos": {},
+      "menciona_recaptcha_en_html": false,
+      "scripts_inline": 26
+    },
+    {
+      "slug": "programa-de-especializacion-en-felicidad-y-desarrollo-organizacional",
+      "bytes": 260141,
+      "indicadores": {},
+      "sospechosa": false,
+      "dominios_no_reconocidos": {},
+      "menciona_recaptcha_en_html": false,
+      "scripts_inline": 26
+    },
+    {
+      "slug": "programa-de-especializacion-en-gestion-del-cambio-y-negociacion-de-conflictos",
+      "bytes": 258138,
+      "indicadores": {},
+      "sospechosa": false,
+      "dominios_no_reconocidos": {},
+      "menciona_recaptcha_en_html": false,
+      "scripts_inline": 26
+    },
+    {
+      "slug": "programa-de-especializacion-en-gestion-del-talento-y-negociacion-de-conflictos",
+      "bytes": 258518,
+      "indicadores": {},
+      "sospechosa": false,
+      "dominios_no_reconocidos": {},
+      "menciona_recaptcha_en_html": false,
+      "scripts_inline": 26
+    },
+    {
+      "slug": "programa-de-especializacion-en-habilidades-para-la-gestion-de-equipos",
+      "bytes": 256523,
+      "indicadores": {},
+      "sospechosa": false,
+      "dominios_no_reconocidos": {},
+      "menciona_recaptcha_en_html": false,
+      "scripts_inline": 26
+    },
+    {
+      "slug": "programa-de-especializacion-en-inteligencia-emocional-y-coaching",
+      "bytes": 257433,
+      "indicadores": {},
+      "sospechosa": false,
+      "dominios_no_reconocidos": {},
+      "menciona_recaptcha_en_html": false,
+      "scripts_inline": 26
+    },
+    {
+      "slug": "programa-de-especializacion-en-liderazgo-y-comunicacion-efectiva",
+      "bytes": 258376,
+      "indicadores": {},
+      "sospechosa": false,
+      "dominios_no_reconocidos": {},
+      "menciona_recaptcha_en_html": false,
+      "scripts_inline": 26
+    },
+    {
+      "slug": "programa-de-especializacion-en-liderazgo-y-felicidad-organizacional",
+      "bytes": 257563,
+      "indicadores": {},
+      "sospechosa": false,
+      "dominios_no_reconocidos": {},
+      "menciona_recaptcha_en_html": false,
+      "scripts_inline": 26
+    },
+    {
+      "slug": "programa-de-especializacion-en-liderazgo-y-gestion-del-talento",
+      "bytes": 268578,
+      "indicadores": {},
+      "sospechosa": false,
+      "dominios_no_reconocidos": {},
+      "menciona_recaptcha_en_html": false,
+      "scripts_inline": 26
+    },
+    {
+      "slug": "programa-de-especializacion-en-liderazgo-y-negociacion-de-conflictos",
+      "bytes": 304334,
+      "indicadores": {},
+      "sospechosa": false,
+      "dominios_no_reconocidos": {},
+      "menciona_recaptcha_en_html": false,
+      "scripts_inline": 32
+    },
+    {
+      "slug": "programa-de-especializacion-en-liderazgo-y-transformacion-digital",
+      "bytes": 257484,
+      "indicadores": {},
+      "sospechosa": false,
+      "dominios_no_reconocidos": {},
+      "menciona_recaptcha_en_html": false,
+      "scripts_inline": 26
+    },
+    {
+      "slug": "programa-de-especializacion-en-marketing-digital-y-business-model",
+      "bytes": 257340,
+      "indicadores": {},
+      "sospechosa": false,
+      "dominios_no_reconocidos": {},
+      "menciona_recaptcha_en_html": false,
+      "scripts_inline": 26
+    },
+    {
+      "slug": "programa-de-especializacion-en-marketing-digital-y-e-commerce",
+      "bytes": 284655,
+      "indicadores": {},
+      "sospechosa": false,
+      "dominios_no_reconocidos": {},
+      "menciona_recaptcha_en_html": false,
+      "scripts_inline": 32
+    },
+    {
+      "slug": "programa-de-especializacion-en-modelo-de-negocios-digitales-y-business-intelligence",
+      "bytes": 258402,
+      "indicadores": {},
+      "sospechosa": false,
+      "dominios_no_reconocidos": {},
+      "menciona_recaptcha_en_html": false,
+      "scripts_inline": 26
+    },
+    {
+      "slug": "programa-de-especializacion-en-modelo-de-negocios-y-transformacion-digital",
+      "bytes": 259644,
+      "indicadores": {},
+      "sospechosa": false,
+      "dominios_no_reconocidos": {},
+      "menciona_recaptcha_en_html": false,
+      "scripts_inline": 26
+    }
+  ],
+  "resumen": {
+    "paginas_escaneadas": 40,
+    "paginas_con_indicadores": [],
+    "indicadores_hallados": {},
+    "dominios_no_reconocidos": {},
+    "scripts_propios_escaneados": 38,
+    "scripts_propios_con_indicadores": []
+  },
+  "scripts_propios": [
+    {
+      "url": "https://udeponline.pe//js.hs-scripts.com/6925781.js",
+      "http": 404,
+      "bytes": 0,
+      "archivo": "7614f2c2e6_6925781.js",
+      "indicadores": {},
+      "dominios_externos_en_js": []
+    },
+    {
+      "url": "https://udeponline.pe//js.hsforms.net/forms/embed/v2.js",
+      "http": 404,
+      "bytes": 0,
+      "archivo": "68eaf6e12c_v2.js",
+      "indicadores": {},
+      "dominios_externos_en_js": []
+    },
+    {
+      "url": "https://udeponline.pe/wp-content/plugins/astra-addon/assets/js/minified/purify.min.js?ver=4.12.2",
+      "http": 200,
+      "bytes": 22215,
+      "archivo": "1d643deb05_purify.min.js",
+      "indicadores": {},
+      "dominios_externos_en_js": []
+    },
+    {
+      "url": "https://udeponline.pe/wp-content/plugins/dynamic-content-for-elementor/assets/js/advanced-video.min.js?ver=3.4.4",
+      "http": 200,
+      "bytes": 1022,
+      "archivo": "924238011f_advanced-video.min.js",
+      "indicadores": {},
+      "dominios_externos_en_js": []
+    },
+    {
+      "url": "https://udeponline.pe/wp-content/plugins/dynamic-content-for-elementor/assets/js/fix-background-loop.min.js?ver=3.4.4",
+      "http": 200,
+      "bytes": 1824,
+      "archivo": "a94ef24e28_fix-background-loop.min.js",
+      "indicadores": {},
+      "dominios_externos_en_js": []
+    },
+    {
+      "url": "https://udeponline.pe/wp-content/plugins/dynamic-content-for-elementor/assets/js/inline-align-form.min.js?ver=3.4.4",
+      "http": 200,
+      "bytes": 410,
+      "archivo": "17b9bf21e1_inline-align-form.min.js",
+      "indicadores": {},
+      "dominios_externos_en_js": []
+    },
+    {
+      "url": "https://udeponline.pe/wp-content/plugins/dynamic-content-for-elementor/assets/js/rellax.min.js?ver=3.4.4",
+      "http": 200,
+      "bytes": 492,
+      "archivo": "079404974a_rellax.min.js",
+      "indicadores": {},
+      "dominios_externos_en_js": []
+    },
+    {
+      "url": "https://udeponline.pe/wp-content/plugins/dynamic-content-for-elementor/assets/js/reveal.min.js?ver=3.4.4",
+      "http": 200,
+      "bytes": 783,
+      "archivo": "a7fcd3ca82_reveal.min.js",
+      "indicadores": {},
+      "dominios_externos_en_js": []
+    },
+    {
+      "url": "https://udeponline.pe/wp-content/plugins/dynamic-content-for-elementor/assets/js/scrolling.min.js?ver=3.4.4",
+      "http": 200,
+      "bytes": 14182,
+      "archivo": "694719ef62_scrolling.min.js",
+      "indicadores": {},
+      "dominios_externos_en_js": []
+    },
+    {
+      "url": "https://udeponline.pe/wp-content/plugins/dynamic-content-for-elementor/assets/js/settings.min.js?ver=3.4.4",
+      "http": 200,
+      "bytes": 1745,
+      "archivo": "f2135885ef_settings.min.js",
+      "indicadores": {},
+      "dominios_externos_en_js": []
+    },
+    {
+      "url": "https://udeponline.pe/wp-content/plugins/dynamic-content-for-elementor/assets/js/tooltip.min.js?ver=3.4.4",
+      "http": 200,
+      "bytes": 1468,
+      "archivo": "0d74e012fc_tooltip.min.js",
+      "indicadores": {},
+      "dominios_externos_en_js": []
+    },
+    {
+      "url": "https://udeponline.pe/wp-content/plugins/dynamic-content-for-elementor/assets/node/animejs/anime.min.js?ver=3.4.4",
+      "http": 200,
+      "bytes": 17384,
+      "archivo": "fcf63adccc_anime.min.js",
+      "indicadores": {},
+      "dominios_externos_en_js": []
+    },
+    {
+      "url": "https://udeponline.pe/wp-content/plugins/dynamic-content-for-elementor/assets/node/jquery-inertia-scroll/jquery-inertiaScroll.js?ver=3.4.4",
+      "http": 200,
+      "bytes": 3763,
+      "archivo": "a9a4999857_jquery-inertiaScroll.js",
+      "indicadores": {},
+      "dominios_externos_en_js": []
+    },
+    {
+      "url": "https://udeponline.pe/wp-content/plugins/dynamic-content-for-elementor/assets/node/jquery-scrollify/jquery.scrollify.js?ver=3.4.4",
+      "http": 200,
+      "bytes": 26517,
+      "archivo": "2ca3c648f2_jquery.scrollify.js",
+      "indicadores": {},
+      "dominios_externos_en_js": []
+    },
+    {
+      "url": "https://udeponline.pe/wp-content/plugins/dynamic-content-for-elementor/assets/node/jquery.easing/jquery-easing.min.js?ver=3.4.4",
+      "http": 200,
+      "bytes": 2532,
+      "archivo": "becb579147_jquery-easing.min.js",
+      "indicadores": {},
+      "dominios_externos_en_js": []
+    },
+    {
+      "url": "https://udeponline.pe/wp-content/plugins/dynamic-content-for-elementor/assets/node/lax.js/lax.min.js?ver=3.4.4",
+      "http": 200,
+      "bytes": 12766,
+      "archivo": "b3d104454a_lax.min.js",
+      "indicadores": {},
+      "dominios_externos_en_js": []
+    },
+    {
+      "url": "https://udeponline.pe/wp-content/plugins/dynamic-content-for-elementor/assets/node/plyr/plyr.polyfilled.min.js?ver=3.4.4",
+      "http": 200,
+      "bytes": 119661,
+      "archivo": "422cf91b78_plyr.polyfilled.min.js",
+      "indicadores": {},
+      "dominios_externos_en_js": [
+        "cdn.plyr.io",
+        "go.aniview.com",
+        "i.ytimg.com",
+        "noembed.com",
+        "www.youtube-nocookie.com"
+      ]
+    },
+    {
+      "url": "https://udeponline.pe/wp-content/plugins/dynamic-content-for-elementor/assets/node/popperjs/popper.min.js?ver=3.4.4",
+      "http": 200,
+      "bytes": 20122,
+      "archivo": "59f18778df_popper.min.js",
+      "indicadores": {},
+      "dominios_externos_en_js": []
+    },
+    {
+      "url": "https://udeponline.pe/wp-content/plugins/dynamic-content-for-elementor/assets/node/rellax/rellax.min.js?ver=3.4.4",
+      "http": 200,
+      "bytes": 7032,
+      "archivo": "18acaffa90_rellax.min.js",
+      "indicadores": {},
+      "dominios_externos_en_js": []
+    },
+    {
+      "url": "https://udeponline.pe/wp-content/plugins/dynamic-content-for-elementor/assets/node/revealfx/revealFx.js?ver=3.4.4",
+      "http": 200,
+      "bytes": 8831,
+      "archivo": "63881baa67_revealFx.js",
+      "indicadores": {},
+      "dominios_externos_en_js": []
+    },
+    {
+      "url": "https://udeponline.pe/wp-content/plugins/dynamic-content-for-elementor/assets/node/tippy.js/tippy-bundle.umd.min.js?ver=3.4.4",
+      "http": 200,
+      "bytes": 25717,
+      "archivo": "b74ca7174b_tippy-bundle.umd.min.js",
+      "indicadores": {},
+      "dominios_externos_en_js": []
+    },
+    {
+      "url": "https://udeponline.pe/wp-content/plugins/dynamic-content-for-elementor/assets/node/velocity-animate/velocity.min.js?ver=3.4.4",
+      "http": 200,
+      "bytes": 44808,
+      "archivo": "fdef4c0598_velocity.min.js",
+      "indicadores": {},
+      "dominios_externos_en_js": []
+    },
+    {
+      "url": "https://udeponline.pe/wp-content/plugins/elementor-pro/assets/js/elements-handlers.min.js?ver=3.35.1",
+      "http": 200,
+      "bytes": 44258,
+      "archivo": "95cadb7838_elements-handlers.min.js",
+      "indicadores": {},
+      "dominios_externos_en_js": []
+    },
+    {
+      "url": "https://udeponline.pe/wp-content/plugins/elementor-pro/assets/js/frontend.min.js?ver=3.35.1",
+      "http": 200,
+      "bytes": 24047,
+      "archivo": "230eeb52c0_frontend.min.js",
+      "indicadores": {},
+      "dominios_externos_en_js": []
+    },
+    {
+      "url": "https://udeponline.pe/wp-content/plugins/elementor-pro/assets/js/webpack-pro.runtime.min.js?ver=3.35.1",
+      "http": 200,
+      "bytes": 6248,
+      "archivo": "74268aa586_webpack-pro.runtime.min.js",
+      "indicadores": {},
+      "dominios_externos_en_js": []
+    },
+    {
+      "url": "https://udeponline.pe/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=3.35.4",
+      "http": 200,
+      "bytes": 50503,
+      "archivo": "af3480ab18_frontend-modules.min.js",
+      "indicadores": {},
+      "dominios_externos_en_js": []
+    },
+    {
+      "url": "https://udeponline.pe/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.35.4",
+      "http": 200,
+      "bytes": 31880,
+      "archivo": "c0e68de204_frontend.min.js",
+      "indicadores": {},
+      "dominios_externos_en_js": []
+    },
+    {
+      "url": "https://udeponline.pe/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=3.35.4",
+      "http": 200,
+      "bytes": 5677,
+      "archivo": "46226f19ee_webpack.runtime.min.js",
+      "indicadores": {},
+      "dominios_externos_en_js": []
+    },
+    {
+      "url": "https://udeponline.pe/wp-content/plugins/elementor/assets/lib/font-awesome/js/v4-shims.min.js?ver=3.35.4",
+      "http": 200,
+      "bytes": 15073,
+      "archivo": "647edaaca9_v4-shims.min.js",
+      "indicadores": {},
+      "dominios_externos_en_js": [
+        "fontawesome.com"
+      ]
+    },
+    {
+      "url": "https://udeponline.pe/wp-content/themes/astra/assets/js/minified/flexibility.min.js?ver=4.12.1",
+      "http": 200,
+      "bytes": 15525,
+      "archivo": "da9f24ba95_flexibility.min.js",
+      "indicadores": {},
+      "dominios_externos_en_js": []
+    },
+    {
+      "url": "https://udeponline.pe/wp-content/themes/astra/assets/js/minified/style.min.js?ver=4.12.1",
+      "http": 200,
+      "bytes": 13056,
+      "archivo": "63f0183fb6_style.min.js",
+      "indicadores": {},
+      "dominios_externos_en_js": []
+    },
+    {
+      "url": "https://udeponline.pe/wp-content/uploads/astra-addon/astra-addon-69ea4ab58c8278-67797758.js?ver=4.12.2",
+      "http": 200,
+      "bytes": 56905,
+      "archivo": "a1db1285ae_astra-addon-69ea4ab58c8278-67797758.js",
+      "indicadores": {},
+      "dominios_externos_en_js": []
+    },
+    {
+      "url": "https://udeponline.pe/wp-includes/js/dist/hooks.min.js?ver=dd5603f07f9220ed27f1",
+      "http": 200,
+      "bytes": 5661,
+      "archivo": "99b553d845_hooks.min.js",
+      "indicadores": {},
+      "dominios_externos_en_js": []
+    },
+    {
+      "url": "https://udeponline.pe/wp-includes/js/dist/i18n.min.js?ver=c26c3dc7bed366793375",
+      "http": 200,
+      "bytes": 5314,
+      "archivo": "47752311c0_i18n.min.js",
+      "indicadores": {},
+      "dominios_externos_en_js": []
+    },
+    {
+      "url": "https://udeponline.pe/wp-includes/js/imagesloaded.min.js?ver=5.0.0",
+      "http": 200,
+      "bytes": 5520,
+      "archivo": "d9333e0bee_imagesloaded.min.js",
+      "indicadores": {},
+      "dominios_externos_en_js": []
+    },
+    {
+      "url": "https://udeponline.pe/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1",
+      "http": 200,
+      "bytes": 13577,
+      "archivo": "ae5cf7a1c3_jquery-migrate.min.js",
+      "indicadores": {},
+      "dominios_externos_en_js": []
+    },
+    {
+      "url": "https://udeponline.pe/wp-includes/js/jquery/jquery.min.js?ver=3.7.1",
+      "http": 200,
+      "bytes": 87553,
+      "archivo": "a547dbcb31_jquery.min.js",
+      "indicadores": {},
+      "dominios_externos_en_js": []
+    },
+    {
+      "url": "https://udeponline.pe/wp-includes/js/jquery/ui/core.min.js?ver=1.13.3",
+      "http": 200,
+      "bytes": 21464,
+      "archivo": "8a5413df15_core.min.js",
+      "indicadores": {},
+      "dominios_externos_en_js": []
+    }
+  ]
+}

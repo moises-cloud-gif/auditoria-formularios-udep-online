@@ -14,6 +14,7 @@ escrito en `tools/clasificar.py` para que sea reproducible.
 | 1 · inventarios | **CERRADA** — 40/40 páginas, 40/40 formularios por API sin errores, 1083 flows revisados | `output/10_paginas.json`, `11_formularios.json`, `12_activadores.json`, `output/evidencia/{paginas,formularios,flows}/` |
 | 2 · clasificación | **CERRADA** — A=2 · B=38 · C=0 · D=0 | `output/20_matriz.json` |
 | 2 bis · cruce con canon Piura (pedido por Santiago, 16-sep) | **CERRADA** — 80 instancias: 70 coinciden, 6 falsas alarmas del canon, 4 sin fila, **0 discrepancias reales** | `output/21_cruce_canon.json`, `cruce_canon_vicente.csv`, `13_formularios_canon.json` |
+| 2 ter · verificaciones del 16-sep sin navegador | **CERRADA** — seguridad ClickFix: 0 indicadores en 40 páginas y 38 scripts · título: 36 páginas con riesgo estructural (conteo en pantalla pendiente) · URLs de agosto reconciliadas · planilla canon corregida (propuesta) | `output/40_seguridad.json`, `41_titulo_embeds.json`, `42_reconciliacion_agosto.json`, `canon_piura_propuesta_corregida.xlsx` |
 | 3 · envíos | **DETENIDA A PROPÓSITO** — `DRY_RUN=1`. La pasada real crea 80 contactos en el portal productivo y exige (a) decisión de Moisés/Santiago, (b) aviso al equipo comercial de UDEP y (c) un entorno donde Playwright pueda abrir udeponline.pe (ver P5). | — |
 | 4 · juez | no iniciada | — |
 | 5 · remediador | no iniciada (0 de 2 pasadas usadas) | — |

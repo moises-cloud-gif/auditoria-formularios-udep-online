@@ -1,0 +1,799 @@
+{
+  "generado": "2026-09-16T14:32:39",
+  "paginas": [
+    {
+      "slug": "curso-de-analitica-digital-growth-marketing",
+      "titulo_wp_ocurrencias_html": 1,
+      "titulo_wp_cerca_del_modal": 1,
+      "css_oculta_encabezado_hubspot": false,
+      "css_menciona_encabezado": [],
+      "formulario_trae_encabezado_hoy": true,
+      "formulario_actualizado": "2026-09-15",
+      "firma_incrustaciones": [
+        "plano",
+        "plano"
+      ],
+      "agosto_estado": null,
+      "agosto_observacion": null,
+      "agosto_decia_titulo_duplicado_modal": false,
+      "agosto_decia_titulo_ausente_hero": false,
+      "riesgo_duplicado_hoy": true
+    },
+    {
+      "slug": "curso-de-business-intelligence-data-science",
+      "titulo_wp_ocurrencias_html": 1,
+      "titulo_wp_cerca_del_modal": 1,
+      "css_oculta_encabezado_hubspot": false,
+      "css_menciona_encabezado": [],
+      "formulario_trae_encabezado_hoy": true,
+      "formulario_actualizado": "2026-09-15",
+      "firma_incrustaciones": [
+        "plano",
+        "plano"
+      ],
+      "agosto_estado": "REVISAR",
+      "agosto_observacion": "Descripción rota: 14 corte(s) de texto a mitad de frase",
+      "agosto_decia_titulo_duplicado_modal": false,
+      "agosto_decia_titulo_ausente_hero": false,
+      "riesgo_duplicado_hoy": true
+    },
+    {
+      "slug": "curso-de-coaching",
+      "titulo_wp_ocurrencias_html": 1,
+      "titulo_wp_cerca_del_modal": 1,
+      "css_oculta_encabezado_hubspot": false,
+      "css_menciona_encabezado": [],
+      "formulario_trae_encabezado_hoy": false,
+      "formulario_actualizado": "2026-06-11",
+      "firma_incrustaciones": [
+        "plano",
+        "plano"
+      ],
+      "agosto_estado": "REVISAR",
+      "agosto_observacion": "Título DUPLICADO dentro del modal (x3, esperado 2) · Descripción rota: 2 corte(s) de texto a mitad de frase",
+      "agosto_decia_titulo_duplicado_modal": true,
+      "agosto_decia_titulo_ausente_hero": false,
+      "riesgo_duplicado_hoy": false
+    },
+    {
+      "slug": "curso-de-comunicacion-efectiva",
+      "titulo_wp_ocurrencias_html": 1,
+      "titulo_wp_cerca_del_modal": 1,
+      "css_oculta_encabezado_hubspot": false,
+      "css_menciona_encabezado": [],
+      "formulario_trae_encabezado_hoy": true,
+      "formulario_actualizado": "2026-09-15",
+      "firma_incrustaciones": [
+        "plano",
+        "plano"
+      ],
+      "agosto_estado": "REVISAR",
+      "agosto_observacion": "Título «¿Quieres más información?» AUSENTE en el hero (esperado 1)",
+      "agosto_decia_titulo_duplicado_modal": false,
+      "agosto_decia_titulo_ausente_hero": true,
+      "riesgo_duplicado_hoy": true
+    },
+    {
+      "slug": "curso-de-digital-business-model",
+      "titulo_wp_ocurrencias_html": 1,
+      "titulo_wp_cerca_del_modal": 1,
+      "css_oculta_encabezado_hubspot": false,
+      "css_menciona_encabezado": [],
+      "formulario_trae_encabezado_hoy": true,
+      "formulario_actualizado": "2026-09-15",
+      "firma_incrustaciones": [
+        "plano",
+        "plano"
+      ],
+      "agosto_estado": "REVISAR",
+      "agosto_observacion": "Título «¿Quieres más información?» AUSENTE en el hero (esperado 1) · formId ≠ canon (sirve 00b12055…) — CONOCIDO, instructivo E",
+      "agosto_decia_titulo_duplicado_modal": false,
+      "agosto_decia_titulo_ausente_hero": true,
+      "riesgo_duplicado_hoy": true
+    },
+    {
+      "slug": "curso-de-felicidad-y-bienestar-organizacional",
+      "titulo_wp_ocurrencias_html": 1,
+      "titulo_wp_cerca_del_modal": 1,
+      "css_oculta_encabezado_hubspot": false,
+      "css_menciona_encabezado": [],
+      "formulario_trae_encabezado_hoy": true,
+      "formulario_actualizado": "2026-09-15",
+      "firma_incrustaciones": [
+        "plano",
+        "plano"
+      ],
+      "agosto_estado": "REVISAR",
+      "agosto_observacion": "Título «¿Quieres más información?» AUSENTE en el hero (esperado 1)",
+      "agosto_decia_titulo_duplicado_modal": false,
+      "agosto_decia_titulo_ausente_hero": true,
+      "riesgo_duplicado_hoy": true
+    },
+    {
+      "slug": "curso-de-gestion-de-equipos-de-alto-rendimiento",
+      "titulo_wp_ocurrencias_html": 1,
+      "titulo_wp_cerca_del_modal": 1,
+      "css_oculta_encabezado_hubspot": false,
+      "css_menciona_encabezado": [],
+      "formulario_trae_encabezado_hoy": true,
+      "formulario_actualizado": "2026-09-15",
+      "firma_incrustaciones": [
+        "plano",
+        "plano"
+      ],
+      "agosto_estado": "REVISAR",
+      "agosto_observacion": "Título «¿Quieres más información?» AUSENTE en el hero (esperado 1)",
+      "agosto_decia_titulo_duplicado_modal": false,
+      "agosto_decia_titulo_ausente_hero": true,
+      "riesgo_duplicado_hoy": true
+    },
+    {
+      "slug": "curso-de-gestion-del-talento",
+      "titulo_wp_ocurrencias_html": 1,
+      "titulo_wp_cerca_del_modal": 1,
+      "css_oculta_encabezado_hubspot": false,
+      "css_menciona_encabezado": [],
+      "formulario_trae_encabezado_hoy": true,
+      "formulario_actualizado": "2026-09-15",
+      "firma_incrustaciones": [
+        "plano",
+        "plano"
+      ],
+      "agosto_estado": "OK",
+      "agosto_observacion": "OK — sin hallazgos propios",
+      "agosto_decia_titulo_duplicado_modal": false,
+      "agosto_decia_titulo_ausente_hero": false,
+      "riesgo_duplicado_hoy": true
+    },
+    {
+      "slug": "curso-de-inteligencia-emocional",
+      "titulo_wp_ocurrencias_html": 1,
+      "titulo_wp_cerca_del_modal": 1,
+      "css_oculta_encabezado_hubspot": false,
+      "css_menciona_encabezado": [],
+      "formulario_trae_encabezado_hoy": false,
+      "formulario_actualizado": "2026-06-11",
+      "firma_incrustaciones": [
+        "plano",
+        "plano"
+      ],
+      "agosto_estado": "REVISAR",
+      "agosto_observacion": "Título DUPLICADO dentro del modal (x3, esperado 2) · Descripción rota: 1 corte(s) de texto a mitad de frase",
+      "agosto_decia_titulo_duplicado_modal": true,
+      "agosto_decia_titulo_ausente_hero": false,
+      "riesgo_duplicado_hoy": false
+    },
+    {
+      "slug": "curso-de-liderazgo-en-la-era-digital",
+      "titulo_wp_ocurrencias_html": 1,
+      "titulo_wp_cerca_del_modal": 1,
+      "css_oculta_encabezado_hubspot": false,
+      "css_menciona_encabezado": [],
+      "formulario_trae_encabezado_hoy": true,
+      "formulario_actualizado": "2026-09-15",
+      "firma_incrustaciones": [
+        "plano",
+        "plano"
+      ],
+      "agosto_estado": "OK",
+      "agosto_observacion": "OK — sin hallazgos propios",
+      "agosto_decia_titulo_duplicado_modal": false,
+      "agosto_decia_titulo_ausente_hero": false,
+      "riesgo_duplicado_hoy": true
+    },
+    {
+      "slug": "curso-de-marketing-digital",
+      "titulo_wp_ocurrencias_html": 1,
+      "titulo_wp_cerca_del_modal": 1,
+      "css_oculta_encabezado_hubspot": false,
+      "css_menciona_encabezado": [],
+      "formulario_trae_encabezado_hoy": false,
+      "formulario_actualizado": "2026-06-11",
+      "firma_incrustaciones": [
+        "plano",
+        "plano"
+      ],
+      "agosto_estado": "REVISAR",
+      "agosto_observacion": "Título DUPLICADO dentro del modal (x3, esperado 2)",
+      "agosto_decia_titulo_duplicado_modal": true,
+      "agosto_decia_titulo_ausente_hero": false,
+      "riesgo_duplicado_hoy": false
+    },
+    {
+      "slug": "curso-de-negociacion-y-resolucion-de-conflictos",
+      "titulo_wp_ocurrencias_html": 1,
+      "titulo_wp_cerca_del_modal": 1,
+      "css_oculta_encabezado_hubspot": false,
+      "css_menciona_encabezado": [],
+      "formulario_trae_encabezado_hoy": true,
+      "formulario_actualizado": "2026-09-15",
+      "firma_incrustaciones": [
+        "plano",
+        "plano"
+      ],
+      "agosto_estado": "OK",
+      "agosto_observacion": "OK — sin hallazgos propios",
+      "agosto_decia_titulo_duplicado_modal": false,
+      "agosto_decia_titulo_ausente_hero": false,
+      "riesgo_duplicado_hoy": true
+    },
+    {
+      "slug": "curso-de-negocios-e-commerce",
+      "titulo_wp_ocurrencias_html": 1,
+      "titulo_wp_cerca_del_modal": 1,
+      "css_oculta_encabezado_hubspot": false,
+      "css_menciona_encabezado": [],
+      "formulario_trae_encabezado_hoy": false,
+      "formulario_actualizado": "2026-06-11",
+      "firma_incrustaciones": [
+        "plano",
+        "plano"
+      ],
+      "agosto_estado": "REVISAR",
+      "agosto_observacion": "Título DUPLICADO dentro del modal (x3, esperado 2)",
+      "agosto_decia_titulo_duplicado_modal": true,
+      "agosto_decia_titulo_ausente_hero": false,
+      "riesgo_duplicado_hoy": false
+    },
+    {
+      "slug": "curso-de-negocios-innovadores",
+      "titulo_wp_ocurrencias_html": 1,
+      "titulo_wp_cerca_del_modal": 1,
+      "css_oculta_encabezado_hubspot": false,
+      "css_menciona_encabezado": [],
+      "formulario_trae_encabezado_hoy": true,
+      "formulario_actualizado": "2026-09-15",
+      "firma_incrustaciones": [
+        "plano",
+        "plano"
+      ],
+      "agosto_estado": null,
+      "agosto_observacion": null,
+      "agosto_decia_titulo_duplicado_modal": false,
+      "agosto_decia_titulo_ausente_hero": false,
+      "riesgo_duplicado_hoy": true
+    },
+    {
+      "slug": "curso-de-transformacion-digital",
+      "titulo_wp_ocurrencias_html": 1,
+      "titulo_wp_cerca_del_modal": 1,
+      "css_oculta_encabezado_hubspot": false,
+      "css_menciona_encabezado": [],
+      "formulario_trae_encabezado_hoy": true,
+      "formulario_actualizado": "2026-09-15",
+      "firma_incrustaciones": [
+        "plano",
+        "plano"
+      ],
+      "agosto_estado": "OK",
+      "agosto_observacion": "OK — sin hallazgos propios",
+      "agosto_decia_titulo_duplicado_modal": false,
+      "agosto_decia_titulo_ausente_hero": false,
+      "riesgo_duplicado_hoy": true
+    },
+    {
+      "slug": "curso-desarrollo-organizacional-y-gestion-del-cambio",
+      "titulo_wp_ocurrencias_html": 1,
+      "titulo_wp_cerca_del_modal": 1,
+      "css_oculta_encabezado_hubspot": false,
+      "css_menciona_encabezado": [],
+      "formulario_trae_encabezado_hoy": true,
+      "formulario_actualizado": "2026-09-15",
+      "firma_incrustaciones": [
+        "plano",
+        "plano"
+      ],
+      "agosto_estado": "OK",
+      "agosto_observacion": "OK — sin hallazgos propios",
+      "agosto_decia_titulo_duplicado_modal": false,
+      "agosto_decia_titulo_ausente_hero": false,
+      "riesgo_duplicado_hoy": true
+    },
+    {
+      "slug": "diplomado-en-gestion-de-la-felicidad-y-bienestar-organizacional",
+      "titulo_wp_ocurrencias_html": 2,
+      "titulo_wp_cerca_del_modal": 0,
+      "css_oculta_encabezado_hubspot": false,
+      "css_menciona_encabezado": [],
+      "formulario_trae_encabezado_hoy": true,
+      "formulario_actualizado": "2026-09-15",
+      "firma_incrustaciones": [
+        "plano",
+        "plano"
+      ],
+      "agosto_estado": null,
+      "agosto_observacion": null,
+      "agosto_decia_titulo_duplicado_modal": false,
+      "agosto_decia_titulo_ausente_hero": false,
+      "riesgo_duplicado_hoy": true
+    },
+    {
+      "slug": "diplomado-en-habilidades-para-la-gestion-de-equipos",
+      "titulo_wp_ocurrencias_html": 2,
+      "titulo_wp_cerca_del_modal": 0,
+      "css_oculta_encabezado_hubspot": false,
+      "css_menciona_encabezado": [],
+      "formulario_trae_encabezado_hoy": true,
+      "formulario_actualizado": "2026-09-15",
+      "firma_incrustaciones": [
+        "plano",
+        "plano"
+      ],
+      "agosto_estado": null,
+      "agosto_observacion": null,
+      "agosto_decia_titulo_duplicado_modal": false,
+      "agosto_decia_titulo_ausente_hero": false,
+      "riesgo_duplicado_hoy": true
+    },
+    {
+      "slug": "diplomado-en-inteligencia-emocional-y-coaching-para-el-liderazgo-en-las-organizaciones",
+      "titulo_wp_ocurrencias_html": 2,
+      "titulo_wp_cerca_del_modal": 0,
+      "css_oculta_encabezado_hubspot": false,
+      "css_menciona_encabezado": [],
+      "formulario_trae_encabezado_hoy": true,
+      "formulario_actualizado": "2026-09-15",
+      "firma_incrustaciones": [
+        "plano",
+        "plano"
+      ],
+      "agosto_estado": null,
+      "agosto_observacion": null,
+      "agosto_decia_titulo_duplicado_modal": false,
+      "agosto_decia_titulo_ausente_hero": false,
+      "riesgo_duplicado_hoy": true
+    },
+    {
+      "slug": "diplomado-en-liderazgo-y-gestion-del-talento",
+      "titulo_wp_ocurrencias_html": 2,
+      "titulo_wp_cerca_del_modal": 0,
+      "css_oculta_encabezado_hubspot": false,
+      "css_menciona_encabezado": [],
+      "formulario_trae_encabezado_hoy": true,
+      "formulario_actualizado": "2026-09-15",
+      "firma_incrustaciones": [
+        "plano",
+        "plano"
+      ],
+      "agosto_estado": null,
+      "agosto_observacion": null,
+      "agosto_decia_titulo_duplicado_modal": false,
+      "agosto_decia_titulo_ausente_hero": false,
+      "riesgo_duplicado_hoy": true
+    },
+    {
+      "slug": "diplomado-en-marketing-digital-y-analitica",
+      "titulo_wp_ocurrencias_html": 2,
+      "titulo_wp_cerca_del_modal": 0,
+      "css_oculta_encabezado_hubspot": false,
+      "css_menciona_encabezado": [],
+      "formulario_trae_encabezado_hoy": true,
+      "formulario_actualizado": "2026-09-15",
+      "firma_incrustaciones": [
+        "plano",
+        "plano"
+      ],
+      "agosto_estado": null,
+      "agosto_observacion": null,
+      "agosto_decia_titulo_duplicado_modal": false,
+      "agosto_decia_titulo_ausente_hero": false,
+      "riesgo_duplicado_hoy": true
+    },
+    {
+      "slug": "diplomado-en-marketing-digital-y-ecommerce",
+      "titulo_wp_ocurrencias_html": 2,
+      "titulo_wp_cerca_del_modal": 0,
+      "css_oculta_encabezado_hubspot": false,
+      "css_menciona_encabezado": [],
+      "formulario_trae_encabezado_hoy": true,
+      "formulario_actualizado": "2026-09-15",
+      "firma_incrustaciones": [
+        "plano",
+        "plano"
+      ],
+      "agosto_estado": null,
+      "agosto_observacion": null,
+      "agosto_decia_titulo_duplicado_modal": false,
+      "agosto_decia_titulo_ausente_hero": false,
+      "riesgo_duplicado_hoy": true
+    },
+    {
+      "slug": "programa-de-especializacion-en-comunicacion-efectiva-y-gestion-de-equipos-de-alto-rendimiento",
+      "titulo_wp_ocurrencias_html": 2,
+      "titulo_wp_cerca_del_modal": 2,
+      "css_oculta_encabezado_hubspot": false,
+      "css_menciona_encabezado": [],
+      "formulario_trae_encabezado_hoy": true,
+      "formulario_actualizado": "2026-09-15",
+      "firma_incrustaciones": [
+        "plano",
+        "plano"
+      ],
+      "agosto_estado": "OK",
+      "agosto_observacion": "OK — sin hallazgos propios",
+      "agosto_decia_titulo_duplicado_modal": false,
+      "agosto_decia_titulo_ausente_hero": false,
+      "riesgo_duplicado_hoy": true
+    },
+    {
+      "slug": "programa-de-especializacion-en-comunicacion-efectiva-y-gestion-del-talento",
+      "titulo_wp_ocurrencias_html": 1,
+      "titulo_wp_cerca_del_modal": 1,
+      "css_oculta_encabezado_hubspot": false,
+      "css_menciona_encabezado": [],
+      "formulario_trae_encabezado_hoy": true,
+      "formulario_actualizado": "2026-09-15",
+      "firma_incrustaciones": [
+        "plano",
+        "plano"
+      ],
+      "agosto_estado": "REVISAR",
+      "agosto_observacion": "Título DUPLICADO dentro del modal (x3, esperado 2)",
+      "agosto_decia_titulo_duplicado_modal": true,
+      "agosto_decia_titulo_ausente_hero": false,
+      "riesgo_duplicado_hoy": true
+    },
+    {
+      "slug": "programa-de-especializacion-en-felicidad-organizacional-y-gestion-de-equipos-de-alto-rendimiento",
+      "titulo_wp_ocurrencias_html": 3,
+      "titulo_wp_cerca_del_modal": 3,
+      "css_oculta_encabezado_hubspot": false,
+      "css_menciona_encabezado": [],
+      "formulario_trae_encabezado_hoy": true,
+      "formulario_actualizado": "2026-09-15",
+      "firma_incrustaciones": [
+        "plano",
+        "plano"
+      ],
+      "agosto_estado": "OK",
+      "agosto_observacion": "OK — sin hallazgos propios",
+      "agosto_decia_titulo_duplicado_modal": false,
+      "agosto_decia_titulo_ausente_hero": false,
+      "riesgo_duplicado_hoy": true
+    },
+    {
+      "slug": "programa-de-especializacion-en-felicidad-organizacional-y-inteligencia-emocional",
+      "titulo_wp_ocurrencias_html": 1,
+      "titulo_wp_cerca_del_modal": 1,
+      "css_oculta_encabezado_hubspot": false,
+      "css_menciona_encabezado": [],
+      "formulario_trae_encabezado_hoy": true,
+      "formulario_actualizado": "2026-09-15",
+      "firma_incrustaciones": [
+        "plano",
+        "plano"
+      ],
+      "agosto_estado": "REVISAR",
+      "agosto_observacion": "Título DUPLICADO dentro del modal (x3, esperado 2)",
+      "agosto_decia_titulo_duplicado_modal": true,
+      "agosto_decia_titulo_ausente_hero": false,
+      "riesgo_duplicado_hoy": true
+    },
+    {
+      "slug": "programa-de-especializacion-en-felicidad-y-desarrollo-organizacional",
+      "titulo_wp_ocurrencias_html": 3,
+      "titulo_wp_cerca_del_modal": 3,
+      "css_oculta_encabezado_hubspot": false,
+      "css_menciona_encabezado": [],
+      "formulario_trae_encabezado_hoy": true,
+      "formulario_actualizado": "2026-09-15",
+      "firma_incrustaciones": [
+        "plano",
+        "plano"
+      ],
+      "agosto_estado": "OK",
+      "agosto_observacion": "(página fuera del inventario Piura: es el slug correcto del 404)",
+      "agosto_decia_titulo_duplicado_modal": false,
+      "agosto_decia_titulo_ausente_hero": false,
+      "riesgo_duplicado_hoy": true
+    },
+    {
+      "slug": "programa-de-especializacion-en-gestion-del-cambio-y-negociacion-de-conflictos",
+      "titulo_wp_ocurrencias_html": 2,
+      "titulo_wp_cerca_del_modal": 2,
+      "css_oculta_encabezado_hubspot": false,
+      "css_menciona_encabezado": [],
+      "formulario_trae_encabezado_hoy": true,
+      "formulario_actualizado": "2026-09-15",
+      "firma_incrustaciones": [
+        "plano",
+        "plano"
+      ],
+      "agosto_estado": "OK",
+      "agosto_observacion": "OK — sin hallazgos propios",
+      "agosto_decia_titulo_duplicado_modal": false,
+      "agosto_decia_titulo_ausente_hero": false,
+      "riesgo_duplicado_hoy": true
+    },
+    {
+      "slug": "programa-de-especializacion-en-gestion-del-talento-y-negociacion-de-conflictos",
+      "titulo_wp_ocurrencias_html": 2,
+      "titulo_wp_cerca_del_modal": 2,
+      "css_oculta_encabezado_hubspot": false,
+      "css_menciona_encabezado": [],
+      "formulario_trae_encabezado_hoy": true,
+      "formulario_actualizado": "2026-09-15",
+      "firma_incrustaciones": [
+        "plano",
+        "plano"
+      ],
+      "agosto_estado": "REVISAR",
+      "agosto_observacion": "formId ≠ canon Piura (sirve 0c7b3436…) — validar contra HubSpot",
+      "agosto_decia_titulo_duplicado_modal": false,
+      "agosto_decia_titulo_ausente_hero": false,
+      "riesgo_duplicado_hoy": true
+    },
+    {
+      "slug": "programa-de-especializacion-en-habilidades-para-la-gestion-de-equipos",
+      "titulo_wp_ocurrencias_html": 1,
+      "titulo_wp_cerca_del_modal": 1,
+      "css_oculta_encabezado_hubspot": false,
+      "css_menciona_encabezado": [],
+      "formulario_trae_encabezado_hoy": true,
+      "formulario_actualizado": "2026-09-15",
+      "firma_incrustaciones": [
+        "plano",
+        "plano"
+      ],
+      "agosto_estado": "REVISAR",
+      "agosto_observacion": "Título DUPLICADO dentro del modal (x3, esperado 2)",
+      "agosto_decia_titulo_duplicado_modal": true,
+      "agosto_decia_titulo_ausente_hero": false,
+      "riesgo_duplicado_hoy": true
+    },
+    {
+      "slug": "programa-de-especializacion-en-inteligencia-emocional-y-coaching",
+      "titulo_wp_ocurrencias_html": 3,
+      "titulo_wp_cerca_del_modal": 3,
+      "css_oculta_encabezado_hubspot": false,
+      "css_menciona_encabezado": [],
+      "formulario_trae_encabezado_hoy": true,
+      "formulario_actualizado": "2026-09-15",
+      "firma_incrustaciones": [
+        "plano",
+        "plano"
+      ],
+      "agosto_estado": "OK",
+      "agosto_observacion": "OK — sin hallazgos propios",
+      "agosto_decia_titulo_duplicado_modal": false,
+      "agosto_decia_titulo_ausente_hero": false,
+      "riesgo_duplicado_hoy": true
+    },
+    {
+      "slug": "programa-de-especializacion-en-liderazgo-y-comunicacion-efectiva",
+      "titulo_wp_ocurrencias_html": 2,
+      "titulo_wp_cerca_del_modal": 2,
+      "css_oculta_encabezado_hubspot": false,
+      "css_menciona_encabezado": [],
+      "formulario_trae_encabezado_hoy": true,
+      "formulario_actualizado": "2026-09-15",
+      "firma_incrustaciones": [
+        "plano",
+        "plano"
+      ],
+      "agosto_estado": "OK",
+      "agosto_observacion": "OK — sin hallazgos propios",
+      "agosto_decia_titulo_duplicado_modal": false,
+      "agosto_decia_titulo_ausente_hero": false,
+      "riesgo_duplicado_hoy": true
+    },
+    {
+      "slug": "programa-de-especializacion-en-liderazgo-y-felicidad-organizacional",
+      "titulo_wp_ocurrencias_html": 3,
+      "titulo_wp_cerca_del_modal": 3,
+      "css_oculta_encabezado_hubspot": false,
+      "css_menciona_encabezado": [],
+      "formulario_trae_encabezado_hoy": true,
+      "formulario_actualizado": "2026-09-15",
+      "firma_incrustaciones": [
+        "plano",
+        "plano"
+      ],
+      "agosto_estado": "OK",
+      "agosto_observacion": "OK — sin hallazgos propios",
+      "agosto_decia_titulo_duplicado_modal": false,
+      "agosto_decia_titulo_ausente_hero": false,
+      "riesgo_duplicado_hoy": true
+    },
+    {
+      "slug": "programa-de-especializacion-en-liderazgo-y-gestion-del-talento",
+      "titulo_wp_ocurrencias_html": 2,
+      "titulo_wp_cerca_del_modal": 2,
+      "css_oculta_encabezado_hubspot": false,
+      "css_menciona_encabezado": [],
+      "formulario_trae_encabezado_hoy": true,
+      "formulario_actualizado": "2026-09-15",
+      "firma_incrustaciones": [
+        "plano",
+        "plano"
+      ],
+      "agosto_estado": "OK",
+      "agosto_observacion": "OK — sin hallazgos propios",
+      "agosto_decia_titulo_duplicado_modal": false,
+      "agosto_decia_titulo_ausente_hero": false,
+      "riesgo_duplicado_hoy": true
+    },
+    {
+      "slug": "programa-de-especializacion-en-liderazgo-y-negociacion-de-conflictos",
+      "titulo_wp_ocurrencias_html": 7,
+      "titulo_wp_cerca_del_modal": 1,
+      "css_oculta_encabezado_hubspot": true,
+      "css_menciona_encabezado": [],
+      "formulario_trae_encabezado_hoy": true,
+      "formulario_actualizado": "2026-09-15",
+      "firma_incrustaciones": [
+        "plano",
+        "css+onFormReady",
+        "css+onFormReady",
+        "css+onFormReady",
+        "css+onFormReady",
+        "css+onFormReady",
+        "css+onFormReady",
+        "plano"
+      ],
+      "agosto_estado": "REVISAR",
+      "agosto_observacion": "Título «¿Quieres más información?» AUSENTE en el hero (esperado 1) · formId ≠ canon Piura (sirve 84f82226…) — validar contra HubSpot",
+      "agosto_decia_titulo_duplicado_modal": false,
+      "agosto_decia_titulo_ausente_hero": true,
+      "riesgo_duplicado_hoy": false
+    },
+    {
+      "slug": "programa-de-especializacion-en-liderazgo-y-transformacion-digital",
+      "titulo_wp_ocurrencias_html": 3,
+      "titulo_wp_cerca_del_modal": 3,
+      "css_oculta_encabezado_hubspot": false,
+      "css_menciona_encabezado": [],
+      "formulario_trae_encabezado_hoy": true,
+      "formulario_actualizado": "2026-09-15",
+      "firma_incrustaciones": [
+        "plano",
+        "plano"
+      ],
+      "agosto_estado": "OK",
+      "agosto_observacion": "OK — sin hallazgos propios",
+      "agosto_decia_titulo_duplicado_modal": false,
+      "agosto_decia_titulo_ausente_hero": false,
+      "riesgo_duplicado_hoy": true
+    },
+    {
+      "slug": "programa-de-especializacion-en-marketing-digital-y-business-model",
+      "titulo_wp_ocurrencias_html": 2,
+      "titulo_wp_cerca_del_modal": 2,
+      "css_oculta_encabezado_hubspot": false,
+      "css_menciona_encabezado": [],
+      "formulario_trae_encabezado_hoy": true,
+      "formulario_actualizado": "2026-09-15",
+      "firma_incrustaciones": [
+        "plano",
+        "plano"
+      ],
+      "agosto_estado": "OK",
+      "agosto_observacion": "OK — sin hallazgos propios",
+      "agosto_decia_titulo_duplicado_modal": false,
+      "agosto_decia_titulo_ausente_hero": false,
+      "riesgo_duplicado_hoy": true
+    },
+    {
+      "slug": "programa-de-especializacion-en-marketing-digital-y-e-commerce",
+      "titulo_wp_ocurrencias_html": 2,
+      "titulo_wp_cerca_del_modal": 0,
+      "css_oculta_encabezado_hubspot": false,
+      "css_menciona_encabezado": [],
+      "formulario_trae_encabezado_hoy": true,
+      "formulario_actualizado": "2026-09-15",
+      "firma_incrustaciones": [
+        "plano",
+        "plano"
+      ],
+      "agosto_estado": "OK",
+      "agosto_observacion": "OK — sin hallazgos propios",
+      "agosto_decia_titulo_duplicado_modal": false,
+      "agosto_decia_titulo_ausente_hero": false,
+      "riesgo_duplicado_hoy": true
+    },
+    {
+      "slug": "programa-de-especializacion-en-modelo-de-negocios-digitales-y-business-intelligence",
+      "titulo_wp_ocurrencias_html": 2,
+      "titulo_wp_cerca_del_modal": 2,
+      "css_oculta_encabezado_hubspot": false,
+      "css_menciona_encabezado": [],
+      "formulario_trae_encabezado_hoy": true,
+      "formulario_actualizado": "2026-09-15",
+      "firma_incrustaciones": [
+        "plano",
+        "plano"
+      ],
+      "agosto_estado": "OK",
+      "agosto_observacion": "OK — sin hallazgos propios",
+      "agosto_decia_titulo_duplicado_modal": false,
+      "agosto_decia_titulo_ausente_hero": false,
+      "riesgo_duplicado_hoy": true
+    },
+    {
+      "slug": "programa-de-especializacion-en-modelo-de-negocios-y-transformacion-digital",
+      "titulo_wp_ocurrencias_html": 1,
+      "titulo_wp_cerca_del_modal": 1,
+      "css_oculta_encabezado_hubspot": false,
+      "css_menciona_encabezado": [],
+      "formulario_trae_encabezado_hoy": true,
+      "formulario_actualizado": "2026-09-15",
+      "firma_incrustaciones": [
+        "plano",
+        "plano"
+      ],
+      "agosto_estado": "OK",
+      "agosto_observacion": "OK — sin hallazgos propios",
+      "agosto_decia_titulo_duplicado_modal": false,
+      "agosto_decia_titulo_ausente_hero": false,
+      "riesgo_duplicado_hoy": true
+    }
+  ],
+  "resumen": {
+    "paginas_con_titulo_wp_en_html": 40,
+    "distribucion_ocurrencias_titulo_wp": {
+      "1": 20,
+      "2": 14,
+      "3": 5,
+      "7": 1
+    },
+    "paginas_con_css_que_oculta_encabezado": 1,
+    "formularios_con_encabezado_hoy": 36,
+    "riesgo_duplicado_hoy": [
+      "curso-de-analitica-digital-growth-marketing",
+      "curso-de-business-intelligence-data-science",
+      "curso-de-comunicacion-efectiva",
+      "curso-de-digital-business-model",
+      "curso-de-felicidad-y-bienestar-organizacional",
+      "curso-de-gestion-de-equipos-de-alto-rendimiento",
+      "curso-de-gestion-del-talento",
+      "curso-de-liderazgo-en-la-era-digital",
+      "curso-de-negociacion-y-resolucion-de-conflictos",
+      "curso-de-negocios-innovadores",
+      "curso-de-transformacion-digital",
+      "curso-desarrollo-organizacional-y-gestion-del-cambio",
+      "diplomado-en-gestion-de-la-felicidad-y-bienestar-organizacional",
+      "diplomado-en-habilidades-para-la-gestion-de-equipos",
+      "diplomado-en-inteligencia-emocional-y-coaching-para-el-liderazgo-en-las-organizaciones",
+      "diplomado-en-liderazgo-y-gestion-del-talento",
+      "diplomado-en-marketing-digital-y-analitica",
+      "diplomado-en-marketing-digital-y-ecommerce",
+      "programa-de-especializacion-en-comunicacion-efectiva-y-gestion-de-equipos-de-alto-rendimiento",
+      "programa-de-especializacion-en-comunicacion-efectiva-y-gestion-del-talento",
+      "programa-de-especializacion-en-felicidad-organizacional-y-gestion-de-equipos-de-alto-rendimiento",
+      "programa-de-especializacion-en-felicidad-organizacional-y-inteligencia-emocional",
+      "programa-de-especializacion-en-felicidad-y-desarrollo-organizacional",
+      "programa-de-especializacion-en-gestion-del-cambio-y-negociacion-de-conflictos",
+      "programa-de-especializacion-en-gestion-del-talento-y-negociacion-de-conflictos",
+      "programa-de-especializacion-en-habilidades-para-la-gestion-de-equipos",
+      "programa-de-especializacion-en-inteligencia-emocional-y-coaching",
+      "programa-de-especializacion-en-liderazgo-y-comunicacion-efectiva",
+      "programa-de-especializacion-en-liderazgo-y-felicidad-organizacional",
+      "programa-de-especializacion-en-liderazgo-y-gestion-del-talento",
+      "programa-de-especializacion-en-liderazgo-y-transformacion-digital",
+      "programa-de-especializacion-en-marketing-digital-y-business-model",
+      "programa-de-especializacion-en-marketing-digital-y-e-commerce",
+      "programa-de-especializacion-en-modelo-de-negocios-digitales-y-business-intelligence",
+      "programa-de-especializacion-en-modelo-de-negocios-y-transformacion-digital"
+    ],
+    "agosto_duplicado_en_modal": [
+      "curso-de-coaching",
+      "curso-de-inteligencia-emocional",
+      "curso-de-marketing-digital",
+      "curso-de-negocios-e-commerce",
+      "programa-de-especializacion-en-comunicacion-efectiva-y-gestion-del-talento",
+      "programa-de-especializacion-en-felicidad-organizacional-y-inteligencia-emocional",
+      "programa-de-especializacion-en-habilidades-para-la-gestion-de-equipos"
+    ],
+    "agosto_ausente_en_hero": [
+      "curso-de-comunicacion-efectiva",
+      "curso-de-digital-business-model",
+      "curso-de-felicidad-y-bienestar-organizacional",
+      "curso-de-gestion-de-equipos-de-alto-rendimiento",
+      "programa-de-especializacion-en-liderazgo-y-negociacion-de-conflictos"
+    ],
+    "firmas_incrustacion": {
+      "plano|plano": 39,
+      "plano|css+onFormReady|css+onFormReady|css+onFormReady|css+onFormReady|css+onFormReady|css+onFormReady|plano": 1
+    }
+  }
+}

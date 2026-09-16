@@ -1,0 +1,98 @@
+{
+  "generado": "2026-09-16T14:32:42",
+  "urls": [
+    {
+      "nombre": "negocios-innovadores (URL del canon, fila 35)",
+      "url": "https://udeponline.pe/negocios-innovadores/",
+      "http": 301,
+      "redirige_a": "https://udeponline.pe/curso-de-negocios-innovadores/",
+      "tiene_formulario": null,
+      "destino_final": "https://udeponline.pe/curso-de-negocios-innovadores/",
+      "http_final": 200
+    },
+    {
+      "nombre": "curso-de-negocios-innovadores (URL real)",
+      "url": "https://udeponline.pe/curso-de-negocios-innovadores/",
+      "http": 200,
+      "redirige_a": null,
+      "tiene_formulario": true
+    },
+    {
+      "nombre": "enfelicidad (URL mal escrita del canon, fila 19)",
+      "url": "https://udeponline.pe/programa-de-especializacion-enfelicidad-y-desarrollo-organizacional/",
+      "http": 404,
+      "redirige_a": null,
+      "tiene_formulario": null
+    },
+    {
+      "nombre": "felicidad-y-desarrollo (URL real)",
+      "url": "https://udeponline.pe/programa-de-especializacion-en-felicidad-y-desarrollo-organizacional/",
+      "http": 200,
+      "redirige_a": null,
+      "tiene_formulario": true
+    },
+    {
+      "nombre": "curso-de-marketing-digital-test (fila 34)",
+      "url": "https://udeponline.pe/curso-de-marketing-digital-test/",
+      "http": 404,
+      "redirige_a": null,
+      "tiene_formulario": null
+    },
+    {
+      "nombre": "programas-de-especializacion-dev",
+      "url": "https://udeponline.pe/programas-de-especializacion-dev/",
+      "http": 200,
+      "redirige_a": null,
+      "tiene_formulario": false
+    },
+    {
+      "nombre": "curso-de-analitica-digital-growth-marketing",
+      "url": "https://udeponline.pe/curso-de-analitica-digital-growth-marketing/",
+      "http": 200,
+      "redirige_a": null,
+      "tiene_formulario": true
+    },
+    {
+      "nombre": "diplomado: diplomado-en-gestion-de-la-felicidad-y-bienestar-organizacional",
+      "url": "https://udeponline.pe/diplomado-en-gestion-de-la-felicidad-y-bienestar-organizacional/",
+      "http": 200,
+      "redirige_a": null,
+      "tiene_formulario": true
+    },
+    {
+      "nombre": "diplomado: diplomado-en-habilidades-para-la-gestion-de-equipos",
+      "url": "https://udeponline.pe/diplomado-en-habilidades-para-la-gestion-de-equipos/",
+      "http": 200,
+      "redirige_a": null,
+      "tiene_formulario": true
+    },
+    {
+      "nombre": "diplomado: diplomado-en-inteligencia-emocional-y-coaching-para-el-liderazgo-en-las-organizaciones",
+      "url": "https://udeponline.pe/diplomado-en-inteligencia-emocional-y-coaching-para-el-liderazgo-en-las-organizaciones/",
+      "http": 200,
+      "redirige_a": null,
+      "tiene_formulario": true
+    },
+    {
+      "nombre": "diplomado: diplomado-en-liderazgo-y-gestion-del-talento",
+      "url": "https://udeponline.pe/diplomado-en-liderazgo-y-gestion-del-talento/",
+      "http": 200,
+      "redirige_a": null,
+      "tiene_formulario": true
+    },
+    {
+      "nombre": "diplomado: diplomado-en-marketing-digital-y-analitica",
+      "url": "https://udeponline.pe/diplomado-en-marketing-digital-y-analitica/",
+      "http": 200,
+      "redirige_a": null,
+      "tiene_formulario": true
+    },
+    {
+      "nombre": "diplomado: diplomado-en-marketing-digital-y-ecommerce",
+      "url": "https://udeponline.pe/diplomado-en-marketing-digital-y-ecommerce/",
+      "http": 200,
+      "redirige_a": null,
+      "tiene_formulario": true
+    }
+  ]
+}

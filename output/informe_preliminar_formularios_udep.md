@@ -1,6 +1,6 @@
 # Auditoría de formularios · UDEP Online — informe preliminar (rondas 0 a 2)
 
-**Fecha:** 15 de septiembre de 2026 · **Portal HubSpot:** 6925781 · **Sitio:** udeponline.pe
+**Fecha:** 15 de septiembre de 2026 · actualizado 16-sep con el cruce contra el canon Piura · **Portal HubSpot:** 6925781 · **Sitio:** udeponline.pe
 **Estado:** PRELIMINAR. Cubre lo verificable sin enviar formularios: definición de los 40
 formularios por API, marcado de las 40 páginas y los workflows Activador del portal. La prueba de
 envío real (80 instancias) no se ejecutó todavía; ver "Lo que no se pudo verificar".
@@ -55,6 +55,48 @@ Sin envío no hay registro de disparo. Lo verificado por lectura del marcado: **
 incrustado coincide con el esperado en las 40 páginas**, sin divergencias respecto de la medición
 del 15 de septiembre (`10_paginas.json`, `divergencias: []`). El identificador que efectivamente
 se registre en HubSpot queda para la ronda 3.
+
+## 2 bis. Cruce con el canon Piura (pedido por Santiago el 16-sep)
+
+Se cruzaron las 80 instancias (hero y modal de cada página) contra la planilla *Formularios de
+Google (Piura)*, columna ID, resolviendo cada identificador por la API de HubSpot para saber a qué
+formulario apunta de verdad. Regla aplicada: **la herramienta gana sobre la hoja**. Evidencia:
+`21_cruce_canon.json`, `cruce_canon_vicente.csv` (80 filas), `cruce_canon_discrepancias.csv`.
+
+| Resultado sobre 80 instancias | Cantidad |
+|---|---|
+| El formulario de la página coincide con el canon | **70** |
+| Falsa alarma del canon: la página está bien, la planilla está mal | **6** (3 páginas) |
+| La planilla no tiene fila para la página | **4** (2 páginas) |
+| **Discrepancia real** (la página apunta a un formulario de otro programa) | **0** |
+
+**Conclusión para Vicente: no hay que cambiar el identificador en ninguna de las 40 páginas.** Las
+diferencias con la planilla son errores de la planilla:
+
+- *Liderazgo y Negociación de Conflictos* (fila 3) y *Gestión del Talento y Negociación de
+  Conflictos* (fila 7) comparten el ID `43632e61` y tienen los nombres cruzados, tal como advirtió
+  Santiago. Por API, `43632e61` es "PIURA: PDE en Liderazgo y Negociación de Conflictos (UDN
+  UDEP)". El sitio sirve `84f82226` ("Liderazgo y Negociación de Conflictos Piura") y `0c7b3436`
+  ("PDE en Gestión del Talento y Negociación de Conflictos"), ambos correctos para su página.
+- *Digital Business Model* (fila 30): el canon dice `b92183d3` ("Curso Digital Business Model
+  (UDN UDEP)") y el sitio usa `00b12055` ("Curso Digital Business Model Piura (UDN UDEP)"). Son
+  dos formularios distintos para el mismo curso, ambos activos y ambos inscriptos en el Activador
+  de Cursos. El de la página corresponde al curso; el del canon no fue normalizado el 15-sep
+  (`13_formularios_canon.json`).
+- Sin fila en la planilla: *Analítica Digital & Growth Marketing* (`7a38b319`, creado el 15-sep) y
+  *Diplomado en Inteligencia Emocional y Coaching* (`bef4306e`).
+- Filas del canon que no corresponden a ninguna página: fila 34 "Marketing Digital Test" sin ID,
+  fila 37 duplicada de Comunicación Efectiva y Gestión del Talento con un ID de Meta
+  (`1901549703874911`), y filas 45 y 46 con anotaciones en vez de datos. La fila 19 tiene la URL
+  mal escrita ("enfelicidad") y la fila 35 una URL que no existe; en ambas el ID sí coincide con
+  el sitio.
+
+**Hallazgo derivado:** existen formularios duplicados y activos para el mismo programa
+(`43632e61` junto a `84f82226`; `b92183d3` junto a `00b12055`), y los dos duplicados están
+inscriptos en Activadores. `43632e61` conserva el valor de programa correcto ("Liderazgo y
+Negociación de Conflictos") mientras que `84f82226`, el que usa la página, envía "Marketing
+Digital y Ecommerce" desde la normalización. Conviene decidir cuál es el canónico de cada par y
+archivar el otro, para que no vuelvan a mezclarse en la planilla.
 
 ## 3. Activador de cada formulario
 
@@ -280,6 +322,9 @@ cambian. Lo que le toca a él es marcado de WordPress, no formularios:
 - `12_activadores.json` + `evidencia/flows/<flowId>.json` · respuesta cruda de
   `GET /automation/v4/flows/{flowId}` de los seis Activadores; 1083 flows recorridos.
 - `20_matriz.json` · 40 filas con hallazgos, severidad, caso y acción.
+- `21_cruce_canon.json` + `13_formularios_canon.json` + `input/canon_piura.xlsx` · cruce de las 80 instancias
+  contra la planilla Piura, con los dos formIds del canon resueltos por API.
+- `cruce_canon_vicente.csv` (80 filas) y `cruce_canon_discrepancias.csv` (vacío: 0 discrepancias reales).
 - `registro_pruebas.csv` · 80 filas (banner y modal por página) con R1-R5, H1-H7, caso y
   severidad; R1-R5, H1, H2 y H5 en PENDIENTE hasta la ronda 3.
 

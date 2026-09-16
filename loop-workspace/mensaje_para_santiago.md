@@ -59,6 +59,14 @@ verdad en el HubSpot productivo y por eso está frenada hasta tener las decision
 - Solo si el reCAPTCHA se confirma como clave de prueba: avisarle antes de tocarlo, porque el
   cambio alcanza a los formularios de UANDES Online.
 
+## Cruce contra el canon Piura (16-sep)
+
+Hecho, con el token cargado: las 80 instancias resueltas por API y cruzadas con la planilla.
+**0 discrepancias reales.** Los 40 identificadores del sitio son los correctos; las 6 diferencias
+con la planilla son errores de la planilla (los nombres cruzados de Liderazgo/Gestión del Talento y
+Negociación, y Digital Business Model, que tiene dos formularios activos para el mismo curso).
+Dos páginas no tienen fila en la planilla. Tabla para Vicente: `output/cruce_canon_vicente.csv`.
+
 ## Evidencia
 
 Informe preliminar y registro de 80 filas en el repositorio

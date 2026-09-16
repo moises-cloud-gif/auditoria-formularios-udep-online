@@ -1,0 +1,43 @@
+{
+  "formularios": {
+    "43632e61-2706-46fe-bc8a-1638b6bfc01e": {
+      "http": 200,
+      "nombre": "PIURA: PDE en Liderazgo y Negociación de Conflictos (UDN UDE",
+      "archivado": false,
+      "creado": "2025-09-26T00:49:35.273Z",
+      "actualizado": "2026-06-11T04:52:30.083Z",
+      "campos": [
+        "firstname",
+        "lastname",
+        "phone",
+        "email",
+        "programas_piura__udn_udep_",
+        "nivel_de_estudios__udn_udep_",
+        "medio_de_contacto",
+        "mensaje"
+      ],
+      "valor_programa": [
+        "Liderazgo y Negociación de Conflictos"
+      ]
+    },
+    "b92183d3-4a82-42a8-be63-805d1204e40a": {
+      "http": 200,
+      "nombre": "Curso Digital Business Model  (UDN UDEP)",
+      "archivado": false,
+      "creado": "2025-03-21T14:01:26.544Z",
+      "actualizado": "2026-06-11T07:09:07.437Z",
+      "campos": [
+        "firstname",
+        "lastname",
+        "phone",
+        "email",
+        "nivel_de_estudios__udn_udep_",
+        "cursos_piura__udn_udep_",
+        "medio_de_contacto__udn_udep_",
+        "mensaje"
+      ],
+      "valor_programa": null
+    }
+  },
+  "generado": "2026-09-16T12:33:05"
+}

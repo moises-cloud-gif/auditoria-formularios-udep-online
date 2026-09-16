@@ -1,0 +1,123 @@
+{
+  "generado": "2026-09-16T12:34:36",
+  "instancias": 80,
+  "veredictos": {
+    "CANON SIN FILA": 4,
+    "COINCIDE": 70,
+    "FALSA ALARMA DEL CANON": 6
+  },
+  "discrepancias_reales": [],
+  "errores_del_canon": [
+    {
+      "pagina": "curso-de-analitica-digital-growth-marketing",
+      "url": "https://udeponline.pe/curso-de-analitica-digital-growth-marketing/",
+      "instancia": "hero",
+      "formId_en_la_pagina": "7a38b319-f279-497a-84c6-e85dad3de2a4",
+      "apunta_hoy_a_nombre_real_hubspot": "Curso Analítica Digital & Growth Marketing Piura (UDN UDEP)",
+      "programa_que_envia_el_formulario": "Gestión del Talento",
+      "formId_canon": "",
+      "nombre_en_canon": "",
+      "fila_canon": "",
+      "canon_encontrado_por": "",
+      "coincide_con_canon": "NO",
+      "veredicto": "CANON SIN FILA",
+      "formId_que_debe_quedar": "7a38b319-f279-497a-84c6-e85dad3de2a4",
+      "accion": "nada: el formId de la pagina es el correcto; agregar la fila a la planilla",
+      "detalle": "la planilla no tiene fila para esta pagina"
+    },
+    {
+      "pagina": "curso-de-digital-business-model",
+      "url": "https://udeponline.pe/curso-de-digital-business-model/",
+      "instancia": "hero",
+      "formId_en_la_pagina": "00b12055-381c-43f6-9dc1-45372becccd8",
+      "apunta_hoy_a_nombre_real_hubspot": "Curso Digital Business Model Piura  (UDN UDEP)",
+      "programa_que_envia_el_formulario": "Gestión del Talento",
+      "formId_canon": "b92183d3-4a82-42a8-be63-805d1204e40a",
+      "nombre_en_canon": "Digital Business Model",
+      "fila_canon": 30,
+      "canon_encontrado_por": "url",
+      "coincide_con_canon": "NO",
+      "veredicto": "FALSA ALARMA DEL CANON",
+      "formId_que_debe_quedar": "00b12055-381c-43f6-9dc1-45372becccd8",
+      "accion": "nada: el formId de la pagina es el correcto; corregir la planilla (fila 30): su ID b92183d3 resuelve a 'Curso Digital Business Model  (UDN UDEP)'",
+      "detalle": "el sitio usa 'Curso Digital Business Model Piura  (UDN UDEP)', que corresponde a la pagina; el canon dice b92183d3 = 'Curso Digital Business Model  (UDN UDEP)'"
+    },
+    {
+      "pagina": "diplomado-en-inteligencia-emocional-y-coaching-para-el-liderazgo-en-las-organizaciones",
+      "url": "https://udeponline.pe/diplomado-en-inteligencia-emocional-y-coaching-para-el-liderazgo-en-las-organizaciones/",
+      "instancia": "hero",
+      "formId_en_la_pagina": "bef4306e-9106-4ad8-920f-c01e63c7726e",
+      "apunta_hoy_a_nombre_real_hubspot": "PIURA: Diplomado Inteligencia Emocional & Coaching (UDN UDEP)",
+      "programa_que_envia_el_formulario": "Marketing Digital y Ecommerce",
+      "formId_canon": "",
+      "nombre_en_canon": "",
+      "fila_canon": "",
+      "canon_encontrado_por": "",
+      "coincide_con_canon": "NO",
+      "veredicto": "CANON SIN FILA",
+      "formId_que_debe_quedar": "bef4306e-9106-4ad8-920f-c01e63c7726e",
+      "accion": "nada: el formId de la pagina es el correcto; agregar la fila a la planilla",
+      "detalle": "la planilla no tiene fila para esta pagina"
+    },
+    {
+      "pagina": "programa-de-especializacion-en-gestion-del-talento-y-negociacion-de-conflictos",
+      "url": "https://udeponline.pe/programa-de-especializacion-en-gestion-del-talento-y-negociacion-de-conflictos/",
+      "instancia": "hero",
+      "formId_en_la_pagina": "0c7b3436-4cc6-4ada-91ea-76b82d1e64ed",
+      "apunta_hoy_a_nombre_real_hubspot": "PIURA: PDE en Gestión del Talento y Negociación de Conflictos",
+      "programa_que_envia_el_formulario": "Marketing Digital y Ecommerce",
+      "formId_canon": "43632e61-2706-46fe-bc8a-1638b6bfc01e",
+      "nombre_en_canon": "Programa de Especialización en Liderazgo y Negociación de Conflictos",
+      "fila_canon": 7,
+      "canon_encontrado_por": "url",
+      "coincide_con_canon": "NO",
+      "veredicto": "FALSA ALARMA DEL CANON",
+      "formId_que_debe_quedar": "0c7b3436-4cc6-4ada-91ea-76b82d1e64ed",
+      "accion": "nada: el formId de la pagina es el correcto; corregir la planilla (fila 7): su ID 43632e61 resuelve a 'PIURA: PDE en Liderazgo y Negociación de Conflictos (UDN UDE'",
+      "detalle": "el sitio usa 'PIURA: PDE en Gestión del Talento y Negociación de Conflictos', que corresponde a la pagina; el canon dice 43632e61 = 'PIURA: PDE en Liderazgo y Negociación de Conflictos (UDN UDE'"
+    },
+    {
+      "pagina": "programa-de-especializacion-en-liderazgo-y-negociacion-de-conflictos",
+      "url": "https://udeponline.pe/programa-de-especializacion-en-liderazgo-y-negociacion-de-conflictos/",
+      "instancia": "hero",
+      "formId_en_la_pagina": "84f82226-d1c2-43aa-b4e9-da20f43c0548",
+      "apunta_hoy_a_nombre_real_hubspot": "Liderazgo y Negociación de Conflictos Piura (UDN UDEP)",
+      "programa_que_envia_el_formulario": "Marketing Digital y Ecommerce",
+      "formId_canon": "43632e61-2706-46fe-bc8a-1638b6bfc01e",
+      "nombre_en_canon": "Gestión del Talento y Negociación de Conflictos",
+      "fila_canon": 3,
+      "canon_encontrado_por": "url",
+      "coincide_con_canon": "NO",
+      "veredicto": "FALSA ALARMA DEL CANON",
+      "formId_que_debe_quedar": "84f82226-d1c2-43aa-b4e9-da20f43c0548",
+      "accion": "nada: el formId de la pagina es el correcto; corregir la planilla (fila 3): su ID 43632e61 resuelve a 'PIURA: PDE en Liderazgo y Negociación de Conflictos (UDN UDE'",
+      "detalle": "el sitio usa 'Liderazgo y Negociación de Conflictos Piura (UDN UDEP)', que corresponde a la pagina; el canon dice 43632e61 = 'PIURA: PDE en Liderazgo y Negociación de Conflictos (UDN UDE'"
+    }
+  ],
+  "filas_del_canon_sin_pagina": [
+    {
+      "fila": 34,
+      "nombre": "Marketing Digital Test",
+      "id": "",
+      "url": "https://udeponline.pe/curso-de-marketing-digital-test/"
+    },
+    {
+      "fila": 37,
+      "nombre": "Programa de Especialización en Comunicación Efectiva y Gestión del Talento",
+      "id": "1901549703874911",
+      "url": "https://udeponline.pe/programa-de-especializacion-en-comunicacion-efectiva-y-gestion-del-talento/"
+    },
+    {
+      "fila": 45,
+      "nombre": "Reemplazar con este ID",
+      "id": "",
+      "url": ""
+    },
+    {
+      "fila": 46,
+      "nombre": "Al dar click en \"Postula aquí\", aparece duplicado el \"Quieres mas informacion?\"",
+      "id": "",
+      "url": ""
+    }
+  ]
+}

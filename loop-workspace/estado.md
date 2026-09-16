@@ -35,6 +35,15 @@ Pasadas del probador usadas: 0 de 3.
 4. La skill `consulting-deliverable-system` no está instalada en esta sesión. El informe preliminar
    se redactó siguiendo la estructura obligatoria del agente `redactor-informe`.
 
+## Hallazgo de seguridad del propio paquete (16-sep)
+
+La limpieza original (`tools/limpiar_pruebas.py`) borraba **todo** lo que devolviera la búsqueda
+`qa+*` de HubSpot. Esa búsqueda devuelve hoy dos contactos reales de UANDES (leads de Facebook con
+`_qa` en el correo) que no tienen nada que ver con la prueba. Con el script original, aprobar la
+limpieza los habría archivado. Se corrigió: ahora solo borra correos que cumplen exactamente el
+patrón `qa+<slug>-<banner|modal>-<AAAAMMDD>@5minutos.io` y lista el resto como excluido.
+Evidencia: `output/90_limpieza.json`.
+
 ## Bloqueos para el usuario
 
 - `git push` está denegado por `.claude/settings.json` del paquete y la sesión no pudo editarlo.

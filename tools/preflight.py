@@ -52,20 +52,33 @@ def p4():
 
 
 def p5():
+    """El sitio usa el embed v2 de HubSpot: el formulario vive DENTRO de un iframe.
+    Contar 'form input' en la pagina principal siempre da cero. Se cuenta en los marcos."""
+    import os
     from playwright.sync_api import sync_playwright
     pag = hs.paginas()[0]
+    visible = os.getenv("PW_VISIBLE", "0") == "1"
     with sync_playwright() as pw:
-        b = pw.chromium.launch()
-        pg = b.new_page()
-        pg.goto(pag["url"], timeout=60000, wait_until="networkidle")
-        pg.wait_for_timeout(4000)
-        inputs = pg.locator("form input").count()
+        b = pw.chromium.launch(headless=not visible)
+        ctx = b.new_context(viewport={"width": 1440, "height": 900}, locale="es-PE")
+        pg = ctx.new_page()
+        pg.goto(pag["url"], timeout=90000, wait_until="domcontentloaded")
+        pg.wait_for_timeout(9000)
+        en_pagina = pg.locator("form input").count()
+        en_marcos = sum(f.locator("input, select, textarea").count() for f in pg.frames[1:])
+        iframes = pg.locator("iframe.hs-form-iframe, iframe[id^='hs-form-iframe']").count()
+        titulo = pg.title()
         destino = hs.EVID / "preflight_render.png"
         pg.screenshot(path=str(destino), full_page=False)
         b.close()
-    if inputs == 0:
-        return False, f"Playwright abrio {pag['slug']} pero no renderizo ningun campo"
-    return True, f"{inputs} campos renderizados en {pag['slug']}, captura en {destino.name}"
+    if "just a moment" in titulo.lower():
+        return False, "Cloudflare esta desafiando al navegador. Reintenta con PW_VISIBLE=1"
+    total = en_pagina + en_marcos
+    if total == 0:
+        return False, (f"Playwright abrio {pag['slug']} pero no renderizo ningun campo "
+                       f"(iframes de formulario detectados: {iframes})")
+    return True, (f"{total} campos renderizados en {pag['slug']} "
+                  f"({en_marcos} dentro del iframe de HubSpot), captura en {destino.name}")
 
 
 def p6():

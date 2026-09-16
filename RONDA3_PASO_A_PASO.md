@@ -55,6 +55,11 @@ nunca tenés que copiar la llave a ningún otro lado.
 Si no encontrás el archivo (en Windows y Mac los archivos que empiezan con punto están ocultos),
 activá "ver archivos ocultos" en el explorador, o pedile a Roman que te lo mande de nuevo.
 
+> **Trampa clásica de Windows:** si lo abrís con el Bloc de notas y guardás, Windows le agrega
+> `.txt` al nombre y los scripts no lo encuentran. En el explorador activá "Extensiones de nombre
+> de archivo" en la pestaña Vista, y confirmá que el nombre termine en `env` y nada más. Los
+> scripts lo leen con la librería python-dotenv; vos no tenés que copiar la llave a ningún lado.
+
 ## Paso 3 · Instalar lo que usan los scripts (una sola vez)
 
 ```bash
@@ -70,8 +75,26 @@ El segundo comando baja un navegador Chrome propio para la prueba. Tarda un par 
 python tools/preflight.py
 ```
 
-Tiene que terminar con `VEREDICTO: PASA` y las seis comprobaciones en `PASA`, incluida `P5`. Si
-`P5` falla acá también, mandame el texto del error. **Si dice FALLA, no sigas.**
+Tiene que terminar con `VEREDICTO: PASA` y las seis comprobaciones en `PASA`, incluida `P5`.
+**Si dice FALLA, no sigas.** Para saber por qué, corré:
+
+```bash
+python tools/diagnostico.py
+```
+
+Ese comando no necesita la llave y te dice en castellano qué falta: si el archivo de configuración
+está donde tiene que estar, si Windows le agregó `.txt`, si la llave se carga con python-dotenv, y
+si el formulario se dibuja bien en la página. Pegame su respuesta si no queda claro.
+
+Si querés ver el navegador mientras trabaja, útil cuando Cloudflare desconfía de un navegador
+oculto, en Windows:
+
+```bash
+set PW_VISIBLE=1
+python tools/preflight.py
+```
+
+En Mac, en vez de `set` usá `export PW_VISIBLE=1`. La misma variable sirve para el paso 7.
 
 ## Paso 5 · Ensayo en seco con dos páginas (no envía nada)
 

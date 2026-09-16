@@ -79,7 +79,32 @@ with sync_playwright() as pw:
     ifr = pg.locator("iframe.hs-form-iframe, iframe[id^='hs-form-iframe']").count()
     print(f"  iframes de formulario de HubSpot detectados: {ifr}")
     txt = pg.content()
-    print(f"  la pagina menciona reCAPTCHA de prueba: {'testing purposes only' in txt.lower()}")
+    # reCAPTCHA: la clave (sitekey) viaja en la URL del marco de Google, parametro k=
+    import re as _re
+    CLAVE_PRUEBA_GOOGLE = "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+    claves = set()
+    for fr in pg.frames:
+        m = _re.search(r"[?&]k=([A-Za-z0-9_\-]+)", fr.url or "")
+        if m:
+            claves.add(m.group(1))
+    if claves:
+        tipo = "enterprise" if any("enterprise" in (f.url or "") for f in pg.frames) else "clasico"
+        for k in claves:
+            print(f"  reCAPTCHA sitekey ({tipo}): {k}")
+            if k == CLAVE_PRUEBA_GOOGLE:
+                print("     !! ES LA CLAVE DE PRUEBA PUBLICA DE GOOGLE: no hay proteccion real contra spam")
+            else:
+                print("     (no es la clave de prueba publica de Google; comparar con la del portal en HubSpot)")
+    else:
+        print("  no se detecto ningun marco de reCAPTCHA")
+    aviso = "testing purposes only" in txt.lower()
+    for fr in pg.frames:
+        try:
+            if "testing purposes only" in fr.locator("body").inner_text().lower():
+                aviso = True
+        except Exception:
+            pass
+    print(f"  aviso 'This reCAPTCHA is for testing purposes only' visible: {aviso}")
     print(f"  Cloudflare desafiando: {'just a moment' in pg.title().lower() or 'checking your browser' in txt.lower()}")
     pg.screenshot(path=str(evid / "diagnostico_render.png"), full_page=False)
     (evid / "diagnostico_render.html").write_text(txt, encoding="utf-8")

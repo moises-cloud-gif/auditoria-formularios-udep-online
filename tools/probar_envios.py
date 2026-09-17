@@ -157,9 +157,60 @@ def completar_y_enviar(pg, instancia, slug):
         llenar("input[name='firstname']", "QA", "nombre")
         llenar("input[name='lastname']", f"Prueba {slug[:40]}", "apellido")
         llenar("input[name='email']", correo, "correo")
-        # El telefono es un campo internacional con selector de pais: se escribe solo el numero.
+        # ---- telefono ---------------------------------------------------------------
+        # Es un campo internacional: al lado del selector de pais hay un input que filtra
+        # lo que se pega. Se prueban varios selectores, se teclea, y como ultimo recurso se
+        # escribe el valor disparando los eventos que el widget escucha.
         solo_numero = "".join(c for c in hs.QA_TEL if c.isdigit())[-9:]
-        llenar("input[name='phone']", solo_numero, "telefono")
+
+        def llenar_telefono():
+            candidatos = ("input[name='phone']", "input[type='tel']",
+                          ".hs-fieldtype-intl-phone input.hs-input",
+                          ".hs_phone input.hs-input:not([type='hidden'])")
+            for sel_tel in candidatos:
+                try:
+                    fr = buscar_frame(pg, instancia)
+                    loc = fr.locator(sel_tel).first
+                    if loc.count() == 0 or not loc.is_visible():
+                        continue
+                    # 1) pegar
+                    try:
+                        loc.fill(solo_numero, timeout=6000)
+                        if loc.input_value().strip():
+                            return anotar(f"telefono ({sel_tel})", True)
+                    except Exception:
+                        pass
+                    # 2) teclear
+                    try:
+                        loc.click(timeout=5000)
+                        loc.press_sequentially(solo_numero, delay=60, timeout=10000)
+                        if loc.input_value().strip():
+                            return anotar(f"telefono ({sel_tel})", True)
+                    except Exception:
+                        try:
+                            loc.type(solo_numero, delay=60, timeout=10000)
+                            if loc.input_value().strip():
+                                return anotar(f"telefono ({sel_tel})", True)
+                        except Exception:
+                            pass
+                    # 3) escribir el valor y avisarle al widget
+                    try:
+                        loc.evaluate("""(el, v) => {
+                            el.focus();
+                            el.value = v;
+                            el.dispatchEvent(new Event('input', {bubbles: true}));
+                            el.dispatchEvent(new Event('change', {bubbles: true}));
+                            el.dispatchEvent(new Event('blur', {bubbles: true}));
+                        }""", solo_numero)
+                        if loc.input_value().strip():
+                            return anotar(f"telefono ({sel_tel})", True)
+                    except Exception:
+                        pass
+                except Exception:
+                    continue
+            return anotar("telefono", False)
+
+        con_reintento(llenar_telefono, pg, intentos=2)
         for s_campo, nom in (("textarea[name='mensaje']", "mensaje"),
                              ("textarea[name='message']", "mensaje generico"),
                              ("textarea[name='mensaje__udn_udep_']", "mensaje con sufijo")):

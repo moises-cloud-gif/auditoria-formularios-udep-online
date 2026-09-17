@@ -41,9 +41,16 @@
     "Alternativa: intentar desplazarse con la rueda del mouse dentro de la caja azul."
   ],
   "alcance": {
-    "confirmado": "2 de 40 paginas, por prueba humana",
-    "no_extrapolable_todavia": "Las dos paginas probadas tienen CSS de modal distinto entre si, asi que no se puede asumir que las 38 restantes fallen por lo mismo. Hay que contar cuantas usan cada plantilla antes de afirmar nada sobre las 40.",
-    "lo_que_si_vale_para_las_40": "Ningun envio de la muestra manual pudo hacerse por modal. Los 7 salieron por el banner."
+    "confirmado_por_prueba_humana": "2 de 40 paginas",
+    "plantillas_de_modal_encontradas": {
+      "A_sin_scroll_min_height_640": 39,
+      "B_con_scroll_pero_iframe_colapsado": 1
+    },
+    "detalle": "39 de las 40 paginas usan exactamente la misma plantilla de modal que curso-de-gestion-del-talento, que es una de las dos que Moises probo y fallo. La unica excepcion es programa-de-especializacion-en-liderazgo-y-negociacion-de-conflictos, que usa la plantilla B y tambien fallo.",
+    "las_40_bloquean_el_scroll_de_la_pagina": true,
+    "39_de_40_no_tienen_ninguna_forma_de_desplazarse_dentro_del_modal": true,
+    "lectura": "La pagina probada no es un caso particular: es la plantilla que usan 39 de 40. La extrapolacion a las 40 es solida, pero sigue siendo extrapolacion y asi debe escribirse en el informe: confirmado en 2, misma plantilla en 39.",
+    "archivo": "output/56_modal_css.json"
   },
   "consecuencia_para_el_negocio": "Toda persona que entra por el boton 'Postula aqui' llena el formulario, lo envia y se topa con un error que no puede resolver, porque el campo que le falta no esta a la vista. No queda contacto en HubSpot, no hay atribucion y no se dispara ningun Activador. Es un lead que se pierde y ademas se lleva una mala experiencia.",
   "quien_corrige": "Vicente Ham. Es CSS del sitio, no configuracion de HubSpot.",

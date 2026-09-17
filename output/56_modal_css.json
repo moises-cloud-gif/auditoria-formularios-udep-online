@@ -1,0 +1,370 @@
+{
+  "generado": "2026-09-17",
+  "que_es": "Como maneja la altura la caja del modal en cada pagina, leido del CSS servido en output/evidencia/paginas/",
+  "resumen": {
+    "A (sin scroll, min-height 640)": 39,
+    "B (con scroll, pero iframe colapsado)": 1
+  },
+  "paginas": [
+    {
+      "slug": "curso-de-analitica-digital-growth-marketing",
+      "plantilla": "A (sin scroll, min-height 640)",
+      "caja_con_scroll": false,
+      "dialogo_max_alto": false,
+      "contenedor_min640": true,
+      "iframe_colapsado": false,
+      "bloquea_scroll_de_la_pagina": true
+    },
+    {
+      "slug": "curso-de-business-intelligence-data-science",
+      "plantilla": "A (sin scroll, min-height 640)",
+      "caja_con_scroll": false,
+      "dialogo_max_alto": false,
+      "contenedor_min640": true,
+      "iframe_colapsado": false,
+      "bloquea_scroll_de_la_pagina": true
+    },
+    {
+      "slug": "curso-de-coaching",
+      "plantilla": "A (sin scroll, min-height 640)",
+      "caja_con_scroll": false,
+      "dialogo_max_alto": false,
+      "contenedor_min640": true,
+      "iframe_colapsado": false,
+      "bloquea_scroll_de_la_pagina": true
+    },
+    {
+      "slug": "curso-de-comunicacion-efectiva",
+      "plantilla": "A (sin scroll, min-height 640)",
+      "caja_con_scroll": false,
+      "dialogo_max_alto": false,
+      "contenedor_min640": true,
+      "iframe_colapsado": false,
+      "bloquea_scroll_de_la_pagina": true
+    },
+    {
+      "slug": "curso-de-digital-business-model",
+      "plantilla": "A (sin scroll, min-height 640)",
+      "caja_con_scroll": false,
+      "dialogo_max_alto": false,
+      "contenedor_min640": true,
+      "iframe_colapsado": false,
+      "bloquea_scroll_de_la_pagina": true
+    },
+    {
+      "slug": "curso-de-felicidad-y-bienestar-organizacional",
+      "plantilla": "A (sin scroll, min-height 640)",
+      "caja_con_scroll": false,
+      "dialogo_max_alto": false,
+      "contenedor_min640": true,
+      "iframe_colapsado": false,
+      "bloquea_scroll_de_la_pagina": true
+    },
+    {
+      "slug": "curso-de-gestion-de-equipos-de-alto-rendimiento",
+      "plantilla": "A (sin scroll, min-height 640)",
+      "caja_con_scroll": false,
+      "dialogo_max_alto": false,
+      "contenedor_min640": true,
+      "iframe_colapsado": false,
+      "bloquea_scroll_de_la_pagina": true
+    },
+    {
+      "slug": "curso-de-gestion-del-talento",
+      "plantilla": "A (sin scroll, min-height 640)",
+      "caja_con_scroll": false,
+      "dialogo_max_alto": false,
+      "contenedor_min640": true,
+      "iframe_colapsado": false,
+      "bloquea_scroll_de_la_pagina": true
+    },
+    {
+      "slug": "curso-de-inteligencia-emocional",
+      "plantilla": "A (sin scroll, min-height 640)",
+      "caja_con_scroll": false,
+      "dialogo_max_alto": false,
+      "contenedor_min640": true,
+      "iframe_colapsado": false,
+      "bloquea_scroll_de_la_pagina": true
+    },
+    {
+      "slug": "curso-de-liderazgo-en-la-era-digital",
+      "plantilla": "A (sin scroll, min-height 640)",
+      "caja_con_scroll": false,
+      "dialogo_max_alto": false,
+      "contenedor_min640": true,
+      "iframe_colapsado": false,
+      "bloquea_scroll_de_la_pagina": true
+    },
+    {
+      "slug": "curso-de-marketing-digital",
+      "plantilla": "A (sin scroll, min-height 640)",
+      "caja_con_scroll": false,
+      "dialogo_max_alto": false,
+      "contenedor_min640": true,
+      "iframe_colapsado": false,
+      "bloquea_scroll_de_la_pagina": true
+    },
+    {
+      "slug": "curso-de-negociacion-y-resolucion-de-conflictos",
+      "plantilla": "A (sin scroll, min-height 640)",
+      "caja_con_scroll": false,
+      "dialogo_max_alto": false,
+      "contenedor_min640": true,
+      "iframe_colapsado": false,
+      "bloquea_scroll_de_la_pagina": true
+    },
+    {
+      "slug": "curso-de-negocios-e-commerce",
+      "plantilla": "A (sin scroll, min-height 640)",
+      "caja_con_scroll": false,
+      "dialogo_max_alto": false,
+      "contenedor_min640": true,
+      "iframe_colapsado": false,
+      "bloquea_scroll_de_la_pagina": true
+    },
+    {
+      "slug": "curso-de-negocios-innovadores",
+      "plantilla": "A (sin scroll, min-height 640)",
+      "caja_con_scroll": false,
+      "dialogo_max_alto": false,
+      "contenedor_min640": true,
+      "iframe_colapsado": false,
+      "bloquea_scroll_de_la_pagina": true
+    },
+    {
+      "slug": "curso-de-transformacion-digital",
+      "plantilla": "A (sin scroll, min-height 640)",
+      "caja_con_scroll": false,
+      "dialogo_max_alto": false,
+      "contenedor_min640": true,
+      "iframe_colapsado": false,
+      "bloquea_scroll_de_la_pagina": true
+    },
+    {
+      "slug": "curso-desarrollo-organizacional-y-gestion-del-cambio",
+      "plantilla": "A (sin scroll, min-height 640)",
+      "caja_con_scroll": false,
+      "dialogo_max_alto": false,
+      "contenedor_min640": true,
+      "iframe_colapsado": false,
+      "bloquea_scroll_de_la_pagina": true
+    },
+    {
+      "slug": "diplomado-en-gestion-de-la-felicidad-y-bienestar-organizacional",
+      "plantilla": "A (sin scroll, min-height 640)",
+      "caja_con_scroll": false,
+      "dialogo_max_alto": true,
+      "contenedor_min640": true,
+      "iframe_colapsado": false,
+      "bloquea_scroll_de_la_pagina": true
+    },
+    {
+      "slug": "diplomado-en-habilidades-para-la-gestion-de-equipos",
+      "plantilla": "A (sin scroll, min-height 640)",
+      "caja_con_scroll": false,
+      "dialogo_max_alto": true,
+      "contenedor_min640": true,
+      "iframe_colapsado": false,
+      "bloquea_scroll_de_la_pagina": true
+    },
+    {
+      "slug": "diplomado-en-inteligencia-emocional-y-coaching-para-el-liderazgo-en-las-organizaciones",
+      "plantilla": "A (sin scroll, min-height 640)",
+      "caja_con_scroll": false,
+      "dialogo_max_alto": true,
+      "contenedor_min640": true,
+      "iframe_colapsado": false,
+      "bloquea_scroll_de_la_pagina": true
+    },
+    {
+      "slug": "diplomado-en-liderazgo-y-gestion-del-talento",
+      "plantilla": "A (sin scroll, min-height 640)",
+      "caja_con_scroll": false,
+      "dialogo_max_alto": true,
+      "contenedor_min640": true,
+      "iframe_colapsado": false,
+      "bloquea_scroll_de_la_pagina": true
+    },
+    {
+      "slug": "diplomado-en-marketing-digital-y-analitica",
+      "plantilla": "A (sin scroll, min-height 640)",
+      "caja_con_scroll": false,
+      "dialogo_max_alto": true,
+      "contenedor_min640": true,
+      "iframe_colapsado": false,
+      "bloquea_scroll_de_la_pagina": true
+    },
+    {
+      "slug": "diplomado-en-marketing-digital-y-ecommerce",
+      "plantilla": "A (sin scroll, min-height 640)",
+      "caja_con_scroll": false,
+      "dialogo_max_alto": true,
+      "contenedor_min640": true,
+      "iframe_colapsado": false,
+      "bloquea_scroll_de_la_pagina": true
+    },
+    {
+      "slug": "programa-de-especializacion-en-comunicacion-efectiva-y-gestion-de-equipos-de-alto-rendimiento",
+      "plantilla": "A (sin scroll, min-height 640)",
+      "caja_con_scroll": false,
+      "dialogo_max_alto": false,
+      "contenedor_min640": true,
+      "iframe_colapsado": false,
+      "bloquea_scroll_de_la_pagina": true
+    },
+    {
+      "slug": "programa-de-especializacion-en-comunicacion-efectiva-y-gestion-del-talento",
+      "plantilla": "A (sin scroll, min-height 640)",
+      "caja_con_scroll": false,
+      "dialogo_max_alto": false,
+      "contenedor_min640": true,
+      "iframe_colapsado": false,
+      "bloquea_scroll_de_la_pagina": true
+    },
+    {
+      "slug": "programa-de-especializacion-en-felicidad-organizacional-y-gestion-de-equipos-de-alto-rendimiento",
+      "plantilla": "A (sin scroll, min-height 640)",
+      "caja_con_scroll": false,
+      "dialogo_max_alto": false,
+      "contenedor_min640": true,
+      "iframe_colapsado": false,
+      "bloquea_scroll_de_la_pagina": true
+    },
+    {
+      "slug": "programa-de-especializacion-en-felicidad-organizacional-y-inteligencia-emocional",
+      "plantilla": "A (sin scroll, min-height 640)",
+      "caja_con_scroll": false,
+      "dialogo_max_alto": false,
+      "contenedor_min640": true,
+      "iframe_colapsado": false,
+      "bloquea_scroll_de_la_pagina": true
+    },
+    {
+      "slug": "programa-de-especializacion-en-felicidad-y-desarrollo-organizacional",
+      "plantilla": "A (sin scroll, min-height 640)",
+      "caja_con_scroll": false,
+      "dialogo_max_alto": false,
+      "contenedor_min640": true,
+      "iframe_colapsado": false,
+      "bloquea_scroll_de_la_pagina": true
+    },
+    {
+      "slug": "programa-de-especializacion-en-gestion-del-cambio-y-negociacion-de-conflictos",
+      "plantilla": "A (sin scroll, min-height 640)",
+      "caja_con_scroll": false,
+      "dialogo_max_alto": false,
+      "contenedor_min640": true,
+      "iframe_colapsado": false,
+      "bloquea_scroll_de_la_pagina": true
+    },
+    {
+      "slug": "programa-de-especializacion-en-gestion-del-talento-y-negociacion-de-conflictos",
+      "plantilla": "A (sin scroll, min-height 640)",
+      "caja_con_scroll": false,
+      "dialogo_max_alto": false,
+      "contenedor_min640": true,
+      "iframe_colapsado": false,
+      "bloquea_scroll_de_la_pagina": true
+    },
+    {
+      "slug": "programa-de-especializacion-en-habilidades-para-la-gestion-de-equipos",
+      "plantilla": "A (sin scroll, min-height 640)",
+      "caja_con_scroll": false,
+      "dialogo_max_alto": false,
+      "contenedor_min640": true,
+      "iframe_colapsado": false,
+      "bloquea_scroll_de_la_pagina": true
+    },
+    {
+      "slug": "programa-de-especializacion-en-inteligencia-emocional-y-coaching",
+      "plantilla": "A (sin scroll, min-height 640)",
+      "caja_con_scroll": false,
+      "dialogo_max_alto": false,
+      "contenedor_min640": true,
+      "iframe_colapsado": false,
+      "bloquea_scroll_de_la_pagina": true
+    },
+    {
+      "slug": "programa-de-especializacion-en-liderazgo-y-comunicacion-efectiva",
+      "plantilla": "A (sin scroll, min-height 640)",
+      "caja_con_scroll": false,
+      "dialogo_max_alto": false,
+      "contenedor_min640": true,
+      "iframe_colapsado": false,
+      "bloquea_scroll_de_la_pagina": true
+    },
+    {
+      "slug": "programa-de-especializacion-en-liderazgo-y-felicidad-organizacional",
+      "plantilla": "A (sin scroll, min-height 640)",
+      "caja_con_scroll": false,
+      "dialogo_max_alto": false,
+      "contenedor_min640": true,
+      "iframe_colapsado": false,
+      "bloquea_scroll_de_la_pagina": true
+    },
+    {
+      "slug": "programa-de-especializacion-en-liderazgo-y-gestion-del-talento",
+      "plantilla": "A (sin scroll, min-height 640)",
+      "caja_con_scroll": false,
+      "dialogo_max_alto": false,
+      "contenedor_min640": true,
+      "iframe_colapsado": false,
+      "bloquea_scroll_de_la_pagina": true
+    },
+    {
+      "slug": "programa-de-especializacion-en-liderazgo-y-negociacion-de-conflictos",
+      "plantilla": "B (con scroll, pero iframe colapsado)",
+      "caja_con_scroll": true,
+      "dialogo_max_alto": true,
+      "contenedor_min640": true,
+      "iframe_colapsado": true,
+      "bloquea_scroll_de_la_pagina": true
+    },
+    {
+      "slug": "programa-de-especializacion-en-liderazgo-y-transformacion-digital",
+      "plantilla": "A (sin scroll, min-height 640)",
+      "caja_con_scroll": false,
+      "dialogo_max_alto": false,
+      "contenedor_min640": true,
+      "iframe_colapsado": false,
+      "bloquea_scroll_de_la_pagina": true
+    },
+    {
+      "slug": "programa-de-especializacion-en-marketing-digital-y-business-model",
+      "plantilla": "A (sin scroll, min-height 640)",
+      "caja_con_scroll": false,
+      "dialogo_max_alto": false,
+      "contenedor_min640": true,
+      "iframe_colapsado": false,
+      "bloquea_scroll_de_la_pagina": true
+    },
+    {
+      "slug": "programa-de-especializacion-en-marketing-digital-y-e-commerce",
+      "plantilla": "A (sin scroll, min-height 640)",
+      "caja_con_scroll": false,
+      "dialogo_max_alto": true,
+      "contenedor_min640": true,
+      "iframe_colapsado": false,
+      "bloquea_scroll_de_la_pagina": true
+    },
+    {
+      "slug": "programa-de-especializacion-en-modelo-de-negocios-digitales-y-business-intelligence",
+      "plantilla": "A (sin scroll, min-height 640)",
+      "caja_con_scroll": false,
+      "dialogo_max_alto": false,
+      "contenedor_min640": true,
+      "iframe_colapsado": false,
+      "bloquea_scroll_de_la_pagina": true
+    },
+    {
+      "slug": "programa-de-especializacion-en-modelo-de-negocios-y-transformacion-digital",
+      "plantilla": "A (sin scroll, min-height 640)",
+      "caja_con_scroll": false,
+      "dialogo_max_alto": false,
+      "contenedor_min640": true,
+      "iframe_colapsado": false,
+      "bloquea_scroll_de_la_pagina": true
+    }
+  ]
+}

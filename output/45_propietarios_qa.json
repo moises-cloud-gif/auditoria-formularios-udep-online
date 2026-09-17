@@ -1,0 +1,54 @@
+{
+  "generado": "2026-09-17T13:36:47",
+  "propietarios_5minutos": [
+    {
+      "id": "12720291",
+      "userId": 12720291,
+      "email": "pedro@5minutos.io",
+      "nombre": "Pedro Vega"
+    },
+    {
+      "id": "46494940",
+      "userId": 46494940,
+      "email": "sebastian.gomez@5minutos.io",
+      "nombre": "Sebastián Gómez Switt"
+    },
+    {
+      "id": "47546802",
+      "userId": 47546802,
+      "email": "maria@5minutos.io",
+      "nombre": "Maria Miranda"
+    },
+    {
+      "id": "69414260",
+      "userId": 69414260,
+      "email": "roman@5minutos.io",
+      "nombre": "Santiago Roman Roman"
+    },
+    {
+      "id": "79365375",
+      "userId": 79365375,
+      "email": "andrea@5minutos.io",
+      "nombre": "Andrea Avila Parra"
+    },
+    {
+      "id": "82923019",
+      "userId": 82923019,
+      "email": "moises@5minutos.io",
+      "nombre": "Moisés Camargo"
+    },
+    {
+      "id": "83348853",
+      "userId": 83348853,
+      "email": "jorge.rodriguez@5minutos.io",
+      "nombre": "Jorge Rodriguez"
+    },
+    {
+      "id": "88700099",
+      "userId": 88700099,
+      "email": "roberto@5minutos.io",
+      "nombre": "Roberto Raggio"
+    }
+  ],
+  "total_propietarios_portal": 100
+}

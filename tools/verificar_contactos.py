@@ -18,6 +18,18 @@ from lib import hs
 
 RAW = hs.EVID / "contactos"
 RAW.mkdir(parents=True, exist_ok=True)
+
+# Propietarios de 5minutos: a uno de ellos deben quedar asignados los contactos de prueba,
+# por acuerdo con Pedro. Si alguno cae en un propietario distinto, es una fuga a un
+# ejecutivo real y hay que detener la pasada.
+def _cargar_propietarios():
+    r = hs.api("GET", "/crm/v3/owners?limit=500")
+    todos = {str(o.get("id")): (o.get("email") or "") for o in r.json().get("results", [])} if r.status_code == 200 else {}
+    nuestros = {i for i, e in todos.items() if "5minutos" in e.lower()}
+    return todos, nuestros
+
+PROPIETARIOS, NUESTROS = _cargar_propietarios()
+print(f"propietarios del portal leidos: {len(PROPIETARIOS)} · de 5minutos: {len(NUESTROS)}")
 forms = hs.leer("11_formularios.json")["formularios"]
 envios = hs.leer("30_envios.json")
 PROPS = ["email", "firstname", "lastname", "createdate", "hubspot_owner_id", "hubspot_owner_assigneddate",
@@ -52,15 +64,30 @@ for i in pend:
     i["form_id_registrado"] = conv                      # HubSpot registra el nombre del formulario
     i["H2_atribucion"] = (norm(conv) == norm(esperado)) if conv and esperado else None
     i["H3_programa_real"] = p.get("cursos_piura__udn_udep_") or p.get("programas_piura__udn_udep_") or p.get("cursos_piura")
-    i["H5_disparo"] = bool(p.get("hubspot_owner_id"))
-    i["propietario"] = p.get("hubspot_owner_id")
+    dueno = str(p.get("hubspot_owner_id") or "")
+    i["H5_disparo"] = bool(dueno)
+    i["propietario"] = dueno or None
+    i["propietario_email"] = PROPIETARIOS.get(dueno)
+    i["fuga_a_ejecutivo_real"] = bool(dueno) and dueno not in NUESTROS
+    i["estatus_de_gestion"] = p.get("estatus_de_gestion")
     i["mensaje_llego_a"] = "mensaje" if p.get("mensaje") else ("message" if p.get("message") else None)
     i["verificado_en"] = hs.ahora()
     ok_h1 += 1; ok_h2 += bool(i["H2_atribucion"]); ok_h5 += bool(i["H5_disparo"])
-    print(f"  {i['slug'][:45]:45}/{i['instancia']:6} H1 ok · H2 {i['H2_atribucion']} · H5 {i['H5_disparo']} · programa='{i['H3_programa_real']}'")
+    alerta = "  <-- FUGA: propietario ajeno a 5minutos" if i["fuga_a_ejecutivo_real"] else ""
+    print(f"  {i['slug'][:42]:42}/{i['instancia']:6} H1 ok · H2 {str(i['H2_atribucion']):5} · "
+          f"H5 {str(i['H5_disparo']):5} · duenio {i.get('propietario_email') or '-'} · "
+          f"programa='{i['H3_programa_real']}'{alerta}")
     time.sleep(0.2)
 
 hs.guardar("30_envios.json", envios)
+fugas = [f"{i['slug']}/{i['instancia']} -> {i.get('propietario_email')}" for i in pend if i.get("fuga_a_ejecutivo_real")]
 print(f"\nH1 contacto creado: {ok_h1}/{len(pend)} · H2 atribuido al formulario correcto: {ok_h2}/{len(pend)} · H5 con propietario asignado: {ok_h5}/{len(pend)}")
 print("Nota: H5 usa el propietario asignado como efecto observable del Activador. Si un contacto no tiene")
 print("propietario a los pocos minutos del envio, el Activador no se ejecuto o el workflow de asignacion no lo tomo.")
+if fugas:
+    print(f"\n*** ATENCION: {len(fugas)} contacto(s) de prueba quedaron asignados a un propietario ajeno a 5minutos.")
+    print("*** Detene la pasada y avisa: son leads falsos cayendo sobre ejecutivos reales.")
+    for f in fugas[:20]:
+        print("   ", f)
+else:
+    print("Sin fugas: ningun contacto de prueba quedo asignado a un ejecutivo ajeno a 5minutos.")

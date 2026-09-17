@@ -1,0 +1,75 @@
+{
+  "generado": "2026-09-17T19:38:35",
+  "resultados": [
+    {
+      "codigo": "m1",
+      "slug": "curso-de-analitica-digital-growth-marketing",
+      "instancia": "banner",
+      "correo": "qa+manual-20260917@5minutos.io",
+      "contacto": null
+    },
+    {
+      "codigo": "m2",
+      "slug": "curso-de-negocios-innovadores",
+      "instancia": "banner",
+      "correo": "qa+m2-20260917@5minutos.io",
+      "contacto": null
+    },
+    {
+      "codigo": "m3",
+      "slug": "curso-de-gestion-del-talento",
+      "instancia": "banner",
+      "correo": "qa+m3-20260917@5minutos.io",
+      "contacto": null
+    },
+    {
+      "codigo": "m4",
+      "slug": "curso-de-marketing-digital",
+      "instancia": "banner",
+      "correo": "qa+m4-20260917@5minutos.io",
+      "contacto": null
+    },
+    {
+      "codigo": "m5",
+      "slug": "programa-de-especializacion-en-marketing-digital-y-e-commerce",
+      "instancia": "banner",
+      "correo": "qa+m5-20260917@5minutos.io",
+      "contacto": null
+    },
+    {
+      "codigo": "m6",
+      "slug": "diplomado-en-marketing-digital-y-ecommerce",
+      "instancia": "banner",
+      "correo": "qa+m6-20260917@5minutos.io",
+      "contacto": null
+    },
+    {
+      "codigo": "m7",
+      "slug": "programa-de-especializacion-en-liderazgo-y-negociacion-de-conflictos",
+      "instancia": "modal",
+      "correo": "qa+m7-20260917@5minutos.io",
+      "contacto": null
+    },
+    {
+      "codigo": "m8",
+      "slug": "curso-de-gestion-del-talento",
+      "instancia": "modal",
+      "correo": "qa+m8-20260917@5minutos.io",
+      "contacto": "240325472142",
+      "creado": "2026-09-17T18:57:22.952Z",
+      "H2_formulario": "Curso de Gestión del Talento: Curso Gestión del Talento Piura (UDN UDEP)",
+      "H3_programa_llegado": "Gestión del Talento",
+      "H3_programa_correcto": "Gestión del Talento",
+      "H3_ok": true,
+      "equipo": "Equipo Perú",
+      "facultad": "Ciencias Económicas y Empresariales,",
+      "pais": "Perú",
+      "propietario_id": "1661807111",
+      "propietario_email": "ssilva@udeponline.pe",
+      "estatus_de_gestion": "Volver a contactar",
+      "mensaje_llego_a": "mensaje",
+      "mql": null,
+      "estado_activador_segun_config": "UNO"
+    }
+  ]
+}

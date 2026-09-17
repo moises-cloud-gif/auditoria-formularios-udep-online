@@ -1,0 +1,28 @@
+{
+  "generado": "2026-09-17T19:40:50",
+  "severidad": "URGENTE",
+  "que_paso": "Los 8 envios manuales quedaron en UN SOLO contacto (240325472142). HubSpot los unifico por la cookie del navegador: cada envio sobreescribio el correo del anterior en vez de crear un contacto nuevo.",
+  "fuga": {
+    "contacto": "240325472142",
+    "correo_actual": "qa+m8-20260917@5minutos.io",
+    "propietario_asignado": "1661807111 = ssilva@udeponline.pe (ejecutivo real de UDEP)",
+    "asignado_el": "2026-09-17T19:28:19 por AUTOMATION_PLATFORM",
+    "propietario_esperado": "82923019 = moises@5minutos.io",
+    "tarea_creada": "117060280237 'Contactar dentro del dia dia al Lead de Piura - Peru', sin empezar, a nombre de ssilva",
+    "ticket_sla_creado": "48606686277 'QA Prueba manual', a nombre de ssilva",
+    "causa": "La rama '5minutos.' del flujo 0452 no se aplico: el historial muestra una sola asignacion de propietario y no es la de Moises. Hay que revisar donde esta ubicada esa rama respecto de la asignacion, y si un flujo posterior (1741893789, tickets de SLA) vuelve a asignar."
+  },
+  "acciones_urgentes": [
+    "Avisarle a ssilva@udeponline.pe que el lead es de prueba y no hay que gestionarlo.",
+    "Borrar o cerrar la tarea 117060280237 y el ticket 48606686277.",
+    "Quitar el propietario del contacto 240325472142, o borrar el contacto.",
+    "Pedirle a Roman que revise por que la rama '5minutos.' del 0452 no retuvo la asignacion."
+  ],
+  "leccion_para_la_metodologia": "Los envios manuales desde un mismo navegador no sirven para generar contactos distintos: HubSpot los une por cookie. Cada envio necesita una ventana de incognito nueva, o limpiar las cookies entre uno y otro.",
+  "lo_que_igual_quedo_probado": [
+    "8 envios de formulario registrados, cada uno atribuido al formulario correcto (H2 correcto 8 de 8).",
+    "El MODAL envia: los envios m7 y m8 fueron por la ventana emergente y quedaron registrados. Cierra la duda de agosto.",
+    "Analitica Digital hace llegar el programa 'Gestion del Talento', que es incorrecto.",
+    "Cuando el formulario tiene Activador, la cadena completa funciona: equipo Peru, facultad y pais asignados."
+  ]
+}

@@ -25,6 +25,10 @@ for i in inst:
           f"{str(i.get('R4_confirmacion')):5} {str(i.get('R5_clausula_datos')):5} "
           f"{len(i.get('R2_campos') or []):6} {str(i.get('recaptcha_clave_de_prueba')):14} "
           f"{(i.get('form_id_disparado') or '')[:8]}")
+    if i.get("campos_no_llenados"):
+        print(f"      NO se pudo llenar: {', '.join(i['campos_no_llenados'])}")
+    if i.get("errores_de_validacion"):
+        print(f"      el formulario rechazo: {' | '.join(i['errores_de_validacion'])[:120]}")
     if i.get("error") and "DRY_RUN" not in str(i.get("error")):
         print(f"      error: {i['error'][:110]}")
 

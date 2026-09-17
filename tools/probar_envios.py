@@ -89,6 +89,7 @@ def completar_y_enviar(pg, instancia, slug):
             "R1_renderiza": False, "R2_campos": [], "R3_envio": False,
             "R4_confirmacion": False, "R5_clausula_datos": False,
             "recaptcha_clave_de_prueba": None, "form_id_disparado": None,
+            "campos_llenados": [], "campos_no_llenados": [], "errores_de_validacion": [],
             "captura": None, "error": None}
     try:
         con_reintento(lambda: buscar_frame(pg, instancia).locator("form").first.wait_for(
@@ -105,41 +106,67 @@ def completar_y_enviar(pg, instancia, slug):
         fila["R5_clausula_datos"] = ("autorizo" in texto or "datos personales" in texto or "autoriza" in texto)
         fila["recaptcha_clave_de_prueba"] = "testing purposes only" in texto
 
-        def llenar(sel_campo, val, obligatorio=True):
+        def anotar(nombre, ok):
+            (fila["campos_llenados"] if ok else fila["campos_no_llenados"]).append(nombre)
+            return ok
+
+        def llenar(sel_campo, val, nombre=None, obligatorio=True):
+            nombre = nombre or sel_campo
             def _hacer():
                 loc = buscar_frame(pg, instancia).locator(sel_campo).first
                 if loc.count() == 0:
-                    return False
+                    return None
                 loc.fill(val, timeout=8000)
-                return True
+                return loc.input_value()
             try:
-                return con_reintento(_hacer, pg)
-            except Exception as e:
+                puesto = con_reintento(_hacer, pg)
+                if puesto is None:
+                    return anotar(nombre, False)
+                if not puesto:   # quedo vacio: el campo necesita tecleo, no pegado
+                    def _teclear():
+                        l2 = buscar_frame(pg, instancia).locator(sel_campo).first
+                        l2.click(timeout=6000)
+                        l2.type(val, delay=40, timeout=10000)
+                        return l2.input_value()
+                    puesto = con_reintento(_teclear, pg, intentos=2)
+                return anotar(nombre, bool(puesto))
+            except Exception:
                 if obligatorio:
-                    raise
-                return False
+                    return anotar(nombre, False)
+                return anotar(nombre, False)
 
-        def elegir(sel_campo):
+        def elegir(sel_campo, nombre=None):
+            """Elige la primera opcion real del desplegable (salteando el 'Selecciona')."""
+            nombre = nombre or sel_campo
             def _hacer():
                 d = buscar_frame(pg, instancia).locator(sel_campo).first
                 if d.count() == 0:
-                    return False
-                d.select_option(index=1, timeout=8000)
-                return True
+                    return None
+                valores = d.locator("option").evaluate_all(
+                    "els => els.map(e => e.value).filter(v => v !== null && v !== '')")
+                if not valores:
+                    return None
+                d.select_option(value=valores[0], timeout=8000)
+                return d.input_value()
             try:
-                return con_reintento(_hacer, pg)
+                puesto = con_reintento(_hacer, pg)
+                return anotar(nombre, bool(puesto))
             except Exception:
-                return False
+                return anotar(nombre, False)
 
-        llenar("input[name='firstname']", "QA")
-        llenar("input[name='lastname']", f"Prueba {slug[:40]}")
-        llenar("input[name='email']", correo)
-        llenar("input[name='phone']", hs.QA_TEL, obligatorio=False)
-        for s_campo in ("textarea[name='mensaje']", "textarea[name='message']",
-                        "textarea[name='mensaje__udn_udep_']"):
-            llenar(s_campo, f"PRUEBA QA 5MINUTOS - {HOY} - NO GESTIONAR", obligatorio=False)
-        for s_campo in ("select[name^='nivel_de_estudios']", "select[name^='medio_de_contacto']"):
-            elegir(s_campo)
+        llenar("input[name='firstname']", "QA", "nombre")
+        llenar("input[name='lastname']", f"Prueba {slug[:40]}", "apellido")
+        llenar("input[name='email']", correo, "correo")
+        # El telefono es un campo internacional con selector de pais: se escribe solo el numero.
+        solo_numero = "".join(c for c in hs.QA_TEL if c.isdigit())[-9:]
+        llenar("input[name='phone']", solo_numero, "telefono")
+        for s_campo, nom in (("textarea[name='mensaje']", "mensaje"),
+                             ("textarea[name='message']", "mensaje generico"),
+                             ("textarea[name='mensaje__udn_udep_']", "mensaje con sufijo")):
+            if buscar_frame(pg, instancia).locator(s_campo).count():
+                llenar(s_campo, f"PRUEBA QA 5MINUTOS - {HOY} - NO GESTIONAR", nom, obligatorio=False)
+        elegir("select[name^='nivel_de_estudios']", "nivel de estudios")
+        elegir("select[name^='medio_de_contacto']", "medio de contacto")
         for s_campo in ("input[type='checkbox'][name*='LEGAL']", "input[type='checkbox'][name*='consent']"):
             try:
                 def _chk():
@@ -165,7 +192,12 @@ def completar_y_enviar(pg, instancia, slug):
         con_reintento(lambda: buscar_frame(pg, instancia).locator(
             "input[type='submit'], button[type='submit']").first.click(timeout=12000), pg)
         pg.wait_for_timeout(9000)
-        fila["R3_envio"] = True
+        # Errores de validacion: si el formulario rechazo el envio, siguen los campos en pantalla.
+        try:
+            fila["errores_de_validacion"] = buscar_frame(pg, instancia).locator(
+                ".hs-error-msg, .hs-main-font-element label.hs-error-msg").all_inner_texts()
+        except Exception:
+            pass
         t2 = ""
         try:
             t2 = buscar_frame(pg, instancia).locator("body").inner_text().lower()
@@ -174,6 +206,10 @@ def completar_y_enviar(pg, instancia, slug):
         if not t2:
             t2 = pg.locator("body").inner_text().lower()
         fila["R4_confirmacion"] = ("gracias" in t2 or "contactaremos" in t2)
+        # R3 es "el envio se acepto", no "se apreto el boton".
+        fila["R3_envio"] = bool(fila["R4_confirmacion"]) or not fila["errores_de_validacion"]
+        if fila["errores_de_validacion"]:
+            fila["error"] = "el formulario rechazo el envio: " + " | ".join(fila["errores_de_validacion"])[:180]
         fila["texto_despues_de_enviar"] = t2[:200]
         captura2 = hs.EVID / f"{slug}__{instancia}__{HOY}__post.png"
         try:

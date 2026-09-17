@@ -1,0 +1,33 @@
+{
+  "generado": "2026-09-17T18:59:40",
+  "que_es": "Envio hecho a mano por Moises Camargo en un navegador normal, como lo haria un visitante.",
+  "pagina": "https://udeponline.pe/curso-de-analitica-digital-growth-marketing/",
+  "instancia": "banner",
+  "contacto": "240325472142",
+  "correo": "qa+manual-20260917@5minutos.io",
+  "creado": "2026-09-17T18:57:22",
+  "resultados": {
+    "R3_envio_aceptado": true,
+    "R4_mensaje_confirmacion": "Gracias, te contactaremos a la brevedad.",
+    "captcha_pidio_algo_al_humano": false,
+    "H1_contacto_creado": true,
+    "H2_atribucion": "correcta: 'Curso Analitica Digital & Growth Marketing Piura (UDN UDEP)'",
+    "H3_programa_que_llego": "Gestion del Talento",
+    "H3_programa_correcto": "Analitica Digital & Growth Marketing (no existe la opcion)",
+    "H3_veredicto": "FALLA CONFIRMADA EN PRODUCCION",
+    "H5_propietario": null,
+    "H5_veredicto": "SIN ASIGNAR: confirma que el formulario no tiene Activador",
+    "equipo": null,
+    "facultad": null,
+    "pais": null,
+    "mensaje_llego_a": "mensaje (propiedad correcta)",
+    "mql": null
+  },
+  "conclusiones": [
+    "El reCAPTCHA NO bloquea a las personas: el humano envio sin que le pidiera nada y vio el mensaje de gracias.",
+    "El reCAPTCHA SI bloquea al navegador automatizado, que recibe 'No se ha podido validar el captcha'.",
+    "Por lo tanto el captcha no protege contra spam (clave de prueba) y ademas impide la automatizacion de la prueba.",
+    "El hallazgo del programa mal atribuido queda confirmado con un lead real, no solo por configuracion.",
+    "El formulario sin Activador queda confirmado: el lead entro y no se le asigno a nadie."
+  ]
+}

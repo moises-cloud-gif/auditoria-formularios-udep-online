@@ -343,6 +343,37 @@ que quien mantenga la planilla la revise y la aplique.
 
 ---
 
+## Prueba con un envío humano real (17-sep) — CONFIRMA LOS DOS HALLAZGOS PRINCIPALES
+
+Moisés llenó y envió a mano, en un navegador normal, el formulario del banner de *Curso de
+Analítica Digital & Growth Marketing*, como lo haría cualquier visitante. Evidencia:
+`50_envio_manual_referencia.json` y `evidencia/contactos/240325472142.json`.
+
+| Qué se comprobó | Resultado |
+|---|---|
+| ¿El reCAPTCHA le pidió algo a la persona? | **No.** Apretó enviar y pasó |
+| ¿Se aceptó el envío y apareció la confirmación? | **Sí:** "Gracias, te contactaremos a la brevedad." |
+| ¿Se creó el contacto? | **Sí**, a las 18:57 |
+| ¿Quedó atribuido al formulario correcto? | **Sí** |
+| ¿Con qué programa llegó? | **"Gestión del Talento"**, y la página es de Analítica Digital |
+| ¿Se le asignó un ejecutivo? | **No. Sin propietario, sin equipo, sin facultad y sin país** |
+| ¿Quedó marcado como MQL? | No |
+
+**Las dos conclusiones que esto cierra:**
+
+1. **El problema del programa mal atribuido está confirmado en producción con un lead real**, no
+   solo leyendo la configuración. Una persona pidió información de Analítica Digital y en el CRM
+   quedó registrada como interesada en Gestión del Talento.
+2. **El formulario sin Activador está confirmado.** El lead entró al CRM y no se le asignó a nadie.
+   Nadie lo va a llamar. Es exactamente lo que la auditoría predijo leyendo los workflows.
+
+**Y una conclusión sobre el reCAPTCHA que cambia su lectura:** no bloquea a las personas, pero sí
+bloquea a un navegador automatizado, que recibe "No se ha podido validar el captcha". O sea que hoy
+el captcha **no protege contra spam** (usa una clave que Google marca como de prueba) y al mismo
+tiempo **impide automatizar la verificación**. Es lo peor de los dos mundos.
+
+---
+
 ## Lo que no se pudo verificar, con el motivo
 
 | Qué | Motivo | Cómo se cierra |

@@ -1,6 +1,6 @@
 {
-  "generado": "2026-09-15T21:50:55",
-  "dry_run": true,
+  "generado": "2026-09-17T22:59:52",
+  "dry_run": false,
   "checks": {
     "P1_token_y_portal": {
       "pasa": true,
@@ -19,13 +19,13 @@
       "detalle": "scope de automation activo"
     },
     "P5_playwright_render": {
-      "pasa": false,
-      "detalle": "Error: Page.goto: net::ERR_CERT_AUTHORITY_INVALID at https://udeponline.pe/curso-de-analitica-digital-growth-marketing/\nCall log:\n  - navigating to \"https://udeponline.pe/curso-de-analitica-digital-growth-marketing/\", waiting until \"networkidle\"\n"
+      "pasa": true,
+      "detalle": "16 campos renderizados en curso-de-analitica-digital-growth-marketing (16 dentro del iframe de HubSpot), captura en preflight_render.png"
     },
     "P6_paginas_vivas": {
       "pasa": true,
       "detalle": "las 40 paginas responden 200"
     }
   },
-  "veredicto": "FALLA"
+  "veredicto": "PASA"
 }

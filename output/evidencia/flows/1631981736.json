@@ -1,0 +1,905 @@
+{
+  "id": "1631981736",
+  "isEnabled": true,
+  "flowType": "WORKFLOW",
+  "revisionId": "69",
+  "name": "0451. Definiciòn Nivel de Estudios Perú (UDN UDEP)",
+  "uuid": "0451. Definiciòn Nivel de Estudios Perú (UDN UDEP)-1631981736",
+  "createdAt": "2025-02-17T18:23:02.355Z",
+  "updatedAt": "2026-09-17T13:19:28.439Z",
+  "startActionId": "96",
+  "nextAvailableActionId": "97",
+  "actions": [
+    {
+      "actionId": "1",
+      "listBranches": [
+        {
+          "filterBranch": {
+            "filterBranches": [
+              {
+                "filterBranches": [],
+                "filters": [
+                  {
+                    "property": "nivel_de_estudios__udn_udep_",
+                    "operation": {
+                      "operator": "IS_ANY_OF",
+                      "includeObjectsWithNoValueSet": false,
+                      "values": [
+                        "Titulado",
+                        "Doctorado",
+                        "Grado Bachiller",
+                        "Magister",
+                        "Postgrado",
+                        "Títulado",
+                        "Carrera Universitaria",
+                        "Titulo Profesional",
+                        "Técnico",
+                        "Maestría"
+                      ],
+                      "operationType": "ENUMERATION"
+                    },
+                    "filterType": "PROPERTY"
+                  }
+                ],
+                "filterBranchType": "AND",
+                "filterBranchOperator": "AND"
+              },
+              {
+                "filterBranches": [],
+                "filters": [
+                  {
+                    "property": "tienes_estudios_tcnicos_o_universitarios",
+                    "operation": {
+                      "operator": "CONTAINS_EXACTLY",
+                      "includeObjectsWithNoValueSet": false,
+                      "values": [
+                        "Si",
+                        "si",
+                        "Sí",
+                        "sí"
+                      ],
+                      "operationType": "MULTISTRING"
+                    },
+                    "filterType": "PROPERTY"
+                  }
+                ],
+                "filterBranchType": "AND",
+                "filterBranchOperator": "AND"
+              }
+            ],
+            "filters": [],
+            "filterBranchType": "OR",
+            "filterBranchOperator": "OR"
+          },
+          "branchName": "Bachiller, Técnico, Titulado, Magíster. Doctorado",
+          "connection": {
+            "edgeType": "STANDARD",
+            "nextActionId": "4"
+          }
+        },
+        {
+          "filterBranch": {
+            "filterBranches": [
+              {
+                "filterBranches": [],
+                "filters": [
+                  {
+                    "property": "nivel_de_estudios__udn_udep_",
+                    "operation": {
+                      "operator": "IS_ANY_OF",
+                      "includeObjectsWithNoValueSet": false,
+                      "values": [
+                        "Secundaria Completa"
+                      ],
+                      "operationType": "ENUMERATION"
+                    },
+                    "filterType": "PROPERTY"
+                  }
+                ],
+                "filterBranchType": "AND",
+                "filterBranchOperator": "AND"
+              },
+              {
+                "filterBranches": [],
+                "filters": [
+                  {
+                    "property": "tienes_estudios_tcnicos_o_universitarios",
+                    "operation": {
+                      "operator": "CONTAINS_EXACTLY",
+                      "includeObjectsWithNoValueSet": false,
+                      "values": [
+                        "No",
+                        "no"
+                      ],
+                      "operationType": "MULTISTRING"
+                    },
+                    "filterType": "PROPERTY"
+                  }
+                ],
+                "filterBranchType": "AND",
+                "filterBranchOperator": "AND"
+              }
+            ],
+            "filters": [],
+            "filterBranchType": "OR",
+            "filterBranchOperator": "OR"
+          },
+          "branchName": "Secundaria Completa",
+          "connection": {
+            "edgeType": "STANDARD",
+            "nextActionId": "6"
+          }
+        }
+      ],
+      "defaultBranch": {
+        "edgeType": "STANDARD",
+        "nextActionId": "16"
+      },
+      "type": "LIST_BRANCH"
+    },
+    {
+      "actionId": "2",
+      "listBranches": [
+        {
+          "filterBranch": {
+            "filterBranches": [
+              {
+                "filterBranches": [],
+                "filters": [
+                  {
+                    "property": "programas_piura__udn_udep_",
+                    "operation": {
+                      "operator": "IS_ANY_OF",
+                      "includeObjectsWithNoValueSet": false,
+                      "values": [
+                        "Habilidades para la Gestión de Equipos",
+                        "Comunicación Efectiva y Gestión del Talento",
+                        "Modelo de Negocios Digitales y Business Intelligence",
+                        "liderazgo_y_felicidad_organizacional",
+                        "Diplomado Habilidades para la Gestión de Equipos",
+                        "Comunicación Efectiva y Gestión de Equipos de Alto Rendimiento",
+                        "Diplomado Gestión Felicidad y Bienestar Organizacional",
+                        "liderazgo_y_transformacion_digital",
+                        "Liderazgo y Comunicación Efectiva",
+                        "Diplomado Marketing Digital y Analítica",
+                        "Marketing Digital y Business Model",
+                        "Marketing Digital y Ecommerce",
+                        "Gestión del Cambio y Negociación de Conflictos",
+                        "Gestión de Talento y Negociación de Conflictos",
+                        "Felicidad Organizacional y Gestion de Equipos de Alto Rendimiento",
+                        "Liderazgo y Gestión del Talento",
+                        "Diplomado Liderazgo y Gestión del Talento",
+                        "Felicidad y Desarrollo Organizacional",
+                        "Diplomado en Marketing Digital y Ecommerce",
+                        "Inteligencia Emocional y Coaching",
+                        "Diplomado Inteligencia Emocional & Coaching",
+                        "Modelo de Negocios y Transformación Digital",
+                        "Felicidad Organizacional e Inteligencia Emocional",
+                        "Liderazgo y Negociación de Conflictos"
+                      ],
+                      "operationType": "ENUMERATION"
+                    },
+                    "filterType": "PROPERTY"
+                  }
+                ],
+                "filterBranchType": "AND",
+                "filterBranchOperator": "AND"
+              },
+              {
+                "filterBranches": [],
+                "filters": [
+                  {
+                    "property": "cursos_piura__udn_udep_",
+                    "operation": {
+                      "operator": "IS_ANY_OF",
+                      "includeObjectsWithNoValueSet": false,
+                      "values": [
+                        "Gestión del Talento",
+                        "Transformación Digital",
+                        "Desarrollo Organizacional y Gestión del Cambio",
+                        "Gestión de Personas",
+                        "Negocios e-commerce",
+                        "Digital Business Model",
+                        "Comunicación Efectiva",
+                        "Liderazgo en la era digital",
+                        "Felicidad y Bienestar Organizacional",
+                        "Negociación y Resolución de Conflictos",
+                        "Gestión de Equipos de Alto Rendimiento",
+                        "Marketing Digital"
+                      ],
+                      "operationType": "ENUMERATION"
+                    },
+                    "filterType": "PROPERTY"
+                  }
+                ],
+                "filterBranchType": "AND",
+                "filterBranchOperator": "AND"
+              }
+            ],
+            "filters": [],
+            "filterBranchType": "OR",
+            "filterBranchOperator": "OR"
+          },
+          "branchName": "Piura",
+          "connection": {
+            "edgeType": "STANDARD",
+            "nextActionId": "1"
+          }
+        }
+      ],
+      "defaultBranch": {
+        "edgeType": "STANDARD",
+        "nextActionId": "77"
+      },
+      "type": "LIST_BRANCH"
+    },
+    {
+      "actionId": "4",
+      "actionTypeVersion": 0,
+      "actionTypeId": "0-5",
+      "connection": {
+        "edgeType": "STANDARD",
+        "nextActionId": "8"
+      },
+      "fields": {
+        "property_name": "equipos_por_nivel_de_estudios__udn_udep_",
+        "value": {
+          "staticValue": "Equipo Perú",
+          "type": "STATIC_VALUE"
+        }
+      },
+      "type": "SINGLE_CONNECTION"
+    },
+    {
+      "actionId": "6",
+      "actionTypeVersion": 0,
+      "actionTypeId": "0-5",
+      "connection": {
+        "edgeType": "GOTO",
+        "nextActionId": "8"
+      },
+      "fields": {
+        "property_name": "equipos_por_nivel_de_estudios__udn_udep_",
+        "value": {
+          "staticValue": "No Aplica a Equipo",
+          "type": "STATIC_VALUE"
+        }
+      },
+      "type": "SINGLE_CONNECTION"
+    },
+    {
+      "actionId": "8",
+      "actionTypeVersion": 0,
+      "actionTypeId": "0-15",
+      "fields": {
+        "flow_id": "1631990199"
+      },
+      "type": "SINGLE_CONNECTION"
+    },
+    {
+      "actionId": "16",
+      "actionTypeVersion": 0,
+      "actionTypeId": "0-8",
+      "fields": {
+        "user_ids": [
+          "7078555",
+          "51298145"
+        ],
+        "subject": "No indica Nivel de Estudios Piura",
+        "body": "<p>Contacto No indica Nivel de Estudios Piura</p>"
+      },
+      "type": "SINGLE_CONNECTION"
+    },
+    {
+      "actionId": "77",
+      "actionTypeVersion": 0,
+      "actionTypeId": "0-8",
+      "fields": {
+        "user_ids": [
+          "7078555",
+          "51298145"
+        ],
+        "subject": "No se calificó con un equipo por Nivel de estudios- Piura",
+        "body": "<p>Contacto Piura No se calificó con un equipo por Nivel de estudios</p>"
+      },
+      "type": "SINGLE_CONNECTION"
+    },
+    {
+      "actionId": "80",
+      "actionTypeVersion": 0,
+      "actionTypeId": "0-1",
+      "connection": {
+        "edgeType": "STANDARD",
+        "nextActionId": "92"
+      },
+      "fields": {
+        "delta": "3",
+        "time_unit": "MINUTES"
+      },
+      "type": "SINGLE_CONNECTION"
+    },
+    {
+      "actionId": "83",
+      "listBranches": [
+        {
+          "filterBranch": {
+            "filterBranches": [
+              {
+                "filterBranches": [],
+                "filters": [
+                  {
+                    "property": "pais_lead",
+                    "operation": {
+                      "operator": "IS_ANY_OF",
+                      "includeObjectsWithNoValueSet": false,
+                      "values": [
+                        "Perú"
+                      ],
+                      "operationType": "ENUMERATION"
+                    },
+                    "filterType": "PROPERTY"
+                  }
+                ],
+                "filterBranchType": "AND",
+                "filterBranchOperator": "AND"
+              }
+            ],
+            "filters": [],
+            "filterBranchType": "OR",
+            "filterBranchOperator": "OR"
+          },
+          "branchName": "Contacto de Meta Peru",
+          "connection": {
+            "edgeType": "STANDARD",
+            "nextActionId": "2"
+          }
+        },
+        {
+          "filterBranch": {
+            "filterBranches": [
+              {
+                "filterBranches": [],
+                "filters": [
+                  {
+                    "property": "pais_lead",
+                    "operation": {
+                      "operator": "IS_ANY_OF",
+                      "includeObjectsWithNoValueSet": false,
+                      "values": [
+                        "Ecuador"
+                      ],
+                      "operationType": "ENUMERATION"
+                    },
+                    "filterType": "PROPERTY"
+                  }
+                ],
+                "filterBranchType": "AND",
+                "filterBranchOperator": "AND"
+              }
+            ],
+            "filters": [],
+            "filterBranchType": "OR",
+            "filterBranchOperator": "OR"
+          },
+          "branchName": "Contacto de Meta Ecuador",
+          "connection": {
+            "edgeType": "STANDARD",
+            "nextActionId": "84"
+          }
+        }
+      ],
+      "defaultBranch": {
+        "edgeType": "STANDARD",
+        "nextActionId": "91"
+      },
+      "type": "LIST_BRANCH"
+    },
+    {
+      "actionId": "84",
+      "listBranches": [
+        {
+          "filterBranch": {
+            "filterBranches": [
+              {
+                "filterBranches": [],
+                "filters": [
+                  {
+                    "property": "programas_piura__udn_udep_",
+                    "operation": {
+                      "operator": "IS_ANY_OF",
+                      "includeObjectsWithNoValueSet": false,
+                      "values": [
+                        "Habilidades para la Gestión de Equipos",
+                        "Comunicación Efectiva y Gestión del Talento",
+                        "Modelo de Negocios Digitales y Business Intelligence",
+                        "liderazgo_y_felicidad_organizacional",
+                        "Diplomado Habilidades para la Gestión de Equipos",
+                        "Comunicación Efectiva y Gestión de Equipos de Alto Rendimiento",
+                        "Diplomado Gestión Felicidad y Bienestar Organizacional",
+                        "liderazgo_y_transformacion_digital",
+                        "Liderazgo y Comunicación Efectiva",
+                        "Diplomado Marketing Digital y Analítica",
+                        "Marketing Digital y Business Model",
+                        "Marketing Digital y Ecommerce",
+                        "Gestión del Cambio y Negociación de Conflictos",
+                        "Gestión de Talento y Negociación de Conflictos",
+                        "Felicidad Organizacional y Gestion de Equipos de Alto Rendimiento",
+                        "Liderazgo y Gestión del Talento",
+                        "Diplomado Liderazgo y Gestión del Talento",
+                        "Felicidad y Desarrollo Organizacional",
+                        "Diplomado en Marketing Digital y Ecommerce",
+                        "Inteligencia Emocional y Coaching",
+                        "Diplomado Inteligencia Emocional & Coaching",
+                        "Modelo de Negocios y Transformación Digital",
+                        "Felicidad Organizacional e Inteligencia Emocional",
+                        "Liderazgo y Negociación de Conflictos"
+                      ],
+                      "operationType": "ENUMERATION"
+                    },
+                    "filterType": "PROPERTY"
+                  }
+                ],
+                "filterBranchType": "AND",
+                "filterBranchOperator": "AND"
+              },
+              {
+                "filterBranches": [],
+                "filters": [
+                  {
+                    "property": "cursos_piura__udn_udep_",
+                    "operation": {
+                      "operator": "IS_ANY_OF",
+                      "includeObjectsWithNoValueSet": false,
+                      "values": [
+                        "Gestión del Talento",
+                        "Transformación Digital",
+                        "Desarrollo Organizacional y Gestión del Cambio",
+                        "Gestión de Personas",
+                        "Negocios e-commerce",
+                        "Digital Business Model",
+                        "Comunicación Efectiva",
+                        "Liderazgo en la era digital",
+                        "Felicidad y Bienestar Organizacional",
+                        "Negociación y Resolución de Conflictos",
+                        "Gestión de Equipos de Alto Rendimiento",
+                        "Marketing Digital"
+                      ],
+                      "operationType": "ENUMERATION"
+                    },
+                    "filterType": "PROPERTY"
+                  }
+                ],
+                "filterBranchType": "AND",
+                "filterBranchOperator": "AND"
+              }
+            ],
+            "filters": [],
+            "filterBranchType": "OR",
+            "filterBranchOperator": "OR"
+          },
+          "branchName": "Piura",
+          "connection": {
+            "edgeType": "STANDARD",
+            "nextActionId": "85"
+          }
+        }
+      ],
+      "defaultBranch": {
+        "edgeType": "STANDARD",
+        "nextActionId": "86"
+      },
+      "type": "LIST_BRANCH"
+    },
+    {
+      "actionId": "85",
+      "listBranches": [
+        {
+          "filterBranch": {
+            "filterBranches": [
+              {
+                "filterBranches": [],
+                "filters": [
+                  {
+                    "property": "nivel_de_estudios__udn_udep_",
+                    "operation": {
+                      "operator": "IS_ANY_OF",
+                      "includeObjectsWithNoValueSet": false,
+                      "values": [
+                        "Doctorado",
+                        "Grado Bachiller",
+                        "Magister",
+                        "Postgrado",
+                        "Títulado",
+                        "Titulo Profesional",
+                        "Técnico",
+                        "Maestría"
+                      ],
+                      "operationType": "ENUMERATION"
+                    },
+                    "filterType": "PROPERTY"
+                  }
+                ],
+                "filterBranchType": "AND",
+                "filterBranchOperator": "AND"
+              },
+              {
+                "filterBranches": [],
+                "filters": [
+                  {
+                    "property": "tienes_estudios_tcnicos_o_universitarios",
+                    "operation": {
+                      "operator": "CONTAINS_EXACTLY",
+                      "includeObjectsWithNoValueSet": false,
+                      "values": [
+                        "sí",
+                        "Sí",
+                        "Si",
+                        "si"
+                      ],
+                      "operationType": "MULTISTRING"
+                    },
+                    "filterType": "PROPERTY"
+                  }
+                ],
+                "filterBranchType": "AND",
+                "filterBranchOperator": "AND"
+              }
+            ],
+            "filters": [],
+            "filterBranchType": "OR",
+            "filterBranchOperator": "OR"
+          },
+          "branchName": "Bachiller, Técnico, Titulado, Magíster. Doctorado",
+          "connection": {
+            "edgeType": "STANDARD",
+            "nextActionId": "87"
+          }
+        },
+        {
+          "filterBranch": {
+            "filterBranches": [
+              {
+                "filterBranches": [],
+                "filters": [
+                  {
+                    "property": "nivel_de_estudios__udn_udep_",
+                    "operation": {
+                      "operator": "IS_ANY_OF",
+                      "includeObjectsWithNoValueSet": false,
+                      "values": [
+                        "Secundaria Completa"
+                      ],
+                      "operationType": "ENUMERATION"
+                    },
+                    "filterType": "PROPERTY"
+                  }
+                ],
+                "filterBranchType": "AND",
+                "filterBranchOperator": "AND"
+              },
+              {
+                "filterBranches": [],
+                "filters": [
+                  {
+                    "property": "tienes_estudios_tcnicos_o_universitarios",
+                    "operation": {
+                      "operator": "CONTAINS_EXACTLY",
+                      "includeObjectsWithNoValueSet": false,
+                      "values": [
+                        "No",
+                        "no"
+                      ],
+                      "operationType": "MULTISTRING"
+                    },
+                    "filterType": "PROPERTY"
+                  }
+                ],
+                "filterBranchType": "AND",
+                "filterBranchOperator": "AND"
+              }
+            ],
+            "filters": [],
+            "filterBranchType": "OR",
+            "filterBranchOperator": "OR"
+          },
+          "branchName": "Secundaria Completa",
+          "connection": {
+            "edgeType": "STANDARD",
+            "nextActionId": "88"
+          }
+        }
+      ],
+      "defaultBranch": {
+        "edgeType": "STANDARD",
+        "nextActionId": "89"
+      },
+      "type": "LIST_BRANCH"
+    },
+    {
+      "actionId": "86",
+      "actionTypeVersion": 0,
+      "actionTypeId": "0-8",
+      "fields": {
+        "user_ids": [
+          "7078555",
+          "51298145"
+        ],
+        "subject": "No se calificó con un equipo por Nivel de estudios- Piura",
+        "body": "<p>Contacto Piura No se calificó con un equipo por Nivel de estudios</p>"
+      },
+      "type": "SINGLE_CONNECTION"
+    },
+    {
+      "actionId": "87",
+      "actionTypeVersion": 0,
+      "actionTypeId": "0-5",
+      "connection": {
+        "edgeType": "STANDARD",
+        "nextActionId": "90"
+      },
+      "fields": {
+        "property_name": "equipos_por_nivel_de_estudios__udn_udep_",
+        "value": {
+          "staticValue": "Equipo Ecuador",
+          "type": "STATIC_VALUE"
+        }
+      },
+      "type": "SINGLE_CONNECTION"
+    },
+    {
+      "actionId": "88",
+      "actionTypeVersion": 0,
+      "actionTypeId": "0-5",
+      "connection": {
+        "edgeType": "GOTO",
+        "nextActionId": "90"
+      },
+      "fields": {
+        "property_name": "equipos_por_nivel_de_estudios__udn_udep_",
+        "value": {
+          "staticValue": "No Aplica a Equipo",
+          "type": "STATIC_VALUE"
+        }
+      },
+      "type": "SINGLE_CONNECTION"
+    },
+    {
+      "actionId": "89",
+      "actionTypeVersion": 0,
+      "actionTypeId": "0-8",
+      "fields": {
+        "user_ids": [
+          "7078555",
+          "51298145"
+        ],
+        "subject": "No indica Nivel de Estudios Piura",
+        "body": "<p>Contacto No indica Nivel de Estudios Piura</p>"
+      },
+      "type": "SINGLE_CONNECTION"
+    },
+    {
+      "actionId": "90",
+      "actionTypeVersion": 0,
+      "actionTypeId": "0-15",
+      "fields": {
+        "flow_id": "1631990199"
+      },
+      "type": "SINGLE_CONNECTION"
+    },
+    {
+      "actionId": "91",
+      "actionTypeVersion": 0,
+      "actionTypeId": "0-8",
+      "fields": {
+        "user_ids": [
+          "78920322",
+          "7078555"
+        ],
+        "subject": "WF 0451 - No reconoce País",
+        "body": "<p>WF Nivel de estudio no reconoce país (Ecuador y Perú)</p>"
+      },
+      "type": "SINGLE_CONNECTION"
+    },
+    {
+      "actionId": "92",
+      "listBranches": [
+        {
+          "filterBranch": {
+            "filterBranches": [
+              {
+                "filterBranches": [],
+                "filters": [
+                  {
+                    "property": "phone",
+                    "operation": {
+                      "operator": "STARTS_WITH",
+                      "includeObjectsWithNoValueSet": false,
+                      "values": [
+                        "+51"
+                      ],
+                      "operationType": "MULTISTRING"
+                    },
+                    "filterType": "PROPERTY"
+                  }
+                ],
+                "filterBranchType": "AND",
+                "filterBranchOperator": "AND"
+              }
+            ],
+            "filters": [],
+            "filterBranchType": "OR",
+            "filterBranchOperator": "OR"
+          },
+          "branchName": "Conctato Peru",
+          "connection": {
+            "edgeType": "STANDARD",
+            "nextActionId": "94"
+          }
+        },
+        {
+          "filterBranch": {
+            "filterBranches": [
+              {
+                "filterBranches": [],
+                "filters": [
+                  {
+                    "property": "phone",
+                    "operation": {
+                      "operator": "STARTS_WITH",
+                      "includeObjectsWithNoValueSet": false,
+                      "values": [
+                        "+593"
+                      ],
+                      "operationType": "MULTISTRING"
+                    },
+                    "filterType": "PROPERTY"
+                  }
+                ],
+                "filterBranchType": "AND",
+                "filterBranchOperator": "AND"
+              }
+            ],
+            "filters": [],
+            "filterBranchType": "OR",
+            "filterBranchOperator": "OR"
+          },
+          "branchName": "Contacto Ecuador",
+          "connection": {
+            "edgeType": "STANDARD",
+            "nextActionId": "93"
+          }
+        },
+        {
+          "filterBranch": {
+            "filterBranches": [
+              {
+                "filterBranches": [],
+                "filters": [
+                  {
+                    "property": "pais_lead",
+                    "operation": {
+                      "operator": "IS_ANY_OF",
+                      "includeObjectsWithNoValueSet": false,
+                      "values": [
+                        "Ecuador",
+                        "Perú"
+                      ],
+                      "operationType": "ENUMERATION"
+                    },
+                    "filterType": "PROPERTY"
+                  }
+                ],
+                "filterBranchType": "AND",
+                "filterBranchOperator": "AND"
+              }
+            ],
+            "filters": [],
+            "filterBranchType": "OR",
+            "filterBranchOperator": "OR"
+          },
+          "branchName": "Si País es conocido",
+          "connection": {
+            "edgeType": "STANDARD",
+            "nextActionId": "83"
+          }
+        }
+      ],
+      "defaultBranch": {
+        "edgeType": "GOTO",
+        "nextActionId": "1"
+      },
+      "type": "LIST_BRANCH"
+    },
+    {
+      "actionId": "93",
+      "actionTypeVersion": 0,
+      "actionTypeId": "0-5",
+      "connection": {
+        "edgeType": "GOTO",
+        "nextActionId": "83"
+      },
+      "fields": {
+        "property_name": "pais_lead",
+        "value": {
+          "staticValue": "Ecuador",
+          "type": "STATIC_VALUE"
+        }
+      },
+      "type": "SINGLE_CONNECTION"
+    },
+    {
+      "actionId": "94",
+      "actionTypeVersion": 0,
+      "actionTypeId": "0-5",
+      "connection": {
+        "edgeType": "GOTO",
+        "nextActionId": "83"
+      },
+      "fields": {
+        "property_name": "pais_lead",
+        "value": {
+          "staticValue": "Perú",
+          "type": "STATIC_VALUE"
+        }
+      },
+      "type": "SINGLE_CONNECTION"
+    },
+    {
+      "actionId": "96",
+      "actionTypeVersion": 0,
+      "actionTypeId": "0-5",
+      "connection": {
+        "edgeType": "STANDARD",
+        "nextActionId": "80"
+      },
+      "fields": {
+        "property_name": "programa_mas_recientemente_solicitado",
+        "value": {
+          "propertyName": "programas_piura__udn_udep_",
+          "type": "OBJECT_PROPERTY"
+        }
+      },
+      "type": "SINGLE_CONNECTION"
+    }
+  ],
+  "enrollmentCriteria": {
+    "shouldReEnroll": true,
+    "type": "MANUAL"
+  },
+  "timeWindows": [],
+  "blockedDates": [],
+  "customProperties": {},
+  "dataSources": [],
+  "crmObjectCreationStatus": "COMPLETE",
+  "suppressionListIds": [],
+  "goalFilterBranch": {
+    "filterBranches": [
+      {
+        "filterBranches": [],
+        "filters": [
+          {
+            "property": "hs_email_domain",
+            "operation": {
+              "operator": "CONTAINS_EXACTLY",
+              "includeObjectsWithNoValueSet": false,
+              "values": [
+                "@5minutos.io",
+                "5minutos.io"
+              ],
+              "operationType": "MULTISTRING"
+            },
+            "filterType": "PROPERTY"
+          }
+        ],
+        "filterBranchType": "AND",
+        "filterBranchOperator": "AND"
+      }
+    ],
+    "filters": [],
+    "filterBranchType": "OR",
+    "filterBranchOperator": "OR"
+  },
+  "canEnrollFromSalesforce": false,
+  "type": "CONTACT_FLOW",
+  "objectTypeId": "0-1"
+}

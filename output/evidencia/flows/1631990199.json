@@ -1,0 +1,997 @@
+{
+  "id": "1631990199",
+  "isEnabled": true,
+  "flowType": "WORKFLOW",
+  "revisionId": "57",
+  "name": "0452. LEADS-Asignación de leads a equipo Piura (UDN UDEP)",
+  "uuid": "0452. LEADS-Asignación de leads a equipo Piura (UDN UDEP)-1631990199",
+  "createdAt": "2025-02-17T18:24:16.856Z",
+  "updatedAt": "2026-09-02T06:14:45.021Z",
+  "startActionId": "17",
+  "nextAvailableActionId": "49",
+  "actions": [
+    {
+      "actionId": "3",
+      "actionTypeVersion": 0,
+      "actionTypeId": "0-8",
+      "connection": {
+        "edgeType": "STANDARD",
+        "nextActionId": "14"
+      },
+      "fields": {
+        "subject": "Ingreso un Lead Programas Piura",
+        "body": "<p>Ingresó un lead del Programa Piura, por favor realizar la gestión correspondiente.</p>",
+        "owner_properties": [
+          "hubspot_owner_id"
+        ]
+      },
+      "type": "SINGLE_CONNECTION"
+    },
+    {
+      "actionId": "9",
+      "listBranches": [
+        {
+          "filterBranch": {
+            "filterBranches": [
+              {
+                "filterBranches": [],
+                "filters": [
+                  {
+                    "property": "hubspot_owner_id",
+                    "operation": {
+                      "operator": "IS_KNOWN",
+                      "includeObjectsWithNoValueSet": false,
+                      "operationType": "ALL_PROPERTY"
+                    },
+                    "filterType": "PROPERTY"
+                  }
+                ],
+                "filterBranchType": "AND",
+                "filterBranchOperator": "AND"
+              }
+            ],
+            "filters": [],
+            "filterBranchType": "OR",
+            "filterBranchOperator": "OR"
+          },
+          "connection": {
+            "edgeType": "STANDARD",
+            "nextActionId": "10"
+          }
+        }
+      ],
+      "defaultBranch": {
+        "edgeType": "STANDARD",
+        "nextActionId": "41"
+      },
+      "type": "LIST_BRANCH"
+    },
+    {
+      "actionId": "10",
+      "actionTypeVersion": 0,
+      "actionTypeId": "0-8",
+      "connection": {
+        "edgeType": "STANDARD",
+        "nextActionId": "39"
+      },
+      "fields": {
+        "subject": "{{ enrolled_object.firstname }} completó un nuevo formulario.",
+        "body": "<p>Hola {{ enrolled_object.hubspot_owner_id }}</p>\n<p>Te informamos que {{ enrolled_object.firstname }} completó un nuevo formulario.</p>\n<p>Saludos</p>\n<br>",
+        "owner_properties": [
+          "hubspot_owner_id"
+        ]
+      },
+      "type": "SINGLE_CONNECTION"
+    },
+    {
+      "actionId": "11",
+      "actionTypeVersion": 0,
+      "actionTypeId": "0-15",
+      "fields": {
+        "flow_id": "1631989399"
+      },
+      "type": "SINGLE_CONNECTION"
+    },
+    {
+      "actionId": "12",
+      "actionTypeVersion": 0,
+      "actionTypeId": "0-5",
+      "connection": {
+        "edgeType": "STANDARD",
+        "nextActionId": "32"
+      },
+      "fields": {
+        "property_name": "facultades_piura__udn_udep_",
+        "value": {
+          "staticValue": "Ciencias Económicas y Empresariales,",
+          "type": "STATIC_VALUE"
+        }
+      },
+      "type": "SINGLE_CONNECTION"
+    },
+    {
+      "actionId": "13",
+      "actionTypeVersion": 0,
+      "actionTypeId": "0-3",
+      "fields": {
+        "task_type": "TODO",
+        "subject": "Contactar dentro del día",
+        "body": "<p>Contacto ingresó un nuevo formulario, se solicita por favor contactar dentro del día</p><p>Nombre: {{ enrolled_object.firstname }} {{ enrolled_object.lastname }}</p><p>Correo: {{ enrolled_object.email }}</p>",
+        "associations": [
+          {
+            "target": {
+              "associationCategory": "HUBSPOT_DEFINED",
+              "associationTypeId": 204
+            },
+            "value": {
+              "type": "ENROLLED_OBJECT"
+            }
+          }
+        ],
+        "use_explicit_associations": "true",
+        "owner_assignment": {
+          "value": {
+            "propertyName": "hubspot_owner_id",
+            "type": "OBJECT_PROPERTY"
+          },
+          "type": "CUSTOM"
+        },
+        "priority": "HIGH"
+      },
+      "type": "SINGLE_CONNECTION"
+    },
+    {
+      "actionId": "14",
+      "actionTypeVersion": 0,
+      "actionTypeId": "0-3",
+      "connection": {
+        "edgeType": "STANDARD",
+        "nextActionId": "11"
+      },
+      "fields": {
+        "task_type": "TODO",
+        "subject": "Contactar dentro del dia dia al Lead de Piura - Peru",
+        "body": "<p>Contacto ingresó un nuevo formulario, se solicita por favor contactar dentro del día</p><p>Nombre: {{ enrolled_object.firstname }} {{ enrolled_object.lastname }}</p><p>Correo: {{ enrolled_object.email }}</p>",
+        "associations": [
+          {
+            "target": {
+              "associationCategory": "HUBSPOT_DEFINED",
+              "associationTypeId": 204
+            },
+            "value": {
+              "type": "ENROLLED_OBJECT"
+            }
+          }
+        ],
+        "use_explicit_associations": "true",
+        "owner_assignment": {
+          "value": {
+            "propertyName": "hubspot_owner_id",
+            "type": "OBJECT_PROPERTY"
+          },
+          "type": "CUSTOM"
+        },
+        "priority": "HIGH"
+      },
+      "type": "SINGLE_CONNECTION"
+    },
+    {
+      "actionId": "15",
+      "listBranches": [
+        {
+          "filterBranch": {
+            "filterBranches": [
+              {
+                "filterBranches": [],
+                "filters": [
+                  {
+                    "property": "estatus_de_gestion",
+                    "operation": {
+                      "operator": "IS_ANY_OF",
+                      "includeObjectsWithNoValueSet": false,
+                      "values": [
+                        "Matriculado"
+                      ],
+                      "operationType": "ENUMERATION"
+                    },
+                    "filterType": "PROPERTY"
+                  }
+                ],
+                "filterBranchType": "AND",
+                "filterBranchOperator": "AND"
+              }
+            ],
+            "filters": [],
+            "filterBranchType": "OR",
+            "filterBranchOperator": "OR"
+          },
+          "branchName": "Matriculado"
+        }
+      ],
+      "defaultBranch": {
+        "edgeType": "STANDARD",
+        "nextActionId": "16"
+      },
+      "type": "LIST_BRANCH"
+    },
+    {
+      "actionId": "16",
+      "actionTypeVersion": 0,
+      "actionTypeId": "0-5",
+      "connection": {
+        "edgeType": "STANDARD",
+        "nextActionId": "13"
+      },
+      "fields": {
+        "property_name": "estatus_de_gestion",
+        "value": {
+          "staticValue": "Volver a llamar - Prioritario",
+          "type": "STATIC_VALUE"
+        }
+      },
+      "type": "SINGLE_CONNECTION"
+    },
+    {
+      "actionId": "17",
+      "listBranches": [
+        {
+          "filterBranch": {
+            "filterBranches": [
+              {
+                "filterBranches": [],
+                "filters": [
+                  {
+                    "property": "equipos_por_nivel_de_estudios__udn_udep_",
+                    "operation": {
+                      "operator": "IS_ANY_OF",
+                      "includeObjectsWithNoValueSet": false,
+                      "values": [
+                        "Equipo Ecuador"
+                      ],
+                      "operationType": "ENUMERATION"
+                    },
+                    "filterType": "PROPERTY"
+                  }
+                ],
+                "filterBranchType": "AND",
+                "filterBranchOperator": "AND"
+              }
+            ],
+            "filters": [],
+            "filterBranchType": "OR",
+            "filterBranchOperator": "OR"
+          },
+          "branchName": "Equipo Ecuador",
+          "connection": {
+            "edgeType": "STANDARD",
+            "nextActionId": "26"
+          }
+        },
+        {
+          "filterBranch": {
+            "filterBranches": [
+              {
+                "filterBranches": [],
+                "filters": [
+                  {
+                    "property": "equipos_por_nivel_de_estudios__udn_udep_",
+                    "operation": {
+                      "operator": "IS_ANY_OF",
+                      "includeObjectsWithNoValueSet": false,
+                      "values": [
+                        "Equipo Perú"
+                      ],
+                      "operationType": "ENUMERATION"
+                    },
+                    "filterType": "PROPERTY"
+                  }
+                ],
+                "filterBranchType": "AND",
+                "filterBranchOperator": "AND"
+              }
+            ],
+            "filters": [],
+            "filterBranchType": "OR",
+            "filterBranchOperator": "OR"
+          },
+          "branchName": "Equipo Perú",
+          "connection": {
+            "edgeType": "STANDARD",
+            "nextActionId": "12"
+          }
+        },
+        {
+          "filterBranch": {
+            "filterBranches": [
+              {
+                "filterBranches": [],
+                "filters": [
+                  {
+                    "property": "equipos_por_nivel_de_estudios__udn_udep_",
+                    "operation": {
+                      "operator": "IS_ANY_OF",
+                      "includeObjectsWithNoValueSet": false,
+                      "values": [
+                        "No Aplica a Equipo"
+                      ],
+                      "operationType": "ENUMERATION"
+                    },
+                    "filterType": "PROPERTY"
+                  }
+                ],
+                "filterBranchType": "AND",
+                "filterBranchOperator": "AND"
+              }
+            ],
+            "filters": [],
+            "filterBranchType": "OR",
+            "filterBranchOperator": "OR"
+          },
+          "branchName": "No Aplica",
+          "connection": {
+            "edgeType": "STANDARD",
+            "nextActionId": "20"
+          }
+        }
+      ],
+      "type": "LIST_BRANCH"
+    },
+    {
+      "actionId": "18",
+      "actionTypeVersion": 14,
+      "actionTypeId": "0-31",
+      "connection": {
+        "edgeType": "STANDARD",
+        "nextActionId": "19"
+      },
+      "fields": {
+        "targetContact": "{{ enrolled_object }}",
+        "marketableType": "MARKETABLE"
+      },
+      "type": "SINGLE_CONNECTION"
+    },
+    {
+      "actionId": "19",
+      "actionTypeVersion": 0,
+      "actionTypeId": "0-4",
+      "fields": {
+        "content_id": "190497954174"
+      },
+      "type": "SINGLE_CONNECTION"
+    },
+    {
+      "actionId": "20",
+      "actionTypeVersion": 0,
+      "actionTypeId": "0-5",
+      "connection": {
+        "edgeType": "STANDARD",
+        "nextActionId": "18"
+      },
+      "fields": {
+        "property_name": "hubspot_owner_id",
+        "value": {
+          "staticValue": "30630770",
+          "type": "STATIC_VALUE"
+        }
+      },
+      "type": "SINGLE_CONNECTION"
+    },
+    {
+      "actionId": "22",
+      "actionTypeVersion": 0,
+      "actionTypeId": "0-8",
+      "connection": {
+        "edgeType": "STANDARD",
+        "nextActionId": "28"
+      },
+      "fields": {
+        "user_ids": [
+          "7078555"
+        ],
+        "subject": "Ingreso Lead Piura - Ecuador",
+        "body": "<p>Ingresó lead de Ecuador para Programa Piura, por favor realizar la gestión correspondiente.</p>",
+        "owner_properties": [
+          "hubspot_owner_id"
+        ]
+      },
+      "type": "SINGLE_CONNECTION"
+    },
+    {
+      "actionId": "23",
+      "listBranches": [
+        {
+          "filterBranch": {
+            "filterBranches": [
+              {
+                "filterBranches": [],
+                "filters": [
+                  {
+                    "property": "hubspot_owner_id",
+                    "operation": {
+                      "operator": "IS_KNOWN",
+                      "includeObjectsWithNoValueSet": false,
+                      "operationType": "ALL_PROPERTY"
+                    },
+                    "filterType": "PROPERTY"
+                  }
+                ],
+                "filterBranchType": "AND",
+                "filterBranchOperator": "AND"
+              }
+            ],
+            "filters": [],
+            "filterBranchType": "OR",
+            "filterBranchOperator": "OR"
+          },
+          "connection": {
+            "edgeType": "STANDARD",
+            "nextActionId": "24"
+          }
+        }
+      ],
+      "defaultBranch": {
+        "edgeType": "STANDARD",
+        "nextActionId": "37"
+      },
+      "type": "LIST_BRANCH"
+    },
+    {
+      "actionId": "24",
+      "actionTypeVersion": 0,
+      "actionTypeId": "0-8",
+      "connection": {
+        "edgeType": "STANDARD",
+        "nextActionId": "35"
+      },
+      "fields": {
+        "subject": "{{ enrolled_object.firstname }} completó un nuevo formulario.",
+        "body": "<p>Hola {{ enrolled_object.hubspot_owner_id }}</p>\n<p>Te informamos que {{ enrolled_object.firstname }} completó un nuevo formulario.</p>\n<p>Saludos</p>\n<br>",
+        "owner_properties": [
+          "hubspot_owner_id"
+        ]
+      },
+      "type": "SINGLE_CONNECTION"
+    },
+    {
+      "actionId": "25",
+      "actionTypeVersion": 0,
+      "actionTypeId": "0-15",
+      "fields": {
+        "flow_id": "1631989399"
+      },
+      "type": "SINGLE_CONNECTION"
+    },
+    {
+      "actionId": "26",
+      "actionTypeVersion": 0,
+      "actionTypeId": "0-5",
+      "connection": {
+        "edgeType": "STANDARD",
+        "nextActionId": "31"
+      },
+      "fields": {
+        "property_name": "facultades_piura__udn_udep_",
+        "value": {
+          "staticValue": "Ciencias Económicas y Empresariales,",
+          "type": "STATIC_VALUE"
+        }
+      },
+      "type": "SINGLE_CONNECTION"
+    },
+    {
+      "actionId": "27",
+      "actionTypeVersion": 0,
+      "actionTypeId": "0-3",
+      "fields": {
+        "task_type": "TODO",
+        "subject": "Contactar dentro del día",
+        "body": "<p>Contacto ingresó un nuevo formulario, se solicita por favor contactar dentro del día</p><p>Nombre: {{ enrolled_object.firstname }} {{ enrolled_object.lastname }}</p><p>Correo: {{ enrolled_object.email }}</p>",
+        "associations": [
+          {
+            "target": {
+              "associationCategory": "HUBSPOT_DEFINED",
+              "associationTypeId": 204
+            },
+            "value": {
+              "type": "ENROLLED_OBJECT"
+            }
+          }
+        ],
+        "use_explicit_associations": "true",
+        "owner_assignment": {
+          "value": {
+            "propertyName": "hubspot_owner_id",
+            "type": "OBJECT_PROPERTY"
+          },
+          "type": "CUSTOM"
+        },
+        "priority": "HIGH"
+      },
+      "type": "SINGLE_CONNECTION"
+    },
+    {
+      "actionId": "28",
+      "actionTypeVersion": 0,
+      "actionTypeId": "0-3",
+      "connection": {
+        "edgeType": "STANDARD",
+        "nextActionId": "25"
+      },
+      "fields": {
+        "task_type": "TODO",
+        "subject": "Contactar dentro del dia dia al Lead de Piura - Ecuador",
+        "body": "<p>Contacto ingresó un nuevo formulario, se solicita por favor contactar dentro del día</p><p>Nombre: {{ enrolled_object.firstname }} {{ enrolled_object.lastname }}</p><p>Correo: {{ enrolled_object.email }}</p>",
+        "associations": [
+          {
+            "target": {
+              "associationCategory": "HUBSPOT_DEFINED",
+              "associationTypeId": 204
+            },
+            "value": {
+              "type": "ENROLLED_OBJECT"
+            }
+          }
+        ],
+        "use_explicit_associations": "true",
+        "owner_assignment": {
+          "value": {
+            "propertyName": "hubspot_owner_id",
+            "type": "OBJECT_PROPERTY"
+          },
+          "type": "CUSTOM"
+        },
+        "priority": "HIGH"
+      },
+      "type": "SINGLE_CONNECTION"
+    },
+    {
+      "actionId": "29",
+      "listBranches": [
+        {
+          "filterBranch": {
+            "filterBranches": [
+              {
+                "filterBranches": [],
+                "filters": [
+                  {
+                    "property": "estatus_de_gestion",
+                    "operation": {
+                      "operator": "IS_ANY_OF",
+                      "includeObjectsWithNoValueSet": false,
+                      "values": [
+                        "Matriculado"
+                      ],
+                      "operationType": "ENUMERATION"
+                    },
+                    "filterType": "PROPERTY"
+                  }
+                ],
+                "filterBranchType": "AND",
+                "filterBranchOperator": "AND"
+              }
+            ],
+            "filters": [],
+            "filterBranchType": "OR",
+            "filterBranchOperator": "OR"
+          },
+          "branchName": "Matriculado"
+        }
+      ],
+      "defaultBranch": {
+        "edgeType": "STANDARD",
+        "nextActionId": "30"
+      },
+      "type": "LIST_BRANCH"
+    },
+    {
+      "actionId": "30",
+      "actionTypeVersion": 0,
+      "actionTypeId": "0-5",
+      "connection": {
+        "edgeType": "STANDARD",
+        "nextActionId": "27"
+      },
+      "fields": {
+        "property_name": "estatus_de_gestion",
+        "value": {
+          "staticValue": "Volver a llamar - Prioritario",
+          "type": "STATIC_VALUE"
+        }
+      },
+      "type": "SINGLE_CONNECTION"
+    },
+    {
+      "actionId": "31",
+      "actionTypeVersion": 0,
+      "actionTypeId": "0-5",
+      "connection": {
+        "edgeType": "STANDARD",
+        "nextActionId": "43"
+      },
+      "fields": {
+        "property_name": "pais_lead",
+        "value": {
+          "staticValue": "Ecuador",
+          "type": "STATIC_VALUE"
+        }
+      },
+      "type": "SINGLE_CONNECTION"
+    },
+    {
+      "actionId": "32",
+      "actionTypeVersion": 0,
+      "actionTypeId": "0-5",
+      "connection": {
+        "edgeType": "STANDARD",
+        "nextActionId": "44"
+      },
+      "fields": {
+        "property_name": "pais_lead",
+        "value": {
+          "staticValue": "Perú",
+          "type": "STATIC_VALUE"
+        }
+      },
+      "type": "SINGLE_CONNECTION"
+    },
+    {
+      "actionId": "35",
+      "listBranches": [
+        {
+          "filterBranch": {
+            "filterBranches": [
+              {
+                "filterBranches": [],
+                "filters": [
+                  {
+                    "property": "hs_object_id",
+                    "operation": {
+                      "operator": "IS_UNKNOWN",
+                      "includeObjectsWithNoValueSet": false,
+                      "operationType": "ALL_PROPERTY"
+                    },
+                    "filterType": "PROPERTY"
+                  }
+                ],
+                "filterBranchType": "AND",
+                "filterBranchOperator": "AND"
+              }
+            ],
+            "filters": [],
+            "filterBranchType": "OR",
+            "filterBranchOperator": "OR"
+          },
+          "connection": {
+            "edgeType": "STANDARD",
+            "nextActionId": "29"
+          }
+        }
+      ],
+      "defaultBranch": {
+        "edgeType": "STANDARD",
+        "nextActionId": "38"
+      },
+      "type": "LIST_BRANCH"
+    },
+    {
+      "actionId": "36",
+      "actionTypeVersion": 0,
+      "actionTypeId": "0-29",
+      "connection": {
+        "edgeType": "STANDARD",
+        "nextActionId": "22"
+      },
+      "fields": {
+        "event_filter_branches": [
+          {
+            "filterBranches": [],
+            "filters": [
+              {
+                "property": "hs_name",
+                "operation": {
+                  "operator": "IS_EQUAL_TO",
+                  "includeObjectsWithNoValueSet": false,
+                  "value": "hubspot_owner_id",
+                  "operationType": "STRING"
+                },
+                "filterType": "PROPERTY"
+              },
+              {
+                "property": "hs_value",
+                "operation": {
+                  "operator": "IS_KNOWN",
+                  "includeObjectsWithNoValueSet": false,
+                  "operationType": "ALL_PROPERTY"
+                },
+                "filterType": "PROPERTY"
+              }
+            ],
+            "eventTypeId": "4-655002",
+            "operator": "HAS_COMPLETED",
+            "filterBranchType": "UNIFIED_EVENTS",
+            "filterBranchOperator": "AND"
+          }
+        ],
+        "expiration_minutes": "30"
+      },
+      "type": "SINGLE_CONNECTION"
+    },
+    {
+      "actionId": "37",
+      "actionTypeVersion": 0,
+      "actionTypeId": "0-15",
+      "connection": {
+        "edgeType": "STANDARD",
+        "nextActionId": "36"
+      },
+      "fields": {
+        "flow_id": "1741893789"
+      },
+      "type": "SINGLE_CONNECTION"
+    },
+    {
+      "actionId": "38",
+      "actionTypeVersion": 0,
+      "actionTypeId": "0-15",
+      "connection": {
+        "edgeType": "GOTO",
+        "nextActionId": "28"
+      },
+      "fields": {
+        "flow_id": "1741893789"
+      },
+      "type": "SINGLE_CONNECTION"
+    },
+    {
+      "actionId": "39",
+      "listBranches": [
+        {
+          "filterBranch": {
+            "filterBranches": [
+              {
+                "filterBranches": [],
+                "filters": [
+                  {
+                    "property": "hs_object_id",
+                    "operation": {
+                      "operator": "IS_UNKNOWN",
+                      "includeObjectsWithNoValueSet": false,
+                      "operationType": "ALL_PROPERTY"
+                    },
+                    "filterType": "PROPERTY"
+                  }
+                ],
+                "filterBranchType": "AND",
+                "filterBranchOperator": "AND"
+              }
+            ],
+            "filters": [],
+            "filterBranchType": "OR",
+            "filterBranchOperator": "OR"
+          },
+          "connection": {
+            "edgeType": "STANDARD",
+            "nextActionId": "15"
+          }
+        }
+      ],
+      "defaultBranch": {
+        "edgeType": "STANDARD",
+        "nextActionId": "40"
+      },
+      "type": "LIST_BRANCH"
+    },
+    {
+      "actionId": "40",
+      "actionTypeVersion": 0,
+      "actionTypeId": "0-15",
+      "connection": {
+        "edgeType": "GOTO",
+        "nextActionId": "14"
+      },
+      "fields": {
+        "flow_id": "1741893789"
+      },
+      "type": "SINGLE_CONNECTION"
+    },
+    {
+      "actionId": "41",
+      "actionTypeVersion": 0,
+      "actionTypeId": "0-15",
+      "connection": {
+        "edgeType": "STANDARD",
+        "nextActionId": "42"
+      },
+      "fields": {
+        "flow_id": "1741893789"
+      },
+      "type": "SINGLE_CONNECTION"
+    },
+    {
+      "actionId": "42",
+      "actionTypeVersion": 0,
+      "actionTypeId": "0-29",
+      "connection": {
+        "edgeType": "STANDARD",
+        "nextActionId": "3"
+      },
+      "fields": {
+        "event_filter_branches": [
+          {
+            "filterBranches": [],
+            "filters": [
+              {
+                "property": "hs_name",
+                "operation": {
+                  "operator": "IS_EQUAL_TO",
+                  "includeObjectsWithNoValueSet": false,
+                  "value": "hubspot_owner_id",
+                  "operationType": "STRING"
+                },
+                "filterType": "PROPERTY"
+              },
+              {
+                "property": "hs_value",
+                "operation": {
+                  "operator": "IS_KNOWN",
+                  "includeObjectsWithNoValueSet": false,
+                  "operationType": "ALL_PROPERTY"
+                },
+                "filterType": "PROPERTY"
+              }
+            ],
+            "eventTypeId": "4-655002",
+            "operator": "HAS_COMPLETED",
+            "filterBranchType": "UNIFIED_EVENTS",
+            "filterBranchOperator": "AND"
+          }
+        ],
+        "expiration_minutes": "30"
+      },
+      "type": "SINGLE_CONNECTION"
+    },
+    {
+      "actionId": "43",
+      "listBranches": [
+        {
+          "filterBranch": {
+            "filterBranches": [
+              {
+                "filterBranches": [],
+                "filters": [
+                  {
+                    "property": "programas_piura__udn_udep_",
+                    "operation": {
+                      "operator": "IS_ANY_OF",
+                      "includeObjectsWithNoValueSet": false,
+                      "values": [
+                        "Diplomado Liderazgo y Gestión del Talento",
+                        "Diplomado Habilidades para la Gestión de Equipos",
+                        "Diplomado en Marketing Digital y Ecommerce",
+                        "Diplomado Gestión Felicidad y Bienestar Organizacional",
+                        "Diplomado Inteligencia Emocional & Coaching",
+                        "Diplomado Marketing Digital y Analítica"
+                      ],
+                      "operationType": "ENUMERATION"
+                    },
+                    "filterType": "PROPERTY"
+                  }
+                ],
+                "filterBranchType": "AND",
+                "filterBranchOperator": "AND"
+              }
+            ],
+            "filters": [],
+            "filterBranchType": "OR",
+            "filterBranchOperator": "OR"
+          },
+          "branchName": "Es un diplomado",
+          "connection": {
+            "edgeType": "STANDARD",
+            "nextActionId": "48"
+          }
+        }
+      ],
+      "defaultBranch": {
+        "edgeType": "STANDARD",
+        "nextActionId": "23"
+      },
+      "type": "LIST_BRANCH"
+    },
+    {
+      "actionId": "44",
+      "listBranches": [
+        {
+          "filterBranch": {
+            "filterBranches": [
+              {
+                "filterBranches": [],
+                "filters": [
+                  {
+                    "property": "programas_piura__udn_udep_",
+                    "operation": {
+                      "operator": "IS_ANY_OF",
+                      "includeObjectsWithNoValueSet": false,
+                      "values": [
+                        "Diplomado Liderazgo y Gestión del Talento",
+                        "Diplomado Habilidades para la Gestión de Equipos",
+                        "Diplomado en Marketing Digital y Ecommerce",
+                        "Diplomado Gestión Felicidad y Bienestar Organizacional",
+                        "Diplomado Inteligencia Emocional & Coaching",
+                        "Diplomado Marketing Digital y Analítica"
+                      ],
+                      "operationType": "ENUMERATION"
+                    },
+                    "filterType": "PROPERTY"
+                  }
+                ],
+                "filterBranchType": "AND",
+                "filterBranchOperator": "AND"
+              }
+            ],
+            "filters": [],
+            "filterBranchType": "OR",
+            "filterBranchOperator": "OR"
+          },
+          "branchName": "Es un diplomado",
+          "connection": {
+            "edgeType": "STANDARD",
+            "nextActionId": "47"
+          }
+        }
+      ],
+      "defaultBranch": {
+        "edgeType": "STANDARD",
+        "nextActionId": "9"
+      },
+      "type": "LIST_BRANCH"
+    },
+    {
+      "actionId": "47",
+      "actionTypeVersion": 0,
+      "actionTypeId": "0-5",
+      "connection": {
+        "edgeType": "GOTO",
+        "nextActionId": "41"
+      },
+      "fields": {
+        "property_name": "equipos_por_nivel_de_estudios__udn_udep_",
+        "value": {
+          "staticValue": "Equipo Diplomados",
+          "type": "STATIC_VALUE"
+        }
+      },
+      "type": "SINGLE_CONNECTION"
+    },
+    {
+      "actionId": "48",
+      "actionTypeVersion": 0,
+      "actionTypeId": "0-5",
+      "connection": {
+        "edgeType": "GOTO",
+        "nextActionId": "37"
+      },
+      "fields": {
+        "property_name": "equipos_por_nivel_de_estudios__udn_udep_",
+        "value": {
+          "staticValue": "Equipo Diplomados",
+          "type": "STATIC_VALUE"
+        }
+      },
+      "type": "SINGLE_CONNECTION"
+    }
+  ],
+  "enrollmentCriteria": {
+    "shouldReEnroll": true,
+    "type": "MANUAL"
+  },
+  "timeWindows": [],
+  "blockedDates": [],
+  "customProperties": {},
+  "dataSources": [],
+  "crmObjectCreationStatus": "COMPLETE",
+  "suppressionListIds": [],
+  "canEnrollFromSalesforce": false,
+  "type": "CONTACT_FLOW",
+  "objectTypeId": "0-1"
+}

@@ -1,0 +1,44 @@
+{
+  "generado": "2026-09-17T13:33:01",
+  "motivo": "Pedro pidio que los contactos de prueba no queden como MQL ni se asignen. Se verifica el estado real de la cadena de workflows antes de la ronda 3.",
+  "cadena": "formulario -> Activador -> 1631981736 (0451 Definicion Nivel de Estudios) -> 1631990199 (0452 LEADS-Asignacion a equipo Piura)",
+  "flujos": {
+    "1631981736": {
+      "nombre": "0451. Definiciòn Nivel de Estudios Perú (UDN UDEP)",
+      "activo": true,
+      "actualizado": "2026-09-17T13:19:28.439Z",
+      "tiene_meta_que_expulsa": true,
+      "meta_filtra_por": [
+        "hs_email_domain"
+      ],
+      "meta_valores": [
+        "[\"@5minutos.io\", \"5minutos.io\"]"
+      ],
+      "escribe_propiedades": [
+        "equipos_por_nivel_de_estudios__udn_udep_",
+        "pais_lead",
+        "programa_mas_recientemente_solicitado"
+      ],
+      "crea_tareas": 0,
+      "menciona_mql": false
+    },
+    "1631990199": {
+      "nombre": "0452. LEADS-Asignación de leads a equipo Piura (UDN UDEP)",
+      "activo": true,
+      "actualizado": "2026-09-02T06:14:45.021Z",
+      "tiene_meta_que_expulsa": false,
+      "meta_filtra_por": [],
+      "meta_valores": [],
+      "escribe_propiedades": [
+        "equipos_por_nivel_de_estudios__udn_udep_",
+        "estatus_de_gestion",
+        "facultades_piura__udn_udep_",
+        "hubspot_owner_id",
+        "pais_lead"
+      ],
+      "crea_tareas": 4,
+      "menciona_mql": false
+    }
+  },
+  "conclusion": "Los 6 Activadores estan intactos y activos (43_estado_activadores.json). El 17-sep a las 13:19 se agrego una meta al flujo 0451 que expulsa a todo contacto con dominio 5minutos.io. Consecuencia: los contactos de prueba entran al Activador pero salen de 0451 antes de ejecutar nada, nunca llegan a 0452 y por lo tanto no reciben propietario, ni tarea de seguimiento, ni estatus de gestion. Eso cumple el pedido de Pedro. Costo para la auditoria: H5 (el Activador se ejecuto para el contacto) deja de ser observable por el propietario asignado, que es como lo media tools/verificar_contactos.py. Ni 0451 ni 0452 escriben propiedades MQL: el riesgo de MQL estaba aguas abajo y queda descartado por la misma via."
+}

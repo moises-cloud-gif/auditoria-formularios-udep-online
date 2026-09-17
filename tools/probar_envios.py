@@ -24,48 +24,65 @@ a = ap.parse_args()
 
 HOY = datetime.date.today().strftime("%Y%m%d")
 VISIBLE = os.getenv("PW_VISIBLE", "0") == "1"
-SEL_IFRAME = "iframe.hs-form-iframe, iframe[id^='hs-form-iframe']"
 paginas = hs.paginas()[a.desde:a.hasta]
 filas = []
 
 
-def marcar_iframes(pg):
-    """Etiqueta cada iframe de formulario como 'banner' o 'modal' segun donde vive."""
-    try:
-        pg.eval_on_selector_all(SEL_IFRAME, """els => els.forEach(el => {
-            el.setAttribute('data-qa-inst', el.closest('#hubspot-formulario') ? 'modal' : 'banner');
-        })""")
-    except Exception:
-        pass
-    return pg.locator(SEL_IFRAME).count()
+def _frames_con_formulario(pg):
+    """Devuelve [(frame, es_del_modal)] de los marcos que contienen un formulario.
 
-
-def marco(pg, instancia):
-    """Devuelve un acceso FRESCO al iframe del formulario.
-
-    HubSpot vuelve a dibujar el iframe despues de cargar (prellenado de valores conocidos,
-    reCAPTCHA), y eso borra la marca que le ponemos. Por eso se re-marca antes de cada accion
-    en lugar de guardar una referencia, que es lo que hacia fallar el llenado con TimeoutError.
+    No depende de marcar el iframe con un atributo: HubSpot vuelve a dibujar el iframe
+    despues de cargar y borra cualquier marca, que es lo que hacia fallar el llenado.
+    Un objeto Frame de Playwright se puede volver a buscar en cada accion.
     """
-    marcar_iframes(pg)
-    return pg.frame_locator(f"iframe[data-qa-inst='{instancia}']")
+    salida = []
+    for fr in pg.frames:
+        if fr == pg.main_frame:
+            continue
+        try:
+            if fr.locator("form").count() == 0:
+                continue
+            el = fr.frame_element()
+            es_modal = bool(el.evaluate("el => !!el.closest('#hubspot-formulario')"))
+            salida.append((fr, es_modal))
+        except Exception:
+            continue
+    return salida
 
 
-def con_reintento(fn, intentos=3, espera=1500, pg=None):
-    """Ejecuta fn() y reintenta si el iframe se renovo en el medio."""
+def buscar_frame(pg, instancia):
+    """Marco del formulario del banner o del modal. Lanza excepcion si no aparece."""
+    cands = _frames_con_formulario(pg)
+    if not cands:
+        raise RuntimeError(f"ningun marco con formulario en la pagina (marcos totales: {len(pg.frames) - 1})")
+    quiero_modal = instancia == "modal"
+    exactos = [f for f, m in cands if m == quiero_modal]
+    if exactos:
+        return exactos[0]
+    if len(cands) == 1:
+        return cands[0][0]
+    raise RuntimeError(f"no se distinguio el marco de '{instancia}' entre {len(cands)} candidatos")
+
+
+def marcar_iframes(pg):
+    """Compatibilidad: informa cuantos marcos de formulario hay."""
+    return len(_frames_con_formulario(pg))
+
+
+def con_reintento(fn, pg, intentos=4, espera=2000):
+    """Ejecuta fn() y reintenta si el marco se renovo en el medio."""
     ultimo = None
     for _ in range(intentos):
         try:
             return fn()
         except Exception as e:
             ultimo = e
-            if pg is not None:
-                pg.wait_for_timeout(espera)
+            pg.wait_for_timeout(espera)
     raise ultimo
 
 
 def completar_y_enviar(pg, instancia, slug):
-    """Llena y envia el formulario dentro de su iframe. Devuelve la fila de evidencia."""
+    """Llena y envia el formulario dentro de su marco. Devuelve la fila de evidencia."""
     correo = hs.correo_qa(slug, instancia, HOY)
     fila = {"slug": slug, "instancia": instancia, "correo": correo,
             "fecha": hs.ahora(), "dry_run": hs.DRY_RUN,
@@ -73,69 +90,70 @@ def completar_y_enviar(pg, instancia, slug):
             "R4_confirmacion": False, "R5_clausula_datos": False,
             "recaptcha_clave_de_prueba": None, "form_id_disparado": None,
             "captura": None, "error": None}
-    sel = f"iframe[data-qa-inst='{instancia}']"
     try:
-        con_reintento(lambda: marco(pg, instancia).locator("form").first.wait_for(
-            state="visible", timeout=20000), pg=pg)
+        con_reintento(lambda: buscar_frame(pg, instancia).locator("form").first.wait_for(
+            state="visible", timeout=15000), pg)
         fila["R1_renderiza"] = True
-        pg.wait_for_timeout(2500)   # deja que termine de re-dibujarse antes de tocar nada
+        pg.wait_for_timeout(3000)   # deja que HubSpot termine de re-dibujar
 
-        fila["R2_campos"] = con_reintento(lambda: marco(pg, instancia).locator(
+        fila["R2_campos"] = con_reintento(lambda: buscar_frame(pg, instancia).locator(
             "form input, form select, form textarea").evaluate_all(
-            "els => els.map(e => e.name || e.id).filter(Boolean)"), pg=pg)
-        fila["form_id_disparado"] = con_reintento(lambda: marco(pg, instancia).locator(
-            "form").first.get_attribute("data-form-id"), pg=pg)
-        texto = con_reintento(lambda: marco(pg, instancia).locator("body").inner_text(), pg=pg).lower()
+            "els => els.map(e => e.name || e.id).filter(Boolean)"), pg)
+        fila["form_id_disparado"] = con_reintento(lambda: buscar_frame(pg, instancia).locator(
+            "form").first.get_attribute("data-form-id"), pg)
+        texto = con_reintento(lambda: buscar_frame(pg, instancia).locator("body").inner_text(), pg).lower()
         fila["R5_clausula_datos"] = ("autorizo" in texto or "datos personales" in texto or "autoriza" in texto)
         fila["recaptcha_clave_de_prueba"] = "testing purposes only" in texto
 
-        def llenar(sel_campo, val):
+        def llenar(sel_campo, val, obligatorio=True):
             def _hacer():
-                loc = marco(pg, instancia).locator(sel_campo).first
+                loc = buscar_frame(pg, instancia).locator(sel_campo).first
                 if loc.count() == 0:
                     return False
-                loc.fill(val, timeout=10000)
+                loc.fill(val, timeout=8000)
                 return True
-            return con_reintento(_hacer, pg=pg)
+            try:
+                return con_reintento(_hacer, pg)
+            except Exception as e:
+                if obligatorio:
+                    raise
+                return False
 
         def elegir(sel_campo):
             def _hacer():
-                d = marco(pg, instancia).locator(sel_campo).first
+                d = buscar_frame(pg, instancia).locator(sel_campo).first
                 if d.count() == 0:
                     return False
-                d.select_option(index=1, timeout=10000)
+                d.select_option(index=1, timeout=8000)
                 return True
             try:
-                return con_reintento(_hacer, pg=pg)
+                return con_reintento(_hacer, pg)
             except Exception:
                 return False
 
         llenar("input[name='firstname']", "QA")
         llenar("input[name='lastname']", f"Prueba {slug[:40]}")
         llenar("input[name='email']", correo)
-        llenar("input[name='phone']", hs.QA_TEL)
+        llenar("input[name='phone']", hs.QA_TEL, obligatorio=False)
         for s_campo in ("textarea[name='mensaje']", "textarea[name='message']",
                         "textarea[name='mensaje__udn_udep_']"):
-            try:
-                llenar(s_campo, f"PRUEBA QA 5MINUTOS - {HOY} - NO GESTIONAR")
-            except Exception:
-                pass
+            llenar(s_campo, f"PRUEBA QA 5MINUTOS - {HOY} - NO GESTIONAR", obligatorio=False)
         for s_campo in ("select[name^='nivel_de_estudios']", "select[name^='medio_de_contacto']"):
             elegir(s_campo)
         for s_campo in ("input[type='checkbox'][name*='LEGAL']", "input[type='checkbox'][name*='consent']"):
             try:
                 def _chk():
-                    c = marco(pg, instancia).locator(s_campo).first
+                    c = buscar_frame(pg, instancia).locator(s_campo).first
                     if c.count() and not c.is_checked():
-                        c.check(timeout=8000)
+                        c.check(timeout=6000)
                     return True
-                con_reintento(_chk, pg=pg)
+                con_reintento(_chk, pg, intentos=2)
             except Exception:
                 pass
 
         captura = hs.EVID / f"{slug}__{instancia}__{HOY}.png"
         try:
-            con_reintento(lambda: (marcar_iframes(pg), pg.locator(sel).first.screenshot(path=str(captura)))[1], pg=pg)
+            con_reintento(lambda: buscar_frame(pg, instancia).frame_element().screenshot(path=str(captura)), pg, intentos=2)
         except Exception:
             pg.screenshot(path=str(captura))
         fila["captura"] = captura.name
@@ -144,22 +162,22 @@ def completar_y_enviar(pg, instancia, slug):
             fila["error"] = "DRY_RUN=1: no se envio"
             return fila
 
-        con_reintento(lambda: marco(pg, instancia).locator(
-            "input[type='submit'], button[type='submit']").first.click(timeout=15000), pg=pg)
+        con_reintento(lambda: buscar_frame(pg, instancia).locator(
+            "input[type='submit'], button[type='submit']").first.click(timeout=12000), pg)
         pg.wait_for_timeout(9000)
         fila["R3_envio"] = True
+        t2 = ""
         try:
-            t2 = marco(pg, instancia).locator("body").inner_text().lower()
+            t2 = buscar_frame(pg, instancia).locator("body").inner_text().lower()
         except Exception:
-            t2 = ""
+            pass
         if not t2:
             t2 = pg.locator("body").inner_text().lower()
         fila["R4_confirmacion"] = ("gracias" in t2 or "contactaremos" in t2)
         fila["texto_despues_de_enviar"] = t2[:200]
         captura2 = hs.EVID / f"{slug}__{instancia}__{HOY}__post.png"
         try:
-            marcar_iframes(pg)
-            pg.locator(sel).first.screenshot(path=str(captura2))
+            buscar_frame(pg, instancia).frame_element().screenshot(path=str(captura2))
         except Exception:
             pg.screenshot(path=str(captura2))
         fila["captura_post"] = captura2.name
@@ -218,7 +236,7 @@ with sync_playwright() as pw:
                 filas.append({"slug": slug, "instancia": "modal", "R1_renderiza": False,
                               "error": "no se pudo abrir el modal (no se encontro el boton Postula)",
                               "fecha": hs.ahora(), "dry_run": hs.DRY_RUN, "captura": None})
-            elif pg2.locator("iframe[data-qa-inst='modal']").count() == 0:
+            elif marcar_iframes(pg2) == 0:
                 filas.append({"slug": slug, "instancia": "modal", "R1_renderiza": False,
                               "error": "el modal abrio pero no hay formulario dentro de #hubspot-formulario",
                               "fecha": hs.ahora(), "dry_run": hs.DRY_RUN, "captura": None})

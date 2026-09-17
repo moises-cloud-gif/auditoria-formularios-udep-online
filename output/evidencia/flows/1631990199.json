@@ -2,13 +2,13 @@
   "id": "1631990199",
   "isEnabled": true,
   "flowType": "WORKFLOW",
-  "revisionId": "57",
+  "revisionId": "60",
   "name": "0452. LEADS-Asignación de leads a equipo Piura (UDN UDEP)",
   "uuid": "0452. LEADS-Asignación de leads a equipo Piura (UDN UDEP)-1631990199",
   "createdAt": "2025-02-17T18:24:16.856Z",
-  "updatedAt": "2026-09-02T06:14:45.021Z",
+  "updatedAt": "2026-09-17T18:03:10.307Z",
   "startActionId": "17",
-  "nextAvailableActionId": "49",
+  "nextAvailableActionId": "50",
   "actions": [
     {
       "actionId": "3",
@@ -331,6 +331,39 @@
           "connection": {
             "edgeType": "STANDARD",
             "nextActionId": "20"
+          }
+        },
+        {
+          "filterBranch": {
+            "filterBranches": [
+              {
+                "filterBranches": [],
+                "filters": [
+                  {
+                    "property": "hs_email_domain",
+                    "operation": {
+                      "operator": "CONTAINS_EXACTLY",
+                      "includeObjectsWithNoValueSet": false,
+                      "values": [
+                        "5minutos.io"
+                      ],
+                      "operationType": "MULTISTRING"
+                    },
+                    "filterType": "PROPERTY"
+                  }
+                ],
+                "filterBranchType": "AND",
+                "filterBranchOperator": "AND"
+              }
+            ],
+            "filters": [],
+            "filterBranchType": "OR",
+            "filterBranchOperator": "OR"
+          },
+          "branchName": "5minutos.",
+          "connection": {
+            "edgeType": "STANDARD",
+            "nextActionId": "49"
           }
         }
       ],
@@ -975,6 +1008,19 @@
         "property_name": "equipos_por_nivel_de_estudios__udn_udep_",
         "value": {
           "staticValue": "Equipo Diplomados",
+          "type": "STATIC_VALUE"
+        }
+      },
+      "type": "SINGLE_CONNECTION"
+    },
+    {
+      "actionId": "49",
+      "actionTypeVersion": 0,
+      "actionTypeId": "0-5",
+      "fields": {
+        "property_name": "hubspot_owner_id",
+        "value": {
+          "staticValue": "82923019",
           "type": "STATIC_VALUE"
         }
       },

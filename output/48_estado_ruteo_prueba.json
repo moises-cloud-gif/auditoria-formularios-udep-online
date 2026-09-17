@@ -1,0 +1,18 @@
+{
+  "generado": "2026-09-17T18:11:21",
+  "hallazgo": "Roman implemento la rama en 0452 pero no quito la meta del 0451, asi que la rama nunca se alcanza.",
+  "0451_1631981736": {
+    "actualizado": "2026-09-17T13:19",
+    "meta_expulsa_5minutos": true,
+    "efecto": "el contacto con dominio 5minutos.io sale del flujo antes de ejecutar nada, y por lo tanto nunca se inscribe en 0452"
+  },
+  "0452_1631990199": {
+    "actualizado": "2026-09-17T18:03",
+    "rama_nueva": "5minutos.",
+    "filtra_por": "hs_email_domain contiene 5minutos.io",
+    "accion": "49 · asigna hubspot_owner_id = 82923019 (Moises Camargo) y termina ahi",
+    "efecto": "correcto: asigna a Moises, sin tarea, sin estatus de gestion y sin flujos siguientes",
+    "problema": "inalcanzable mientras la meta del 0451 siga puesta"
+  },
+  "que_falta": "Quitar la meta de hs_email_domain = 5minutos.io del flujo 1631981736 (0451)."
+}

@@ -49,13 +49,16 @@ Evidencia: `output/90_limpieza.json`.
 | Requisito | Estado | Fecha |
 |---|---|---|
 | Aprobación de Santiago Roman para los 80 envíos reales con Activadores encendidos | **APROBADA** (reportada por Moisés Camargo) | 17-sep-2026 |
-| Aviso al equipo comercial de UDEP con la ventana horaria | **PENDIENTE** | — |
+| Aviso al equipo comercial de UDEP con la ventana horaria | **HECHO** (reportado por Moisés) | 17-sep-2026 |
 | Aprobación de la limpieza de contactos de prueba | pendiente, es posterior a la pasada | — |
 | Aviso a Rocío por el reCAPTCHA (alcanza a UANDES) | pendiente, antes de corregir | — |
 
-La ronda 3 no arranca hasta que el aviso al equipo comercial esté hecho: es un
-requisito del propio requerimiento (§4.5, criterios de entrada) y sin él los
-ejecutivos trabajan leads inventados.
+**La ronda 3 está habilitada.** Los contactos de prueba pasan por la clasificación de país y
+equipo y quedan asignados a Moisés, sin tarea, sin correo automático, sin ticket de SLA y sin
+marca MQL. Verificado en el portal el 17-sep a las 18:13 (`output/48_estado_ruteo_prueba.json`).
+
+**Desviación declarada:** se modificaron cinco workflows de producción para esta corrida, acordado
+con Pedro y aprobado por Santiago. Al cerrar hay que revertir la rama "5minutos." del flujo 0452.
 
 ## Bloqueos para el usuario
 

@@ -44,7 +44,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "python3 .claude/hooks/block_secrets.py"
+            "command": "python3 \"$CLAUDE_PROJECT_DIR/.claude/hooks/block_secrets.py\""
           }
         ]
       },
@@ -53,7 +53,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "python3 .claude/hooks/guard_escrituras.py"
+            "command": "python3 \"$CLAUDE_PROJECT_DIR/.claude/hooks/guard_escrituras.py\""
           }
         ]
       }

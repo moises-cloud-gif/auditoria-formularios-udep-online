@@ -1,6 +1,6 @@
 # Estado del loop · auditoría de formularios UDEP Online
 
-**Última actualización:** 2026-09-16 (sesión remota de Claude Code, rama `claude/informe-github-repo-2xu2ep`)
+**Última actualización:** 2026-09-17 (sesión remota de Claude Code, rama `claude/informe-github-repo-2xu2ep`)
 **Orquestador:** Claude, actuando sobre los scripts de `tools/`. Los agentes de `.claude/agents/` no
 estaban disponibles como subagentes en esta sesión (el repo estaba vacío al arrancar), así que las
 rondas se ejecutaron con los mismos scripts y contratos, y el criterio de clasificación quedó
@@ -43,6 +43,19 @@ La limpieza original (`tools/limpiar_pruebas.py`) borraba **todo** lo que devolv
 limpieza los habría archivado. Se corrigió: ahora solo borra correos que cumplen exactamente el
 patrón `qa+<slug>-<banner|modal>-<AAAAMMDD>@5minutos.io` y lista el resto como excluido.
 Evidencia: `output/90_limpieza.json`.
+
+## Aprobaciones y avisos
+
+| Requisito | Estado | Fecha |
+|---|---|---|
+| Aprobación de Santiago Roman para los 80 envíos reales con Activadores encendidos | **APROBADA** (reportada por Moisés Camargo) | 17-sep-2026 |
+| Aviso al equipo comercial de UDEP con la ventana horaria | **PENDIENTE** | — |
+| Aprobación de la limpieza de contactos de prueba | pendiente, es posterior a la pasada | — |
+| Aviso a Rocío por el reCAPTCHA (alcanza a UANDES) | pendiente, antes de corregir | — |
+
+La ronda 3 no arranca hasta que el aviso al equipo comercial esté hecho: es un
+requisito del propio requerimiento (§4.5, criterios de entrada) y sin él los
+ejecutivos trabajan leads inventados.
 
 ## Bloqueos para el usuario
 

@@ -1,0 +1,48 @@
+{
+  "generado": "2026-09-17",
+  "hallazgo": "El formulario del modal se dibuja pero no envia",
+  "criterio_afectado": "CA-1 (el formulario captura el lead) · cierra el pendiente de agosto 'fuga del modal'",
+  "severidad": "alta",
+  "sintoma_confirmado_por_humano": {
+    "quien": "Moises Camargo",
+    "como": "clic en el boton 'Postula aqui' en una ventana normal, sin automatizacion",
+    "resultado": "C: el modal abre y el formulario aparece dentro, pero al dar ENVIAR el envio no se completa",
+    "paginas_probadas": [
+      "https://udeponline.pe/curso-de-gestion-del-talento/",
+      "https://udeponline.pe/programa-de-especializacion-en-liderazgo-y-negociacion-de-conflictos/"
+    ],
+    "pendiente_de_detalle": "falta saber si aparece un mensaje de error en pantalla y cual"
+  },
+  "por_que_importa": [
+    "Las dos paginas probadas tienen marcado muy distinto y fallan igual, asi que la causa no es el marcado duplicado de la pagina de Liderazgo.",
+    "Lo unico que comparten es el patron estructural, y ese patron esta en las 40 paginas.",
+    "Ninguno de los 7 envios manuales de la muestra pudo hacerse por modal: los 7 salieron por el banner."
+  ],
+  "evidencia_estructural": {
+    "archivo": "output/54_modal_estructura.json",
+    "fuente": "HTML servido, guardado en output/evidencia/paginas/",
+    "paginas_analizadas": 40,
+    "el_mismo_formulario_se_dibuja_dos_veces_por_pagina": 40,
+    "detalle": "Cada pagina incrusta el mismo formId dos veces: una fija en la portada (banner) y otra dentro del modal, con el mismo portal 6925781 y la misma region na1.",
+    "paginas_con_ids_html_duplicados": 1,
+    "pagina_con_ids_duplicados": "programa-de-especializacion-en-liderazgo-y-negociacion-de-conflictos (8 incrustaciones, 7 contenedores con el mismo id, HTML invalido, mas un temporizador que borra modales sobrantes cada 1,2 s)"
+  },
+  "hipotesis_de_causa": {
+    "enunciado": "El reCAPTCHA de HubSpot se engancha de forma confiable a una sola instancia del formulario por pagina. Con el mismo formulario dibujado dos veces, la segunda instancia no consigue token valido y el envio queda rechazado.",
+    "estado": "HIPOTESIS, no confirmada",
+    "a_favor": [
+      "El error que recibio el navegador automatizado sobre el banner fue exactamente 'No se ha podido validar el captcha'.",
+      "El sintoma se repite en una pagina con marcado limpio y en otra con marcado roto: la constante es la doble incrustacion.",
+      "Ninguna de las 40 paginas menciona reCAPTCHA en su HTML: lo inyecta el embed de HubSpot desde la configuracion del portal."
+    ],
+    "como_se_confirma": "Reproducir el envio por modal con la consola del navegador abierta y leer la respuesta del endpoint de HubSpot, o pedir a Vicente que deje una pagina de prueba con una sola incrustacion."
+  },
+  "alcance_estimado": {
+    "confirmado": "2 de 40 paginas, por prueba humana",
+    "extrapolado": "las 40, porque el patron estructural es identico en las 40",
+    "advertencia": "La extrapolacion es razonable pero NO es evidencia. Para declararlo sobre las 40 hace falta probar las 40."
+  },
+  "consecuencia_para_el_negocio": "Si se confirma, la mitad de las entradas de leads del sitio no funciona: todo visitante que hace clic en 'Postula aqui' llena el formulario, lo envia y no llega nada a HubSpot. No hay contacto, no hay atribucion y no se dispara ningun Activador. El visitante cree que dejo sus datos.",
+  "quien_decide": "Moises. La correccion la ejecuta Vicente Ham: es un cambio en el sitio, no en HubSpot.",
+  "no_se_corrige_en_esta_corrida": "La regla 6 del proyecto: la auditoria diagnostica, la correccion es una tarea posterior con su propia aprobacion."
+}

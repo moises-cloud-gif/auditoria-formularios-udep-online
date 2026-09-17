@@ -40,6 +40,30 @@ def marcar_iframes(pg):
     return pg.locator(SEL_IFRAME).count()
 
 
+def marco(pg, instancia):
+    """Devuelve un acceso FRESCO al iframe del formulario.
+
+    HubSpot vuelve a dibujar el iframe despues de cargar (prellenado de valores conocidos,
+    reCAPTCHA), y eso borra la marca que le ponemos. Por eso se re-marca antes de cada accion
+    en lugar de guardar una referencia, que es lo que hacia fallar el llenado con TimeoutError.
+    """
+    marcar_iframes(pg)
+    return pg.frame_locator(f"iframe[data-qa-inst='{instancia}']")
+
+
+def con_reintento(fn, intentos=3, espera=1500, pg=None):
+    """Ejecuta fn() y reintenta si el iframe se renovo en el medio."""
+    ultimo = None
+    for _ in range(intentos):
+        try:
+            return fn()
+        except Exception as e:
+            ultimo = e
+            if pg is not None:
+                pg.wait_for_timeout(espera)
+    raise ultimo
+
+
 def completar_y_enviar(pg, instancia, slug):
     """Llena y envia el formulario dentro de su iframe. Devuelve la fila de evidencia."""
     correo = hs.correo_qa(slug, instancia, HOY)
@@ -51,50 +75,67 @@ def completar_y_enviar(pg, instancia, slug):
             "captura": None, "error": None}
     sel = f"iframe[data-qa-inst='{instancia}']"
     try:
-        marco_el = pg.locator(sel).first
-        marco_el.wait_for(state="attached", timeout=25000)
-        fl = pg.frame_locator(sel)
-        fl.locator("form").first.wait_for(state="visible", timeout=25000)
+        con_reintento(lambda: marco(pg, instancia).locator("form").first.wait_for(
+            state="visible", timeout=20000), pg=pg)
         fila["R1_renderiza"] = True
+        pg.wait_for_timeout(2500)   # deja que termine de re-dibujarse antes de tocar nada
 
-        fila["R2_campos"] = fl.locator("form input, form select, form textarea").evaluate_all(
-            "els => els.map(e => e.name || e.id).filter(Boolean)")
-        fila["form_id_disparado"] = fl.locator("form").first.get_attribute("data-form-id")
-        texto = fl.locator("body").inner_text().lower()
-        fila["R5_clausula_datos"] = ("autorizo" in texto or "datos personales" in texto
-                                     or "autoriza" in texto)
+        fila["R2_campos"] = con_reintento(lambda: marco(pg, instancia).locator(
+            "form input, form select, form textarea").evaluate_all(
+            "els => els.map(e => e.name || e.id).filter(Boolean)"), pg=pg)
+        fila["form_id_disparado"] = con_reintento(lambda: marco(pg, instancia).locator(
+            "form").first.get_attribute("data-form-id"), pg=pg)
+        texto = con_reintento(lambda: marco(pg, instancia).locator("body").inner_text(), pg=pg).lower()
+        fila["R5_clausula_datos"] = ("autorizo" in texto or "datos personales" in texto or "autoriza" in texto)
         fila["recaptcha_clave_de_prueba"] = "testing purposes only" in texto
 
         def llenar(sel_campo, val):
-            loc = fl.locator(sel_campo).first
-            if loc.count():
-                loc.fill(val)
+            def _hacer():
+                loc = marco(pg, instancia).locator(sel_campo).first
+                if loc.count() == 0:
+                    return False
+                loc.fill(val, timeout=10000)
+                return True
+            return con_reintento(_hacer, pg=pg)
+
+        def elegir(sel_campo):
+            def _hacer():
+                d = marco(pg, instancia).locator(sel_campo).first
+                if d.count() == 0:
+                    return False
+                d.select_option(index=1, timeout=10000)
+                return True
+            try:
+                return con_reintento(_hacer, pg=pg)
+            except Exception:
+                return False
 
         llenar("input[name='firstname']", "QA")
         llenar("input[name='lastname']", f"Prueba {slug[:40]}")
         llenar("input[name='email']", correo)
         llenar("input[name='phone']", hs.QA_TEL)
-        for s in ("textarea[name='mensaje']", "textarea[name='message']",
-                  "textarea[name='mensaje__udn_udep_']"):
-            llenar(s, f"PRUEBA QA 5MINUTOS - {HOY} - NO GESTIONAR")
-        for s in ("select[name^='nivel_de_estudios']", "select[name^='medio_de_contacto']"):
-            d = fl.locator(s).first
-            if d.count():
-                try:
-                    d.select_option(index=1)
-                except Exception:
-                    pass
-        for s in ("input[type='checkbox'][name*='LEGAL']", "input[type='checkbox'][name*='consent']"):
-            c = fl.locator(s).first
-            if c.count() and not c.is_checked():
-                try:
-                    c.check()
-                except Exception:
-                    pass
+        for s_campo in ("textarea[name='mensaje']", "textarea[name='message']",
+                        "textarea[name='mensaje__udn_udep_']"):
+            try:
+                llenar(s_campo, f"PRUEBA QA 5MINUTOS - {HOY} - NO GESTIONAR")
+            except Exception:
+                pass
+        for s_campo in ("select[name^='nivel_de_estudios']", "select[name^='medio_de_contacto']"):
+            elegir(s_campo)
+        for s_campo in ("input[type='checkbox'][name*='LEGAL']", "input[type='checkbox'][name*='consent']"):
+            try:
+                def _chk():
+                    c = marco(pg, instancia).locator(s_campo).first
+                    if c.count() and not c.is_checked():
+                        c.check(timeout=8000)
+                    return True
+                con_reintento(_chk, pg=pg)
+            except Exception:
+                pass
 
         captura = hs.EVID / f"{slug}__{instancia}__{HOY}.png"
         try:
-            marco_el.screenshot(path=str(captura))
+            con_reintento(lambda: (marcar_iframes(pg), pg.locator(sel).first.screenshot(path=str(captura)))[1], pg=pg)
         except Exception:
             pg.screenshot(path=str(captura))
         fila["captura"] = captura.name
@@ -103,11 +144,12 @@ def completar_y_enviar(pg, instancia, slug):
             fila["error"] = "DRY_RUN=1: no se envio"
             return fila
 
-        fl.locator("input[type='submit'], button[type='submit']").first.click()
-        pg.wait_for_timeout(8000)
+        con_reintento(lambda: marco(pg, instancia).locator(
+            "input[type='submit'], button[type='submit']").first.click(timeout=15000), pg=pg)
+        pg.wait_for_timeout(9000)
         fila["R3_envio"] = True
         try:
-            t2 = fl.locator("body").inner_text().lower()
+            t2 = marco(pg, instancia).locator("body").inner_text().lower()
         except Exception:
             t2 = ""
         if not t2:
@@ -116,7 +158,8 @@ def completar_y_enviar(pg, instancia, slug):
         fila["texto_despues_de_enviar"] = t2[:200]
         captura2 = hs.EVID / f"{slug}__{instancia}__{HOY}__post.png"
         try:
-            marco_el.screenshot(path=str(captura2))
+            marcar_iframes(pg)
+            pg.locator(sel).first.screenshot(path=str(captura2))
         except Exception:
             pg.screenshot(path=str(captura2))
         fila["captura_post"] = captura2.name

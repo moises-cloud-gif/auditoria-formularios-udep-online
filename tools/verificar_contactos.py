@@ -36,7 +36,14 @@ PROPS = ["email", "firstname", "lastname", "createdate", "hubspot_owner_id", "hu
          "recent_conversion_event_name", "recent_conversion_date", "first_conversion_event_name",
          "num_conversion_events", "cursos_piura__udn_udep_", "programas_piura__udn_udep_", "cursos_piura",
          "mensaje", "message", "medio_de_contacto__udn_udep_", "nivel_de_estudios__udn_udep_",
-         "hs_analytics_source", "hs_analytics_first_url", "lifecyclestage"]
+         "hs_analytics_source", "hs_analytics_first_url", "lifecyclestage",
+         # ---- resultado del ruteo: que decidieron los workflows con este lead ----
+         "equipos_por_nivel_de_estudios__udn_udep_",   # equipo que le asigno el flujo 0451
+         "facultades_piura__udn_udep_",                # facultad que le asigno el flujo 0452
+         "pais_lead",                                  # pais deducido
+         "programa_mas_recientemente_solicitado",      # programa que quedo registrado
+         "estatus_de_gestion",                         # estado comercial que le pusieron
+         "mql__si_o_no_", "mql_aplica_10"]             # control: no deberian marcarse
 
 def norm(s):
     return " ".join((s or "").lower().split())
@@ -70,13 +77,20 @@ for i in pend:
     i["propietario_email"] = PROPIETARIOS.get(dueno)
     i["fuga_a_ejecutivo_real"] = bool(dueno) and dueno not in NUESTROS
     i["estatus_de_gestion"] = p.get("estatus_de_gestion")
+    # --- resultado del ruteo ---
+    i["equipo_asignado"] = p.get("equipos_por_nivel_de_estudios__udn_udep_")
+    i["facultad_asignada"] = p.get("facultades_piura__udn_udep_")
+    i["pais_deducido"] = p.get("pais_lead")
+    i["programa_registrado"] = p.get("programa_mas_recientemente_solicitado")
+    i["marcado_mql"] = p.get("mql__si_o_no_") or p.get("mql_aplica_10")
+    i["clasifico"] = bool(i["equipo_asignado"] or i["facultad_asignada"])
     i["mensaje_llego_a"] = "mensaje" if p.get("mensaje") else ("message" if p.get("message") else None)
     i["verificado_en"] = hs.ahora()
     ok_h1 += 1; ok_h2 += bool(i["H2_atribucion"]); ok_h5 += bool(i["H5_disparo"])
     alerta = "  <-- FUGA: propietario ajeno a 5minutos" if i["fuga_a_ejecutivo_real"] else ""
     print(f"  {i['slug'][:42]:42}/{i['instancia']:6} H1 ok · H2 {str(i['H2_atribucion']):5} · "
           f"H5 {str(i['H5_disparo']):5} · duenio {i.get('propietario_email') or '-'} · "
-          f"programa='{i['H3_programa_real']}'{alerta}")
+          f"equipo={i.get('equipo_asignado') or '-'} · programa='{i['H3_programa_real']}'{alerta}")
     time.sleep(0.2)
 
 hs.guardar("30_envios.json", envios)
@@ -91,3 +105,12 @@ if fugas:
         print("   ", f)
 else:
     print("Sin fugas: ningun contacto de prueba quedo asignado a un ejecutivo ajeno a 5minutos.")
+
+import collections
+print("\n--- Resultado del ruteo (a que equipo mandaron los workflows cada lead) ---")
+print("Clasificados con equipo o facultad:", sum(1 for i in pend if i.get("clasifico")), "de", len(pend))
+for etiqueta, clave in (("equipo", "equipo_asignado"), ("facultad", "facultad_asignada"), ("pais", "pais_deducido")):
+    c = collections.Counter(str(i.get(clave)) for i in pend)
+    print(f"  por {etiqueta}: {dict(c)}")
+marcados = [i["correo"] for i in pend if i.get("marcado_mql")]
+print(f"Marcados como MQL (no deberia haber ninguno): {len(marcados)} {marcados[:5]}")

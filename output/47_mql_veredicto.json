@@ -1,0 +1,28 @@
+{
+  "generado": "2026-09-17T14:02:32",
+  "pregunta": "Los contactos de prueba pueden quedar marcados como MQL?",
+  "workflows_mql_activos": {
+    "1739825564": {
+      "nombre": "MQL V3 Para reportería (Si)",
+      "activo": true,
+      "actualizado": "2026-09-17T13:21:49.712Z",
+      "inscribe_por": "hubspot_team_id (equipo asignado)",
+      "meta_excluye_5minutos": true
+    },
+    "1739986020": {
+      "nombre": "MQL V3 Para reportería (No)",
+      "activo": true,
+      "actualizado": "2026-09-17T13:20:50.626Z",
+      "inscribe_por": "hubspot_team_id (equipo asignado)",
+      "meta_excluye_5minutos": true
+    },
+    "1848236044": {
+      "nombre": "MQL Aplica (1-0)",
+      "activo": true,
+      "actualizado": "2026-09-17T13:18:33.354Z",
+      "inscribe_por": "hubspot_team_id (equipo asignado)",
+      "meta_excluye_5minutos": true
+    }
+  },
+  "conclusion": "Los tres workflows MQL activos se inscriben por hubspot_team_id, es decir solo despues de que el contacto recibio un equipo. Con la meta del 0451 los contactos de prueba nunca reciben equipo, asi que no entrarian. Ademas los tres tienen su propia meta que excluye el dominio 5minutos.io. Doble proteccion: el pedido de Pedro sobre MQL esta cubierto."
+}

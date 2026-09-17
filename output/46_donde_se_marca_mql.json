@@ -1,0 +1,78 @@
+{
+  "generado": "2026-09-17T13:50:35",
+  "flows_revisados": 1093,
+  "escriben_mql": [
+    {
+      "flowId": "1708065856",
+      "nombre": "MQL V2 Para reportería",
+      "activo": false,
+      "escribe": [
+        "mql__si_o_no_"
+      ],
+      "filtra": [],
+      "en_la_cadena_udep": false
+    },
+    {
+      "flowId": "1739825564",
+      "nombre": "MQL V3 Para reportería (Si)",
+      "activo": true,
+      "escribe": [
+        "mql__si_o_no_"
+      ],
+      "filtra": [],
+      "en_la_cadena_udep": false
+    },
+    {
+      "flowId": "1739986020",
+      "nombre": "MQL V3 Para reportería (No)",
+      "activo": true,
+      "escribe": [
+        "mql__si_o_no_"
+      ],
+      "filtra": [],
+      "en_la_cadena_udep": false
+    },
+    {
+      "flowId": "1848236044",
+      "nombre": "MQL Aplica (1-0)",
+      "activo": true,
+      "escribe": [
+        "mql_aplica_10"
+      ],
+      "filtra": [],
+      "en_la_cadena_udep": false
+    },
+    {
+      "flowId": "1851789447",
+      "nombre": "MQL Aplica (1-0)(V2)",
+      "activo": false,
+      "escribe": [
+        "mql_aplica_10"
+      ],
+      "filtra": [],
+      "en_la_cadena_udep": false
+    }
+  ],
+  "filtran_mql": [
+    {
+      "flowId": "1703680310",
+      "nombre": "Ciclo de vida uandes",
+      "activo": false,
+      "escribe": [],
+      "filtra": [
+        "conversion_mql"
+      ],
+      "en_la_cadena_udep": false
+    },
+    {
+      "flowId": "1846355530",
+      "nombre": "Asegurar diclo de vida para CPA de google",
+      "activo": true,
+      "escribe": [],
+      "filtra": [
+        "conversion_mql"
+      ],
+      "en_la_cadena_udep": false
+    }
+  ]
+}

@@ -1,3 +1,8 @@
 ESCRIBE  1708065856 · MQL V2 Para reportería · ['mql__si_o_no_'] · activo=False
 ESCRIBE  1739825564 · MQL V3 Para reportería (Si) · ['mql__si_o_no_'] · activo=True
 ESCRIBE  1739986020 · MQL V3 Para reportería (No) · ['mql__si_o_no_'] · activo=True
+ESCRIBE  1848236044 · MQL Aplica (1-0) · ['mql_aplica_10'] · activo=True
+ESCRIBE  1851789447 · MQL Aplica (1-0)(V2) · ['mql_aplica_10'] · activo=False
+output/46_donde_se_marca_mql.json
+FLOWS REVISADOS: 1093 · escriben MQL: 5 · filtran MQL: 2
+En la cadena de UDEP: ninguno

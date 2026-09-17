@@ -1,5 +1,15 @@
 # Pedido a Roman · cómo desviar los contactos de prueba sin romper la auditoría
 
+> **Corrección del 17-sep, después de escanear el portal completo.** Una versión anterior de este
+> documento sugería que el cambio de Roman podía no evitar el marcado MQL. **Era incorrecto.**
+> Roman modificó cuatro workflows hoy entre las 13:18 y las 13:21, no uno: el `0451` y los tres
+> workflows de MQL (`MQL Aplica (1-0)`, `MQL V3 (No)` y `MQL V3 (Sí)`), todos con una meta que
+> excluye el dominio `5minutos.io`. El pedido de Pedro sobre MQL queda cubierto por partida doble:
+> esos workflows además se inscriben por `hubspot_team_id`, y los contactos de prueba nunca reciben
+> equipo. Evidencia: `output/46_donde_se_marca_mql.json` y `output/47_mql_veredicto.json`
+> (1093 flows revisados). **Lo único que sigue abierto es el ruteo**, por lo que dice el resto de
+> este documento.
+
 **Fecha:** 17-sep-2026 · **Decisión:** Moisés y Pedro · los contactos de prueba se asignan a
 nosotros, no se excluyen del circuito.
 

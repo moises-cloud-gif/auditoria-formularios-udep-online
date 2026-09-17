@@ -1,48 +1,51 @@
 {
   "generado": "2026-09-17",
-  "hallazgo": "El formulario del modal se dibuja pero no envia",
+  "hallazgo": "El formulario del modal se dibuja pero rechaza el envio por campo obligatorio vacio",
   "criterio_afectado": "CA-1 (el formulario captura el lead) · cierra el pendiente de agosto 'fuga del modal'",
   "severidad": "alta",
   "sintoma_confirmado_por_humano": {
     "quien": "Moises Camargo",
     "como": "clic en el boton 'Postula aqui' en una ventana normal, sin automatizacion",
-    "resultado": "C: el modal abre y el formulario aparece dentro, pero al dar ENVIAR el envio no se completa",
+    "resultado": "El modal abre, el formulario aparece, se llena lo que se ve y al enviar sale el cartel 'Rellena este campo obligatorio'. El envio no se completa.",
+    "mensaje_textual": "Rellena este campo obligatorio",
+    "de_quien_es_el_mensaje": "Es el aviso nativo del navegador sobre un campo required vacio. NO es el mensaje de HubSpot ni del reCAPTCHA.",
     "paginas_probadas": [
       "https://udeponline.pe/curso-de-gestion-del-talento/",
       "https://udeponline.pe/programa-de-especializacion-en-liderazgo-y-negociacion-de-conflictos/"
-    ],
-    "pendiente_de_detalle": "falta saber si aparece un mensaje de error en pantalla y cual"
+    ]
   },
-  "por_que_importa": [
-    "Las dos paginas probadas tienen marcado muy distinto y fallan igual, asi que la causa no es el marcado duplicado de la pagina de Liderazgo.",
-    "Lo unico que comparten es el patron estructural, y ese patron esta en las 40 paginas.",
-    "Ninguno de los 7 envios manuales de la muestra pudo hacerse por modal: los 7 salieron por el banner."
+  "correccion_de_una_hipotesis_anterior": {
+    "que_se_dijo": "Que la causa probable era el reCAPTCHA, porque el mismo formulario se incrusta dos veces por pagina y el captcha se engancha a una sola instancia.",
+    "por_que_queda_descartada": "El mensaje que recibe la persona es de validacion de campo obligatorio, que ocurre ANTES de que el formulario intente enviarse. El captcha nunca llega a evaluarse.",
+    "que_sigue_siendo_cierto": "Las 40 paginas siguen incrustando el mismo formulario dos veces (output/54_modal_estructura.json). Es un defecto real y vale reportarlo, pero no es la causa de esta falla."
+  },
+  "causa_probable": {
+    "enunciado": "En el modal hay al menos un campo obligatorio que la persona no puede ver ni alcanzar, porque la caja del modal no muestra el formulario completo. Lo llena hasta donde ve, envia, y el navegador lo frena por el campo que quedo vacio fuera de vista.",
+    "estado": "CAUSA PROBABLE, falta la comprobacion visual",
+    "evidencia_en_el_codigo": {
+      "curso-de-gestion-del-talento": {
+        "css_del_modal": ".udep-modal{position:fixed;inset:0} sin overflow, .udep-modal__dialog{margin:4% auto} sin max-height, #hubspot-formulario{min-height:640px}, iframe con min-height:640px !important, y html.modal-open{overflow:hidden}",
+        "consecuencia": "La caja puede quedar mas alta que la pantalla y no hay ninguna forma de desplazarse: ni la caja ni la pagina tienen scroll. Lo que queda por debajo del borde inferior es inalcanzable."
+      },
+      "programa-de-especializacion-en-liderazgo-y-negociacion-de-conflictos": {
+        "css_del_modal": ".udep-modal{overflow:auto}, dialog con max-height:calc(100dvh - 32px) y overflow:auto, pero #hubspot-formulario iframe{height:auto !important; min-height:0 !important}",
+        "consecuencia": "Esta si tiene scroll interno, pero le quita al iframe toda altura propia. Un iframe con height auto y sin minimo colapsa a la altura por defecto, dejando visible solo el principio del formulario."
+      },
+      "lectura": "Las dos paginas fallan por el mismo efecto (el formulario no se ve entero) pero por dos errores de CSS distintos. Son dos plantillas hechas a mano, no un componente comun."
+    }
+  },
+  "como_se_confirma_en_dos_minutos": [
+    "Abrir la pagina, hacer clic en 'Postula aqui'.",
+    "Con el modal abierto, bajar el zoom del navegador a 50% (Ctrl y la tecla menos).",
+    "Si aparecen campos que antes no se veian, la causa queda confirmada.",
+    "Alternativa: intentar desplazarse con la rueda del mouse dentro de la caja azul."
   ],
-  "evidencia_estructural": {
-    "archivo": "output/54_modal_estructura.json",
-    "fuente": "HTML servido, guardado en output/evidencia/paginas/",
-    "paginas_analizadas": 40,
-    "el_mismo_formulario_se_dibuja_dos_veces_por_pagina": 40,
-    "detalle": "Cada pagina incrusta el mismo formId dos veces: una fija en la portada (banner) y otra dentro del modal, con el mismo portal 6925781 y la misma region na1.",
-    "paginas_con_ids_html_duplicados": 1,
-    "pagina_con_ids_duplicados": "programa-de-especializacion-en-liderazgo-y-negociacion-de-conflictos (8 incrustaciones, 7 contenedores con el mismo id, HTML invalido, mas un temporizador que borra modales sobrantes cada 1,2 s)"
-  },
-  "hipotesis_de_causa": {
-    "enunciado": "El reCAPTCHA de HubSpot se engancha de forma confiable a una sola instancia del formulario por pagina. Con el mismo formulario dibujado dos veces, la segunda instancia no consigue token valido y el envio queda rechazado.",
-    "estado": "HIPOTESIS, no confirmada",
-    "a_favor": [
-      "El error que recibio el navegador automatizado sobre el banner fue exactamente 'No se ha podido validar el captcha'.",
-      "El sintoma se repite en una pagina con marcado limpio y en otra con marcado roto: la constante es la doble incrustacion.",
-      "Ninguna de las 40 paginas menciona reCAPTCHA en su HTML: lo inyecta el embed de HubSpot desde la configuracion del portal."
-    ],
-    "como_se_confirma": "Reproducir el envio por modal con la consola del navegador abierta y leer la respuesta del endpoint de HubSpot, o pedir a Vicente que deje una pagina de prueba con una sola incrustacion."
-  },
-  "alcance_estimado": {
+  "alcance": {
     "confirmado": "2 de 40 paginas, por prueba humana",
-    "extrapolado": "las 40, porque el patron estructural es identico en las 40",
-    "advertencia": "La extrapolacion es razonable pero NO es evidencia. Para declararlo sobre las 40 hace falta probar las 40."
+    "no_extrapolable_todavia": "Las dos paginas probadas tienen CSS de modal distinto entre si, asi que no se puede asumir que las 38 restantes fallen por lo mismo. Hay que contar cuantas usan cada plantilla antes de afirmar nada sobre las 40.",
+    "lo_que_si_vale_para_las_40": "Ningun envio de la muestra manual pudo hacerse por modal. Los 7 salieron por el banner."
   },
-  "consecuencia_para_el_negocio": "Si se confirma, la mitad de las entradas de leads del sitio no funciona: todo visitante que hace clic en 'Postula aqui' llena el formulario, lo envia y no llega nada a HubSpot. No hay contacto, no hay atribucion y no se dispara ningun Activador. El visitante cree que dejo sus datos.",
-  "quien_decide": "Moises. La correccion la ejecuta Vicente Ham: es un cambio en el sitio, no en HubSpot.",
-  "no_se_corrige_en_esta_corrida": "La regla 6 del proyecto: la auditoria diagnostica, la correccion es una tarea posterior con su propia aprobacion."
+  "consecuencia_para_el_negocio": "Toda persona que entra por el boton 'Postula aqui' llena el formulario, lo envia y se topa con un error que no puede resolver, porque el campo que le falta no esta a la vista. No queda contacto en HubSpot, no hay atribucion y no se dispara ningun Activador. Es un lead que se pierde y ademas se lleva una mala experiencia.",
+  "quien_corrige": "Vicente Ham. Es CSS del sitio, no configuracion de HubSpot.",
+  "no_se_corrige_en_esta_corrida": "Regla 6 del proyecto: la auditoria diagnostica, la correccion es una tarea posterior con su propia aprobacion."
 }

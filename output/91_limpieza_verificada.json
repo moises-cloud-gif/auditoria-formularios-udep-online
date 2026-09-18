@@ -1,0 +1,47 @@
+{
+  "generado": "2026-09-18T16:35:45",
+  "que_es": "Verificacion uno por uno de que los 7 contactos de la muestra manual quedaron borrados.",
+  "aprobacion": "Moises Camargo, 18-sep-2026, en la sesion de trabajo",
+  "contactos": [
+    {
+      "id": "249125331492",
+      "http": 404,
+      "borrado": true
+    },
+    {
+      "id": "249124622417",
+      "http": 404,
+      "borrado": true
+    },
+    {
+      "id": "249129868041",
+      "http": 404,
+      "borrado": true
+    },
+    {
+      "id": "249129157018",
+      "http": 404,
+      "borrado": true
+    },
+    {
+      "id": "249125717044",
+      "http": 404,
+      "borrado": true
+    },
+    {
+      "id": "249123268260",
+      "http": 404,
+      "borrado": true
+    },
+    {
+      "id": "249124540048",
+      "http": 404,
+      "borrado": true
+    }
+  ],
+  "todos_borrados": true,
+  "no_se_tocaron": [
+    "152544870187 franssk_qa@hotmail.com",
+    "206193115151 fernanda_qa@hotmail.com"
+  ]
+}

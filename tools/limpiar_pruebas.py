@@ -8,7 +8,8 @@ Uso:
 Guarda de seguridad (16-sep-2026): la busqueda de HubSpot por "qa+*" tambien devuelve contactos
 reales cuyo correo contiene "_qa" (por ejemplo leads de Facebook de UANDES). Por eso, ademas de la
 busqueda, cada correo tiene que cumplir EXACTAMENTE el patron de la prueba
-  qa+<slug>-<banner|modal>-<AAAAMMDD>@5minutos.io
+  qa+<slug>-<banner|modal>-<AAAAMMDD>@5minutos.io   (envios automatizados)
+  qa+<codigo>-<AAAAMMDD>@5minutos.io                (muestra manual)
 Lo que no cumpla se lista como EXCLUIDO y no se toca jamas.
 """
 import sys, pathlib, argparse, re
@@ -20,7 +21,18 @@ ap.add_argument("--ejecutar", action="store_true")
 a = ap.parse_args()
 
 usuario, dominio = hs.QA_BASE.split("@", 1)
-PATRON = re.compile(rf"^{re.escape(usuario)}\+[a-z0-9-]+-(banner|modal)-\d{{8}}@{re.escape(dominio)}$", re.I)
+# Dos formas legitimas de correo de prueba, y ninguna otra:
+#   qa+<slug>-<banner|modal>-<AAAAMMDD>@5minutos.io   los envios automatizados
+#   qa+<codigo>-<AAAAMMDD>@5minutos.io                la muestra manual (m1..m8, manual)
+# El ancla del dominio es lo que deja fuera a los leads reales con "_qa" en el correo.
+PATRONES = [
+    re.compile(rf"^{re.escape(usuario)}\+[a-z0-9-]+-(banner|modal)-\d{{8}}@{re.escape(dominio)}$", re.I),
+    re.compile(rf"^{re.escape(usuario)}\+(m\d+|manual)-\d{{8}}@{re.escape(dominio)}$", re.I),
+]
+
+
+def es_de_prueba(correo):
+    return any(p.match(correo) for p in PATRONES)
 
 encontrados, after = [], None
 while True:
@@ -39,7 +51,7 @@ while True:
     if not after:
         break
 
-de_prueba = [c for c in encontrados if PATRON.match((c["properties"].get("email") or "").strip())]
+de_prueba = [c for c in encontrados if es_de_prueba((c["properties"].get("email") or "").strip())]
 excluidos = [c for c in encontrados if c not in de_prueba]
 
 print(f"Contactos que devuelve la busqueda: {len(encontrados)}")

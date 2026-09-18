@@ -1,16 +1,23 @@
-# Auditoría de formularios · UDEP Online — informe preliminar (rondas 0 a 2)
+# Auditoría de formularios · UDEP Online — informe final
 
-**Fecha:** 15 de septiembre de 2026 · actualizado 16-sep con el cruce contra el canon Piura, seguridad, título, reconciliación con agosto y el reCAPTCHA confirmado en pantalla · **Portal HubSpot:** 6925781 · **Sitio:** udeponline.pe
-**Estado:** PRELIMINAR. Cubre lo verificable sin enviar formularios: definición de los 40
-formularios por API, marcado de las 40 páginas y los workflows Activador del portal. La prueba de
-envío real (80 instancias) no se ejecutó todavía; ver "Lo que no se pudo verificar".
+**Fecha:** 18 de septiembre de 2026 · **Portal HubSpot:** 6925781 · **Sitio:** udeponline.pe
+**Alcance verificado:** los 40 formularios revisados uno por uno contra la API de HubSpot, las 40
+páginas leídas del sitio vivo, los 1093 workflows del portal barridos, y **7 envíos reales hechos a
+mano** por una persona en un navegador normal.
 
+**Cobertura de la prueba de envío: 7 de 80 instancias.** El requerimiento pide 80 (banner y modal
+de las 40 páginas). Se hicieron 7, todas por el formulario del banner. **Por el modal no se pudo
+hacer ninguna, porque el modal no deja enviar** — y eso dejó de ser una limitación de la prueba
+para convertirse en el hallazgo más grave del informe. Lo que no se probó está declarado como no
+probado, página por página, en `registro_pruebas.csv`.
 ---
 
 ## Respuesta
 
-**De los 40 formularios, solo 2 capturan, atribuyen y enrutan bien según lo que se puede ver sin
-enviar. Los otros 38 tienen al menos un defecto crítico.** El más extendido no lo reportó nadie:
+**Hay dos respuestas, y la segunda es peor que la primera.**
+
+**Uno: de los 40 formularios, solo 2 capturan, atribuyen y enrutan bien. Los otros 38 tienen al
+menos un defecto crítico.** El más extendido no lo reportó nadie:
 **37 formularios atribuyen el lead a un programa distinto del de su página o a ninguno**, porque el
 campo oculto que lleva el nombre del programa trae el mismo valor en todos (registro
 `20_matriz.json`, columna `H3`). Además, el formulario nuevo de *Analítica Digital & Growth
@@ -20,6 +27,13 @@ nadie (`12_activadores.json`, `7a38b319`).
 Los dos que están bien: *Curso Gestión del Talento* (`d6c333ed`, que es la plantilla) y *PDE en
 Marketing Digital y E-commerce* (`cd64140f`).
 
+**Dos: la mitad de las entradas de leads del sitio no funciona en absoluto.** Cada página tiene dos
+formularios: el fijo y el que se abre con el botón "Postula aquí". **El del botón no deja enviar.**
+La persona lo llena, aprieta enviar y el navegador la frena por un campo obligatorio que está fuera
+de la pantalla y que no puede alcanzar. No queda contacto, no hay atribución, no se dispara ningún
+Activador, y el visitante se va creyendo que dejó sus datos. Comprobado a mano en 2 páginas; **39 de
+las 40 usan la misma plantilla defectuosa**. Ver la sección "El modal no deja enviar".
+
 | Verificación | Resultado sobre 40 | Evidencia |
 |---|---|---|
 | Programa correcto en el campo oculto (H3) | **2 bien · 33 envían otro programa · 4 sin valor · 1 sin opción disponible** | `20_matriz.json` |
@@ -28,33 +42,107 @@ Marketing Digital y E-commerce* (`cd64140f`).
 | Cláusula de autorización de datos | 36 sí · **4 no** | `11_formularios.json` |
 | Mensaje de confirmación "Gracias, te contactaremos a la brevedad." | 36 sí · **4 vacío** | `11_formularios.json` |
 | Unidad de negocio y tipo de suscripción (H6) | **no lo expone la API** · pendiente en la interfaz | `11_formularios.json` |
-| reCAPTCHA habilitado | 40 sí (interruptor por formulario) · clave de prueba: pendiente de ver en pantalla | `11_formularios.json` |
-| Banner y modal usan el mismo formulario | 40 sí | `10_paginas.json` |
+| reCAPTCHA habilitado | 40 sí (interruptor por formulario) · **clave de prueba confirmada en pantalla el 16-sep** | `11_formularios.json` |
+| Banner y modal usan el mismo formulario | 40 sí · HubSpot no distingue por cuál entró el lead | `10_paginas.json` |
+| **El modal permite enviar** | **no en las 2 probadas** · 39 de 40 usan la misma plantilla defectuosa | `55_hallazgo_modal.json`, `56_modal_css.json` |
+| Envíos reales ejecutados | **7 de 80** · las 40 del modal son imposibles hoy | `registro_pruebas.csv` |
 | Portal declarado en la incrustación | 6925781 en las 80 | `10_paginas.json` |
 
 ---
 
-## 1. Prueba de envío real sobre las 80 instancias
+## 1. Prueba de envío real — 7 de 80 instancias
 
-**No ejecutada.** Está lista para correr pero se detuvo a propósito en la ronda 3 porque:
+**Qué se hizo:** 7 envíos reales, hechos a mano por Moisés Camargo en un navegador normal, cada uno
+en una ventana de incógnito distinta, como lo haría cualquier visitante. Todos por el formulario del
+banner. Evidencia: `51_muestra_manual_resultados.json` y la respuesta cruda de cada contacto en
+`evidencia/contactos/`.
 
-1. Crea 80 contactos reales en el portal productivo y, si los Activadores funcionan, los asigna a
-   ejecutivos de UDEP. Requiere decisión explícita y aviso previo al equipo comercial
-   (`input/requirements.md` §4.0 y §7 pregunta 1).
-2. El entorno donde corrió esta sesión no puede abrir udeponline.pe con el navegador automatizado
-   (ver "Lo que no se pudo verificar"). En una máquina local no hay ese impedimento.
+**Qué no se hizo, y por qué:**
 
-Lo que sí quedó verificado del lado web: las 40 páginas responden 200 (`00_preflight.json`, P6),
-cada una incrusta el mismo formulario en banner y modal, y ninguna incrustación manipula campos
-por JavaScript, salvo el bloque roto de *Liderazgo y Negociación de Conflictos* (`10_paginas.json`,
-`instancias[].tiene_callbacks`).
+| Lo que falta | Motivo |
+|---|---|
+| Las 40 instancias del modal | **El modal no deja enviar.** No es una decisión de alcance: se intentó y no se pudo. Es el hallazgo de la sección siguiente |
+| 33 de las 40 instancias del banner | El reCAPTCHA del sitio rechaza al navegador automatizado, así que los 80 envíos no se pueden automatizar. A mano son unas 4 horas de una persona |
+
+**Por qué 7 alcanzan para lo que este informe afirma.** La muestra no se eligió al azar: cubre los
+dos cursos nuevos, un formulario sano de referencia, uno de los cuatro mal configurados de junio y
+tres de las familias de programas. Los dos hallazgos principales —el programa mal atribuido y el
+formulario sin Activador— quedaron **confirmados con leads reales**, no por lectura de
+configuración. Lo que la muestra **no** permite afirmar es el comportamiento individual de las 33
+páginas no probadas: ahí el informe se apoya en la configuración leída por API, que es sólida pero
+no es lo mismo que haberlo probado. En `registro_pruebas.csv` cada fila dice cuál de las dos cosas
+es.
+
+**Lo verificado del lado web sin enviar:** las 40 páginas responden 200 (`00_preflight.json`, P6),
+cada una incrusta el mismo formulario en banner y modal, y ninguna incrustación manipula campos por
+JavaScript, salvo el bloque roto de *Liderazgo y Negociación de Conflictos* (`10_paginas.json`).
+
+
+## 1 bis. El modal no deja enviar — hallazgo principal
+
+**Qué pasa.** Cada página de producto tiene dos formularios: el que se ve al entrar (el "banner") y
+el que se abre en una ventana flotante al hacer clic en **"Postula aquí"** (el "modal"). Son el
+mismo formulario de HubSpot incrustado dos veces. **El del botón no permite completar el envío.**
+
+**Cómo se comprobó.** Moisés lo probó a mano, en un navegador normal, en dos páginas:
+
+| Página | Qué pasó |
+|---|---|
+| `curso-de-gestion-del-talento` | El modal abre, el formulario aparece, se llena lo que se ve, y al enviar sale **"Rellena este campo obligatorio"**. No se completa |
+| `programa-de-especializacion-en-liderazgo-y-negociacion-de-conflictos` | Idéntico |
+
+Ese mensaje no es de HubSpot ni del reCAPTCHA: **es el aviso del navegador por un campo obligatorio
+vacío**, y ocurre antes de que el formulario intente enviarse.
+
+**Por qué queda un campo vacío si la persona llenó todo lo que veía.** Porque no lo veía todo. El
+CSS del modal no muestra el formulario completo, y lo hace de dos maneras distintas:
+
+- En la plantilla que usan **39 de las 40 páginas**, la caja del modal **no tiene ninguna forma de
+  desplazarse**: no tiene límite de altura, no tiene barra de scroll propia, le exige al formulario
+  640 píxeles de alto mínimo, y además bloquea el scroll de la página de fondo. Si el formulario es
+  más alto que la pantalla, **lo que queda debajo del borde es inalcanzable**.
+- En la página de *Liderazgo y Negociación*, la única con la otra plantilla, sí hay scroll interno,
+  pero se le fuerza al formulario "altura automática, sin mínimo", lo que lo colapsa y deja visible
+  solo el principio.
+
+Conteo sobre el CSS servido de las 40 páginas (`56_modal_css.json`): **39 con la primera plantilla,
+1 con la segunda, y las 40 bloquean el scroll de la página mientras el modal está abierto.**
+
+**Alcance, dicho con precisión.** Comprobado a mano en **2 de 40**. Las otras 38 usan la misma
+plantilla que una de las dos probadas. Es una extrapolación bien fundada, pero es extrapolación: para
+afirmarlo sobre las 40 hay que probar las 40.
+
+**Qué significa para el negocio.** Toda persona que entra por "Postula aquí" —que es el botón
+destacado de la página, repetido entre 6 y 19 veces en cada una— llena el formulario, lo envía, y se
+topa con un error que no puede resolver. **Ese lead se pierde entero y además se lleva una mala
+experiencia.** No hay forma de saber cuántos fueron, porque por definición no dejaron rastro en
+HubSpot.
+
+**Quién lo corrige: Vicente Ham.** Es CSS del sitio en WordPress, no configuración de HubSpot. El
+arreglo es de pocas líneas: darle a la caja del modal un límite de altura y barra de desplazamiento
+propia. Evidencia completa en `55_hallazgo_modal.json` y `56_modal_css.json`.
+
+**Nota de honestidad sobre este informe.** La primera hipótesis que se escribió atribuía esta falla
+al reCAPTCHA, porque el mismo formulario se incrusta dos veces por página. **Quedó descartada** en
+cuanto se supo el texto exacto del error. La doble incrustación existe igual en las 40 páginas y
+sigue siendo un defecto que vale reportar, pero no es la causa de esto.
 
 ## 2. Qué formulario se dispara en cada página
 
-Sin envío no hay registro de disparo. Lo verificado por lectura del marcado: **el identificador
-incrustado coincide con el esperado en las 40 páginas**, sin divergencias respecto de la medición
-del 15 de septiembre (`10_paginas.json`, `divergencias: []`). El identificador que efectivamente
-se registre en HubSpot queda para la ronda 3.
+Dos verificaciones, una por lectura y otra por envío:
+
+- **Por lectura del marcado, en las 40 páginas:** el identificador incrustado coincide con el
+  esperado, sin divergencias respecto de la medición del 15 de septiembre (`10_paginas.json`,
+  `divergencias: []`).
+- **Por envío real, en 7 páginas:** HubSpot registró la conversión contra el formulario correcto en
+  las 7. Lo graba como *"Título de la página: Nombre del formulario"*
+  (`51_muestra_manual_resultados.json`).
+
+En las 33 páginas restantes esto queda afirmado por lectura del marcado, no por envío.
+
+**Un límite del método que conviene que Vicente sepa:** el banner y el modal de cada página usan el
+**mismo** identificador de formulario, así que HubSpot no distingue por cuál de los dos entró un
+lead. Para saberlo hay que mirar la página de origen, no el formulario.
 
 ## 2 bis. Cruce con el canon Piura (pedido por Santiago el 16-sep)
 
@@ -198,6 +286,8 @@ Se revisaron primero y su resultado va antes que el resto:
 - ***Negocios Innovadores*** (`a44b1d7f`): definición igual a la plantilla, cláusula, encabezado y
   confirmación correctos, **un Activador** (Cursos). **Falla H3:** envía "Gestión del Talento".
   Un lead entra, se asigna, pero queda marcado como interesado en otro curso.
+  **CONFIRMADO CON UN LEAD REAL** el 17-sep: el envío de prueba llegó con programa
+  "Gestión del Talento" estando en la página de Negocios Innovadores.
 - ***Analítica Digital & Growth Marketing*** (`7a38b319`): definición igual a la plantilla,
   cláusula, encabezado y confirmación correctos. **Falla H4:** ningún Activador lo referencia.
   **Falla H3 sin arreglo posible desde el formulario:** no existe la opción del curso en la
@@ -343,49 +433,72 @@ que quien mantenga la planilla la revise y la aplique.
 
 ---
 
-## Prueba con un envío humano real (17-sep) — CONFIRMA LOS DOS HALLAZGOS PRINCIPALES
+## Los 7 envíos reales, uno por uno
 
-Moisés llenó y envió a mano, en un navegador normal, el formulario del banner de *Curso de
-Analítica Digital & Growth Marketing*, como lo haría cualquier visitante. Evidencia:
-`50_envio_manual_referencia.json` y `evidencia/contactos/240325472142.json`.
+Hechos a mano por Moisés Camargo el 17-sep, cada uno en una ventana de incógnito distinta para que
+HubSpot no los fusionara en un solo contacto. Los 7 quedaron como registros separados, con una
+conversión cada uno.
 
-| Qué se comprobó | Resultado |
-|---|---|
-| ¿El reCAPTCHA le pidió algo a la persona? | **No.** Apretó enviar y pasó |
-| ¿Se aceptó el envío y apareció la confirmación? | **Sí:** "Gracias, te contactaremos a la brevedad." |
-| ¿Se creó el contacto? | **Sí**, a las 18:57 |
-| ¿Quedó atribuido al formulario correcto? | **Sí** |
-| ¿Con qué programa llegó? | **"Gestión del Talento"**, y la página es de Analítica Digital |
-| ¿Se le asignó un ejecutivo? | **No. Sin propietario, sin equipo, sin facultad y sin país** |
-| ¿Quedó marcado como MQL? | No |
+| # | Página | Atribución (H2) | Programa que llegó (H3) | ¿Correcto? | Activador (H5) |
+|---|---|---|---|---|---|
+| m2 | curso-de-negocios-innovadores | correcta | Gestión del Talento | **NO** · debía ser Negocios Innovadores | disparó |
+| m3 | curso-de-gestion-del-talento | correcta | Gestión del Talento | sí | disparó |
+| m4 | curso-de-marketing-digital | correcta | Marketing Digital | sí | disparó |
+| m5 | pde-marketing-digital-y-e-commerce | correcta | Marketing Digital y Ecommerce | sí | disparó |
+| m6 | diplomado-marketing-digital-y-ecommerce | correcta | Marketing Digital y Ecommerce | a revisar contra el canon | disparó |
+| m7 | pde-liderazgo-y-negociacion | correcta | **Marketing Digital y Ecommerce** | **NO** · debía ser Liderazgo y Negociación | disparó |
+| m8 | curso-de-gestion-del-talento | correcta | Gestión del Talento | sí | disparó |
 
-**Las dos conclusiones que esto cierra:**
+**Lo que estos 7 cierran:**
 
-1. **El problema del programa mal atribuido está confirmado en producción con un lead real**, no
-   solo leyendo la configuración. Una persona pidió información de Analítica Digital y en el CRM
-   quedó registrada como interesada en Gestión del Talento.
-2. **El formulario sin Activador está confirmado.** El lead entró al CRM y no se le asignó a nadie.
-   Nadie lo va a llamar. Es exactamente lo que la auditoría predijo leyendo los workflows.
+1. **El programa mal atribuido está confirmado en producción con leads reales.** En *Negocios
+   Innovadores* y en *Liderazgo y Negociación*, la persona pidió información de un programa y en el
+   CRM quedó registrada como interesada en otro. Si un ejecutivo abre ese contacto, lee algo que la
+   persona nunca dijo.
+2. **La atribución al formulario funciona bien en los 7.** HubSpot registra la conversión como
+   *"Título de la página: Nombre del formulario"*, y en los 7 el formulario es el que corresponde a
+   su página. Este punto del requerimiento queda en verde.
+3. **Un envío del 17-sep desmintió a la auditoría, y se corrige acá.** Leyendo la configuración se
+   había previsto que *curso-de-marketing-digital* llegaría con el programa vacío. Llegó con
+   "Marketing Digital", que es lo correcto. Es un caso menos en la lista de fallas.
 
-**Y una conclusión sobre el reCAPTCHA que cambia su lectura:** no bloquea a las personas, pero sí
-bloquea a un navegador automatizado, que recibe "No se ha podido validar el captcha". O sea que hoy
-el captcha **no protege contra spam** (usa una clave que Google marca como de prueba) y al mismo
-tiempo **impide automatizar la verificación**. Es lo peor de los dos mundos.
+**Un envío anterior, del mismo día, sobre *Analítica Digital & Growth Marketing*** (`50_envio_manual_referencia.json`)
+había confirmado además el otro hallazgo grande: ese lead **entró al CRM y no se le asignó a nadie**,
+porque su formulario no está conectado a ningún Activador.
 
----
+**Sobre el reCAPTCHA, lo que estos envíos demuestran:** a la persona **no le pidió nada** — apretó
+enviar y pasó. Al navegador automatizado sí lo bloquea. O sea que hoy el captcha **no protege contra
+spam** (usa una clave que Google marca como de prueba) y al mismo tiempo **impide automatizar la
+verificación**. Es lo peor de los dos mundos.
+
+### Condiciones de la prueba que hay que declarar
+
+- Para que los contactos de prueba no llegaran a ejecutivos reales ni se contaran como MQL, se pidió
+  a Roman Villalobos que agregara una regla temporal en los workflows de asignación: si el correo es
+  de 5minutos, el lead se asigna a Moisés. **Funcionó**: los 7 quedaron con dueño
+  `moises@5minutos.io` y con las propiedades de MQL vacías.
+- **Esa regla toca 5 workflows de producción y sigue puesta.** Hay que pedirle a Roman que la quite.
+  Es una desviación consciente de la regla "no se modifica ningún workflow en esta corrida",
+  acordada con Pedro y aprobada por Santiago, y se declara acá a propósito.
+- Efecto secundario de esa misma regla: en los 7 contactos quedaron vacíos **facultad y país**,
+  porque la rama de prueba asigna el dueño y termina antes de que el flujo los complete. **No es un
+  defecto del sitio**; es un límite de esta corrida.
+- **Los 7 contactos de prueba fueron borrados el 18-sep**, con aprobación de Moisés, y verificados
+  uno por uno (`91_limpieza_verificada.json`). El portal quedó sin rastros.
 
 ## Lo que no se pudo verificar, con el motivo
 
 | Qué | Motivo | Cómo se cierra |
 |---|---|---|
-| R1 a R5 (render, campos en pantalla, envío aceptado, confirmación visible, cláusula legible) en las 80 instancias | La ronda 3 no corrió: variable `DRY_RUN` en 1 por decisión pendiente, y el navegador automatizado no pudo abrir el sitio desde este entorno (certificado del proxy de salida, error `ERR_CERT_AUTHORITY_INVALID`, `00_preflight.json` P5) | Correr la ronda 3 desde una máquina local con `DRY_RUN=0`, después de avisar al equipo comercial |
-| H1, H2, H5 (contacto creado, atribución al formulario, Activador ejecutado) | Dependen del envío real | Ronda 3 |
-| H6 (unidad de negocio y tipo de suscripción) | La API de formularios no lo expone | Revisión en la interfaz de HubSpot |
-| La sitekey renderizada en una página de UANDES Online | La red desde la que se corrió rechazó la conexión a `uandesonline.cl`. El alcance ya quedó establecido por otra vía (mismo portal, misma configuración de captcha), así que esto solo agregaría confirmación visual | Reintentar `tools/diagnostico.py <url de uandesonline.cl>` desde otra red |
-| Si los seis bloques rotos de *Liderazgo y Negociación* duplican el formulario en pantalla (CA-7) | Solo se ve en el navegador | Ronda 3 |
-| El valor oculto de programa **antes** del 15 de septiembre | La API no tiene historial de formularios | Preguntar a Vicente qué envió su script |
-
----
+| Las 40 instancias del **modal** | No se puede enviar por el modal. Es el hallazgo de la sección 1 bis, no una limitación de la prueba | Primero que Vicente arregle el CSS; después probar |
+| 33 de las 40 instancias del **banner** | El reCAPTCHA rechaza al navegador automatizado, así que los envíos no se pueden automatizar; a mano son unas 4 horas | Corregir el reCAPTCHA, o hacerlos a mano |
+| R1 a R5 en las 73 instancias no probadas | Dependen del envío | Con lo anterior resuelto |
+| H1, H2, H5 en las 33 páginas no probadas | Dependen del envío. Para esas páginas el informe se apoya en la configuración leída por API | Con lo anterior resuelto |
+| H6 (unidad de negocio y tipo de suscripción) | La API de formularios no lo expone | Revisión a mano en la interfaz de HubSpot |
+| Si los seis bloques rotos de *Liderazgo y Negociación* duplican el formulario en pantalla (CA-7) | Solo se ve en el navegador, y esa página es justamente una de las que no deja enviar por el modal | Recorrido visual de las 40 páginas, sin enviar |
+| Facultad y país de los contactos de prueba | La regla temporal de ruteo corta el flujo antes de completarlos | Repetir un envío después de que Roman quite la regla |
+| El valor oculto de programa **antes** del 15 de septiembre | La API no guarda historial de formularios | Preguntar a Vicente qué envió su script |
+| La sitekey renderizada en una página de UANDES Online | La red desde la que se corrió rechazó la conexión a `uandesonline.cl`. El alcance ya quedó establecido por otra vía (mismo portal, misma configuración de captcha) | Reintentar desde otra red |
 
 ## Lo que encontramos y no pidió
 
@@ -412,19 +525,31 @@ tiempo **impide automatizar la verificación**. Es lo peor de los dos mundos.
 
 ## Decisiones que quedan para Moisés y Santiago
 
-1. **Correr o no la pasada real de 80 envíos**, y cuándo. Recomendación: sí, desde una máquina
-   local, con los Activadores encendidos, avisando antes al equipo comercial de UDEP. Sin eso no
-   se cierran R1-R5, H1, H2, H5, el reCAPTCHA ni CA-7.
-2. **Qué se le dice a Vicente ahora**: que no tiene que repuntar nada, que el problema del valor
-   oculto probablemente viene de su normalización, y pedirle el valor que envió su script.
-3. **Aprobar la edición de los 38 formularios caso B** y en qué orden. Propuesta: primero los dos
+**Urgente, esta semana:**
+
+1. **Mandarle a Vicente el arreglo del modal.** Es el hallazgo de mayor impacto y el de arreglo más
+   barato. Mientras no se corrija, todo lead que entre por "Postula aquí" se pierde.
+2. **Pedirle a Roman que quite la regla temporal de ruteo** de los 5 workflows. La prueba terminó y
+   los contactos ya se borraron; la regla no tiene por qué seguir viva en producción.
+3. **Avisarle al equipo comercial de UDEP que la pasada de prueba terminó.**
+
+**Del alcance de la corrección:**
+
+4. **Aprobar la edición de los 38 formularios caso B** y en qué orden. Propuesta: primero los dos
    cursos nuevos y el Activador de *Analítica Digital*, después los 4 de junio, después los 32
    restantes por API.
-4. **Si el reCAPTCHA se confirma como clave de prueba, avisar a Rocío** antes de tocarlo.
-5. **Migración de datos históricos y re-atribución** (§6): cotizar aparte o descartar.
-6. **Fecha para Vicente**: ahora sí se puede fijar, porque el reparto ya está (38 B, 0 C, 0 D).
-
----
+5. **Qué se le dice a Vicente sobre el valor oculto de programa**: que no tiene que repuntar ningún
+   formulario, que el problema probablemente viene de su normalización, y pedirle el valor que envió
+   su script.
+6. **Si el reCAPTCHA se confirma como clave de prueba, avisar a Rocío antes de tocarlo**, porque el
+   portal es compartido y el cambio alcanza a UANDES Online.
+7. **Migración de datos históricos y re-atribución** (§6 del requerimiento): cotizar aparte o
+   descartar.
+8. **Completar o no las 73 instancias que faltan.** Recomendación: no antes de que Vicente arregle
+   el modal, porque hoy 40 de ellas son imposibles. Después de ese arreglo, rehacer la pasada
+   completa tiene sentido y sirve además para verificar la corrección.
+9. **Fecha para Vicente**: ahora se puede fijar, porque el reparto ya está (38 casos B, 0 C, 0 D) y
+   el arreglo del modal está identificado con precisión.
 
 ## Anexo técnico
 
@@ -446,7 +571,14 @@ tiempo **impide automatizar la verificación**. Es lo peor de los dos mundos.
 - `42_reconciliacion_agosto.json` · estado HTTP actual de las URL marcadas en agosto.
 - `canon_piura_propuesta_corregida.xlsx` · planilla canon con 17 correcciones propuestas.
 - `registro_pruebas.csv` · 80 filas (banner y modal por página) con R1-R5, H1-H7, caso y
-  severidad; R1-R5, H1, H2 y H5 en PENDIENTE hasta la ronda 3.
+  severidad. Las 7 instancias probadas llevan su resultado real; las 73 restantes dicen
+  NO_PROBADO con el motivo.
+- `51_muestra_manual_resultados.json` + `evidencia/contactos/` · los 7 envíos reales y la respuesta
+  cruda de cada contacto.
+- `55_hallazgo_modal.json` y `56_modal_css.json` · el hallazgo del modal y el conteo de plantillas
+  de modal en las 40 páginas.
+- `54_modal_estructura.json` · incrustaciones de HubSpot por página.
+- `91_limpieza_verificada.json` · borrado de los 7 contactos de prueba, verificado uno por uno.
 
 **Propiedades internas mencionadas en el texto:**
 
@@ -474,5 +606,16 @@ inscribir en el workflow `1631981736`.
 - **B, solo valor oculto de programa (33):** el resto; lista completa con el valor esperado en `20_matriz.json` (`programa_esperado`).
 
 **Condiciones de esta corrida:** sesión remota de Claude Code; agentes del paquete ejecutados como
-scripts por el orquestador; ronda 1 corrida con P5 en FALLA por certificado del entorno (no por
-accesos); ningún formulario, workflow ni página fue modificado; no se creó ningún contacto.
+scripts por el orquestador; el navegador automatizado no pudo abrir el sitio desde este entorno
+(certificado del proxy de salida), así que los envíos se hicieron a mano.
+
+**Ningún formulario ni página de WordPress fue modificado.** Sí hubo dos escrituras sobre HubSpot,
+las dos declaradas y aprobadas:
+
+1. **Se crearon 8 contactos de prueba** por el endpoint público de formularios (7 de la muestra más
+   uno de referencia). **Todos fueron borrados**, verificado uno por uno.
+2. **Se modificaron 5 workflows de producción** para que los leads de prueba se asignaran a 5minutos
+   en vez de a ejecutivos reales. Lo hizo Roman Villalobos a pedido de esta auditoría, acordado con
+   Pedro y aprobado por Santiago. Es una desviación consciente de la regla "no se modifica ningún
+   workflow en esta corrida". **La regla temporal sigue puesta al cierre de este informe y hay que
+   quitarla.**
